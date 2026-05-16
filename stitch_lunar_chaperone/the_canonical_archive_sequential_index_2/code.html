@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Newsreader', serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .font-noto-serif { font-family: 'Noto Serif', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+        
+        /* Custom scrollbar for archival feel */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #fcf9f2; }
+        ::-webkit-scrollbar-thumb { background: #d0c5b7; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1a1a1a", /* Ink */
+                        "surface": "#fcfaf7", /* Paper */
+                        "primary-container": "#c4a77d", /* Gold Accent */
+                        "primary": "#8e734b", /* Gold */
+                        "outline-variant": "#dcd3c1",
+                        "surface-container-low": "#f7f3ed",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e5e2db"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary/20">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 w-full bg-surface/90 backdrop-blur-sm border-b-[0.5px] border-outline-variant/50 flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="menu_book">menu_book</span>
+<h1 class="text-lg font-normal tracking-[0.15em] uppercase text-on-surface font-noto-serif">THE CANONICAL ARCHIVE</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8 text-[10px] tracking-[0.2em] font-inter uppercase font-medium">
+<a class="text-primary transition-colors duration-300" href="#">Archive</a>
+<a class="text-stone-400 hover:text-primary transition-colors duration-300" href="#">Library</a>
+<a class="text-stone-400 hover:text-primary transition-colors duration-300" href="#">Research</a>
+</nav>
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+</div>
+</header>
+<main class="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-24">
+<p class="font-inter text-[10px] tracking-[0.3em] uppercase text-primary mb-6">Master Index / Vol. 2024</p>
+<h2 class="text-6xl md:text-8xl font-cormorant font-light italic leading-tight text-on-surface mb-12">
+            The Lunar <span class="pl-4 lg:pl-12">Chaperone</span>
+</h2>
+<div class="max-w-2xl border-l border-primary/30 pl-8">
+<p class="text-lg font-body leading-relaxed text-on-surface/80 italic mb-8">
+                "A master directory of twenty-six workbooks curated by MOONTUNER. A sequential journey through the celestial tides, strictly alternating between the emerging light and the full descent."
+            </p>
+<button class="font-inter text-[10px] tracking-[0.2em] uppercase border-b-2 border-primary pb-1 text-on-surface hover:text-primary transition-all">Begin Inquiry</button>
+</div>
+</section>
+<!-- Sequential Workbook List -->
+<section class="mb-32">
+<div class="flex items-baseline gap-4 mb-8">
+<span class="font-inter text-[10px] tracking-[0.3em] text-primary uppercase whitespace-nowrap font-semibold">The Sequential Grimoire</span>
+<div class="h-[1px] w-full bg-outline-variant"></div>
+</div>
+<div class="divide-y divide-outline-variant">
+<!-- Workbook 01 -->
+<div class="group py-12 flex flex-col md:flex-row gap-8 items-start hover:bg-surface-container-low/50 transition-all duration-500">
+<div class="flex flex-col gap-1 w-32 shrink-0">
+<span class="font-inter text-[10px] tracking-[0.2em] uppercase text-primary font-bold">Workbook 01</span>
+<span class="font-inter text-[9px] tracking-[0.1em] text-on-surface/40">Waxing Cycle</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-cormorant text-3xl font-light group-hover:italic transition-all duration-500">New Moon in Aries <span class="text-primary/40 mx-2">→</span> Full Moon in Scorpio</h4>
+<p class="text-sm font-body text-on-surface/60 mt-2 max-w-xl">Initiating the cardinal spark within the depths of the shadow self. Establishing the bridge between the self and the unknown.</p>
+</div>
+<span class="material-symbols-outlined text-primary/20 group-hover:text-primary transition-colors" data-icon="adjust">adjust</span>
+</div>
+<!-- Workbook 02 -->
+<div class="group py-12 flex flex-col md:flex-row gap-8 items-start hover:bg-surface-container-low/50 transition-all duration-500">
+<div class="flex flex-col gap-1 w-32 shrink-0">
+<span class="font-inter text-[10px] tracking-[0.2em] uppercase text-primary font-bold">Workbook 02</span>
+<span class="font-inter text-[9px] tracking-[0.1em] text-on-surface/40">Waning Cycle</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-cormorant text-3xl font-light group-hover:italic transition-all duration-500">Full Moon in Scorpio <span class="text-primary/40 mx-2">→</span> New Moon in Taurus</h4>
+<p class="text-sm font-body text-on-surface/60 mt-2 max-w-xl">Releasing the intensity of the transformation to ground within the physical vessel. The calcification of wisdom.</p>
+</div>
+<span class="material-symbols-outlined text-primary/20 group-hover:text-primary transition-colors" data-icon="brightness_4">brightness_4</span>
+</div>
+<!-- Workbook 03 -->
+<div class="group py-12 flex flex-col md:flex-row gap-8 items-start hover:bg-surface-container-low/50 transition-all duration-500">
+<div class="flex flex-col gap-1 w-32 shrink-0">
+<span class="font-inter text-[10px] tracking-[0.2em] uppercase text-primary font-bold">Workbook 03</span>
+<span class="font-inter text-[9px] tracking-[0.1em] text-on-surface/40">Waxing Cycle</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-cormorant text-3xl font-light group-hover:italic transition-all duration-500">New Moon in Taurus <span class="text-primary/40 mx-2">→</span> Full Moon in Sagittarius</h4>
+<p class="text-sm font-body text-on-surface/60 mt-2 max-w-xl">From the solid earth to the expansion of the horizon. Seeding stability and harvesting the vision of the seeker.</p>
+</div>
+<span class="material-symbols-outlined text-primary/20 group-hover:text-primary transition-colors" data-icon="explore">explore</span>
+</div>
+<!-- Workbook 04 -->
+<div class="group py-12 flex flex-col md:flex-row gap-8 items-start hover:bg-surface-container-low/50 transition-all duration-500">
+<div class="flex flex-col gap-1 w-32 shrink-0">
+<span class="font-inter text-[10px] tracking-[0.2em] uppercase text-primary font-bold">Workbook 04</span>
+<span class="font-inter text-[9px] tracking-[0.1em] text-on-surface/40">Waning Cycle</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-cormorant text-3xl font-light group-hover:italic transition-all duration-500">Full Moon in Sagittarius <span class="text-primary/40 mx-2">→</span> New Moon in Gemini</h4>
+<p class="text-sm font-body text-on-surface/60 mt-2 max-w-xl">Distilling the vast philosophy into the precision of the spoken word. The movement from truth to inquiry.</p>
+</div>
+<span class="material-symbols-outlined text-primary/20 group-hover:text-primary transition-colors" data-icon="auto_stories">auto_stories</span>
+</div>
+<!-- Placeholder for Workbooks 05-24 -->
+<div class="group py-16 bg-surface-container-low/30 border-x border-outline-variant/30 flex flex-col items-center justify-center text-center">
+<span class="font-inter text-[9px] tracking-[0.4em] uppercase text-primary/60 mb-4">Continuous Sequential Protocol</span>
+<h4 class="font-cormorant text-2xl italic text-on-surface/40">Workbooks 05 through 24</h4>
+<p class="text-[10px] font-inter tracking-widest text-on-surface/30 mt-2 uppercase">Alternating Phases: Cancer to Leo / Leo to Virgo / Virgo to Libra...</p>
+<div class="w-px h-12 bg-gradient-to-b from-primary/30 to-transparent mt-6"></div>
+</div>
+<!-- Workbook 25 -->
+<div class="group py-12 flex flex-col md:flex-row gap-8 items-start hover:bg-surface-container-low/50 transition-all duration-500">
+<div class="flex flex-col gap-1 w-32 shrink-0">
+<span class="font-inter text-[10px] tracking-[0.2em] uppercase text-primary font-bold">Workbook 25</span>
+<span class="font-inter text-[9px] tracking-[0.1em] text-on-surface/40">Waxing Cycle</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-cormorant text-3xl font-light group-hover:italic transition-all duration-500">New Moon in Aquarius <span class="text-primary/40 mx-2">→</span> Full Moon in Leo</h4>
+<p class="text-sm font-body text-on-surface/60 mt-2 max-w-xl">The collective vision finding its heart. The final emergence of the individual spirit within the universal fabric.</p>
+</div>
+<span class="material-symbols-outlined text-primary/20 group-hover:text-primary transition-colors" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<!-- Workbook 26 -->
+<div class="group py-12 flex flex-col md:flex-row gap-8 items-start hover:bg-surface-container-low/50 transition-all duration-500">
+<div class="flex flex-col gap-1 w-32 shrink-0">
+<span class="font-inter text-[10px] tracking-[0.2em] uppercase text-primary font-bold">Workbook 26</span>
+<span class="font-inter text-[9px] tracking-[0.1em] text-on-surface/40">Waning Cycle</span>
+</div>
+<div class="flex-grow">
+<h4 class="font-cormorant text-3xl font-light group-hover:italic transition-all duration-500">Full Moon in Leo <span class="text-primary/40 mx-2">→</span> New Moon in Pisces</h4>
+<p class="text-sm font-body text-on-surface/60 mt-2 max-w-xl">The heart dissolving back into the primordial waters. Completion of the lunar cycle. From Bone to Heart.</p>
+</div>
+<span class="material-symbols-outlined text-primary/20 group-hover:text-primary transition-colors" data-icon="waves">waves</span>
+</div>
+</div>
+<!-- Call to Action -->
+<div class="mt-20 flex flex-col md:flex-row justify-between items-center bg-on-surface text-surface p-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-[120px]" data-icon="menu_book">menu_book</span>
+</div>
+<div class="mb-8 md:mb-0 relative z-10">
+<h5 class="font-inter text-[10px] tracking-[0.3em] text-primary uppercase font-bold mb-2">Master Acquisition</h5>
+<p class="font-cormorant text-3xl italic">The Complete 26-Workbook Archive</p>
+<p class="font-body text-sm text-surface/60 mt-2">Available as a single digital folio for archival study.</p>
+</div>
+<button class="relative z-10 font-inter text-[10px] tracking-[0.2em] bg-primary text-white px-10 py-4 hover:bg-primary/90 transition-all uppercase font-bold shadow-xl">Secure the Master Index</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="mt-32 pt-16 border-t border-outline-variant/30 grid grid-cols-1 md:grid-cols-4 gap-12 text-on-surface/60">
+<div>
+<p class="font-inter text-[9px] tracking-widest uppercase mb-4 text-primary font-bold">Curated By</p>
+<p class="font-body text-sm italic">MOONTUNER ARCHIVES<br/>EST. MMXXIV</p>
+</div>
+<div>
+<p class="font-inter text-[9px] tracking-widest uppercase mb-4 text-primary font-bold">Classification</p>
+<p class="font-body text-sm italic">Sequential Lunar Workbooks<br/>Volume 01-26 / Master Index</p>
+</div>
+<div class="md:col-span-2 text-right hidden md:block">
+<span class="material-symbols-outlined text-6xl text-primary/20" data-icon="all_inclusive">all_inclusive</span>
+</div>
+</footer>
+</main>
+<!-- Mobile Navigation -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface/95 backdrop-blur-md border-t-[0.5px] border-outline-variant flex justify-around items-center px-4 h-16 z-50">
+<a class="flex flex-col items-center justify-center text-primary border-t-2 border-primary -mt-[2px] px-4 h-full" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="inventory_2">inventory_2</span>
+<span class="font-inter uppercase text-[9px] tracking-widest font-bold mt-1">Archive</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 px-4 h-full" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="local_library">local_library</span>
+<span class="font-inter uppercase text-[9px] tracking-widest font-bold mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 px-4 h-full" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="biotech">biotech</span>
+<span class="font-inter uppercase text-[9px] tracking-widest font-bold mt-1">Research</span>
+</a>
+</nav>
+</body></html>

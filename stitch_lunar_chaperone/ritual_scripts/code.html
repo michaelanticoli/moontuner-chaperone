@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@300;400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#e5e2de",
+                        "outline": "#7f766a",
+                        "on-tertiary-fixed-variant": "#3a475e",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#dcdad3",
+                        "secondary": "#5f5e5c",
+                        "inverse-on-surface": "#f3f0e9",
+                        "secondary-fixed": "#e5e2de",
+                        "on-surface": "#1c1c18",
+                        "surface-tint": "#725b37",
+                        "primary-fixed-dim": "#e1c296",
+                        "primary-container": "#c4a77d",
+                        "on-tertiary-container": "#324057",
+                        "surface-container-highest": "#e5e2db",
+                        "surface-container-high": "#ebe8e1",
+                        "primary-fixed": "#fedeb0",
+                        "surface-variant": "#e5e2db",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#4d463c",
+                        "on-background": "#1c1c18",
+                        "background": "#fcf9f2",
+                        "on-secondary-fixed": "#1c1c1a",
+                        "on-primary-fixed-variant": "#584321",
+                        "primary": "#725b37",
+                        "tertiary-fixed-dim": "#b9c7e3",
+                        "secondary-fixed-dim": "#c9c6c3",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#9eacc7",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface": "#fcf9f2",
+                        "on-secondary-container": "#656461",
+                        "tertiary-fixed": "#d5e3ff",
+                        "on-primary-fixed": "#281800",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#fcf9f2",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#31312c",
+                        "on-primary-container": "#503c1b",
+                        "on-secondary-fixed-variant": "#474744",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#0d1c31",
+                        "tertiary": "#515f77",
+                        "inverse-primary": "#e1c296",
+                        "surface-container-low": "#f6f3ec",
+                        "surface-container": "#f1eee7",
+                        "outline-variant": "#d0c5b7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-gold-leaf {
+            background: linear-gradient(to right, #725b37, #c4a77d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .shadow-archival {
+            box-shadow: 0 40px 60px rgba(28, 28, 24, 0.04);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f2] dark:bg-[#1c1c18] flex justify-between items-center px-12 py-6 max-w-none w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d]">menu_book</span>
+<h1 class="font-serif text-2xl tracking-[0.15em] uppercase text-[#725b37] dark:text-[#c4a77d]">THE SACRED LEDGER</h1>
+</div>
+<nav class="hidden md:flex gap-10">
+<a class="font-label text-xs tracking-[0.2em] uppercase font-light text-[#725b37]/60 dark:text-[#c4a77d]/60 hover:text-[#725b37] dark:hover:text-[#c4a77d] transition-colors duration-300" href="#">JOURNAL</a>
+<a class="font-label text-xs tracking-[0.2em] uppercase font-light text-[#725b37]/60 dark:text-[#c4a77d]/60 hover:text-[#725b37] dark:hover:text-[#c4a77d] transition-colors duration-300" href="#">LIBRARY</a>
+<a class="font-label text-xs tracking-[0.2em] uppercase font-light text-[#725b37] dark:text-[#c4a77d] border-b-2 border-[#725b37]" href="#">RESEARCH</a>
+</nav>
+<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d] cursor-pointer active:scale-95 duration-200">history_edu</span>
+</header>
+<main class="pt-32 pb-40 px-6 md:px-24 lg:px-48 max-w-7xl mx-auto">
+<!-- Title Section -->
+<header class="mb-24 flex flex-col items-start">
+<div class="font-label text-[10px] tracking-[0.3em] uppercase text-outline mb-4">Volume I / Section V</div>
+<h2 class="font-headline text-5xl md:text-7xl font-light tracking-tight leading-none mb-8">Ritual &amp; Commitment</h2>
+<div class="w-24 h-[0.5px] bg-primary"></div>
+</header>
+<!-- Ritual Section Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-32 items-start">
+<!-- Evaporation Rite (Asymmetric Left) -->
+<section class="lg:col-span-7 space-y-12">
+<div class="flex items-baseline gap-6">
+<span class="font-headline italic text-4xl text-primary">01.</span>
+<div>
+<h3 class="font-headline text-3xl font-normal mb-2">The Evaporation Rite</h3>
+<p class="font-label text-[10px] tracking-[0.2em] uppercase text-outline">Time-box: 15 Minutes</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 md:p-12 space-y-8">
+<p class="text-lg leading-relaxed text-on-surface-variant italic">
+                        A practice for the release of intellectual clutter. To begin, settle your mind into the "White Page" state.
+                    </p>
+<div class="space-y-10">
+<div class="flex gap-6 group">
+<div class="font-label text-xs text-outline pt-2">01</div>
+<div class="flex-1 pb-4 border-b border-outline-variant group-focus-within:border-primary transition-colors">
+<label class="font-label text-[10px] tracking-widest uppercase block mb-4 text-outline">Identify the Vapor</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 placeholder:text-outline-variant text-xl italic font-serif" placeholder="What thought patterns are currently obscuring your focus?" type="text"/>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="font-label text-xs text-outline pt-2">02</div>
+<div class="flex-1 pb-4 border-b border-outline-variant group-focus-within:border-primary transition-colors">
+<label class="font-label text-[10px] tracking-widest uppercase block mb-4 text-outline">Transcribe the Heavy</label>
+<textarea class="w-full bg-transparent border-none p-0 focus:ring-0 placeholder:text-outline-variant text-lg leading-relaxed font-body" placeholder="Detail the weight of these thoughts. What is the ink cost of maintaining them?" rows="3"></textarea>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="font-label text-xs text-outline pt-2">03</div>
+<div class="flex-1 pb-4 border-b border-outline-variant group-focus-within:border-primary transition-colors">
+<label class="font-label text-[10px] tracking-widest uppercase block mb-4 text-outline">Seal and Release</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 placeholder:text-outline-variant text-xl italic font-serif" placeholder="Write a single word to symbolize this evaporation." type="text"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sidebar Image/Marginalia -->
+<aside class="lg:col-span-5 space-y-8 lg:mt-32">
+<div class="aspect-[3/4] overflow-hidden grayscale contrast-125 opacity-80 border-[0.5px] border-primary/20">
+<img class="w-full h-full object-cover" data-alt="monochrome close-up of a vintage fountain pen resting on aged yellowed paper with ink blots and delicate calligraphy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_jZTd-NZuHQCHRN-REdz_90X8ptPuc7IK_AkPVvNy7UIr1RTg6eaQxd0q5zR3FdY-qnaAhHcn-iJPOxsqe8ODgh2AUpwTAlzIkkGD53lzi-zCiE3ZX8poFKCxY4Y_BZH1hGwbGU6y3GBRYzQvGdYYPilnkrIYC8C_jAUZrGLPBWOPSoJc2WGwIMpavazw64AAw7xAgdxViXogp4OjQIDF2zELEJFdY6MH7pPG50hR6Tolqc1gYj4buxNNA38w4gPJeDXr8hl4fVji"/>
+</div>
+<div class="pl-8 border-l border-primary/30">
+<p class="font-label text-[10px] leading-relaxed uppercase tracking-widest text-outline">
+                        "The archive is not just a place of storage, but a place of cleansing. One must burn the dross to find the gold."
+                    </p>
+<p class="font-headline italic text-xs mt-2">— The Curator's Notes</p>
+</div>
+</aside>
+</div>
+<!-- Two-Candles Accord -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-32 items-start">
+<!-- Marginalia Left -->
+<aside class="hidden lg:block lg:col-span-4 space-y-4 pt-16">
+<div class="h-[0.5px] w-12 bg-primary mb-8"></div>
+<p class="font-label text-[10px] tracking-[0.2em] uppercase text-outline">The Accord Principle</p>
+<p class="text-sm font-body italic text-on-surface-variant leading-relaxed">
+                    Balance requires two points of light. One for the intention, one for the execution. If one flickers, the other sustains.
+                </p>
+</aside>
+<!-- Main Content -->
+<section class="lg:col-span-8 space-y-12">
+<div class="flex items-baseline gap-6 justify-end text-right">
+<div class="text-right">
+<h3 class="font-headline text-3xl font-normal mb-2">Two-Candles Accord</h3>
+<p class="font-label text-[10px] tracking-[0.2em] uppercase text-outline">Time-box: 30 Minutes</p>
+</div>
+<span class="font-headline italic text-4xl text-primary">02.</span>
+</div>
+<div class="bg-surface-container-highest p-8 md:p-12 shadow-archival relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 opacity-5 translate-x-12 -translate-y-12">
+<span class="material-symbols-outlined text-[8rem]">auto_stories</span>
+</div>
+<div class="space-y-12">
+<div class="space-y-4">
+<h4 class="font-label text-xs tracking-widest uppercase text-primary">The Left Candle: Intention</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="border-b border-outline-variant pb-2">
+<span class="font-label text-[9px] uppercase text-outline">Sacred Aim</span>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface font-body italic" type="text"/>
+</div>
+<div class="border-b border-outline-variant pb-2">
+<span class="font-label text-[9px] uppercase text-outline">Duration of focus</span>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface font-body italic" placeholder="e.g. 4 Hours" type="text"/>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label text-xs tracking-widest uppercase text-primary">The Right Candle: Constraint</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="border-b border-outline-variant pb-2">
+<span class="font-label text-[9px] uppercase text-outline">The Sacrifice (What is removed)</span>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface font-body italic" type="text"/>
+</div>
+<div class="border-b border-outline-variant pb-2">
+<span class="font-label text-[9px] uppercase text-outline">The Boundary</span>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface font-body italic" placeholder="Digital Silence" type="text"/>
+</div>
+</div>
+</div>
+<button class="w-full py-6 border border-primary font-label text-xs tracking-[0.4em] uppercase text-primary hover:bg-primary hover:text-on-primary transition-all duration-500">
+                            Seal the Accord
+                        </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Sacred Commitments -->
+<section class="mt-48">
+<div class="flex flex-col items-center text-center mb-16">
+<h3 class="font-headline text-4xl mb-6">Sacred Commitments</h3>
+<p class="font-label text-[10px] tracking-[0.2em] uppercase text-outline max-w-md">Archetypes of devotion to adapt for your own ledger</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1px bg-outline-variant">
+<!-- Card 1 -->
+<div class="bg-surface p-10 hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-primary mb-6 block" style="font-variation-settings: 'FILL' 1;">history_edu</span>
+<h4 class="font-headline text-xl mb-4 italic">The Chronicler's Vow</h4>
+<p class="font-body text-on-surface-variant leading-relaxed mb-8">
+                        "I commit to the daily transcription of raw thought into refined wisdom, regardless of the quality of the ink."
+                    </p>
+<a class="font-label text-[10px] tracking-widest uppercase text-primary border-b border-primary pb-1 group-hover:pl-4 transition-all" href="#">Adapt this path</a>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface p-10 hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-primary mb-6 block" style="font-variation-settings: 'FILL' 1;">visibility</span>
+<h4 class="font-headline text-xl mb-4 italic">The Observant's Pact</h4>
+<p class="font-body text-on-surface-variant leading-relaxed mb-8">
+                        "I shall not look away from the difficult data. I will record the failure with the same reverence as the success."
+                    </p>
+<a class="font-label text-[10px] tracking-widest uppercase text-primary border-b border-primary pb-1 group-hover:pl-4 transition-all" href="#">Adapt this path</a>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface p-10 hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-primary mb-6 block" style="font-variation-settings: 'FILL' 1;">hourglass_empty</span>
+<h4 class="font-headline text-xl mb-4 italic">The Silent Stoa</h4>
+<p class="font-body text-on-surface-variant leading-relaxed mb-8">
+                        "I commit to one hour of analog contemplation per sun-cycle, honoring the space between words."
+                    </p>
+<a class="font-label text-[10px] tracking-widest uppercase text-primary border-b border-primary pb-1 group-hover:pl-4 transition-all" href="#">Adapt this path</a>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-8 pb-8 pt-4 bg-[#fcf9f2]/80 dark:bg-[#1c1c18]/80 backdrop-blur-md border-t-[0.5px] border-[#725b37]/20 z-50 shadow-[0_-20px_40px_rgba(28,28,24,0.04)]">
+<a class="flex flex-col items-center justify-center text-[#725b37]/40 dark:text-[#c4a77d]/40 hover:opacity-80 transition-opacity duration-300" href="#">
+<span class="material-symbols-outlined mb-1">edit_note</span>
+<span class="font-sans text-[10px] tracking-[0.2em] uppercase font-light">JOURNAL</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#725b37]/40 dark:text-[#c4a77d]/40 hover:opacity-80 transition-opacity duration-300" href="#">
+<span class="material-symbols-outlined mb-1">local_library</span>
+<span class="font-sans text-[10px] tracking-[0.2em] uppercase font-light">LIBRARY</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#725b37] dark:text-[#c4a77d] opacity-100 hover:opacity-80 transition-opacity duration-300" href="#">
+<span class="material-symbols-outlined mb-1">analytics</span>
+<span class="font-sans text-[10px] tracking-[0.2em] uppercase font-light">RESEARCH</span>
+</a>
+</nav>
+</body></html>

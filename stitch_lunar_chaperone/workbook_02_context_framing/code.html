@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,400;1,6..72,400&amp;family=Inter:wght@300;400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e5e2db",
+                        "on-secondary-container": "#656461",
+                        "on-surface-variant": "#4d463c",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#281800",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#e5e2de",
+                        "on-tertiary-container": "#324057",
+                        "on-background": "#1c1c18",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#e1c296",
+                        "on-secondary-fixed-variant": "#474744",
+                        "inverse-primary": "#e1c296",
+                        "on-secondary-fixed": "#1c1c1a",
+                        "background": "#fcf9f2",
+                        "surface-dim": "#dcdad3",
+                        "surface-container-highest": "#e5e2db",
+                        "primary": "#725b37",
+                        "surface": "#fcf9f2",
+                        "outline": "#7f766a",
+                        "on-tertiary-fixed": "#0d1c31",
+                        "tertiary-fixed": "#d5e3ff",
+                        "primary-container": "#c4a77d",
+                        "primary-fixed": "#fedeb0",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#d0c5b7",
+                        "tertiary-fixed-dim": "#b9c7e3",
+                        "on-tertiary-fixed-variant": "#3a475e",
+                        "tertiary": "#515f77",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#c9c6c3",
+                        "surface-container": "#f1eee7",
+                        "on-surface": "#1c1c18",
+                        "on-primary-container": "#503c1b",
+                        "surface-bright": "#fcf9f2",
+                        "surface-tint": "#725b37",
+                        "surface-container-low": "#f6f3ec",
+                        "on-primary-fixed-variant": "#584321",
+                        "inverse-surface": "#31312c",
+                        "surface-container-high": "#ebe8e1",
+                        "tertiary-container": "#9eacc7",
+                        "inverse-on-surface": "#f3f0e9",
+                        "secondary-fixed": "#e5e2de",
+                        "secondary": "#5f5e5c"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Newsreader', serif; background-color: #fcf9f2; color: #1c1c18; }
+        .font-noto-serif { font-family: 'Noto Serif', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="flex min-h-screen">
+<!-- SideNavBar Anchor -->
+<aside class="hidden md:flex flex-col h-full py-12 px-6 gap-8 bg-[#fcf9f2] dark:bg-stone-900 text-[#725b37] dark:text-[#c4a77d] font-inter uppercase tracking-[0.12em] text-[10px] fixed w-72 border-r-[0.5px] border-outline-variant/30">
+<div class="mb-8">
+<h1 class="font-noto-serif italic text-xl normal-case tracking-normal text-on-surface">Lunar Chaperone</h1>
+<p class="mt-2 text-[9px] opacity-60">Archival Metadata v.04</p>
+</div>
+<nav class="flex flex-col gap-6 flex-grow">
+<p class="text-on-surface/40 mb-2">PHASE SEQUENCE</p>
+<a class="flex items-center gap-3 text-[#1c1c18]/50 dark:text-stone-500 hover:bg-[#f5f0e6] dark:hover:bg-stone-800 p-2 transition-colors" href="#">
+<span class="material-symbols-outlined">dark_mode</span> Phase I: Waxing
+            </a>
+<a class="flex items-center gap-3 text-[#725b37] dark:text-[#c4a77d] font-bold translate-x-2 transition-transform p-2" href="#">
+<span class="material-symbols-outlined">light_mode</span> Phase II: Zenith
+            </a>
+<a class="flex items-center gap-3 text-[#1c1c18]/50 dark:text-stone-500 hover:bg-[#f5f0e6] dark:hover:bg-stone-800 p-2 transition-colors" href="#">
+<span class="material-symbols-outlined">brightness_low</span> Phase III: Waning
+            </a>
+<a class="flex items-center gap-3 text-[#1c1c18]/50 dark:text-stone-500 hover:bg-[#f5f0e6] dark:hover:bg-stone-800 p-2 transition-colors" href="#">
+<span class="material-symbols-outlined">contrast</span> Phase IV: Eclipse
+            </a>
+</nav>
+<div class="mt-auto pt-8 border-t border-outline-variant/20">
+<a class="flex items-center gap-3 text-[#1c1c18]/50 dark:text-stone-500 hover:bg-[#f5f0e6] dark:hover:bg-stone-800 p-2 transition-colors" href="#">
+<span class="material-symbols-outlined">menu_book</span> Documentation
+            </a>
+</div>
+</aside>
+<!-- Main Content Stage -->
+<main class="flex-1 md:ml-72 flex flex-col">
+<!-- TopAppBar Anchor -->
+<header class="flex justify-between items-center w-full px-8 py-4 bg-[#fcf9f2] dark:bg-stone-950 sticky top-0 z-10 border-b-[0.5px] border-outline-variant/30">
+<div class="font-noto-serif uppercase tracking-[0.15em] text-xs font-light text-[#725b37] dark:text-[#c4a77d] flex gap-8 items-center">
+<a class="text-[#1c1c18]/60 dark:text-stone-400 hover:text-[#725b37] transition-colors duration-300" href="#">Catalog</a>
+<a class="text-[#725b37] dark:text-[#c4a77d] border-b border-[#725b37] pb-1" href="#">Archives</a>
+<a class="text-[#1c1c18]/60 dark:text-stone-400 hover:text-[#725b37] transition-colors duration-300" href="#">Log</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#725b37] cursor-pointer">clinical_notes</span>
+<span class="material-symbols-outlined text-[#725b37] cursor-pointer">settings</span>
+</div>
+</header>
+<!-- Canvas Body -->
+<section class="max-w-5xl w-full mx-auto px-8 py-20">
+<!-- Metadata Marginalia -->
+<div class="flex flex-col md:flex-row justify-between mb-16 border-b border-outline-variant/20 pb-4">
+<div class="font-inter uppercase tracking-[0.2em] text-[10px] text-outline">
+                    Sequence: 02 / 26
+                </div>
+<div class="font-inter uppercase tracking-[0.2em] text-[10px] text-outline text-right">
+                    Academic ID: WB-CTXT-02
+                </div>
+</div>
+<!-- Hero Section -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-32 items-end">
+<div class="md:col-span-7">
+<h2 class="font-noto-serif text-5xl md:text-7xl font-light leading-tight mb-8">Workbook 02:<br/><span class="italic">Context &amp; Framing</span></h2>
+<p class="text-xl md:text-2xl font-light text-on-surface-variant max-w-xl leading-relaxed">
+                        Navigating the profound shift from the shadowy waters of Scorpio to the tactile foundations of Taurus.
+                    </p>
+</div>
+<div class="md:col-span-5 bg-surface-container-low p-8 aspect-[4/5] flex flex-col justify-center border-l border-primary/20">
+<div class="space-y-6">
+<div class="group">
+<span class="font-inter text-[10px] tracking-widest text-outline uppercase block mb-1">Journey</span>
+<span class="text-lg">Scorpio Full Moon to Taurus New Moon</span>
+</div>
+<div class="group">
+<span class="font-inter text-[10px] tracking-widest text-outline uppercase block mb-1">Elements</span>
+<span class="text-lg">Water to Earth</span>
+</div>
+<div class="group">
+<span class="font-inter text-[10px] tracking-widest text-outline uppercase block mb-1">Body Correspondence</span>
+<span class="text-lg">Reproductive Organs to Throat/Voice</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Lunar Awakening Section -->
+<div class="mb-32 relative">
+<div class="absolute -left-12 top-0 font-inter text-[10px] tracking-widest text-primary vertical-rl rotate-180 uppercase hidden lg:block opacity-50">
+                    Sacred Transmutation
+                </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div class="space-y-8">
+<h3 class="font-noto-serif text-3xl font-light border-b border-outline-variant/30 pb-4">Lunar Awakening</h3>
+<p class="text-lg leading-relaxed first-letter:text-5xl first-letter:font-noto-serif first-letter:mr-3 first-letter:float-left">
+                            The Scorpio Full Moon demands a descent into the internal archives—the emotional basement where truths are often kept under lock and key. It is the archetype of the Diver, plunging into the depths of the psyche to retrieve the gold of self-awareness.
+                        </p>
+<p class="text-lg leading-relaxed text-on-surface-variant italic">
+                            "To reach the root, one must first navigate the deep current."
+                        </p>
+</div>
+<div class="bg-surface-container-high p-10 flex flex-col justify-center relative overflow-hidden">
+<img alt="Texture" class="absolute inset-0 w-full h-full object-cover opacity-10 mix-blend-multiply" data-alt="Abstract cinematic capture of deep swirling water transitioning into dark fertile soil with ethereal golden light particles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwsDucYhiwAS20BXQcF1yWgDVSHsG9uw-FYMxgCMmCRk_91zk9xpKtjTdEtIt-66Nb-QeFBlQ4UPGwfb6lvwou10wIGyaabUBKv13KLGanyDL_smguFNvcU6LHR3gHZRyn8MO65abFVF_JXpFYSAXJiQ9o8vERS688aZXCyUnwCMn-YXovWkXzRAI3CgYPdiRMdHV1FtH79AoqoaU_6kMnmIt9Wd1-h8AubN-sW2Ev1Pc3H3RIYKix6ULJ8pc7GuZs9eyBxlfdm_cN"/>
+<h4 class="font-inter text-xs tracking-[0.2em] uppercase mb-4 text-primary font-semibold">Taurus Grounding</h4>
+<p class="text-lg leading-relaxed z-10">
+                            As we transition to the Taurus New Moon, the focus shifts from the abstract to the tangible. This is the act of planting those Scorpio insights into physical soil. We move from the intensity of the reproductive organs—the seat of creation—upwards to the throat, finding the voice to articulate our newfound grounded reality.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Interactive Fields: Bento Style -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+<div class="md:col-span-2 bg-surface-container-low p-10 border-l-[0.5px] border-outline-variant">
+<h4 class="font-inter text-xs tracking-widest uppercase mb-8 opacity-60 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">edit_note</span> Dream Log: Subconscious Echoes
+                    </h4>
+<div class="space-y-12">
+<div class="group relative">
+<label class="font-inter text-[10px] tracking-widest text-outline uppercase block mb-2 transition-all group-focus-within:text-primary group-focus-within:translate-x-2">Initial Nocturnal Impression</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary p-0 min-h-[100px] text-xl font-body placeholder:opacity-20" placeholder="Record the first fragments of memory upon waking..."></textarea>
+</div>
+<div class="group relative">
+<label class="font-inter text-[10px] tracking-widest text-outline uppercase block mb-2 transition-all group-focus-within:text-primary group-focus-within:translate-x-2">Elemental Weight</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary p-0 text-xl font-body placeholder:opacity-20" placeholder="Water, Silt, or Stone?" type="text"/>
+</div>
+</div>
+</div>
+<div class="bg-surface p-10 border border-outline-variant/30 flex flex-col gap-8">
+<h4 class="font-inter text-xs tracking-widest uppercase mb-4 opacity-60 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">analytics</span> Initial Attunements
+                    </h4>
+<p class="text-sm italic text-on-surface-variant">Rate the somatic resonance in the corresponding centers:</p>
+<div class="space-y-8">
+<div class="flex justify-between items-center group">
+<span class="font-inter text-[10px] tracking-widest text-outline uppercase">The Throat</span>
+<div class="flex gap-2">
+<div class="w-4 h-4 border border-outline-variant hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-4 h-4 border border-outline-variant hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-4 h-4 border border-outline-variant hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-4 h-4 border border-outline-variant hover:bg-primary transition-colors cursor-pointer"></div>
+</div>
+</div>
+<div class="flex justify-between items-center group">
+<span class="font-inter text-[10px] tracking-widest text-outline uppercase">The Root</span>
+<div class="flex gap-2">
+<div class="w-4 h-4 border border-outline-variant hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-4 h-4 border border-outline-variant hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-4 h-4 border border-outline-variant hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-4 h-4 border border-outline-variant hover:bg-primary transition-colors cursor-pointer"></div>
+</div>
+</div>
+</div>
+<div class="mt-auto">
+<button class="w-full bg-primary text-on-primary font-inter uppercase tracking-[0.2em] text-[10px] py-4 hover:opacity-90 transition-opacity">
+                            Seal Archival Entry
+                        </button>
+</div>
+</div>
+</div>
+<!-- Archetypal Journey Visual -->
+<div class="mb-32 flex flex-col items-center">
+<div class="w-full h-[0.5px] bg-outline-variant/30 mb-8 relative">
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary"></div>
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<div class="flex justify-between w-full font-inter text-[10px] tracking-[0.3em] uppercase text-outline">
+<span>Depth (Scorpio)</span>
+<span>Root (Taurus)</span>
+</div>
+<div class="mt-16 text-center max-w-2xl">
+<p class="font-noto-serif italic text-2xl text-on-surface-variant font-light leading-relaxed">
+                        "The journey from the reproductive center to the voice is the journey of bringing the unborn into existence through sound."
+                    </p>
+</div>
+</div>
+<!-- Page Navigation -->
+<div class="flex justify-between items-center pt-20 border-t border-outline-variant/30">
+<a class="group flex items-center gap-4 text-outline hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">arrow_back</span>
+<div class="flex flex-col">
+<span class="font-inter text-[10px] tracking-widest uppercase">Previous</span>
+<span class="font-noto-serif italic text-lg">Workbook 01</span>
+</div>
+</a>
+<a class="group flex items-center gap-4 text-right text-outline hover:text-primary transition-colors" href="#">
+<div class="flex flex-col">
+<span class="font-inter text-[10px] tracking-widest uppercase">Next</span>
+<span class="font-noto-serif italic text-lg">Energy Mapping</span>
+</div>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Marginalia Metadata Footer -->
+<footer class="mt-auto px-8 py-6 border-t border-outline-variant/10 flex justify-between items-center opacity-40">
+<div class="font-inter text-[9px] tracking-[0.2em] uppercase">
+                © MMXXIV The Canonical Archive
+            </div>
+<div class="font-inter text-[9px] tracking-[0.2em] uppercase flex gap-4">
+<span>Ref: SC-TR-V04</span>
+<span>Lat: 34.0522 N</span>
+</div>
+</footer>
+</main>
+</body></html>

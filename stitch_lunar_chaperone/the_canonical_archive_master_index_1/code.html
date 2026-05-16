@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Newsreader', serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .font-noto-serif { font-family: 'Noto Serif', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+        
+        /* Custom scrollbar for archival feel */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #fcf9f2; }
+        ::-webkit-scrollbar-thumb { background: #d0c5b7; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1c1c18",
+                        "surface": "#fcf9f2",
+                        "primary-container": "#c4a77d",
+                        "primary": "#725b37",
+                        "outline-variant": "#d0c5b7",
+                        "surface-container-low": "#f6f3ec",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e5e2db"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 w-full bg-[#fcf9f2] dark:bg-stone-950 border-b-[0.5px] border-stone-200 dark:border-stone-800 flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d]" data-icon="menu_book">menu_book</span>
+<h1 class="text-lg font-normal tracking-[0.15em] uppercase text-[#1c1c18] dark:text-stone-200 font-noto-serif">THE CANONICAL ARCHIVE</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8 text-[10px] tracking-[0.2em] font-inter uppercase font-medium">
+<a class="text-[#725b37] dark:text-[#c4a77d] transition-colors duration-300" href="#">Archive</a>
+<a class="text-stone-400 dark:text-stone-600 hover:text-[#725b37] transition-colors duration-300" href="#">Library</a>
+<a class="text-stone-400 dark:text-stone-600 hover:text-[#725b37] transition-colors duration-300" href="#">Research</a>
+</nav>
+<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d]" data-icon="search">search</span>
+</div>
+</header>
+<main class="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-24 items-end">
+<div class="lg:col-span-7">
+<p class="font-inter text-[10px] tracking-[0.3em] uppercase text-primary mb-6">Master Index / Vol. 2024</p>
+<h2 class="text-6xl md:text-8xl font-cormorant font-light italic leading-tight text-on-surface">
+                    The Lunar <br/> <span class="pl-12 lg:pl-24">Chaperone</span>
+</h2>
+</div>
+<div class="lg:col-span-5 pb-4">
+<div class="border-l border-outline-variant/30 pl-8">
+<p class="text-lg font-body leading-relaxed text-on-surface/80 italic mb-6">
+                        "A master directory of twenty-six workbooks curated by MOONTUNER. A sequential fourteen-day journey through the celestial tides, from the calcification of Bone to the pulse of the Heart."
+                    </p>
+<button class="font-inter text-[10px] tracking-[0.2em] uppercase border-b border-primary/40 pb-1 hover:text-primary transition-all">Begin Inquiry</button>
+</div>
+</div>
+</section>
+<!-- Digital Grimoire: Sequential Master Index -->
+<section class="mb-32">
+<div class="flex items-baseline gap-4 mb-8 overflow-hidden">
+<span class="font-inter text-[10px] tracking-[0.3em] text-primary whitespace-nowrap">CHRONOLOGICAL PROTOCOL</span>
+<div class="h-[0.5px] w-full bg-outline-variant/30"></div>
+</div>
+<div class="divide-y divide-outline-variant/20 border-t border-b border-outline-variant/20">
+<!-- 01-04 Example Items -->
+<div class="group py-10 flex flex-col md:flex-row gap-8 items-start md:items-center hover:bg-surface-container-low transition-colors duration-300 px-4">
+<span class="font-inter text-[11px] tracking-widest text-primary/40 w-12">01</span>
+<div class="flex-grow">
+<h4 class="font-cormorant text-2xl group-hover:italic transition-all duration-300">New Moon → Waxing Crescent: The Seed</h4>
+<p class="text-sm font-body text-on-surface/60 mt-1">Fortnight I: Structural integrity and the architecture of the void.</p>
+</div>
+<span class="font-inter text-[9px] tracking-[0.2em] uppercase text-primary/30">14 Days</span>
+</div>
+<div class="group py-10 flex flex-col md:flex-row gap-8 items-start md:items-center hover:bg-surface-container-low transition-colors duration-300 px-4">
+<span class="font-inter text-[11px] tracking-widest text-primary/40 w-12">02</span>
+<div class="flex-grow">
+<h4 class="font-cormorant text-2xl group-hover:italic transition-all duration-300">Waxing Crescent → First Quarter: The Sprout</h4>
+<p class="text-sm font-body text-on-surface/60 mt-1">Fortnight II: Navigating the currents of the collective subconscious.</p>
+</div>
+<span class="font-inter text-[9px] tracking-[0.2em] uppercase text-primary/30">14 Days</span>
+</div>
+<!-- Eclipse Portal Sequential Step -->
+<div class="group py-10 flex flex-col md:flex-row gap-8 items-start md:items-center bg-[#725b37]/5 hover:bg-[#725b37]/10 transition-colors duration-300 px-4 border-l-2 border-primary">
+<span class="font-inter text-[11px] tracking-widest text-primary w-12 font-bold">03</span>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-inter text-[9px] tracking-widest uppercase text-primary font-semibold">Special: Eclipse Portal A</span>
+</div>
+<h4 class="font-cormorant text-2xl group-hover:italic transition-all duration-300">The Solar Shade: Peak Light Reclaimed</h4>
+<p class="text-sm font-body text-on-surface/70 mt-1 italic">Fortnight III: Non-linear shadow-work during the zenith of alignment.</p>
+</div>
+<span class="font-inter text-[9px] tracking-[0.2em] uppercase text-primary/30">14 Days</span>
+</div>
+<div class="group py-10 flex flex-col md:flex-row gap-8 items-start md:items-center hover:bg-surface-container-low transition-colors duration-300 px-4">
+<span class="font-inter text-[11px] tracking-widest text-primary/40 w-12">04</span>
+<div class="flex-grow flex flex-col md:flex-row gap-8">
+<div class="flex-grow">
+<h4 class="font-cormorant text-2xl group-hover:italic transition-all duration-300">First Quarter → Waxing Gibbous: The Expansion</h4>
+<p class="text-sm font-body text-on-surface/60 mt-1">Fortnight IV: Emergence from the deep primordial waters.</p>
+</div>
+<div class="w-24 h-12 bg-surface-container-highest overflow-hidden relative opacity-60">
+<img class="w-full h-full object-cover mix-blend-multiply" data-alt="abstract monochromatic celestial patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKqrYF2c07Zv3KBjju-xBBbnHPguPByeMp7zV9umIyQJPPt9_Ec4WRSpgg4-h8Rj53ba6KbUXuzkBaREVnvFGtNb4YUa8toxeFoSidrzWIPSala4x7z2tAzCMPePIj_zQIM8p7WnZrOFvMMfPmwrx2Ct4dD5-VzqJGHoLT3zQ8A4SDgNYlW_EMTG9T1_iv1tqXUviZgmKCvWBzhUyQwlOZxnU6tSsL-Vl0wnX04bGAdLe9XHSVkKBxDGqdI-HZC1fZ0D8sjxJTFay8"/>
+</div>
+</div>
+<span class="font-inter text-[9px] tracking-[0.2em] uppercase text-primary/30">14 Days</span>
+</div>
+<!-- 05-24 Summary forbrevity as per existing style -->
+<div class="group py-10 flex flex-col md:flex-row gap-8 items-start md:items-center hover:bg-surface-container-low transition-colors duration-300 px-4 italic">
+<span class="font-inter text-[11px] tracking-widest text-primary/40 w-12">05-24</span>
+<div class="flex-grow">
+<h4 class="font-cormorant text-2xl group-hover:italic transition-all duration-300">The Continuous Cycle: Full Moon → New Moon Phase</h4>
+<p class="text-sm font-body text-on-surface/50 mt-1">Fortnights V through XXIV: Refining the internal landscape through cardinal and fixed transits.</p>
+</div>
+<span class="font-inter text-[9px] tracking-[0.2em] uppercase text-primary/30">280 Days Total</span>
+</div>
+<!-- Eclipse Portal Sequential Step -->
+<div class="group py-10 flex flex-col md:flex-row gap-8 items-start md:items-center bg-[#725b37]/5 hover:bg-[#725b37]/10 transition-colors duration-300 px-4 border-l-2 border-primary">
+<span class="font-inter text-[11px] tracking-widest text-primary w-12 font-bold">25</span>
+<div class="flex-grow">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-inter text-[9px] tracking-widest uppercase text-primary font-semibold">Special: Eclipse Portal B</span>
+</div>
+<h4 class="font-cormorant text-2xl group-hover:italic transition-all duration-300">The Blood Moon Ritual: Lineage Transmutation</h4>
+<p class="text-sm font-body text-on-surface/70 mt-1 italic">Fortnight XXV: Deep ancestral alchemical binding.</p>
+</div>
+<span class="font-inter text-[9px] tracking-[0.2em] uppercase text-primary/30">14 Days</span>
+</div>
+<div class="group py-10 flex flex-col md:flex-row gap-8 items-start md:items-center hover:bg-surface-container-low transition-colors duration-300 px-4">
+<span class="font-inter text-[11px] tracking-widest text-primary/40 w-12 font-bold">26</span>
+<div class="flex-grow">
+<h4 class="font-cormorant text-2xl group-hover:italic transition-all duration-300">Waning Crescent → New Moon: The Convergence</h4>
+<p class="text-sm font-body text-on-surface/60 mt-1">Fortnight XXVI: From Bone to Heart. The final alchemy of the master cycle.</p>
+</div>
+<span class="font-inter text-[9px] tracking-[0.2em] uppercase text-primary/30">14 Days</span>
+</div>
+</div>
+<!-- Download Action for the Grimoire -->
+<div class="mt-16 flex flex-col md:flex-row justify-between items-center bg-surface-container-low p-8 border border-outline-variant/20">
+<div class="mb-6 md:mb-0">
+<h5 class="font-inter text-[10px] tracking-widest text-primary uppercase">Sequential Access</h5>
+<p class="font-cormorant text-xl italic mt-2">Download the complete 26-workbook Archival Bundle</p>
+</div>
+<button class="font-inter text-[10px] tracking-widest bg-primary text-white px-8 py-3 hover:bg-on-surface transition-colors uppercase">Acquire Master Index</button>
+</div>
+</section>
+<!-- Marginalia/Metadata Section -->
+<footer class="mt-32 pt-16 border-t border-outline-variant/30 grid grid-cols-1 md:grid-cols-4 gap-12 text-on-surface/40">
+<div>
+<p class="font-inter text-[9px] tracking-widest uppercase mb-4 text-on-surface">Curated By</p>
+<p class="font-body text-sm italic">MOONTUNER ARCHIVES<br/>EST. MMXXIV</p>
+</div>
+<div>
+<p class="font-inter text-[9px] tracking-widest uppercase mb-4 text-on-surface">Classification</p>
+<p class="font-body text-sm italic">Esoteric / Lunar / Digital Grimoire<br/>Volume 01-26</p>
+</div>
+<div class="md:col-span-2 text-right hidden md:block">
+<span class="material-symbols-outlined text-6xl opacity-10" data-icon="all_inclusive">all_inclusive</span>
+</div>
+</footer>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#fcf9f2]/80 dark:bg-stone-950/80 backdrop-blur-md border-t-[0.5px] border-stone-200 dark:border-stone-800 flex justify-around items-center px-4 h-16 z-50">
+<a class="flex flex-col items-center justify-center text-[#725b37] border-t border-[#725b37] -mt-[0.5px] px-4 h-full" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-inter uppercase text-[10px] tracking-[0.15em] font-medium mt-1">Archive</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 px-4 h-full" href="#">
+<span class="material-symbols-outlined" data-icon="local_library">local_library</span>
+<span class="font-inter uppercase text-[10px] tracking-[0.15em] font-medium mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 px-4 h-full" href="#">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+<span class="font-inter uppercase text-[10px] tracking-[0.15em] font-medium mt-1">Research</span>
+</a>
+</nav>
+</body></html>

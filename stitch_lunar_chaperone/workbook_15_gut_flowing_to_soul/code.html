@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Workbook 15: Gut Flowing to Soul</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Inter:wght@300;400;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,400&amp;family=Noto+Serif:ital,wght@0,300;0,400;1,300&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#7f766a",
+                        "surface-variant": "#e5e2db",
+                        "primary-fixed": "#fedeb0",
+                        "surface-bright": "#fcf9f2",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#e5e2de",
+                        "on-tertiary-fixed-variant": "#3a475e",
+                        "outline-variant": "#d0c5b7",
+                        "on-secondary-container": "#656461",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#515f77",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dcdad3",
+                        "on-primary-fixed-variant": "#584321",
+                        "on-secondary-fixed-variant": "#474744",
+                        "inverse-primary": "#e1c296",
+                        "surface-tint": "#725b37",
+                        "background": "#fcf9f2",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#ebe8e1",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#9eacc7",
+                        "secondary": "#5f5e5c",
+                        "on-tertiary-container": "#324057",
+                        "secondary-fixed-dim": "#c9c6c3",
+                        "inverse-surface": "#31312c",
+                        "secondary-container": "#e5e2de",
+                        "primary": "#725b37",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#281800",
+                        "on-secondary-fixed": "#1c1c1a",
+                        "surface-container-low": "#f6f3ec",
+                        "primary-fixed-dim": "#e1c296",
+                        "tertiary-fixed": "#d5e3ff",
+                        "on-tertiary-fixed": "#0d1c31",
+                        "on-surface-variant": "#4d463c",
+                        "on-surface": "#1c1c18",
+                        "surface": "#fcf9f2",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#b9c7e3",
+                        "surface-container": "#f1eee7",
+                        "inverse-on-surface": "#f3f0e9",
+                        "primary-container": "#c4a77d",
+                        "surface-container-highest": "#e5e2db",
+                        "on-background": "#1c1c18",
+                        "on-primary-container": "#503c1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Cormorant Garamond", "serif"],
+                        "body": ["Newsreader", "serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fcf9f2;
+            color: #1c1c18;
+            -webkit-font-smoothing: antialiased;
+        }
+        .marginalia {
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 10px;
+            color: #7f766a;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<nav class="flex justify-between items-center w-full px-12 py-6 fixed top-0 z-50 bg-[#fcf9f2] dark:bg-stone-950 bg-gradient-to-b from-stone-200/50 to-transparent">
+<div class="text-2xl font-headline lowercase tracking-tighter text-[#725b37] dark:text-[#c4a77d] italic">
+            Lunar Chaperone
+        </div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-stone-500 font-label uppercase tracking-[0.15em] text-[10px] hover:text-[#725b37] transition-colors duration-300" href="#">The Archive</a>
+<a class="text-stone-500 font-label uppercase tracking-[0.15em] text-[10px] hover:text-[#725b37] transition-colors duration-300" href="#">Phases</a>
+<a class="text-[#725b37] border-b border-[#725b37] pb-1 font-label uppercase tracking-[0.15em] text-[10px]" href="#">Rituals</a>
+<a class="text-stone-500 font-label uppercase tracking-[0.15em] text-[10px] hover:text-[#725b37] transition-colors duration-300" href="#">Metadata</a>
+</div>
+<div class="flex items-center space-x-6 text-[#725b37]">
+<span class="material-symbols-outlined cursor-pointer">menu_book</span>
+<span class="material-symbols-outlined cursor-pointer">settings</span>
+<div class="w-8 h-8 bg-surface-container-high flex items-center justify-center overflow-hidden">
+<img alt="Curator Profile" class="w-full h-full object-cover grayscale opacity-80" data-alt="close-up profile of a scholarly woman in a vintage library setting with warm atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCftWL6mXPXF4LE5b3-m2d6dzLRLkPQ1D8AyDYGaof15mNfnuz3gZdmyFFmSo9-udF41BdCAKaZ05Gt3ZFXBrZOPjCIIfNr8-9A42Z2QnXSba3SxtVMqHP1sk2tOf_KveF38-NTVTu40RSr4GfxT4hXxky8tjfscoATeTv1onjI2APuIpzstIni4W3vKZN-1uNV3yVcxL9fHbHBVEovx7pjbeV3SPwgING9OZFxc_VeWtNSsYAC3c2yiyluzbPhoz1AhGspi_p0vY1w"/>
+</div>
+</div>
+</nav>
+<div class="flex pt-24 min-h-screen">
+<!-- Sidebar -->
+<aside class="hidden lg:flex flex-col h-screen sticky top-24 border-r-[0.5px] border-stone-200 dark:border-stone-800 p-8 w-72 bg-[#fcf9f2]">
+<div class="mb-12">
+<div class="font-headline italic text-lg text-stone-800 dark:text-stone-200">INDEX LUMINARIS</div>
+<div class="font-label uppercase tracking-[0.2em] text-[11px] font-light text-stone-400 mt-1">V. 2.0.4 // ARCHIVE</div>
+</div>
+<nav class="space-y-6 flex-grow">
+<div class="group flex items-center space-x-3 text-stone-400 font-label uppercase tracking-[0.2em] text-[11px] hover:bg-stone-200/20 p-2 cursor-pointer transition-all">
+<span class="material-symbols-outlined">radio_button_unchecked</span>
+<span>Introduction</span>
+</div>
+<div class="group flex items-center space-x-3 text-stone-400 font-label uppercase tracking-[0.2em] text-[11px] hover:bg-stone-200/20 p-2 cursor-pointer transition-all">
+<span class="material-symbols-outlined">last_page</span>
+<span>Waxing Crescent</span>
+</div>
+<div class="group flex items-center space-x-3 text-[#725b37] font-bold translate-x-2 font-label uppercase tracking-[0.2em] text-[11px] p-2 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">brightness_1</span>
+<span>Full Moon</span>
+</div>
+<div class="group flex items-center space-x-3 text-stone-400 font-label uppercase tracking-[0.2em] text-[11px] hover:bg-stone-200/20 p-2 cursor-pointer transition-all">
+<span class="material-symbols-outlined">first_page</span>
+<span>Waning Gibbous</span>
+</div>
+<div class="group flex items-center space-x-3 text-stone-400 font-label uppercase tracking-[0.2em] text-[11px] hover:bg-stone-200/20 p-2 cursor-pointer transition-all">
+<span class="material-symbols-outlined">circle</span>
+<span>New Moon</span>
+</div>
+</nav>
+<button class="mt-8 bg-primary text-on-primary font-label uppercase tracking-widest text-[10px] py-4 px-6 hover:opacity-90 transition-opacity">
+                Record Observation
+            </button>
+<div class="mt-auto pt-8 border-t border-stone-100 flex flex-col space-y-4">
+<div class="flex items-center space-x-3 text-stone-400 font-label uppercase tracking-[0.2em] text-[10px]">
+<span class="material-symbols-outlined text-sm">help_outline</span>
+<span>Support</span>
+</div>
+<div class="flex items-center space-x-3 text-stone-400 font-label uppercase tracking-[0.2em] text-[10px]">
+<span class="material-symbols-outlined text-sm">menu_book</span>
+<span>References</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Stage -->
+<main class="flex-grow px-8 lg:px-24 py-12 max-w-7xl mx-auto overflow-hidden">
+<!-- Hero Header Section -->
+<header class="relative mb-32">
+<div class="marginalia absolute -top-8 left-0">Module XV // Virgo to Pisces</div>
+<h1 class="text-6xl md:text-8xl font-headline font-light tracking-tight leading-none mb-6">
+                    Gut Flowing <br/>
+<span class="italic pl-16 md:pl-32 text-primary">to Soul</span>
+</h1>
+<p class="max-w-xl text-lg text-on-surface-variant font-light italic leading-relaxed ml-auto pr-12">
+                    A university-level exploration into the alchemy of transit—tracing the path from the terrestrial precision of the digestive system to the infinite waters of the etheric body.
+                </p>
+<div class="mt-12 h-[1px] w-full bg-gradient-to-r from-transparent via-outline-variant to-transparent opacity-30"></div>
+</header>
+<!-- Bento Grid - Protocols & Elements -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-32">
+<!-- Large Feature Card: Earth to Water -->
+<div class="md:col-span-8 bg-surface-container-low p-12 relative">
+<div class="marginalia mb-8">Alchemy of Element</div>
+<div class="flex flex-col md:flex-row gap-12 items-end">
+<div class="flex-1">
+<h2 class="text-3xl font-headline mb-6">Earth → Water</h2>
+<p class="text-on-surface-variant leading-relaxed mb-8">
+                                As we move from the Virgo New Moon, the focus is on the somatic architecture of the gut—the site of discernment. We flow toward the Pisces Full Moon, where the physical boundaries dissolve into the spiritual unity of the collective unconscious.
+                            </p>
+<div class="space-y-4">
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label text-[10px] tracking-widest uppercase text-stone-400">Biological Anchor</span>
+<span class="font-headline italic">Digestive System</span>
+</div>
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-2">
+<span class="font-label text-[10px] tracking-widest uppercase text-stone-400">Etheric Anchor</span>
+<span class="font-headline italic">The Feet &amp; Sub-Aura</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-64 h-80 bg-surface grayscale overflow-hidden shadow-sm">
+<img alt="Elemental Flow" class="w-full h-full object-cover opacity-60 mix-blend-multiply" data-alt="abstract macro photography of flowing water mixing with dark sand and earth textures in high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnT6bzHb-7aUAn0oDZpu94Vr9XCKr47RVhR9UErba9mvwa-a6EMZ0_aNKsD-JHxvghJ7lM537veuauNkuPwbuA7wTDyj7Ii7LhRGW_69JchqafjfAqa7Pjq1e_GyI6lF9v8X8leicYB_Jn4ctdA5J--FUYZmT6L470C0rdCyAsWqFfXkbQWkXUY16gC8-PTRqWWd3WdMd26ThXRG50TGCwdk0fnzCpmwoX6-pPWxw00oVUHEV6TJvhPo_nUYZZOKnnkXTuOvDDOgjF"/>
+</div>
+</div>
+</div>
+<!-- Protocol Card -->
+<div class="md:col-span-4 bg-surface-container-highest p-8 flex flex-col justify-between">
+<div>
+<div class="marginalia mb-6">Somatic Protocol</div>
+<h3 class="text-xl font-headline italic mb-4">The Discernment Breath</h3>
+<p class="text-sm text-on-surface-variant leading-loose mb-8">
+                            A specific vagus nerve sequence designed to prime the digestive tract for spiritual reception.
+                        </p>
+</div>
+<ul class="space-y-3 font-label text-[10px] tracking-widest uppercase text-primary">
+<li class="flex items-center gap-3">
+<span class="w-1 h-1 bg-primary"></span>
+                            4-Count Solar Plexus Inhale
+                        </li>
+<li class="flex items-center gap-3">
+<span class="w-1 h-1 bg-primary"></span>
+                            7-Count Vellum Hold
+                        </li>
+<li class="flex items-center gap-3">
+<span class="w-1 h-1 bg-primary"></span>
+                            8-Count Grounded Release
+                        </li>
+</ul>
+</div>
+</section>
+<!-- 14-Day Sequential Plan (Visual Timeline) -->
+<section class="mb-32 relative">
+<div class="marginalia mb-12 text-center">Temporal Mapping: The 14-Day Cycle</div>
+<div class="overflow-x-auto pb-12">
+<div class="flex min-w-[1200px] gap-4">
+<!-- Iterative Day Cards -->
+<div class="w-64 p-6 border-l-[0.5px] border-outline-variant/40 bg-surface hover:bg-surface-container-low transition-colors group">
+<div class="font-headline text-4xl mb-4 text-stone-300 group-hover:text-primary transition-colors">01</div>
+<div class="font-label uppercase tracking-widest text-[9px] text-stone-400 mb-2">New Moon Ritual</div>
+<h4 class="font-headline italic text-lg mb-4">Gut Seeding</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Initialization of the probiotic ritual and dietary narrowing.</p>
+</div>
+<div class="w-64 p-6 border-l-[0.5px] border-outline-variant/40 bg-surface hover:bg-surface-container-low transition-colors group">
+<div class="font-headline text-4xl mb-4 text-stone-300 group-hover:text-primary transition-colors">04</div>
+<div class="font-label uppercase tracking-widest text-[9px] text-stone-400 mb-2">Waxing Phase</div>
+<h4 class="font-headline italic text-lg mb-4">Discernment</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Somatic tracking of metabolic response to information intake.</p>
+</div>
+<div class="w-64 p-6 border-l-[0.5px] border-outline-variant/40 bg-surface hover:bg-surface-container-low transition-colors group">
+<div class="font-headline text-4xl mb-4 text-stone-300 group-hover:text-primary transition-colors">07</div>
+<div class="font-label uppercase tracking-widest text-[9px] text-stone-400 mb-2">First Quarter</div>
+<h4 class="font-headline italic text-lg mb-4">The Bridge</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Integration of earth elements into the lymphatic system flow.</p>
+</div>
+<div class="w-64 p-6 border-l-[0.5px] border-outline-variant/40 bg-surface hover:bg-surface-container-low transition-colors group">
+<div class="font-headline text-4xl mb-4 text-stone-300 group-hover:text-primary transition-colors">11</div>
+<div class="font-label uppercase tracking-widest text-[9px] text-stone-400 mb-2">Gibbous Moon</div>
+<h4 class="font-headline italic text-lg mb-4">Dissolution</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Beginning the transition to liquid meditation and foot baths.</p>
+</div>
+<div class="w-64 p-6 border-l-[0.5px] border-outline-variant/40 bg-surface hover:bg-surface-container-low transition-colors group">
+<div class="font-headline text-4xl mb-4 text-stone-300 group-hover:text-primary transition-colors">14</div>
+<div class="font-label uppercase tracking-widest text-[9px] text-stone-400 mb-2">Full Moon Rite</div>
+<h4 class="font-headline italic text-lg mb-4">Piscean Unity</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Final ritual script for total etheric body immersion.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Prompts & Scripts -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-32">
+<div class="relative">
+<div class="marginalia mb-8">Academic Prompt // Research Cluster</div>
+<div class="space-y-12">
+<div>
+<label class="block font-label uppercase tracking-widest text-[10px] text-stone-400 mb-4">Observation I</label>
+<h4 class="text-2xl font-headline mb-4 italic">Correlative Metabolism</h4>
+<p class="text-on-surface-variant leading-relaxed mb-6">Describe the sensation in your intestinal wall when encountering a complex ideological conflict. Does the physical tissue respond before the cognitive process?</p>
+<textarea class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:ring-0 focus:border-primary font-body text-lg italic py-4 h-32 placeholder:text-stone-300" placeholder="Transcription of somatic findings..."></textarea>
+</div>
+<div class="bg-surface-container-low p-8 border-l-4 border-primary">
+<div class="font-label text-[9px] uppercase tracking-widest text-primary mb-2">Archival Note</div>
+<p class="text-sm font-light italic leading-relaxed text-stone-600">
+                                "The gut is the secondary brain not because it thinks, but because it feels what the first brain is too proud to acknowledge." — Curator's Field Guide
+                            </p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-12 outline outline-1 outline-outline-variant/20 shadow-xl shadow-stone-200/50">
+<div class="marginalia mb-8">Ritual Script // Pisces Full Moon</div>
+<div class="prose prose-stone font-body">
+<h4 class="text-3xl font-headline mb-6">The Invocation of No-Self</h4>
+<p class="italic mb-6">"I step from the floor of the archive into the sea of the forgotten..."</p>
+<div class="space-y-6 text-sm text-on-surface-variant leading-relaxed">
+<p><strong class="font-label text-[9px] uppercase tracking-widest text-stone-400 block mb-2">Preparation</strong> Submerge feet in warm water infused with mugwort and sea salt. Light a single carbon ink candle.</p>
+<p><strong class="font-label text-[9px] uppercase tracking-widest text-stone-400 block mb-2">The Call</strong> Chant the following softly: "What was solid is now fluid. What was mine is now ours. What was gut is now soul."</p>
+<p><strong class="font-label text-[9px] uppercase tracking-widest text-stone-400 block mb-2">Closing</strong> Allow the feet to air dry. Do not wipe away the salt. It is the crystallization of the work.</p>
+</div>
+<button class="mt-12 w-full py-4 border border-outline font-label uppercase tracking-widest text-[10px] hover:bg-primary hover:text-white hover:border-primary transition-all duration-500">
+                            Unlock Full Manuscript
+                        </button>
+</div>
+</div>
+</section>
+<!-- Footer Marginalia -->
+<footer class="mt-32 pb-12 border-t border-outline-variant/30 pt-12 flex flex-col md:flex-row justify-between items-start gap-8 opacity-60">
+<div class="max-w-xs">
+<div class="font-headline italic text-xl mb-2">Lunar Chaperone</div>
+<p class="text-[10px] font-label uppercase tracking-widest leading-loose">
+                        University of Ethereal Arts <br/>
+                        Department of Somatic Alchemy <br/>
+                        Document Ref: 88-PIS-VIR
+                    </p>
+</div>
+<div class="flex gap-12 font-label uppercase tracking-widest text-[9px]">
+<a class="hover:text-primary transition-colors underline underline-offset-4 decoration-stone-300" href="#">Privacy Protocols</a>
+<a class="hover:text-primary transition-colors underline underline-offset-4 decoration-stone-300" href="#">Copyright 2024</a>
+<a class="hover:text-primary transition-colors underline underline-offset-4 decoration-stone-300" href="#">Curator Access</a>
+</div>
+</footer>
+</main>
+</div>
+<!-- Floating Tooltip / System Whisper -->
+<div class="fixed bottom-12 right-12 bg-white/80 backdrop-blur-md border border-outline-variant/30 p-4 shadow-2xl hidden lg:block">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">visibility</span>
+<span class="font-label uppercase tracking-widest text-[9px] text-stone-500">System Whisper: Moon at 94% Luminosity</span>
+</div>
+</div>
+</body></html>

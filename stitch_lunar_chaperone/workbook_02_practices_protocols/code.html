@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Workbook 02: Practices &amp; Protocols</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=Inter:wght@100;300;400;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,400;1,6..72,400&amp;family=Noto+Serif:ital,wght@0,100;0,400;1,100&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e5e2db",
+                    "on-secondary-container": "#656461",
+                    "on-surface-variant": "#4d463c",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#281800",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#e5e2de",
+                    "on-tertiary-container": "#324057",
+                    "on-background": "#1c1c18",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#e1c296",
+                    "on-secondary-fixed-variant": "#474744",
+                    "inverse-primary": "#e1c296",
+                    "on-secondary-fixed": "#1c1c1a",
+                    "background": "#fcf9f2",
+                    "surface-dim": "#dcdad3",
+                    "surface-container-highest": "#e5e2db",
+                    "primary": "#725b37",
+                    "surface": "#fcf9f2",
+                    "outline": "#7f766a",
+                    "on-tertiary-fixed": "#0d1c31",
+                    "tertiary-fixed": "#d5e3ff",
+                    "primary-container": "#c4a77d",
+                    "primary-fixed": "#fedeb0",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#d0c5b7",
+                    "tertiary-fixed-dim": "#b9c7e3",
+                    "on-tertiary-fixed-variant": "#3a475e",
+                    "tertiary": "#515f77",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#c9c6c3",
+                    "surface-container": "#f1eee7",
+                    "on-surface": "#1c1c18",
+                    "on-primary-container": "#503c1b",
+                    "surface-bright": "#fcf9f2",
+                    "surface-tint": "#725b37",
+                    "surface-container-low": "#f6f3ec",
+                    "on-primary-fixed-variant": "#584321",
+                    "inverse-surface": "#31312c",
+                    "surface-container-high": "#ebe8e1",
+                    "tertiary-container": "#9eacc7",
+                    "inverse-on-surface": "#f3f0e9",
+                    "secondary-fixed": "#e5e2de",
+                    "secondary": "#5f5e5c"
+            },
+            fontFamily: {
+                    "headline": ["Noto Serif", "serif"],
+                    "body": ["Newsreader", "serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .text-ritual-gradient {
+            background: linear-gradient(to right, #725b37, #c4a77d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container/30">
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="hidden md:flex flex-col h-screen sticky top-0 w-72 bg-[#fcf9f2] dark:bg-stone-900 border-r-[0.5px] border-outline-variant/30 py-12 px-6 gap-8">
+<div class="mb-8">
+<span class="font-noto-serif italic text-xl text-on-surface">Lunar Chaperone</span>
+<p class="font-inter uppercase tracking-[0.12em] text-[10px] text-on-surface/50 mt-1">Archival Metadata v.04</p>
+</div>
+<nav class="flex-grow flex flex-col gap-6">
+<p class="font-inter uppercase tracking-[0.12em] text-[10px] text-primary/60 font-bold mb-2">PHASE SEQUENCE</p>
+<a class="flex items-center gap-4 text-on-surface/50 font-inter uppercase tracking-[0.12em] text-[10px] hover:bg-[#f5f0e6] transition-all p-2 group" href="#">
+<span class="material-symbols-outlined">dark_mode</span>
+<span>Phase I: Waxing</span>
+</a>
+<a class="flex items-center gap-4 text-[#725b37] font-bold translate-x-2 transition-transform font-inter uppercase tracking-[0.12em] text-[10px] p-2" href="#">
+<span class="material-symbols-outlined">light_mode</span>
+<span>Phase II: Zenith</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface/50 font-inter uppercase tracking-[0.12em] text-[10px] hover:bg-[#f5f0e6] transition-all p-2" href="#">
+<span class="material-symbols-outlined">brightness_low</span>
+<span>Phase III: Waning</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface/50 font-inter uppercase tracking-[0.12em] text-[10px] hover:bg-[#f5f0e6] transition-all p-2" href="#">
+<span class="material-symbols-outlined">contrast</span>
+<span>Phase IV: Eclipse</span>
+</a>
+</nav>
+<div class="pt-8 border-t-[0.5px] border-outline-variant/30">
+<a class="flex items-center gap-4 text-on-surface/50 font-inter uppercase tracking-[0.12em] text-[10px] hover:bg-[#f5f0e6] transition-all p-2" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span>Documentation</span>
+</a>
+<div class="mt-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-surface-container-highest border-[0.5px] border-outline-variant overflow-hidden">
+<img alt="Curator Badge" data-alt="close-up portrait of a scholar with neutral expression in soft academic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdDQZY1-CwkYk4YyOpMwdVWhdaeBC8gDYrxTWKiCSped2Q_hzQKCJfUFuIDUWANrfMpU68Hlh9Qx1k5HGZi7MERuIWwiKn9evqX9fglol0FUD4Zexow5raR8lxupdBHvyt4jnE-PuMRpoe0bVUbDwTKx1EeBTuXaTzDAcXJoTW0Ovau93H7ud7H-c04lw1Wtwdqc20dvd-VlA8IagFn35zlpv4Wg0g-QdaLkt1HG2ZqDZZKYOF8shqbtKvYivLK1YyL8pNiS0oC7js"/>
+</div>
+<span class="font-inter uppercase tracking-[0.12em] text-[9px] text-on-surface/40">Curator Auth. 04</span>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-grow bg-surface overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="flex justify-between items-center w-full px-8 py-4 bg-[#fcf9f2] border-b-[0.5px] border-outline-variant/30">
+<div class="font-noto-serif uppercase tracking-[0.15em] text-xs font-light flex gap-8">
+<a class="text-on-surface/60 hover:text-[#725b37] transition-colors duration-300" href="#">Catalog</a>
+<a class="text-on-surface/60 hover:text-[#725b37] transition-colors duration-300" href="#">Archives</a>
+<a class="text-[#725b37] border-b border-[#725b37] pb-1" href="#">Log</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative flex items-center">
+<input class="bg-transparent border-none border-b border-outline-variant/20 focus:border-primary focus:ring-0 text-xs font-inter uppercase tracking-widest py-1 w-48 transition-all placeholder:text-on-surface/20" placeholder="Search Archives..." type="text"/>
+<span class="material-symbols-outlined absolute right-0 text-on-surface/30 text-sm">search</span>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface/60 cursor-pointer hover:text-primary transition-colors">clinical_notes</span>
+<span class="material-symbols-outlined text-on-surface/60 cursor-pointer hover:text-primary transition-colors">settings</span>
+</div>
+</div>
+</header>
+<div class="max-w-6xl mx-auto px-8 py-16">
+<!-- Journal Header -->
+<section class="mb-20 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-8">
+<div class="font-inter uppercase tracking-[0.2em] text-[11px] text-primary mb-4 opacity-70">
+                            Sequence: 02 / 26 — Ritual Protocol
+                        </div>
+<h1 class="text-5xl md:text-7xl font-headline font-light tracking-tight text-on-surface leading-none mb-6">
+                            Practices &amp; <br/><span class="italic text-ritual-gradient">Protocols</span>
+</h1>
+<p class="font-body text-xl text-on-surface/70 leading-relaxed max-w-xl">
+                            Workbook 02 serves as a grounding anchor for the somatic and psychic transition. We engage with the somatic release of the throat and pelvic gate, aligning the vocalized intent with archival shadow audit.
+                        </p>
+</div>
+<div class="md:col-span-4 flex flex-col items-end pb-2">
+<div class="w-full h-40 bg-surface-container-low relative group overflow-hidden">
+<img alt="Contextual Abstract" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000" data-alt="ancient parchment paper with subtle botanical sketches and atmospheric shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8c6H---DH3WSyHV6yVSbrisCLhl-nbHvSZAUgs72L_o0585IdPs0hd_GNbxNrsYv7yTenGWZp2y-qIOf0z225Zq_w5Cmc8HhiVXiMZM0g9mwFcQOkNepkjyh6bD_z_H2bm9AJAnazYLhcmS-kZjwEnEbaHpmwcM5pKxw3MoFcWzplOTg4D1aiTy8Y9kdkb13ZTKT8FjIXr1c1z2JJhmIuzi6OL8nsRgFNo0ESMejH772rsGI0EfmcmT4vC2djambKCkvNX6gIcy7X"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-40"></div>
+</div>
+<span class="font-inter uppercase tracking-[0.15em] text-[9px] text-on-surface/30 mt-3">Ref. WB_02_PROTO_ARCH</span>
+</div>
+</section>
+<!-- Practice Domains: Bento Style -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-px bg-outline-variant/10 mb-20">
+<!-- Physical Domain -->
+<div class="md:col-span-4 bg-surface p-8 border-b-[0.5px] border-r-[0.5px] border-outline-variant/20 hover:bg-surface-container-low transition-colors duration-500">
+<div class="flex justify-between items-start mb-12">
+<span class="font-inter uppercase tracking-[0.2em] text-[10px] text-primary">Domain I</span>
+<span class="material-symbols-outlined text-primary/40">fitness_center</span>
+</div>
+<h3 class="font-headline text-2xl font-light mb-6">Physical</h3>
+<ul class="space-y-4 mb-10">
+<li class="flex gap-4">
+<span class="text-xs font-inter text-on-surface/30 mt-1">01</span>
+<span class="font-body italic text-lg leading-snug">Throat sounding &amp; resonance resonance</span>
+</li>
+<li class="flex gap-4">
+<span class="text-xs font-inter text-on-surface/30 mt-1">02</span>
+<span class="font-body italic text-lg leading-snug">Pelvic floor release sequence</span>
+</li>
+</ul>
+<div class="space-y-4">
+<label class="font-inter uppercase tracking-widest text-[9px] text-on-surface/40 block">Daily Log Notes</label>
+<textarea class="w-full bg-transparent border-none border-b border-outline-variant focus:ring-0 focus:border-primary min-h-[100px] font-body text-sm placeholder:italic" placeholder="Record the visceral response..."></textarea>
+</div>
+</div>
+<!-- Emotional Domain -->
+<div class="md:col-span-4 bg-surface p-8 border-b-[0.5px] border-r-[0.5px] border-outline-variant/20 hover:bg-surface-container-low transition-colors duration-500">
+<div class="flex justify-between items-start mb-12">
+<span class="font-inter uppercase tracking-[0.2em] text-[10px] text-primary">Domain II</span>
+<span class="material-symbols-outlined text-primary/40">psychology</span>
+</div>
+<h3 class="font-headline text-2xl font-light mb-6">Emotional</h3>
+<ul class="space-y-4 mb-10">
+<li class="flex gap-4">
+<span class="text-xs font-inter text-on-surface/30 mt-1">01</span>
+<span class="font-body italic text-lg leading-snug">Shadow audit: The Unspoken</span>
+</li>
+<li class="flex gap-4">
+<span class="text-xs font-inter text-on-surface/30 mt-1">02</span>
+<span class="font-body italic text-lg leading-snug">Value selection &amp; Hierarchical ranking</span>
+</li>
+</ul>
+<div class="space-y-4">
+<label class="font-inter uppercase tracking-widest text-[9px] text-on-surface/40 block">Daily Log Notes</label>
+<textarea class="w-full bg-transparent border-none border-b border-outline-variant focus:ring-0 focus:border-primary min-h-[100px] font-body text-sm placeholder:italic" placeholder="Trace the emotional drift..."></textarea>
+</div>
+</div>
+<!-- Spiritual Domain -->
+<div class="md:col-span-4 bg-surface p-8 border-b-[0.5px] border-outline-variant/20 hover:bg-surface-container-low transition-colors duration-500">
+<div class="flex justify-between items-start mb-12">
+<span class="font-inter uppercase tracking-[0.2em] text-[10px] text-primary">Domain III</span>
+<span class="material-symbols-outlined text-primary/40">auto_awesome</span>
+</div>
+<h3 class="font-headline text-2xl font-light mb-6">Spiritual</h3>
+<ul class="space-y-4 mb-10">
+<li class="flex gap-4">
+<span class="text-xs font-inter text-on-surface/30 mt-1">01</span>
+<span class="font-body italic text-lg leading-snug">Earth grounding visualization</span>
+</li>
+<li class="flex gap-4">
+<span class="text-xs font-inter text-on-surface/30 mt-1">02</span>
+<span class="font-body italic text-lg leading-snug">Throat chakra toning (Eum)</span>
+</li>
+</ul>
+<div class="space-y-4">
+<label class="font-inter uppercase tracking-widest text-[9px] text-on-surface/40 block">Daily Log Notes</label>
+<textarea class="w-full bg-transparent border-none border-b border-outline-variant focus:ring-0 focus:border-primary min-h-[100px] font-body text-sm placeholder:italic" placeholder="Describe the subtle shift in resonance..."></textarea>
+</div>
+</div>
+</section>
+<!-- Evaluation Section: Asymmetric Layout -->
+<section class="mt-24 grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-5">
+<div class="sticky top-24">
+<h2 class="font-headline text-3xl font-light mb-8">Synthesis of <br/>Observation</h2>
+<p class="font-body text-lg text-on-surface/60 leading-relaxed mb-8">
+                                Integration occurs when the disparate threads of protocol weave into a singular pattern of behavior. The audit below tracks the transmutation of knowledge into practice.
+                            </p>
+<div class="w-24 h-[0.5px] bg-primary"></div>
+</div>
+</div>
+<div class="md:col-span-7 bg-surface-container-low p-12 relative">
+<div class="absolute -top-6 -left-6 bg-primary text-on-primary p-4 shadow-xl">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+</div>
+<div class="mb-12">
+<label class="font-inter uppercase tracking-[0.2em] text-[11px] text-primary block mb-6">Weekly Behavioral Shift</label>
+<div class="space-y-12">
+<div>
+<span class="font-inter uppercase text-[9px] text-on-surface/40 mb-2 block">Evaluation Metric A</span>
+<h4 class="font-headline text-xl italic mb-4">Internal Resistance Threshold</h4>
+<input class="w-full accent-primary bg-surface h-1 appearance-none cursor-pointer" type="range"/>
+<div class="flex justify-between font-inter text-[8px] uppercase tracking-tighter mt-2 opacity-40">
+<span>Suppression</span>
+<span>Flow State</span>
+</div>
+</div>
+<div>
+<span class="font-inter uppercase text-[9px] text-on-surface/40 mb-2 block">Evaluation Metric B</span>
+<h4 class="font-headline text-xl italic mb-4">Somatic Awareness Consistency</h4>
+<div class="flex gap-4">
+<button class="flex-1 py-4 border border-outline-variant text-[10px] font-inter uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300">Erratic</button>
+<button class="flex-1 py-4 border border-primary bg-primary text-on-primary text-[10px] font-inter uppercase tracking-widest transition-all duration-300">Sustained</button>
+<button class="flex-1 py-4 border border-outline-variant text-[10px] font-inter uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300">Integrated</button>
+</div>
+</div>
+<div class="pt-8">
+<label class="font-inter uppercase tracking-widest text-[9px] text-on-surface/40 block mb-4">Synthesized Reflection</label>
+<textarea class="w-full bg-surface border-none p-6 focus:ring-0 focus:shadow-inner min-h-[180px] font-body text-base leading-relaxed" placeholder="How has the sequence 02 / 26 altered your default physiological response to shadow audit? Record without hesitation..."></textarea>
+</div>
+</div>
+</div>
+<div class="flex justify-end gap-6 items-center">
+<span class="font-inter uppercase tracking-widest text-[9px] text-on-surface/30">Protocol Finalization Pending</span>
+<button class="bg-primary text-on-primary font-inter uppercase tracking-[0.2em] text-[10px] py-4 px-10 hover:opacity-90 transition-opacity">
+                                Commit to Archive
+                            </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Marginalia / Footer info -->
+<footer class="max-w-6xl mx-auto px-8 pb-12 border-t-[0.5px] border-outline-variant/10 pt-8 flex justify-between items-center text-on-surface/30 font-inter uppercase tracking-[0.2em] text-[8px]">
+<div>Lunar Chaperone — Internal Use Only — Archive ID: 02.26.PB</div>
+<div>Digital Grimoire v.1.04</div>
+<div class="flex gap-4 italic opacity-60">
+<span>Authenticity Guaranteed</span>
+<span class="material-symbols-outlined text-[10px]">verified</span>
+</div>
+</footer>
+</main>
+</div>
+<!-- Mobile Bottom Navigation -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-[#fcf9f2] border-t-[0.5px] border-outline-variant/30 flex justify-around py-4 z-50">
+<a class="flex flex-col items-center gap-1 text-on-surface/40" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-inter uppercase text-[8px] tracking-tighter">Library</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">border_color</span>
+<span class="font-inter uppercase text-[8px] tracking-tighter">Current Log</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface/40" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-inter uppercase text-[8px] tracking-tighter">Timeline</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface/40" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-inter uppercase text-[8px] tracking-tighter">Identity</span>
+</a>
+</nav>
+</body></html>

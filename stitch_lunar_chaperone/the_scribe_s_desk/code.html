@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,600;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#e1c296",
+                    "primary-fixed": "#fedeb0",
+                    "secondary-fixed": "#e5e2de",
+                    "surface-bright": "#fcf9f2",
+                    "primary": "#725b37",
+                    "secondary-container": "#e5e2de",
+                    "inverse-primary": "#e1c296",
+                    "tertiary-fixed": "#d5e3ff",
+                    "surface": "#fcf9f2",
+                    "surface-container": "#f1eee7",
+                    "inverse-on-surface": "#f3f0e9",
+                    "on-background": "#1c1c18",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e5e2db",
+                    "background": "#fcf9f2",
+                    "on-primary-fixed": "#281800",
+                    "on-error": "#ffffff",
+                    "outline-variant": "#d0c5b7",
+                    "on-tertiary-fixed": "#0d1c31",
+                    "outline": "#7f766a",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#1c1c1a",
+                    "tertiary-container": "#9eacc7",
+                    "on-secondary-container": "#656461",
+                    "on-primary-container": "#503c1b",
+                    "surface-container-low": "#f6f3ec",
+                    "on-surface-variant": "#4d463c",
+                    "on-tertiary-container": "#324057",
+                    "secondary": "#5f5e5c",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#725b37",
+                    "on-primary-fixed-variant": "#584321",
+                    "tertiary-fixed-dim": "#b9c7e3",
+                    "surface-dim": "#dcdad3",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#c9c6c3",
+                    "primary-container": "#c4a77d",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#31312c",
+                    "on-secondary-fixed-variant": "#474744",
+                    "surface-container-highest": "#e5e2db",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#ebe8e1",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#1c1c18",
+                    "tertiary": "#515f77",
+                    "on-tertiary-fixed-variant": "#3a475e"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Newsreader"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .dotted-canvas {
+            background-image: radial-gradient(#d0c5b7 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-underline {
+            background-image: linear-gradient(to right, #725b37 0%, #725b37 100%);
+            background-position: 0 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 1px;
+            transition: background-size 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .custom-underline:focus-within {
+            background-size: 100% 1px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- Top Navigation Anchor -->
+<header class="bg-[#fcf9f2] dark:bg-[#1c1c18] flex justify-between items-center w-full px-8 py-6 sticky top-0 z-40">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d] cursor-pointer hover:bg-[#c4a77d]/10 transition-colors duration-300 p-2" data-icon="menu">menu</span>
+<span class="text-sm font-['Inter'] font-medium tracking-[0.2em] text-[#1c1c18] dark:text-[#fcf9f2]">THE CANONICAL ARCHIVE</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<span class="text-[#725b37] dark:text-[#c4a77d] font-semibold font-['Noto_Serif'] font-light tracking-tight cursor-pointer">The Scribe's Desk</span>
+<span class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 font-['Noto_Serif'] font-light tracking-tight cursor-pointer hover:bg-[#c4a77d]/10 transition-colors duration-300 px-2">Library</span>
+<span class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 font-['Noto_Serif'] font-light tracking-tight cursor-pointer hover:bg-[#c4a77d]/10 transition-colors duration-300 px-2">Index</span>
+</div>
+<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d] cursor-pointer hover:bg-[#c4a77d]/10 transition-colors duration-300 p-2" data-icon="history_edu">history_edu</span>
+</header>
+<main class="flex-grow flex flex-col items-center px-6 md:px-24 py-12 max-w-7xl mx-auto w-full">
+<!-- Metadata Header Section -->
+<section class="w-full flex flex-col md:flex-row justify-between mb-24 gap-8">
+<div class="flex flex-col gap-1">
+<span class="text-[10px] font-label font-medium uppercase tracking-[0.25em] text-outline">date</span>
+<span class="text-sm font-label font-semibold tracking-[0.1em] text-on-surface">OCTOBER 24, 1924</span>
+</div>
+<div class="flex flex-col gap-1 md:items-center">
+<span class="text-[10px] font-label font-medium uppercase tracking-[0.25em] text-outline">location</span>
+<span class="text-sm font-label font-semibold tracking-[0.1em] text-on-surface">THE GREAT SILENCE, ATHENS</span>
+</div>
+<div class="flex flex-col gap-1 md:items-end">
+<span class="text-[10px] font-label font-medium uppercase tracking-[0.25em] text-outline">archive_id</span>
+<span class="text-sm font-label font-semibold tracking-[0.1em] text-on-surface">MS-4492-X</span>
+</div>
+</section>
+<!-- Main Writing Canvas -->
+<div class="w-full relative flex flex-col md:flex-row gap-16">
+<!-- Left Margin Marginalia -->
+<aside class="hidden lg:block w-32 shrink-0 pt-24">
+<div class="sticky top-32 space-y-12">
+<div class="flex flex-col gap-2">
+<div class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#c4a77d] mb-2 animate-pulse"></div>
+<p class="text-[10px] font-label uppercase tracking-widest text-outline leading-relaxed">
+                            syncing to<br/>the ether
+                        </p>
+</div>
+<div>
+<p class="text-[11px] font-label uppercase tracking-widest text-outline leading-loose italic">
+                            fragments of<br/>thought are<br/>sacred.
+                        </p>
+</div>
+</div>
+</aside>
+<!-- Editor Container -->
+<div class="flex-grow max-w-3xl">
+<!-- Title Input (Journal Style) -->
+<div class="group mb-16 custom-underline">
+<label class="text-[10px] font-label uppercase tracking-[0.3em] text-outline block mb-4 transition-all duration-500 group-focus-within:translate-x-2">manuscript title</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-4xl md:text-5xl font-headline font-light text-on-surface py-4 px-0 placeholder:text-outline-variant/50 transition-colors" placeholder="Untitled Reflection" type="text"/>
+</div>
+<!-- Body Text Area with Dotted Pattern -->
+<div class="relative min-h-[600px] p-8 md:p-12 surface-container-low dotted-canvas border border-outline-variant/10">
+<h2 class="text-xs font-label uppercase tracking-[0.2em] text-primary mb-12 flex items-center gap-3">
+<span class="w-8 h-[1px] bg-primary-container"></span>
+                        the scribe's desk
+                    </h2>
+<textarea class="w-full bg-transparent border-none focus:ring-0 text-xl md:text-2xl font-body leading-[2] text-on-surface min-h-[500px] resize-none placeholder:text-outline-variant/40" placeholder="Begin the ritual of ink and thought..."></textarea>
+<!-- Asymmetric Image Placement -->
+<div class="absolute -right-12 md:-right-24 bottom-24 w-48 h-64 bg-surface-container-highest shadow-xl p-4 hidden md:block">
+<img alt="archival ink well" class="w-full h-full object-cover grayscale opacity-80" data-alt="moody close-up of a vintage fountain pen and ink well on aged parchment with soft candlelight and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRGVoR3wubs0PsW3aA930e40VLUX_M1yxw-g2rXoUGvvqUiCgA_IWn5NvCV9JPO_ZoAHiK-c1TfTGwmP0GSMKAfNlNVRegLdE1lSwJaOhtb7fVAzpEkVzPZDx0jh58mVvaZF3_3DDzpIhlNQL3-IInIFfyEQjYMvOVep-qs2qsdfqm1f5oowpRUtm9q6PRzbFIst1trDW8cP8ZidAAOX6cv3DlRJjMB46tmQvOyQTWf6KlqhMIx0G2dYHTvHsehDWLoLAlBdWAaGsS"/>
+<span class="text-[9px] font-label uppercase tracking-tighter text-outline mt-2 block">ref: 01-a</span>
+</div>
+</div>
+<!-- Action Footer -->
+<footer class="mt-16 flex justify-between items-center border-t border-outline-variant/20 pt-8">
+<button class="flex items-center gap-3 group">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="delete">delete</span>
+<span class="text-[10px] font-label uppercase tracking-[0.15em] text-outline group-hover:text-primary transition-colors">discard draft</span>
+</button>
+<button class="bg-primary px-10 py-4 text-on-primary text-[11px] font-label uppercase tracking-[0.2em] hover:bg-on-primary-container transition-all duration-500">
+                        commit to archive
+                    </button>
+</footer>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-12 py-8 bg-[#fcf9f2]/80 dark:bg-[#1c1c18]/80 backdrop-blur-xl z-50 md:hidden">
+<div class="flex flex-col items-center justify-center text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#725b37] dark:text-[#c4a77d] scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="fingerprint">fingerprint</span>
+</div>
+</nav>
+</body></html>

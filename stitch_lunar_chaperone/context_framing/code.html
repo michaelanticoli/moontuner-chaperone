@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#e5e2de",
+                    "outline": "#7f766a",
+                    "on-tertiary-fixed-variant": "#3a475e",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#dcdad3",
+                    "secondary": "#5f5e5c",
+                    "inverse-on-surface": "#f3f0e9",
+                    "secondary-fixed": "#e5e2de",
+                    "on-surface": "#1c1c18",
+                    "surface-tint": "#725b37",
+                    "primary-fixed-dim": "#e1c296",
+                    "primary-container": "#c4a77d",
+                    "on-tertiary-container": "#324057",
+                    "surface-container-highest": "#e5e2db",
+                    "surface-container-high": "#ebe8e1",
+                    "primary-fixed": "#fedeb0",
+                    "surface-variant": "#e5e2db",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#4d463c",
+                    "on-background": "#1c1c18",
+                    "background": "#fcf9f2",
+                    "on-secondary-fixed": "#1c1c1a",
+                    "on-primary-fixed-variant": "#584321",
+                    "primary": "#725b37",
+                    "tertiary-fixed-dim": "#b9c7e3",
+                    "secondary-fixed-dim": "#c9c6c3",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#9eacc7",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface": "#fcf9f2",
+                    "on-secondary-container": "#656461",
+                    "tertiary-fixed": "#d5e3ff",
+                    "on-primary-fixed": "#281800",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#fcf9f2",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#31312c",
+                    "on-primary-container": "#503c1b",
+                    "on-secondary-fixed-variant": "#474744",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#0d1c31",
+                    "tertiary": "#515f77",
+                    "inverse-primary": "#e1c296",
+                    "surface-container-low": "#f6f3ec",
+                    "surface-container": "#f1eee7",
+                    "outline-variant": "#d0c5b7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Newsreader"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fcf9f2;
+            color: #1c1c18;
+            -webkit-font-smoothing: antialiased;
+        }
+        .journal-line-focus:focus-within label {
+            transform: translateX(12px);
+            color: #725b37;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body selection:bg-primary-container/30">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f2] dark:bg-[#1c1c18] flex justify-between items-center px-12 py-6 max-w-none w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d]" data-icon="menu_book">menu_book</span>
+<h1 class="font-serif text-2xl tracking-[0.15em] uppercase text-[#725b37] dark:text-[#c4a77d]">THE SACRED LEDGER</h1>
+</div>
+<nav class="hidden md:flex gap-12 font-label text-[10px] tracking-[0.2em] uppercase font-light">
+<a class="text-[#725b37] dark:text-[#c4a77d] border-b-2 border-[#725b37] hover:text-[#725b37] transition-colors duration-300" href="#">JOURNAL</a>
+<a class="text-[#725b37]/60 dark:text-[#c4a77d]/60 hover:text-[#725b37] transition-colors duration-300" href="#">LIBRARY</a>
+<a class="text-[#725b37]/60 dark:text-[#c4a77d]/60 hover:text-[#725b37] transition-colors duration-300" href="#">RESEARCH</a>
+</nav>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d]" data-icon="history_edu">history_edu</span>
+</div>
+</header>
+<main class="pt-32 pb-40 px-6 md:px-24 lg:px-48 max-w-7xl mx-auto">
+<!-- Hero Section: Intentional Asymmetry -->
+<section class="mb-32 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-7">
+<p class="font-label text-[10px] tracking-[0.3em] uppercase text-primary mb-6">Chronicle 008 / Archetypal Shift</p>
+<h2 class="font-headline text-6xl md:text-8xl font-light tracking-tight text-on-surface leading-none mb-8">
+                    Lunar <br/> <span class="italic">Awakening</span>
+</h2>
+<div class="max-w-md">
+<p class="text-xl text-on-surface-variant font-light leading-relaxed">
+                        A celestial passage from the deep, oceanic intuition of the <span class="text-primary italic">Pisces Full Moon</span> to the refined, intellectual equilibrium of the <span class="text-primary italic">Libra New Moon</span>.
+                    </p>
+</div>
+</div>
+<div class="md:col-span-5 flex justify-end">
+<div class="w-full h-[400px] bg-surface-container-low overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Monochrome aesthetic photograph of moonlight reflecting on dark ripples of water, soft grain texture, evocative and mystical" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6n_SVLESNFZ-8s5moFvegtpRT5CJMlG-ryohEy30xCx2Pph_icbvvlyWWkbNMsey6SUTDuSRVDVJdLkMjS55kZqXVTzrWPJUFGh0oWNi_TiFYAxU6uLCOxDquP5fF8SZ5Qbjbkw_9wD6W1eQUIvN3dTN6sHmSWsVofC_C5dMw2mg2q8sveMr1gSktz_N-cflOuYdTf-qktG5auGRgvyKG92bgYwyIAg0qqfmc5C9WzlZjSPuKSaSbmt03seNq34eBWTeh7bMU557m"/>
+</div>
+</div>
+</section>
+<!-- Content Section: The Journey -->
+<section class="mb-32 grid grid-cols-1 md:grid-cols-12 gap-16">
+<div class="md:col-span-4 space-y-12">
+<div class="p-8 bg-surface-container-low">
+<h3 class="font-label text-xs tracking-[0.2em] uppercase text-primary mb-6">Transition Metadata</h3>
+<ul class="space-y-4 font-label text-[11px] tracking-wider text-on-surface/70">
+<li class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span>ELEMENTAL ARC</span>
+<span class="text-on-surface">WATER → AIR</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span>POLARITY</span>
+<span class="text-on-surface">YIN → YANG</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span>MODALITY</span>
+<span class="text-on-surface">MUTABLE → CARDINAL</span>
+</li>
+</ul>
+</div>
+<p class="font-body italic text-lg text-primary/80 px-8">
+                    "The soul emerges from the depths of the collective subconscious, drying its wings in the breeze of objectivity."
+                </p>
+</div>
+<div class="md:col-span-8 md:pl-12">
+<div class="prose prose-stone">
+<p class="text-2xl font-body leading-relaxed mb-8 text-on-surface">
+                        This journey marks a critical sublimation. In the Pisces phase, we were submerged—dissolving boundaries, navigating the dreamscape, and feeling the weight of the universal ache. As we approach the Libra New Moon, the focus shifts toward the <span class="italic">architecture of relationship</span> and the clarity of thought.
+                    </p>
+<p class="text-lg leading-relaxed text-on-surface-variant font-light">
+                        It is the movement from feeling the world to understanding it. The water of Pisces provides the raw material of soul-knowledge; the air of Libra provides the scales to weigh its value. We are called to curate our internal experiences, selecting which symbols shall be carried forward into the new cycle.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Attunements Section: Bento Grid Style -->
+<section class="mb-32">
+<h3 class="font-label text-[10px] tracking-[0.4em] uppercase text-primary mb-12 text-center">Ritualistic Attunements</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 outline outline-1 outline-outline-variant/20">
+<div class="p-12 border-r border-outline-variant/20 flex flex-col justify-between aspect-square group hover:bg-surface-container-low transition-colors duration-500">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-8" data-icon="history_edu">history_edu</span>
+<h4 class="font-headline text-3xl font-light mb-4">Dream Scribe</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">Capturing the lingering vapors of the subconscious before they evaporate in the morning light.</p>
+</div>
+<span class="font-label text-[9px] tracking-widest uppercase text-primary/40 group-hover:text-primary transition-colors">Phase I: Capture</span>
+</div>
+<div class="p-12 border-r border-outline-variant/20 flex flex-col justify-between aspect-square group hover:bg-surface-container-low transition-colors duration-500">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-8" data-icon="auto_awesome">auto_awesome</span>
+<h4 class="font-headline text-3xl font-light mb-4">Symbol Selection</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">Distilling the amorphous Piscean fog into a singular, tangible anchor for the mind.</p>
+</div>
+<span class="font-label text-[9px] tracking-widest uppercase text-primary/40 group-hover:text-primary transition-colors">Phase II: Distill</span>
+</div>
+<div class="p-12 flex flex-col justify-between aspect-square group hover:bg-surface-container-low transition-colors duration-500">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-8" data-icon="water_lux">water_lux</span>
+<h4 class="font-headline text-3xl font-light mb-4">Saline Foot Bath</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">Grounding the high-water mark of the psyche through physical mineral purification.</p>
+</div>
+<span class="font-label text-[9px] tracking-widest uppercase text-primary/40 group-hover:text-primary transition-colors">Phase III: Ground</span>
+</div>
+</div>
+</section>
+<!-- Journaling Section -->
+<section class="max-w-2xl mx-auto space-y-20">
+<div class="text-center mb-16">
+<span class="font-label text-[10px] tracking-[0.3em] uppercase text-on-surface/40">Reflection Fields</span>
+</div>
+<!-- Journal Line: Dream recorded -->
+<div class="relative group journal-line-focus">
+<label class="block font-label text-[10px] tracking-[0.2em] uppercase text-on-surface/50 mb-4 transition-all duration-300">Dream Fragment Recorded</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary font-body text-xl placeholder:text-outline-variant/50 placeholder:italic transition-all duration-300" placeholder="Describe the most vivid image from last night's crossing..." type="text"/>
+<div class="absolute right-0 bottom-4 opacity-0 group-focus-within:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="edit_note">edit_note</span>
+</div>
+</div>
+<!-- Journal Line: Symbol selected -->
+<div class="relative group journal-line-focus">
+<label class="block font-label text-[10px] tracking-[0.2em] uppercase text-on-surface/50 mb-4 transition-all duration-300">Chosen Archetypal Symbol</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary font-body text-xl placeholder:text-outline-variant/50 placeholder:italic transition-all duration-300" placeholder="Which signifier anchors your transition to Air?" type="text"/>
+<div class="absolute right-0 bottom-4 opacity-0 group-focus-within:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="token">token</span>
+</div>
+</div>
+<!-- Journal Line: Foot bath sensations -->
+<div class="relative group journal-line-focus">
+<label class="block font-label text-[10px] tracking-[0.2em] uppercase text-on-surface/50 mb-4 transition-all duration-300">Somatic Sensations (Saline Bath)</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary font-body text-xl placeholder:text-outline-variant/50 placeholder:italic transition-all duration-300" placeholder="Record the physical grounding felt during the ritual..." type="text"/>
+<div class="absolute right-0 bottom-4 opacity-0 group-focus-within:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="waves">waves</span>
+</div>
+</div>
+<div class="pt-12 flex justify-center">
+<button class="bg-primary text-on-primary font-label text-[10px] tracking-[0.3em] uppercase px-12 py-5 hover:bg-primary/90 transition-all duration-300 active:scale-95">
+                    Seal This Ledger Entry
+                </button>
+</div>
+</section>
+<!-- Marginalia -->
+<aside class="fixed right-8 top-1/2 -translate-y-1/2 hidden xl:block pointer-events-none">
+<div class="rotate-90 origin-right flex items-center gap-8">
+<span class="font-label text-[9px] tracking-[0.5em] uppercase text-primary/30">Volume IV</span>
+<span class="font-label text-[9px] tracking-[0.5em] uppercase text-primary/30">Celestial Coordinates 34.05 / 118.24</span>
+<span class="font-label text-[9px] tracking-[0.5em] uppercase text-primary/30">TSL-2024-008</span>
+</div>
+</aside>
+</main>
+<!-- Bottom Navigation Bar -->
+<footer class="fixed bottom-0 left-0 w-full z-50 bg-[#fcf9f2]/80 dark:bg-[#1c1c18]/80 backdrop-blur-md border-t-[0.5px] border-[#725b37]/20 shadow-[0_-20px_40px_rgba(28,28,24,0.04)] fixed bottom-0 left-0 w-full flex justify-around items-center px-8 pb-8 pt-4">
+<div class="flex flex-col items-center justify-center text-[#725b37] dark:text-[#c4a77d] opacity-100 hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined mb-1" data-icon="edit_note">edit_note</span>
+<span class="font-sans text-[10px] tracking-[0.2em] uppercase font-light">JOURNAL</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#725b37]/40 dark:text-[#c4a77d]/40 hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined mb-1" data-icon="local_library">local_library</span>
+<span class="font-sans text-[10px] tracking-[0.2em] uppercase font-light">LIBRARY</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#725b37]/40 dark:text-[#c4a77d]/40 hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined mb-1" data-icon="analytics">analytics</span>
+<span class="font-sans text-[10px] tracking-[0.2em] uppercase font-light">RESEARCH</span>
+</div>
+</footer>
+</body></html>

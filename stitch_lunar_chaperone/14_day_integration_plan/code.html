@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fortnight Integration Plan | MOONTUNER</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;1,300&amp;family=Newsreader:ital,wght@0,300;0,400;0,500;1,400&amp;family=Inter:wght@400;500;600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1c1c18",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#e1c296",
+                        "surface": "#fcf9f2",
+                        "on-secondary-container": "#656461",
+                        "surface-dim": "#dcdad3",
+                        "primary-container": "#c4a77d",
+                        "primary": "#725b37",
+                        "tertiary-fixed-dim": "#b9c7e3",
+                        "outline-variant": "#d0c5b7",
+                        "secondary-container": "#e5e2de",
+                        "secondary": "#5f5e5c",
+                        "inverse-surface": "#31312c",
+                        "secondary-fixed-dim": "#c9c6c3",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#474744",
+                        "on-tertiary-fixed": "#0d1c31",
+                        "surface-container-highest": "#e5e2db",
+                        "on-tertiary-fixed-variant": "#3a475e",
+                        "on-tertiary-container": "#324057",
+                        "surface-container-high": "#ebe8e1",
+                        "tertiary": "#515f77",
+                        "on-primary-fixed": "#281800",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#fedeb0",
+                        "error-container": "#ffdad6",
+                        "background": "#fcf9f2",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#f1eee7",
+                        "secondary-fixed": "#e5e2de",
+                        "surface-variant": "#e5e2db",
+                        "on-error": "#ffffff",
+                        "outline": "#7f766a",
+                        "on-primary-container": "#503c1b",
+                        "surface-container-low": "#f6f3ec",
+                        "inverse-on-surface": "#f3f0e9",
+                        "on-secondary-fixed": "#1c1c1a",
+                        "tertiary-container": "#9eacc7",
+                        "tertiary-fixed": "#d5e3ff",
+                        "primary-fixed-dim": "#e1c296",
+                        "on-surface-variant": "#4d463c",
+                        "on-primary-fixed-variant": "#584321",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#725b37",
+                        "surface-bright": "#fcf9f2",
+                        "on-background": "#1c1c18"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"],
+                        "serif-accent": ["Cormorant Garamond"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .journal-input {
+            border-bottom: 1px solid #d0c5b7;
+            background: transparent;
+            width: 100%;
+            padding: 0.75rem 0;
+            transition: all 0.3s ease;
+        }
+        .journal-input:focus {
+            outline: none;
+            border-bottom-color: #725b37;
+            padding-left: 0.5rem;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .v-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen">
+<!-- TopAppBar -->
+<nav class="bg-[#fcf9f2] dark:bg-stone-950 flex justify-between items-center w-full px-6 py-4 border-b-[0.5px] border-stone-200 dark:border-stone-800 docked full-width top-0 z-50 fixed">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d]" data-icon="menu_book">menu_book</span>
+<span class="text-lg font-normal tracking-[0.15em] uppercase text-[#1c1c18] dark:text-stone-200 font-noto-serif">THE CANONICAL ARCHIVE</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8 font-label uppercase text-[10px] tracking-[0.15em]">
+<a class="text-[#725b37] dark:text-[#c4a77d] transition-colors duration-300" href="#">Archive</a>
+<a class="text-stone-400 dark:text-stone-600 hover:text-[#725b37] transition-colors duration-300" href="#">Library</a>
+<a class="text-stone-400 dark:text-stone-600 hover:text-[#725b37] transition-colors duration-300" href="#">Research</a>
+</div>
+<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d]" data-icon="search">search</span>
+</div>
+</nav>
+<main class="pt-24 pb-32 px-6 md:px-12 max-w-5xl mx-auto">
+<!-- Header Section -->
+<header class="mb-20">
+<p class="font-label text-[10px] uppercase tracking-[0.3em] text-outline mb-4">Module IV: Synthesis</p>
+<h1 class="font-headline font-light italic text-5xl md:text-6xl text-primary leading-tight">Fortnight Integration Plan</h1>
+<div class="mt-8 flex items-start gap-8">
+<div class="h-[1px] w-12 bg-primary mt-3"></div>
+<p class="font-serif-accent text-xl text-on-surface-variant max-w-xl italic">
+                    A ritualized framework for anchoring metaphysical insights into biological rhythm over a fourteen-day cycle. Record with precision; observe with neutrality.
+                </p>
+</div>
+</header>
+<!-- Phase Sections Grid -->
+<div class="grid grid-cols-1 gap-24 relative">
+<!-- Marginalia -->
+<div class="hidden lg:block absolute -left-32 top-0">
+<div class="v-text font-label text-[9px] uppercase tracking-[0.2em] text-outline opacity-50 space-y-8">
+<span>TEMPORAL MAPPING 01-14</span>
+<span>UNIVERSITY LEVEL PROTOCOL</span>
+</div>
+</div>
+<!-- Phase 1: Initiation -->
+<section class="space-y-12">
+<div class="flex items-baseline gap-4">
+<span class="font-label text-xs font-medium text-primary tracking-widest uppercase">Days 01—04</span>
+<h2 class="font-serif-accent text-3xl">Initiation &amp; Illumination</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-16 ml-0 md:ml-12">
+<div class="space-y-8">
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-outline">Actions</label>
+<input class="journal-input font-body text-lg" placeholder="Establish baseline rituals..." type="text"/>
+</div>
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-outline">Observations</label>
+<input class="journal-input font-body text-lg" placeholder="Noting physiological shifts..." type="text"/>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 border-l-[0.5px] border-primary-container">
+<label class="font-label text-[10px] uppercase tracking-widest text-primary mb-4 block">Outcome Measure</label>
+<textarea class="bg-transparent w-full font-body text-lg border-none focus:ring-0 p-0 resize-none h-24 italic" placeholder="The primary shift observed during initiation..."></textarea>
+</div>
+</div>
+</section>
+<!-- Phase 2: Processing -->
+<section class="space-y-12">
+<div class="flex items-baseline gap-4">
+<span class="font-label text-xs font-medium text-primary tracking-widest uppercase">Days 05—07</span>
+<h2 class="font-serif-accent text-3xl">Structural Processing</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-16 ml-0 md:ml-12">
+<div class="space-y-8">
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-outline">Actions</label>
+<input class="journal-input font-body text-lg" placeholder="Complexity integration..." type="text"/>
+</div>
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-outline">Observations</label>
+<input class="journal-input font-body text-lg" placeholder="External feedback loops..." type="text"/>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 border-l-[0.5px] border-primary-container">
+<label class="font-label text-[10px] uppercase tracking-widest text-primary mb-4 block">Outcome Measure</label>
+<textarea class="bg-transparent w-full font-body text-lg border-none focus:ring-0 p-0 resize-none h-24 italic" placeholder="Validation of structural changes..."></textarea>
+</div>
+</div>
+</section>
+<!-- Image Interlude -->
+<div class="w-full h-64 overflow-hidden relative grayscale opacity-40 hover:grayscale-0 transition-all duration-700">
+<img alt="Archival Texture" class="w-full h-full object-cover" data-alt="Macro close-up of aged parchment paper texture with subtle ink wash and crystalline geometry patterns in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0_8W1xIs9cuouh5IceG7KQkLm1brCWZLx6STI1pqW25hdV_muivElrciUi-ikYf_y4b7C_zbO6urjowdUNfbzGYLiVygTanPUZSjBpq94q9VRiugwayAE7pALzhwK-ZZT1Pc4D42nuGCbRFQ8rsrzJxQnH9UnnKey7QhW8SZU2vVyw7SqziYNxo7IgcNbPagtqlnpd6qelHrJGsx_oatXvrumPLXXUeMANh_J0BFZdI9zmE5amMq1bED1GHFMF90xGaN0ZmlSPKUY"/>
+<div class="absolute inset-0 bg-primary/5 mix-blend-overlay"></div>
+</div>
+<!-- Phase 3: Refinement -->
+<section class="space-y-12">
+<div class="flex items-baseline gap-4">
+<span class="font-label text-xs font-medium text-primary tracking-widest uppercase">Days 08—11</span>
+<h2 class="font-serif-accent text-3xl">Somatic Refinement</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-16 ml-0 md:ml-12">
+<div class="space-y-8">
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-outline">Actions</label>
+<input class="journal-input font-body text-lg" placeholder="Subtle adjustments..." type="text"/>
+</div>
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-outline">Observations</label>
+<input class="journal-input font-body text-lg" placeholder="Intuitive navigation..." type="text"/>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 border-l-[0.5px] border-primary-container">
+<label class="font-label text-[10px] uppercase tracking-widest text-primary mb-4 block">Outcome Measure</label>
+<textarea class="bg-transparent w-full font-body text-lg border-none focus:ring-0 p-0 resize-none h-24 italic" placeholder="Synthesized somatic experience..."></textarea>
+</div>
+</div>
+</section>
+<!-- Phase 4: Integration -->
+<section class="space-y-12">
+<div class="flex items-baseline gap-4">
+<span class="font-label text-xs font-medium text-primary tracking-widest uppercase">Days 12—14</span>
+<h2 class="font-serif-accent text-3xl">Final Integration</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-16 ml-0 md:ml-12">
+<div class="space-y-8">
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-outline">Actions</label>
+<input class="journal-input font-body text-lg" placeholder="Permanent anchor point..." type="text"/>
+</div>
+<div>
+<label class="font-label text-[10px] uppercase tracking-widest text-outline">Observations</label>
+<input class="journal-input font-body text-lg" placeholder="Full system coherence..." type="text"/>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 border-l-[0.5px] border-primary-container">
+<label class="font-label text-[10px] uppercase tracking-widest text-primary mb-4 block">Outcome Measure</label>
+<textarea class="bg-transparent w-full font-body text-lg border-none focus:ring-0 p-0 resize-none h-24 italic" placeholder="Final archival statement on synthesis..."></textarea>
+</div>
+</div>
+</section>
+</div>
+<!-- Daily Rhythm Section -->
+<section class="mt-32 border-t-[0.5px] border-outline-variant pt-16">
+<h3 class="font-headline italic text-4xl text-on-surface mb-12">Daily Rhythm</h3>
+<div class="grid md:grid-cols-2 gap-12">
+<!-- Morning -->
+<div class="p-10 border border-outline-variant relative overflow-hidden group">
+<div class="absolute -right-8 -top-8 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[120px]" data-icon="light_mode">light_mode</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="flare">flare</span>
+<h4 class="font-label uppercase text-xs tracking-widest font-semibold">Morning Log</h4>
+</div>
+<div class="space-y-6">
+<div>
+<label class="font-label text-[9px] uppercase tracking-tighter text-outline">Intentional Alignment</label>
+<input class="journal-input font-body text-base" placeholder="Upon waking..." type="text"/>
+</div>
+<div>
+<label class="font-label text-[9px] uppercase tracking-tighter text-outline">Vitality Level</label>
+<div class="flex gap-4 pt-4">
+<div class="w-2 h-2 rounded-full border border-primary"></div>
+<div class="w-2 h-2 rounded-full border border-outline-variant"></div>
+<div class="w-2 h-2 rounded-full border border-outline-variant"></div>
+<div class="w-2 h-2 rounded-full border border-outline-variant"></div>
+<div class="w-2 h-2 rounded-full border border-outline-variant"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Evening -->
+<div class="p-10 border border-outline-variant relative overflow-hidden group">
+<div class="absolute -right-8 -top-8 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[120px]" data-icon="bedtime">bedtime</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
+<h4 class="font-label uppercase text-xs tracking-widest font-semibold">Evening Log</h4>
+</div>
+<div class="space-y-6">
+<div>
+<label class="font-label text-[9px] uppercase tracking-tighter text-outline">Insight Extraction</label>
+<input class="journal-input font-body text-base" placeholder="Before sleep..." type="text"/>
+</div>
+<div>
+<label class="font-label text-[9px] uppercase tracking-tighter text-outline">Integration Quality</label>
+<div class="flex gap-4 pt-4">
+<div class="w-2 h-2 rounded-full border border-primary"></div>
+<div class="w-2 h-2 rounded-full border border-primary"></div>
+<div class="w-2 h-2 rounded-full border border-primary"></div>
+<div class="w-2 h-2 rounded-full border border-outline-variant"></div>
+<div class="w-2 h-2 rounded-full border border-outline-variant"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Metadata -->
+<footer class="mt-32 pt-8 border-t border-surface-container-highest flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex gap-4">
+<button class="font-label text-[10px] uppercase tracking-widest px-6 py-2 border border-outline hover:bg-on-surface hover:text-surface transition-all">Submit Archive</button>
+<button class="font-label text-[10px] uppercase tracking-widest px-6 py-2 text-primary border-b border-primary/20 hover:border-primary transition-all">Download PDF</button>
+</div>
+<p class="font-label text-[9px] text-outline uppercase tracking-widest">© MOONTUNER INSTITUTIONAL CURATION — 2024</p>
+</footer>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-[#fcf9f2]/80 dark:bg-stone-950/80 backdrop-blur-md fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-safe h-16 border-t-[0.5px] border-stone-200 dark:border-stone-800 z-50">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 hover:text-[#1c1c18] dark:hover:text-stone-200 transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-inter uppercase text-[10px] tracking-[0.15em] font-medium mt-1">Archive</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 hover:text-[#1c1c18] dark:hover:text-stone-200 transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="local_library">local_library</span>
+<span class="font-inter uppercase text-[10px] tracking-[0.15em] font-medium mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#725b37] dark:text-[#c4a77d] border-t border-[#725b37] -mt-[0.5px] scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+<span class="font-inter uppercase text-[10px] tracking-[0.15em] font-medium mt-1">Research</span>
+</a>
+</nav>
+</body></html>

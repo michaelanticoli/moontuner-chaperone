@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "inverse-primary": "#e1c296",
+                  "surface-container-highest": "#e5e2db",
+                  "surface-container-low": "#f6f3ec",
+                  "on-primary-fixed": "#281800",
+                  "surface": "#fcf9f2",
+                  "primary-container": "#c4a77d",
+                  "on-secondary": "#ffffff",
+                  "on-tertiary-fixed": "#0d1c31",
+                  "surface-container-high": "#ebe8e1",
+                  "tertiary-fixed": "#d5e3ff",
+                  "error-container": "#ffdad6",
+                  "secondary-fixed": "#e5e2de",
+                  "inverse-on-surface": "#f3f0e9",
+                  "outline": "#7f766a",
+                  "on-tertiary": "#ffffff",
+                  "on-surface": "#1c1c18",
+                  "on-primary-container": "#503c1b",
+                  "surface-container": "#f1eee7",
+                  "on-error-container": "#93000a",
+                  "surface-dim": "#dcdad3",
+                  "surface-bright": "#fcf9f2",
+                  "secondary-fixed-dim": "#c9c6c3",
+                  "on-tertiary-container": "#324057",
+                  "on-primary-fixed-variant": "#584321",
+                  "on-secondary-fixed-variant": "#474744",
+                  "on-primary": "#ffffff",
+                  "surface-tint": "#725b37",
+                  "tertiary-container": "#9eacc7",
+                  "secondary-container": "#e5e2de",
+                  "background": "#fcf9f2",
+                  "primary-fixed": "#fedeb0",
+                  "on-secondary-container": "#656461",
+                  "outline-variant": "#d0c5b7",
+                  "surface-variant": "#e5e2db",
+                  "secondary": "#5f5e5c",
+                  "on-background": "#1c1c18",
+                  "tertiary": "#515f77",
+                  "on-tertiary-fixed-variant": "#3a475e",
+                  "primary-fixed-dim": "#e1c296",
+                  "surface-container-lowest": "#ffffff",
+                  "inverse-surface": "#31312c",
+                  "error": "#ba1a1a",
+                  "on-surface-variant": "#4d463c",
+                  "tertiary-fixed-dim": "#b9c7e3",
+                  "primary": "#725b37",
+                  "on-error": "#ffffff",
+                  "on-secondary-fixed": "#1c1c1a"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0px",
+                  "lg": "0px",
+                  "xl": "0px",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "notoSerif": ["Noto Serif"],
+                  "newsreader": ["Newsreader"],
+                  "inter": ["Inter"]
+          }
+        },
+      }
+    }
+  </script>
+<style>
+    .font-notoSerif { font-family: 'Noto Serif', serif; }
+    .font-newsreader { font-family: 'Newsreader', serif; }
+    .font-inter { font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #fcf9f2; }
+    ::-webkit-scrollbar-thumb { background: #d0c5b7; }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-newsreader selection:bg-primary-container selection:text-on-primary-container">
+<!-- Side Navigation Shell -->
+<aside class="fixed flex flex-col h-full py-12 px-8 bg-[#f5f2eb] dark:bg-stone-900/50 h-screen w-72 left-0 top-0 border-r-[0.5px] border-stone-200/30 z-40">
+<div class="mb-12">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+</div>
+<h1 class="text-lg font-notoSerif text-stone-900 dark:text-stone-100 tracking-tight leading-none uppercase">LUNAR CHAPERONE</h1>
+</div>
+<p class="font-inter uppercase tracking-[0.12em] text-[10px] text-stone-500">VOLUME IV: THE WORKBOOK</p>
+</div>
+<nav class="flex-1 space-y-6">
+<div class="group cursor-pointer">
+<p class="font-inter uppercase tracking-[0.15em] text-[10px] text-stone-400 mb-2">Current Workbook</p>
+<div class="text-stone-900 dark:text-stone-100 font-bold translate-x-2 transition-transform font-inter uppercase tracking-[0.12em] text-[11px] flex items-center gap-3">
+<span class="material-symbols-outlined text-[16px]">record_voice_over</span>
+          Vision to Voice
+        </div>
+</div>
+<div class="space-y-4 pt-4 border-t border-stone-200/20">
+<a class="flex items-center gap-3 text-stone-400 dark:text-stone-500 hover:text-stone-600 transition-colors font-inter uppercase tracking-[0.12em] text-[11px]" href="#">
+<span class="material-symbols-outlined text-[16px]">circle</span>
+          Phase I: New Moon
+        </a>
+<a class="flex items-center gap-3 text-stone-400 dark:text-stone-500 hover:text-stone-600 transition-colors font-inter uppercase tracking-[0.12em] text-[11px]" href="#">
+<span class="material-symbols-outlined text-[16px]">exposure_plus_1</span>
+          Phase II: Waxing
+        </a>
+<a class="flex items-center gap-3 text-stone-400 dark:text-stone-500 hover:text-stone-600 transition-colors font-inter uppercase tracking-[0.12em] text-[11px]" href="#">
+<span class="material-symbols-outlined text-[16px]">brightness_high</span>
+          Phase III: Full Moon
+        </a>
+<a class="flex items-center gap-3 text-stone-400 dark:text-stone-500 hover:text-stone-600 transition-colors font-inter uppercase tracking-[0.12em] text-[11px]" href="#">
+<span class="material-symbols-outlined text-[16px]">exposure_neg_1</span>
+          Phase IV: Waning
+        </a>
+<a class="flex items-center gap-3 text-stone-400 dark:text-stone-500 hover:text-stone-600 transition-colors font-inter uppercase tracking-[0.12em] text-[11px]" href="#">
+<span class="material-symbols-outlined text-[16px]">auto_stories</span>
+          The Chaperone Index
+        </a>
+</div>
+</nav>
+<div class="mt-auto pt-8 border-t border-stone-200/20 space-y-4">
+<button class="w-full py-3 bg-primary text-on-primary font-inter uppercase tracking-widest text-[10px] transition-all hover:bg-on-primary-fixed-variant">
+        Download Manuscript
+      </button>
+<div class="flex justify-between items-center px-2">
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">settings</span>
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary transition-colors">gavel</span>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-72 min-h-screen">
+<!-- Top Nav Shell -->
+<header class="flex justify-between items-center w-full px-12 py-8 sticky top-0 z-50 bg-[#fcf9f2] dark:bg-stone-950 bg-gradient-to-b from-stone-200/20 to-transparent">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-notoSerif tracking-tighter text-stone-900 dark:text-stone-100 italic">THE SACRED LEDGER</span>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.15em] text-[10px] hover:text-[#c4a77d] transition-colors duration-300" href="#">The Archive</a>
+<a class="text-[#725b37] dark:text-[#c4a77d] border-b-[0.5px] border-[#725b37] pb-1 font-inter uppercase tracking-[0.15em] text-[10px]" href="#">Curations</a>
+<a class="text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.15em] text-[10px] hover:text-[#c4a77d] transition-colors duration-300" href="#">Glossary</a>
+<a class="text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.15em] text-[10px] hover:text-[#c4a77d] transition-colors duration-300" href="#">Rituals</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-stone-900 cursor-pointer">menu_book</span>
+<div class="w-8 h-8 rounded-full bg-stone-200 overflow-hidden ring-1 ring-stone-300">
+<img alt="Scholar Profile" class="w-full h-full object-cover" data-alt="Close up portrait of an elderly academic scholar with glasses and a thoughtful expression in soft library lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb4exhiVNSlTNNaV_NJHYgxt6CMZB8f3iUIOT9Z7_v0Q2sXG9PdDVG9Z7U1HlhC_U5Bz3DIHYuR9K2O6iBYUdr0wCvviabWz0BsWtxOWtNDmiExm4G_RZvQzpQWXxrENLscGjEty7NtZpQeNsczoZUXoBj3kwQ-lXQCBIDCP3sVptrQ-fc3I4UALdcwnj-pjKAhyN8-rZWa-23DQeYkwVlYUiyGEi62DBD06ij7Tx6aL5dF9OvmBqboMT8ZpIf5F4zHWzcIbA46ZoB"/>
+</div>
+</div>
+</header>
+<!-- Content Stage -->
+<div class="max-w-5xl mx-auto px-12 py-20">
+<!-- Marginalia Anchor -->
+<div class="relative">
+<div class="absolute -left-32 top-0 w-24">
+<p class="font-inter uppercase tracking-[0.2em] text-[9px] text-primary rotate-90 origin-left mt-8 opacity-60">WORKBOOK 10 // SEQUENCE</p>
+</div>
+</div>
+<!-- Hero Header -->
+<section class="grid grid-cols-12 gap-8 items-end mb-32">
+<div class="col-span-8">
+<p class="font-inter uppercase tracking-[0.3em] text-[11px] text-primary mb-6">Sagittarius Full Moon → Gemini New Moon</p>
+<h2 class="text-7xl font-notoSerif font-light tracking-tight text-on-surface leading-tight">Vision to <span class="italic text-primary">Voice</span></h2>
+<p class="text-2xl font-newsreader italic text-stone-500 mt-6 max-w-xl">A protocol for the crystallization of expansive intuition into precise linguistic expression.</p>
+</div>
+<div class="col-span-4 pb-2">
+<div class="aspect-[3/4] bg-surface-container-low p-6 flex flex-col justify-between border-l-[0.5px] border-primary/20">
+<span class="font-inter text-[10px] uppercase tracking-widest text-stone-400">Element Transition</span>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-notoSerif italic text-xl">Fire</span>
+<span class="material-symbols-outlined text-primary">trending_flat</span>
+<span class="font-notoSerif italic text-xl">Air</span>
+</div>
+<div class="h-[0.5px] bg-stone-300 w-full"></div>
+<div class="flex items-center justify-between">
+<span class="font-inter uppercase tracking-widest text-[9px]">Expansion</span>
+<span class="font-inter uppercase tracking-widest text-[9px]">Delivery</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Body Path -->
+<section class="mb-32 grid grid-cols-12 gap-12">
+<div class="col-span-5">
+<div class="bg-surface-container-highest aspect-square relative group overflow-hidden">
+<img alt="Anatomy Sketch" class="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-1000 group-hover:scale-105" data-alt="Vintage charcoal anatomical sketch of the human torso and respiratory system on aged parchment paper with golden ink annotations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1aNKpOvnm9oln2KR_CYzMWNTFp00P44S5uJaVbd9a3AdLQoymgXVz3fKUsMKvkr2qo4Y8d-Z_4f_q9sSy8PoO_Nw65WTQ_e8U4ETdJMSmQh1OR8wlLYGo2T5iAcny7YHkWwFC527X7gkSCX7TuRiA_5age-MnOXGpqfY_OdwKSQOP-b-6klUsbR7eX1wvOIayQtrci8mlf0nvu2SldHnCUDdFirSd7FnUnSMmgOZprhVf9co8YMo2OHl1QhR3Uqhm7y-gizKTRXW8"/>
+<div class="absolute inset-0 bg-primary/5"></div>
+<div class="absolute bottom-6 left-6 right-6 p-6 bg-surface/90 backdrop-blur-sm border-l-2 border-primary">
+<p class="font-inter uppercase tracking-[0.2em] text-[10px] text-stone-500 mb-2">Physiological Focus</p>
+<h3 class="font-notoSerif text-xl italic text-stone-900">Hips/Thighs → Lungs</h3>
+</div>
+</div>
+</div>
+<div class="col-span-7 flex flex-col justify-center">
+<div class="max-w-md">
+<h4 class="font-inter uppercase tracking-[0.15em] text-xs text-primary mb-6">The Somatic Shift</h4>
+<p class="text-xl leading-relaxed text-stone-700 mb-8">
+              The fire of Sagittarius resides in the powerful muscles of the thighs—the engine of the archer. To transition into Gemini, we must pull that momentum upward, through the solar plexus, and into the bellows of the lungs. 
+            </p>
+<p class="text-stone-500 italic mb-8">
+              "Movement is the precursor to thought. The gait determines the rhythm of the sentence."
+            </p>
+<div class="flex items-center gap-6">
+<div class="h-[1px] w-12 bg-primary"></div>
+<span class="font-inter uppercase tracking-[0.15em] text-[10px] text-stone-400">Section 01.04</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Journal: Vocal Attunements -->
+<section class="mb-32">
+<div class="bg-surface-container-low p-16 relative">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-4xl text-primary/20">graphic_eq</span>
+</div>
+<h3 class="text-4xl font-notoSerif mb-12">Vocal Attunements</h3>
+<div class="grid grid-cols-2 gap-16">
+<div class="space-y-12">
+<div>
+<label class="font-inter uppercase tracking-[0.15em] text-[10px] text-stone-400 block mb-4">Observation: The Resonant Center</label>
+<p class="text-sm text-stone-600 mb-4 italic">Where does your voice originate during moments of unbridled inspiration?</p>
+<div class="relative group">
+<textarea class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 resize-none font-newsreader text-lg placeholder:text-stone-300 transition-all duration-500" placeholder="Describe the physical location of your internal 'echo'..." rows="3"></textarea>
+<div class="absolute bottom-0 left-0 h-[1px] bg-primary w-0 group-focus-within:w-full transition-all duration-700"></div>
+</div>
+</div>
+<div>
+<label class="font-inter uppercase tracking-[0.15em] text-[10px] text-stone-400 block mb-4">Practice: The Vernacular Pivot</label>
+<p class="text-sm text-stone-600 mb-4 italic">Transcribe a complex vision into a single, three-word declarative sentence.</p>
+<div class="relative group">
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 font-newsreader text-lg placeholder:text-stone-300 transition-all duration-500" placeholder="Subject + Action + Essence" type="text"/>
+</div>
+</div>
+</div>
+<div class="border-l border-stone-200 pl-16 flex flex-col justify-center">
+<div class="bg-surface p-8 shadow-[0_40px_60px_-15px_rgba(28,28,24,0.04)]">
+<span class="material-symbols-outlined text-primary mb-4" data-weight="fill">mic</span>
+<p class="font-inter uppercase tracking-[0.1em] text-[11px] mb-4">Ritual Audio Guide</p>
+<p class="text-stone-600 text-sm mb-6 leading-relaxed">Listen to the harmonic transition between the Sagittarian 'G' and the Geminian 'S'—a bridge from throat to teeth.</p>
+<button class="flex items-center gap-2 group">
+<div class="w-10 h-10 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-all">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-sm">play_arrow</span>
+</div>
+<span class="font-inter uppercase tracking-widest text-[9px] group-hover:text-primary transition-colors">Begin Attunement (4:12)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Graduate Research Prompt -->
+<section class="mb-32">
+<div class="max-w-3xl mx-auto text-center py-20 border-y border-primary/10">
+<span class="font-inter uppercase tracking-[0.4em] text-[10px] text-primary block mb-8">Academic Inquiry // Graduate Level</span>
+<h3 class="text-5xl font-notoSerif italic mb-10 leading-tight">On the Translation of Wisdom into Vernacular Speech</h3>
+<p class="text-xl text-stone-700 leading-relaxed mb-12 px-12">
+            The inherent risk of the visionary path is the 'Hermetic Seal'—knowledge so profound it becomes untranslatable. Research the Etymology of <span class="text-primary italic underline decoration-[0.5px] underline-offset-4">Logos</span> and propose a method by which high-frequency intuition can survive the low-fidelity medium of human language without losing its sacred core.
+          </p>
+<div class="flex justify-center gap-12">
+<div class="text-left">
+<p class="font-inter uppercase tracking-[0.15em] text-[9px] text-stone-400">Submission Date</p>
+<p class="font-notoSerif text-lg">Gemini New Moon</p>
+</div>
+<div class="w-[1px] bg-stone-200"></div>
+<div class="text-left">
+<p class="font-inter uppercase tracking-[0.15em] text-[9px] text-stone-400">Academic Weight</p>
+<p class="font-notoSerif text-lg">12 Credits</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Visuals -->
+<section class="grid grid-cols-12 gap-4 mb-32">
+<div class="col-span-8 bg-surface-container-high h-[400px] overflow-hidden relative">
+<img alt="Archive Library" class="w-full h-full object-cover grayscale opacity-60 hover:grayscale-0 transition-all duration-1000" data-alt="Wide angle shot of a dimly lit ancient library with towering mahogany shelves filled with old leather-bound books and dust motes dancing in shafts of light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVWbuTnxcKa1-whGpWYEj8ZAaYvA00VzvT9wpiEZrVf55R1m-yY8MVK0B-pVQWHSwL23o4GanMmP0DsRfkecQF20wIjU9eoHduyRdGt0nMXshPOLXRIf6rq3BnLX5i2UD0A_IOJY3lWgN8zcEu3XE3XeHsnbCXscXlT9dEyVrampSTayW-a_Yd_ZesRtXhn1Q-MNCYLUsnWxqNQ68ZhFUFfZY2WbkT14QDE5H0xYyran_VloAHte3XoNIvG0twDbVGba6lYTLJamgZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-8 left-8 text-white">
+<p class="font-inter uppercase tracking-widest text-[10px] mb-2 opacity-80">Reference Material</p>
+<p class="font-notoSerif text-2xl">The Chaperone Archives: Sector 09</p>
+</div>
+</div>
+<div class="col-span-4 space-y-4">
+<div class="h-[192px] bg-primary-container/20 flex flex-col items-center justify-center text-center p-8">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">cyclone</span>
+<p class="font-inter uppercase tracking-[0.1em] text-[10px] text-primary">Air Element</p>
+<p class="font-newsreader italic text-stone-600 mt-2">The distribution of seeds via the breath.</p>
+</div>
+<div class="h-[192px] bg-surface-container-highest overflow-hidden">
+<img alt="Bird Wings" class="w-full h-full object-cover" data-alt="Close up of white bird feathers in soft focus with a high-key bright lighting aesthetic, emphasizing texture and lightness" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4gO3KD2Jm7Au5Bk4HI6_rI6dJ2qlmSo-Ksj68QipXWqyAqXB-04cRCEpTH2y3ySUCkcDMCxUDCPA11KEcE9r1MEkdekBN6fl2LwBUpjdvbhRqKHjMSNZX1UMMC19r3Dyqx3bwQSSpAhbMGK4tk2E_3KWrJv5cMWaRtDlbYjwZ7cShpKQyNeV7WktqKPCpBLhSNEnxDvR5ybkxWNHfle3ptOyk5XD1MhdHYZsR0owA0CfsKLA6bGGG55tV2DNHMxXg6SYKVe305nz0"/>
+</div>
+</div>
+</section>
+<!-- Footer Marginalia -->
+<footer class="flex justify-between items-end border-t-[0.5px] border-stone-200 pt-12 pb-24">
+<div class="max-w-xs">
+<p class="font-inter uppercase tracking-[0.2em] text-[9px] text-stone-400 mb-4">Proprietary Content</p>
+<p class="text-xs text-stone-500 leading-relaxed">All rituals and academic prompts contained within are the intellectual property of The Sacred Ledger. Unauthorized transcription into mundane speech is discouraged.</p>
+</div>
+<div class="text-right">
+<p class="font-notoSerif italic text-stone-400 text-4xl mb-2">10</p>
+<p class="font-inter uppercase tracking-[0.2em] text-[10px] text-stone-900">Sequence Index</p>
+</div>
+</footer>
+</div>
+</main>
+<!-- Floating Action Button - Contextual -->
+<div class="fixed bottom-12 right-12 flex flex-col items-end gap-4 z-50">
+<div class="bg-surface-container-lowest shadow-[0_40px_60px_-15px_rgba(28,28,24,0.1)] p-4 border border-outline-variant/30 flex items-center gap-4 group cursor-pointer transition-all hover:scale-105">
+<div class="text-right">
+<p class="font-inter uppercase tracking-widest text-[9px] text-stone-400">Save Progress</p>
+<p class="font-notoSerif italic text-sm text-stone-900">Chapter Complete</p>
+</div>
+<div class="w-12 h-12 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary">ink_pen</span>
+</div>
+</div>
+</div>
+</body></html>

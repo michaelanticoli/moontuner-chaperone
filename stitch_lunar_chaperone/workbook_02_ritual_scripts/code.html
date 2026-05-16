@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e5e2db",
+                        "on-secondary-container": "#656461",
+                        "on-surface-variant": "#4d463c",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#281800",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#e5e2de",
+                        "on-tertiary-container": "#324057",
+                        "on-background": "#1c1c18",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#e1c296",
+                        "on-secondary-fixed-variant": "#474744",
+                        "inverse-primary": "#e1c296",
+                        "on-secondary-fixed": "#1c1c1a",
+                        "background": "#fcf9f2",
+                        "surface-dim": "#dcdad3",
+                        "surface-container-highest": "#e5e2db",
+                        "primary": "#725b37",
+                        "surface": "#fcf9f2",
+                        "outline": "#7f766a",
+                        "on-tertiary-fixed": "#0d1c31",
+                        "tertiary-fixed": "#d5e3ff",
+                        "primary-container": "#c4a77d",
+                        "primary-fixed": "#fedeb0",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#d0c5b7",
+                        "tertiary-fixed-dim": "#b9c7e3",
+                        "on-tertiary-fixed-variant": "#3a475e",
+                        "tertiary": "#515f77",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#c9c6c3",
+                        "surface-container": "#f1eee7",
+                        "on-surface": "#1c1c18",
+                        "on-primary-container": "#503c1b",
+                        "surface-bright": "#fcf9f2",
+                        "surface-tint": "#725b37",
+                        "surface-container-low": "#f6f3ec",
+                        "on-primary-fixed-variant": "#584321",
+                        "inverse-surface": "#31312c",
+                        "surface-container-high": "#ebe8e1",
+                        "tertiary-container": "#9eacc7",
+                        "inverse-on-surface": "#f3f0e9",
+                        "secondary-fixed": "#e5e2de",
+                        "secondary": "#5f5e5c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Newsreader', serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#fcf9f2] dark:bg-stone-950 border-b-[0.5px] border-outline-variant flex justify-between items-center px-8 py-4">
+<div class="text-lg font-light tracking-tighter text-[#1c1c18] dark:text-stone-100 font-headline italic">
+            Lunar Chaperone
+        </div>
+<nav class="hidden md:flex gap-12">
+<a class="font-noto-serif uppercase tracking-[0.15em] text-xs font-light text-[#725b37] dark:text-[#c4a77d] border-b border-[#725b37] pb-1 hover:text-[#725b37] transition-colors duration-300" href="#">Catalog</a>
+<a class="font-noto-serif uppercase tracking-[0.15em] text-xs font-light text-[#1c1c18]/60 dark:text-stone-400 hover:text-[#725b37] transition-colors duration-300" href="#">Archives</a>
+<a class="font-noto-serif uppercase tracking-[0.15em] text-xs font-light text-[#1c1c18]/60 dark:text-stone-400 hover:text-[#725b37] transition-colors duration-300" href="#">Log</a>
+</nav>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#725b37] cursor-pointer" data-icon="clinical_notes">clinical_notes</span>
+<span class="material-symbols-outlined text-[#725b37] cursor-pointer" data-icon="settings">settings</span>
+</div>
+</header>
+<div class="flex min-h-screen pt-16">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-screen sticky top-16 bg-[#fcf9f2] dark:bg-stone-900 border-r-[0.5px] border-outline-variant w-72 py-12 px-6 gap-8">
+<div class="mb-4">
+<h3 class="font-inter uppercase tracking-[0.12em] text-[10px] text-on-surface-variant">PHASE SEQUENCE</h3>
+<p class="text-[9px] text-outline font-inter uppercase tracking-[0.05em]">Archival Metadata v.04</p>
+</div>
+<nav class="flex flex-col gap-6">
+<div class="flex items-center gap-4 text-[#1c1c18]/50 dark:text-stone-500 hover:bg-[#f5f0e6] dark:hover:bg-stone-800 p-2 cursor-pointer transition-all duration-300">
+<span class="material-symbols-outlined text-sm" data-icon="dark_mode">dark_mode</span>
+<span class="font-inter uppercase tracking-[0.12em] text-[10px]">Phase I: Waxing</span>
+</div>
+<div class="flex items-center gap-4 text-[#725b37] dark:text-[#c4a77d] font-bold translate-x-2 p-2 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="light_mode">light_mode</span>
+<span class="font-inter uppercase tracking-[0.12em] text-[10px]">Phase II: Zenith</span>
+</div>
+<div class="flex items-center gap-4 text-[#1c1c18]/50 dark:text-stone-500 hover:bg-[#f5f0e6] dark:hover:bg-stone-800 p-2 cursor-pointer transition-all duration-300">
+<span class="material-symbols-outlined text-sm" data-icon="brightness_low">brightness_low</span>
+<span class="font-inter uppercase tracking-[0.12em] text-[10px]">Phase III: Waning</span>
+</div>
+<div class="flex items-center gap-4 text-[#1c1c18]/50 dark:text-stone-500 hover:bg-[#f5f0e6] dark:hover:bg-stone-800 p-2 cursor-pointer transition-all duration-300">
+<span class="material-symbols-outlined text-sm" data-icon="contrast">contrast</span>
+<span class="font-inter uppercase tracking-[0.12em] text-[10px]">Phase IV: Eclipse</span>
+</div>
+</nav>
+<div class="mt-auto border-t-[0.5px] border-outline-variant pt-8">
+<div class="flex items-center gap-4 text-[#1c1c18]/50 dark:text-stone-500 hover:bg-[#f5f0e6] dark:hover:bg-stone-800 p-2 cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="menu_book">menu_book</span>
+<span class="font-inter uppercase tracking-[0.12em] text-[10px]">Documentation</span>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 bg-surface px-8 md:px-24 py-16 overflow-y-auto">
+<!-- Header Section -->
+<div class="max-w-4xl mx-auto mb-24">
+<div class="flex items-baseline justify-between border-b-[0.5px] border-outline-variant pb-4 mb-12">
+<span class="font-inter uppercase tracking-[0.2em] text-[10px] text-outline">Workbook 02: Ritual Scripts</span>
+<span class="font-inter uppercase tracking-[0.2em] text-[10px] text-outline">Sequence: 02 / 26</span>
+</div>
+<h1 class="font-headline font-light text-6xl md:text-8xl text-on-surface leading-tight mb-8">The Descent <br/><span class="italic pl-24">into Form</span></h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 mt-20">
+<div class="space-y-6">
+<p class="text-xl leading-relaxed text-on-surface-variant font-body">
+                            The transition from the volatile depths of Scorpio to the calcified stability of Taurus requires a deliberate slowing of the metabolic spirit. It is the ritual of anchoring shadow into soil.
+                        </p>
+<div class="pt-4">
+<span class="font-inter uppercase tracking-widest text-[10px] text-primary block mb-2 underline underline-offset-8">Aesthetic Context</span>
+<p class="text-sm font-body italic text-outline">Observed under the waning gibbous phase. Requires a grounding atmosphere of 18°C.</p>
+</div>
+</div>
+<div class="relative group">
+<div class="aspect-[3/4] overflow-hidden grayscale contrast-125 opacity-80 group-hover:opacity-100 transition-opacity duration-700">
+<img class="w-full h-full object-cover" data-alt="Ancient dark textured stone sculpture with cracks and moss, dramatic overhead lighting, deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMg8-3r92O3kOH-p7gFgGnN9Pn2X_PihfUCDCFBeeR_nROkRDY5CG1hZk_-Z1L3ZDKte_0QEX3kz_YYFU6B-4RfhHmB3DN5xmNHxW_boClAS-kSti8rfFK96xLs8C-xbZHVDR_cX8ccwZDBdFMfGt_Irq3BbsRaMHu4NzCbUNi9gEICNpFdMeloCovj6SQshhpgj0jePnjaHc_9URWoiCkqqZ2HMT9LpfgMVyZwlrvxAlFxLUE9tPBsNQfhRzaleMyg6c3tXRYcowZ"/>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-surface-container-low p-4 text-[9px] font-inter uppercase tracking-widest leading-loose">
+                            Artifact No. 992<br/>Taurus Foundation
+                        </div>
+</div>
+</div>
+</div>
+<!-- Bento Grid Ritual Sections -->
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-px bg-outline-variant/30 mb-24">
+<!-- Materials List -->
+<div class="md:col-span-4 bg-surface p-12 flex flex-col">
+<h2 class="font-inter uppercase tracking-[0.2em] text-xs text-primary mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-sm" data-icon="inventory_2">inventory_2</span>
+                        Materials List
+                    </h2>
+<ul class="space-y-8 font-body text-lg italic text-on-surface-variant">
+<li class="flex items-start gap-4">
+<span class="text-xs font-inter not-italic text-outline pt-1">01</span>
+                            Black Tourmaline, raw unpolished.
+                        </li>
+<li class="flex items-start gap-4">
+<span class="text-xs font-inter not-italic text-outline pt-1">02</span>
+                            Charred Oak essence (12ml).
+                        </li>
+<li class="flex items-start gap-4">
+<span class="text-xs font-inter not-italic text-outline pt-1">03</span>
+                            Heavy linen cloth, undyed.
+                        </li>
+<li class="flex items-start gap-4">
+<span class="text-xs font-inter not-italic text-outline pt-1">04</span>
+                            A vessel of cold spring water.
+                        </li>
+</ul>
+</div>
+<!-- Clinical Protocol -->
+<div class="md:col-span-8 bg-surface-container-low p-12">
+<h2 class="font-inter uppercase tracking-[0.2em] text-xs text-primary mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-sm" data-icon="account_tree">account_tree</span>
+                        Step-by-Step Clinical Protocol
+                    </h2>
+<div class="space-y-12">
+<div class="group">
+<div class="flex justify-between items-baseline mb-2">
+<span class="font-inter uppercase tracking-widest text-[10px] text-outline">Phase I: The Void</span>
+<span class="text-[9px] font-inter text-outline-variant">DURATION: 15 MIN</span>
+</div>
+<p class="text-on-surface-variant font-body leading-relaxed group-hover:text-on-surface transition-colors">
+                                Submerge the Tourmaline in the vessel. Breath must be held at the bottom of the exhale for four counts. This mimics the Scorpio 'Death' state.
+                            </p>
+</div>
+<div class="group border-t-[0.5px] border-outline-variant/30 pt-8">
+<div class="flex justify-between items-baseline mb-2">
+<span class="font-inter uppercase tracking-widest text-[10px] text-outline">Phase II: The Embodiment</span>
+<span class="text-[9px] font-inter text-outline-variant">DURATION: 40 MIN</span>
+</div>
+<p class="text-on-surface-variant font-body leading-relaxed group-hover:text-on-surface transition-colors">
+                                Wrap the stone in heavy linen. Press it against the base of the spine. Visualize the fluid energy of the psyche turning into solid, structural mineral.
+                            </p>
+</div>
+<div class="group border-t-[0.5px] border-outline-variant/30 pt-8">
+<div class="flex justify-between items-baseline mb-2">
+<span class="font-inter uppercase tracking-widest text-[10px] text-outline">Phase III: The Anchoring</span>
+<span class="text-[9px] font-inter text-outline-variant">DURATION: INDEFINITE</span>
+</div>
+<p class="text-on-surface-variant font-body leading-relaxed group-hover:text-on-surface transition-colors">
+                                Place the wrapped stone at the lowest point of your dwelling. It now acts as a tether for the 'Rooted Power' archetype.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sacred Commitment Fields -->
+<div class="max-w-4xl mx-auto mb-32 bg-surface">
+<div class="text-center mb-16">
+<h2 class="font-headline italic text-4xl mb-4">Sacred Commitment</h2>
+<p class="font-inter uppercase tracking-[0.15em] text-[10px] text-outline">Archetype: 'Rooted Power'</p>
+</div>
+<form class="space-y-16">
+<div class="relative">
+<label class="absolute -top-6 left-0 font-inter uppercase tracking-[0.15em] text-[9px] text-primary">Intent of Solidity</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary placeholder:italic placeholder:text-outline-variant/60 font-body text-2xl transition-all duration-500" placeholder="What will you allow to become permanent?" type="text"/>
+</div>
+<div class="relative">
+<label class="absolute -top-6 left-0 font-inter uppercase tracking-[0.15em] text-[9px] text-primary">Sacrifice of Fluidity</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary placeholder:italic placeholder:text-outline-variant/60 font-body text-2xl transition-all duration-500" placeholder="Which chaos do you renounce for this form?" type="text"/>
+</div>
+<div class="pt-8 flex justify-center">
+<button class="px-16 py-6 bg-primary text-on-primary font-inter uppercase tracking-[0.2em] text-xs hover:bg-primary-container hover:text-on-primary-container transition-all duration-300">
+                            Seal the Protocol
+                        </button>
+</div>
+</form>
+</div>
+<!-- Footer Navigation -->
+<footer class="max-w-4xl mx-auto border-t border-outline-variant pt-12 pb-24 flex justify-between items-center">
+<div class="text-outline italic text-sm">End of Sequence 02</div>
+<a class="group flex items-center gap-4 text-on-surface" href="#">
+<span class="font-inter uppercase tracking-[0.2em] text-xs group-hover:mr-2 transition-all">Advance to Workbook 03</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_right_alt">arrow_right_alt</span>
+</a>
+</footer>
+</main>
+</div>
+<!-- Marginalia -->
+<div class="fixed bottom-12 right-12 hidden lg:block pointer-events-none opacity-40">
+<div class="font-inter uppercase tracking-[0.25em] text-[8px] rotate-90 origin-right text-on-surface-variant">
+            Metaphysical Compliance Archival Code: 02-DESC-FORM-SRCP
+        </div>
+</div>
+</body></html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Newsreader:ital,wght@0,400;0,500;1,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#9eacc7",
+                        "secondary-fixed": "#e5e2de",
+                        "secondary-container": "#e5e2de",
+                        "background": "#fcf9f2",
+                        "secondary-fixed-dim": "#c9c6c3",
+                        "tertiary-fixed-dim": "#b9c7e3",
+                        "surface-container-high": "#ebe8e1",
+                        "on-surface": "#1c1c18",
+                        "surface-container-highest": "#e5e2db",
+                        "surface": "#fcf9f2",
+                        "primary-fixed-dim": "#e1c296",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f3f0e9",
+                        "on-secondary-fixed": "#1c1c1a",
+                        "tertiary": "#515f77",
+                        "secondary": "#5f5e5c",
+                        "on-tertiary-fixed-variant": "#3a475e",
+                        "on-background": "#1c1c18",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#324057",
+                        "on-primary-fixed-variant": "#584321",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#281800",
+                        "surface-dim": "#dcdad3",
+                        "surface-bright": "#fcf9f2",
+                        "surface-container": "#f1eee7",
+                        "tertiary-fixed": "#d5e3ff",
+                        "on-surface-variant": "#4d463c",
+                        "on-secondary-container": "#656461",
+                        "on-primary-container": "#503c1b",
+                        "inverse-surface": "#31312c",
+                        "inverse-primary": "#e1c296",
+                        "on-tertiary-fixed": "#0d1c31",
+                        "surface-tint": "#725b37",
+                        "primary-container": "#c4a77d",
+                        "primary": "#725b37",
+                        "outline-variant": "#d0c5b7",
+                        "outline": "#7f766a",
+                        "primary-fixed": "#fedeb0",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f6f3ec",
+                        "on-secondary-fixed-variant": "#474744",
+                        "surface-variant": "#e5e2db"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Newsreader", "serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "none": "0px"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fcf9f2;
+            color: #1c1c18;
+            font-family: 'Newsreader', serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d0c5b7;
+        }
+        .border-ritual {
+            border-bottom: 1px solid rgba(28, 28, 24, 0.1);
+        }
+        .journal-line {
+            background-image: linear-gradient(rgba(28, 28, 24, 0.1) 1px, transparent 1px);
+            background-size: 100% 2rem;
+            line-height: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f2] dark:bg-stone-950 flex justify-between items-center px-12 h-20 w-full border-b border-[#1c1c18]/10 dark:border-[#fcf9f2]/10">
+<div class="font-noto-serif italic font-light text-[#725b37] dark:text-[#c4a77d] text-xl tracking-tight">THE CANONICAL ARCHIVE</div>
+<div class="flex gap-12 items-center">
+<a class="text-[#725b37] dark:text-[#c4a77d] border-b-0.5 border-[#725b37] pb-1 font-noto-serif text-lg tracking-tight transition-colors duration-300" href="#">The Archive</a>
+<a class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 font-inter uppercase tracking-widest text-[10px] transition-colors duration-300 hover:text-[#725b37]" href="#">Research Logs</a>
+<div class="flex gap-6 ml-4">
+<span class="material-symbols-outlined text-[#725b37] cursor-pointer" data-icon="menu_book">menu_book</span>
+<span class="material-symbols-outlined text-[#725b37] cursor-pointer" data-icon="history_edu">history_edu</span>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-20 h-[calc(100vh-5rem)] w-72 bg-[#fcf9f2] dark:bg-stone-900 flex flex-col py-8 overflow-y-auto border-r border-[#1c1c18]/5 custom-scrollbar">
+<div class="px-8 mb-8">
+<h3 class="font-inter uppercase tracking-[0.15em] text-[11px] text-[#725b37] font-bold">CURRENT WORKBOOK</h3>
+<p class="font-noto-serif text-xl italic opacity-80">Lunar Chaperone Series</p>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Phase I Active -->
+<div class="text-[#725b37] dark:text-[#c4a77d] font-bold border-l-2 border-[#725b37] pl-4 flex items-center py-2 transition-all duration-200 ease-in-out cursor-pointer">
+<span class="material-symbols-outlined mr-3 text-sm" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase I</span>
+</div>
+<div class="text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 flex items-center py-2 transition-all duration-200 ease-in-out hover:bg-[#fcf9f2] dark:hover:bg-stone-800 hover:text-[#725b37] cursor-pointer">
+<span class="material-symbols-outlined mr-3 text-sm" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase II</span>
+</div>
+<div class="text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 flex items-center py-2 transition-all duration-200 ease-in-out hover:bg-[#fcf9f2] dark:hover:bg-stone-800 hover:text-[#725b37] cursor-pointer">
+<span class="material-symbols-outlined mr-3 text-sm" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase III</span>
+</div>
+<!-- Truncated for display -->
+<div class="px-8 py-4 opacity-30 select-none">
+<div class="h-px bg-current w-full"></div>
+</div>
+<div class="text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 flex items-center py-2 transition-all duration-200 ease-in-out hover:bg-[#fcf9f2] dark:hover:bg-stone-800 hover:text-[#725b37] cursor-pointer">
+<span class="material-symbols-outlined mr-3 text-sm" data-icon="done_all">done_all</span>
+<span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase XIV</span>
+</div>
+</nav>
+<div class="px-8 mt-auto pt-8 border-t border-[#1c1c18]/5">
+<button class="w-full bg-[#725b37] text-white py-3 font-inter uppercase tracking-widest text-[10px] mb-6 hover:opacity-90 transition-opacity">
+                Begin Ritual
+            </button>
+<div class="space-y-4">
+<div class="flex items-center text-[#1c1c18]/40 text-[10px] uppercase tracking-widest cursor-pointer hover:text-[#725b37]">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="settings">settings</span>
+                    Settings
+                </div>
+<div class="flex items-center text-[#1c1c18]/40 text-[10px] uppercase tracking-widest cursor-pointer hover:text-[#725b37]">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="help">help</span>
+                    Support
+                </div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-72 mt-20 p-16 min-h-screen">
+<div class="max-w-5xl mx-auto grid grid-cols-12 gap-12">
+<!-- Header Section -->
+<header class="col-span-12 mb-16 relative">
+<div class="absolute -left-12 top-0 opacity-10 text-[120px] font-headline select-none">01</div>
+<div class="pl-4 border-l border-[#725b37]/20">
+<p class="font-label uppercase tracking-[0.2em] text-[10px] text-primary mb-2">Aries New Moon to Scorpio Full Moon</p>
+<h1 class="font-headline text-6xl font-light text-on-surface leading-tight mb-4">Phase I: <span class="italic">The Primal Spark</span></h1>
+<div class="w-24 h-px bg-primary/40"></div>
+</div>
+</header>
+<!-- Marginalia metadata -->
+<aside class="col-span-2 hidden lg:block pt-12">
+<div class="sticky top-32 space-y-8">
+<div class="space-y-1">
+<p class="font-label uppercase text-[9px] tracking-widest text-outline">Date Registered</p>
+<p class="font-body italic text-sm">March 21st, Equinox</p>
+</div>
+<div class="space-y-1">
+<p class="font-label uppercase text-[9px] tracking-widest text-outline">Atmosphere</p>
+<p class="font-body italic text-sm">Cardinal Fire</p>
+</div>
+<div class="space-y-1">
+<p class="font-label uppercase text-[9px] tracking-widest text-outline">Locus</p>
+<p class="font-body italic text-sm">The Internal Hearth</p>
+</div>
+</div>
+</aside>
+<!-- Body Narrative -->
+<article class="col-span-12 lg:col-span-7 prose prose-stone max-w-none">
+<p class="font-body text-xl leading-relaxed text-on-surface/90 first-letter:text-5xl first-letter:font-headline first-letter:mr-3 first-letter:float-left first-letter:text-primary">
+                    Initiation is not a whisper; it is a rupture. To enter the first phase is to acknowledge the 'First Flame'—that raw, unconditioned impulse that precedes thought. Aries does not ask for permission to exist. It is the seedling cracking through the concrete, the first strike of flint against stone in a darkened chamber.
+                </p>
+<p class="font-body text-lg leading-relaxed text-on-surface/80 mt-6">
+                    In the clinical archive of the soul, we classify this as the <span class="italic text-primary">Primal Spark</span>. It is the moment potentiality becomes kinetic. As we transition from the New Moon in Aries toward the eventual depth of Scorpio, we must first master the art of the fire—not just its heat, but its direction. 
+                </p>
+<div class="mt-12 p-8 bg-surface-container-low border-ritual relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-5">
+<span class="material-symbols-outlined text-6xl" data-icon="local_fire_department">local_fire_department</span>
+</div>
+<h4 class="font-label uppercase tracking-widest text-xs mb-4 text-primary font-bold">Protocol: The First Flame</h4>
+<p class="font-body italic text-md text-on-surface-variant">
+                        Sit in stillness. Visualize a singular point of light at the base of the skull. This is the seed of the entire cycle. It contains every action you will take over the next six months.
+                    </p>
+</div>
+</article>
+<!-- Imagery & Sensory Balance -->
+<div class="col-span-12 lg:col-span-3 space-y-6">
+<div class="aspect-[3/4] bg-surface-container-highest relative group">
+<img class="w-full h-full object-cover grayscale-[0.5] contrast-[1.1] mix-blend-multiply opacity-90 group-hover:grayscale-0 transition-all duration-700" data-alt="Macro photography of a single ember glowing in deep darkness with subtle smoke tendrils and warm golden sparks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa7qadqYyMyilkFNz83IxkMTaXQ2D1t6Dd24UDUAHyfJ3VHcKJ4MBj9zwHjz9loylErzHvV3ei-KH0RQlurIOlhJ4WvbNjCap28dwc4dX9MxhCG8wbqr0qB0KjLrpmrsGTe3GX3ShF8SP6LANzoFfsFetoTkTNub03-suMys6ukuaq6gaoLqqJG5kzS6s1ENDAfROWBocREmqoTIY2fUhr5NsDWq4BxoCRmmootHRTGWm8-3uUxWkg-uPVXG0oDIQKxI91fsbBAjkc"/>
+<div class="absolute inset-0 border-[0.5px] border-primary/20 m-2"></div>
+</div>
+<p class="font-label uppercase text-[9px] tracking-widest text-center text-outline-variant">Visual Reference: 01-A-SPARK</p>
+</div>
+<!-- Interactive Attunement Fields -->
+<section class="col-span-12 mt-12 grid grid-cols-1 md:grid-cols-2 gap-16 border-t border-outline-variant/30 pt-16">
+<!-- Dream Scribe -->
+<div class="space-y-6">
+<div class="flex items-end justify-between border-b border-primary/20 pb-2">
+<h3 class="font-headline text-2xl italic font-light">Dream Scribe</h3>
+<span class="font-label uppercase text-[10px] tracking-widest text-outline">Phase I / Log 01</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant">Record the first image that appeared upon waking during the New Moon. Do not analyze. Only transcribe.</p>
+<div class="mt-4">
+<textarea class="w-full bg-transparent border-none focus:ring-0 journal-line font-body text-lg p-0 h-48 resize-none placeholder:text-outline-variant/50" placeholder="Begin the transcription..."></textarea>
+</div>
+</div>
+<!-- Fire Gaze Ritual -->
+<div class="space-y-6">
+<div class="flex items-end justify-between border-b border-primary/20 pb-2">
+<h3 class="font-headline text-2xl italic font-light">Fire Gaze Ritual</h3>
+<span class="font-label uppercase text-[10px] tracking-widest text-outline">Phase I / Ritual</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant">Identify one internal 'barrier' that requires the heat of Aries to dissolve. Name it and commit it to the archive.</p>
+<div class="mt-8 space-y-12">
+<div class="relative">
+<label class="absolute -top-6 left-0 font-label uppercase text-[9px] tracking-widest text-primary/60">The Dissolving Barrier</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 transition-all duration-300 font-body text-xl py-2 px-0" placeholder="i.e. Hesitation in Voice" type="text"/>
+</div>
+<div class="relative">
+<label class="absolute -top-6 left-0 font-label uppercase text-[9px] tracking-widest text-primary/60">The Resulting Ash</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 transition-all duration-300 font-body text-xl py-2 px-0" placeholder="What remains after the fire?" type="text"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Quote / Navigation -->
+<footer class="col-span-12 mt-32 py-12 border-t border-ritual flex flex-col items-center">
+<div class="max-w-xl text-center">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="flare">flare</span>
+<p class="font-headline italic text-2xl text-on-surface/70 leading-relaxed mb-8">
+                        "The flame does not seek to be understood; it only seeks to consume the limitation."
+                    </p>
+<div class="flex gap-12">
+<button class="font-label uppercase text-[11px] tracking-[0.2em] border-b border-primary/40 pb-1 hover:text-primary transition-colors">Prev: Prologue</button>
+<button class="font-label uppercase text-[11px] tracking-[0.2em] border-b border-primary/40 pb-1 hover:text-primary transition-colors">Next: Phase II</button>
+</div>
+</div>
+</footer>
+</div>
+</main>
+<!-- Marginalia Footer Whisper -->
+<div class="fixed bottom-6 right-8 opacity-20 pointer-events-none hidden lg:block">
+<p class="font-label text-[8px] uppercase tracking-[0.4em] origin-right -rotate-90">Canonical Sequence: Aries-01-V-Scorp</p>
+</div>
+</body></html>

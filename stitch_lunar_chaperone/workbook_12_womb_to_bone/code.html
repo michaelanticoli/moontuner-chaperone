@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE SACRED LEDGER | Womb to Bone</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Newsreader:ital,wght@0,400;0,600;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#e1c296",
+                    "surface-container-highest": "#e5e2db",
+                    "surface-container-low": "#f6f3ec",
+                    "on-primary-fixed": "#281800",
+                    "surface": "#fcf9f2",
+                    "primary-container": "#c4a77d",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#0d1c31",
+                    "surface-container-high": "#ebe8e1",
+                    "tertiary-fixed": "#d5e3ff",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed": "#e5e2de",
+                    "inverse-on-surface": "#f3f0e9",
+                    "outline": "#7f766a",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#1c1c18",
+                    "on-primary-container": "#503c1b",
+                    "surface-container": "#f1eee7",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dcdad3",
+                    "surface-bright": "#fcf9f2",
+                    "secondary-fixed-dim": "#c9c6c3",
+                    "on-tertiary-container": "#324057",
+                    "on-primary-fixed-variant": "#584321",
+                    "on-secondary-fixed-variant": "#474744",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#725b37",
+                    "tertiary-container": "#9eacc7",
+                    "secondary-container": "#e5e2de",
+                    "background": "#fcf9f2",
+                    "primary-fixed": "#fedeb0",
+                    "on-secondary-container": "#656461",
+                    "outline-variant": "#d0c5b7",
+                    "surface-variant": "#e5e2db",
+                    "secondary": "#5f5e5c",
+                    "on-background": "#1c1c18",
+                    "tertiary": "#515f77",
+                    "on-tertiary-fixed-variant": "#3a475e",
+                    "primary-fixed-dim": "#e1c296",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-surface": "#31312c",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#4d463c",
+                    "tertiary-fixed-dim": "#b9c7e3",
+                    "primary": "#725b37",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#1c1c1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Newsreader"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .font-notoSerif { font-family: 'Noto Serif', serif; }
+      .font-newsreader { font-family: 'Newsreader', serif; }
+      .font-inter { font-family: 'Inter', sans-serif; }
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: #fcf9f2; }
+      ::-webkit-scrollbar-thumb { background: #d0c5b7; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-newsreader selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 z-50 fixed flex justify-between items-center w-full px-12 py-6 bg-[#fcf9f2] dark:bg-stone-950 bg-gradient-to-b from-stone-200/20 to-transparent">
+<div class="text-2xl font-notoSerif tracking-tighter text-stone-900 dark:text-stone-100 italic">
+            THE SACRED LEDGER
+        </div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.15em] text-[10px] hover:text-[#c4a77d] transition-colors duration-300" href="#">The Archive</a>
+<a class="text-[#725b37] dark:text-[#c4a77d] border-b-0.5 border-[#725b37] pb-1 font-inter uppercase tracking-[0.15em] text-[10px] italic" href="#">Curations</a>
+<a class="text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.15em] text-[10px] hover:text-[#c4a77d] transition-colors duration-300" href="#">Glossary</a>
+<a class="text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.15em] text-[10px] hover:text-[#c4a77d] transition-colors duration-300" href="#">Rituals</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#725b37] cursor-pointer">menu_book</span>
+<div class="w-8 h-8 bg-surface-container-highest border border-outline-variant flex items-center justify-center overflow-hidden">
+<img alt="Scholar Profile" class="w-full h-full object-cover grayscale opacity-80" data-alt="close-up portrait of an elderly academic with spectacles in a dimly lit library setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvNkTkA4wI6LW3h7Te6HDj9gBwZ_J2BKN1cmC8Oc4rHfzFSTuiu2GCxfIdANyBvz3BAwIBEv9Hn6JWiZsIVVlE9E52VYAE-4i-8lRPF-JiDvFzA53MRuN5b3gbxKh-TvQZ8lMizNQSww1QLmwohXEcSzK-6PY_4nbpCpV7nrMNc5WNmWdiPmvfoNFNxde2b0NG0fmKptpRNs6bklhT0C-CUkmz6mzUFhpE7n9vU2_2rj0mzdzXQREorjSAMPYeh7PNFQxNV8tvZNYZ"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed flex flex-col h-full py-12 px-8 h-screen w-72 left-0 top-0 border-r-0.5 border-stone-200/30 bg-[#f5f2eb] dark:bg-stone-900/50 mt-20">
+<div class="mb-12">
+<div class="w-12 h-12 mb-4 bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+</div>
+<h2 class="text-lg font-notoSerif text-stone-900 dark:text-stone-100">LUNAR CHAPERONE</h2>
+<p class="font-inter uppercase tracking-[0.12em] text-[9px] text-stone-500">VOLUME IV: THE WORKBOOK</p>
+</div>
+<nav class="flex-1 space-y-6">
+<div class="flex items-center gap-3 text-stone-400 dark:text-stone-500 font-inter uppercase tracking-[0.12em] text-[11px] cursor-pointer hover:bg-stone-100/50">
+<span class="material-symbols-outlined text-[18px]">circle</span>
+<span>Phase I: New Moon</span>
+</div>
+<div class="flex items-center gap-3 text-stone-400 dark:text-stone-500 font-inter uppercase tracking-[0.12em] text-[11px] cursor-pointer hover:bg-stone-100/50">
+<span class="material-symbols-outlined text-[18px]">exposure_plus_1</span>
+<span>Phase II: Waxing</span>
+</div>
+<div class="flex items-center gap-3 text-stone-900 dark:text-stone-100 font-bold translate-x-2 transition-transform font-inter uppercase tracking-[0.12em] text-[11px] cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">brightness_high</span>
+<span>Phase III: Full Moon</span>
+</div>
+<div class="flex items-center gap-3 text-stone-400 dark:text-stone-500 font-inter uppercase tracking-[0.12em] text-[11px] cursor-pointer hover:bg-stone-100/50">
+<span class="material-symbols-outlined text-[18px]">exposure_neg_1</span>
+<span>Phase IV: Waning</span>
+</div>
+<div class="flex items-center gap-3 text-stone-400 dark:text-stone-500 font-inter uppercase tracking-[0.12em] text-[11px] cursor-pointer hover:bg-stone-100/50">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+<span>The Chaperone Index</span>
+</div>
+</nav>
+<div class="mt-auto pt-8 border-t border-outline-variant/20 space-y-4">
+<button class="w-full py-3 bg-primary text-on-primary font-inter uppercase tracking-widest text-[10px] transition-all hover:bg-on-primary-fixed-variant">Download Manuscript</button>
+<div class="flex justify-between px-2">
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary">settings</span>
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary">gavel</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-72 pt-32 pb-24 px-16 max-w-7xl">
+<!-- Hero Header -->
+<header class="grid grid-cols-12 gap-8 mb-24 items-end">
+<div class="col-span-8">
+<div class="font-inter uppercase tracking-[0.2em] text-[11px] text-primary mb-4">Workbook 12 // Archive Series</div>
+<h1 class="text-7xl font-notoSerif italic leading-tight text-on-surface">Womb to Bone</h1>
+<div class="mt-8 flex gap-12 border-t border-outline-variant/30 pt-8">
+<div>
+<span class="font-inter uppercase tracking-widest text-[9px] text-outline block mb-1">Celestial Pivot</span>
+<span class="text-lg">Cancer FM → Capricorn NM</span>
+</div>
+<div>
+<span class="font-inter uppercase tracking-widest text-[9px] text-outline block mb-1">Elemental Shift</span>
+<span class="text-lg italic text-primary">Water to Earth</span>
+</div>
+<div>
+<span class="font-inter uppercase tracking-widest text-[9px] text-outline block mb-1">Physiological Path</span>
+<span class="text-lg">Stomach → Skeletal System</span>
+</div>
+</div>
+</div>
+<div class="col-span-4 text-right">
+<div class="inline-block border border-outline-variant p-2">
+<img alt="Bone structure" class="w-full grayscale brightness-90" data-alt="high-contrast artistic photograph of a human vertebrae against a dark, minimalist background with soft golden rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2bkEs2EIGC2UAZYlnf-KjsV8w9yL98CxNfALQXtmahvBi38zIaPbbF3fP8i39TGEIEmpxZtWYj3xhEEBS7KjssfYbA1BhxAisELhvcxo9o6H8wYqyR9AEpBTjRZh-J0U6-pPzPuWvFhMuasVJDx2yYyF5mfqtL8TBvGwthKSyoBJbfk86gCRoo1M7LPxmes9eM1ERsYcv85ek4XapyTF7RfEpDZxpppZm9nEJBkzBzoPtcYEQOKVsuPjh6yaFVR-JFzSUCh8C3kAh"/>
+</div>
+<p class="mt-4 font-inter uppercase tracking-widest text-[10px] text-outline">Fig 1.0: Structural Integrity</p>
+</div>
+</header>
+<!-- Asymmetric Intro Section -->
+<section class="grid grid-cols-12 gap-16 mb-32">
+<div class="col-span-4">
+<div class="sticky top-40">
+<p class="font-newsreader text-2xl italic text-on-surface-variant leading-relaxed">
+                        "The softness of the womb provides the safety necessary for the density of the bone to eventually hold its own weight."
+                    </p>
+<div class="mt-12 h-[1px] w-12 bg-primary"></div>
+<p class="mt-4 font-inter uppercase tracking-[0.15em] text-[10px] text-primary">Marginalia: Folio 82</p>
+</div>
+</div>
+<div class="col-span-8 space-y-12">
+<h3 class="text-3xl font-notoSerif text-on-surface">I. The Soft Origin</h3>
+<p class="text-xl leading-relaxed text-on-surface-variant">
+                    Begin your investigation at the Cancer Full Moon. This is the peak of the lunar-tidal influence, where the emotional body is most fluid. We call this the 'Womb' phase—not merely biological, but the psychological container of one's most tender self-concepts. The work here is receptive, stomach-centered, and focused on the quality of nourishment you allow into your private sanctum.
+                </p>
+<div class="bg-surface-container-low p-12 space-y-8">
+<div class="group">
+<label class="block font-inter uppercase tracking-widest text-[10px] text-outline mb-4 transition-all group-focus-within:text-primary group-focus-within:translate-x-2">Prompt: Identify the 'Fluid Boundary' of your current legacy.</label>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-lg font-newsreader italic placeholder:text-stone-300" placeholder="Write into the margin..." type="text"/>
+</div>
+<div class="group">
+<label class="block font-inter uppercase tracking-widest text-[10px] text-outline mb-4 transition-all group-focus-within:text-primary group-focus-within:translate-x-2">Reflect: Where does your softest intent meet the hardest resistance?</label>
+<textarea class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-lg font-newsreader italic placeholder:text-stone-300" placeholder="Document the sensation..." rows="3"></textarea>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Protocol Grid -->
+<section class="mb-32">
+<h2 class="text-4xl font-notoSerif mb-12 italic">II. Skeletal Grounding Protocols</h2>
+<div class="grid grid-cols-4 gap-6 h-[600px]">
+<div class="col-span-2 row-span-2 bg-primary-container/10 p-10 flex flex-col justify-between border-r border-b border-outline-variant/20">
+<div>
+<span class="font-inter uppercase tracking-widest text-[10px] text-primary">Protocol A</span>
+<h4 class="text-2xl font-notoSerif mt-4">The Knee-to-Earth Axis</h4>
+<p class="mt-4 text-on-surface-variant italic">A ritual of physical descent. To build legacy, one must first learn the weight of their own structure against the soil.</p>
+</div>
+<div class="aspect-video relative overflow-hidden mt-8">
+<img alt="Yoga pose" class="w-full h-full object-cover opacity-60 hover:scale-105 transition-transform duration-700" data-alt="black and white aesthetic photo of a person kneeling in a contemplative pose on a stone floor with sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5P0Yeb_vi8aPdJs7BI33IuRXPKD-hE1L537ki-6Fg_gvxZeUZTrWYBbGBaLhyDqEBb0yHCP1HuarjGsf3XB-BcAqjm6oVkQorG5KLrxlllogKz5SfsTmOLS17aW422Mss0PS8wBTXhlgMgnj2uC0XJUaFZkp-GFDu2UfVHs1-hTgQfyqj3EalHzCrjx5vTa_5C_V48NWBtiqAL8ww4PhT1pzOvWeLO25cg2D-xHi-h88Y-6fm-LKQfDP3aJSznM6lWOKZ7929tPXu"/>
+</div>
+</div>
+<div class="col-span-1 bg-surface-container-high p-8 border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-primary mb-4">architecture</span>
+<h4 class="text-lg font-notoSerif italic">Structural Fidelity</h4>
+<p class="mt-2 text-sm text-on-surface-variant font-inter uppercase tracking-wider leading-relaxed">Examine the architectural integrity of your long-term goals.</p>
+</div>
+<div class="col-span-1 bg-surface-container-low p-8 border-b border-outline-variant/20">
+<span class="material-symbols-outlined text-primary mb-4">history_edu</span>
+<h4 class="text-lg font-notoSerif italic">Legacy Script</h4>
+<p class="mt-2 text-sm text-on-surface-variant font-inter uppercase tracking-wider leading-relaxed">Draft the first sentence of your hundred-year impact statement.</p>
+</div>
+<div class="col-span-2 bg-on-surface text-surface p-12 flex items-center gap-12">
+<div class="text-6xl font-notoSerif text-primary-container">12</div>
+<div>
+<h4 class="text-xl font-notoSerif italic text-primary-container">The Graduate Thesis</h4>
+<p class="mt-2 text-sm text-stone-400 font-newsreader leading-relaxed">Advanced research into the Capricorn New Moon shift. Requires the 'Silence and Stone' prerequisite.</p>
+<button class="mt-6 border border-primary-container text-primary-container px-6 py-2 font-inter uppercase tracking-widest text-[9px] hover:bg-primary-container hover:text-on-primary transition-colors">Access Archive</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Research Prompt -->
+<section class="max-w-3xl mx-auto text-center py-24 border-y border-outline-variant/30">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">workspace_premium</span>
+<h2 class="text-4xl font-notoSerif mb-8 italic">Graduate Research Prompt</h2>
+<p class="text-xl leading-relaxed text-on-surface-variant mb-12">
+                "In the transition from the lunar moisture of Cancer to the Saturnian grit of Capricorn, what part of your history must calcify to become a foundation, and what part must be shed like old skin?"
+            </p>
+<div class="relative group">
+<textarea class="w-full bg-surface-container-lowest border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-xl font-newsreader italic py-8 px-12 placeholder:text-stone-300" placeholder="Transcribe your findings here..." rows="6"></textarea>
+<div class="absolute bottom-4 right-4 font-inter uppercase tracking-widest text-[8px] text-outline">Submission ID: LC-V4-W12</div>
+</div>
+</section>
+<!-- Footer Meta -->
+<footer class="mt-32 grid grid-cols-3 gap-12 items-start border-t border-outline-variant/20 pt-12">
+<div class="space-y-4">
+<div class="font-inter uppercase tracking-[0.2em] text-[10px] text-primary">The Sacred Ledger</div>
+<p class="text-xs text-on-surface-variant font-newsreader italic">A division of the Lunar Chaperone Archive. Printed on 120gsm ivory vellum (digital simulation).</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 border border-outline-variant flex items-center justify-center rotate-45 mb-4">
+<div class="-rotate-45 font-notoSerif text-xl">XII</div>
+</div>
+<span class="font-inter uppercase tracking-widest text-[9px] text-outline">Volume IV Status: Authenticated</span>
+</div>
+<div class="text-right flex flex-col items-end gap-2">
+<a class="font-inter uppercase tracking-widest text-[9px] text-on-surface hover:text-primary transition-colors border-b border-transparent hover:border-primary pb-1" href="#">Next: Bone to Breath</a>
+<a class="font-inter uppercase tracking-widest text-[9px] text-on-surface hover:text-primary transition-colors border-b border-transparent hover:border-primary pb-1" href="#">Return to Archive</a>
+</div>
+</footer>
+</main>
+<!-- Marginalia Floating Note -->
+<div class="fixed bottom-12 right-12 text-right pointer-events-none hidden xl:block">
+<div class="transform rotate-90 origin-bottom-right mb-4">
+<span class="font-inter uppercase tracking-[0.3em] text-[8px] text-outline-variant/60">TSL-SYSTEM-WHISPER-V4.12.0</span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/10 p-4 w-48 shadow-2xl backdrop-blur-sm opacity-60">
+<p class="font-inter uppercase tracking-widest text-[8px] text-outline mb-2">Metadata</p>
+<p class="text-[10px] font-newsreader italic text-on-surface-variant">Calculated transition velocity: 0.0034 Earth/Min. Grounding required.</p>
+</div>
+</div>
+</body></html>

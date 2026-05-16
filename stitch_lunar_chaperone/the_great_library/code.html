@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE CANONICAL ARCHIVE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=Inter:wght@300;400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&amp;family=Noto+Serif:wght@300;400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed-dim": "#e1c296",
+                      "primary-fixed": "#fedeb0",
+                      "secondary-fixed": "#e5e2de",
+                      "surface-bright": "#fcf9f2",
+                      "primary": "#725b37",
+                      "secondary-container": "#e5e2de",
+                      "inverse-primary": "#e1c296",
+                      "tertiary-fixed": "#d5e3ff",
+                      "surface": "#fcf9f2",
+                      "surface-container": "#f1eee7",
+                      "inverse-on-surface": "#f3f0e9",
+                      "on-background": "#1c1c18",
+                      "on-secondary": "#ffffff",
+                      "surface-variant": "#e5e2db",
+                      "background": "#fcf9f2",
+                      "on-primary-fixed": "#281800",
+                      "on-error": "#ffffff",
+                      "outline-variant": "#d0c5b7",
+                      "on-tertiary-fixed": "#0d1c31",
+                      "outline": "#7f766a",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed": "#1c1c1a",
+                      "tertiary-container": "#9eacc7",
+                      "on-secondary-container": "#656461",
+                      "on-primary-container": "#503c1b",
+                      "surface-container-low": "#f6f3ec",
+                      "on-surface-variant": "#4d463c",
+                      "on-tertiary-container": "#324057",
+                      "secondary": "#5f5e5c",
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#725b37",
+                      "on-primary-fixed-variant": "#584321",
+                      "tertiary-fixed-dim": "#b9c7e3",
+                      "surface-dim": "#dcdad3",
+                      "error": "#ba1a1a",
+                      "secondary-fixed-dim": "#c9c6c3",
+                      "primary-container": "#c4a77d",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-surface": "#31312c",
+                      "on-secondary-fixed-variant": "#474744",
+                      "surface-container-highest": "#e5e2db",
+                      "error-container": "#ffdad6",
+                      "surface-container-high": "#ebe8e1",
+                      "on-primary": "#ffffff",
+                      "on-surface": "#1c1c18",
+                      "tertiary": "#515f77",
+                      "on-tertiary-fixed-variant": "#3a475e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Noto Serif"],
+                      "body": ["Newsreader"],
+                      "label": ["Inter"],
+                      "display": ["Cormorant Garamond"]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .radiating-circles {
+            background-image: radial-gradient(circle at 100% 0%, transparent 0%, transparent 40%, rgba(114, 91, 55, 0.03) 41%, rgba(114, 91, 55, 0.03) 42%, transparent 43%),
+                              radial-gradient(circle at 100% 0%, transparent 0%, transparent 60%, rgba(114, 91, 55, 0.03) 61%, rgba(114, 91, 55, 0.03) 62%, transparent 63%),
+                              radial-gradient(circle at 100% 0%, transparent 0%, transparent 80%, rgba(114, 91, 55, 0.03) 81%, rgba(114, 91, 55, 0.03) 82%, transparent 83%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen radiating-circles">
+<!-- TopAppBar Fragment -->
+<header class="bg-[#fcf9f2] dark:bg-[#1c1c18] docked full-width top-0 z-50 transition-colors duration-300">
+<div class="flex justify-between items-center w-full px-8 py-6">
+<div class="flex items-center gap-6">
+<button class="text-[#725b37] dark:text-[#c4a77d] hover:bg-[#c4a77d]/10 transition-colors duration-300 p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-sm font-['Inter'] font-medium tracking-[0.2em] text-[#1c1c18] dark:text-[#fcf9f2]">THE CANONICAL ARCHIVE</h1>
+</div>
+<nav class="hidden md:flex gap-12">
+<a class="text-[#725b37] dark:text-[#c4a77d] font-semibold font-['Inter'] uppercase tracking-[0.15em] text-[10px]" href="#">Philosophies</a>
+<a class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 hover:bg-[#c4a77d]/10 transition-colors duration-300 font-['Inter'] uppercase tracking-[0.15em] text-[10px]" href="#">Rituals</a>
+<a class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 hover:bg-[#c4a77d]/10 transition-colors duration-300 font-['Inter'] uppercase tracking-[0.15em] text-[10px]" href="#">History</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-[#725b37] dark:text-[#c4a77d] hover:bg-[#c4a77d]/10 transition-colors duration-300 p-2">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="relative pt-32 pb-48 px-8 max-w-[1440px] mx-auto">
+<!-- Marginalia -->
+<aside class="hidden lg:block absolute left-8 top-48">
+<div class="flex flex-col gap-12">
+<div class="rotate-90 origin-left translate-x-4">
+<p class="font-label text-[10px] uppercase tracking-[0.3em] text-outline opacity-60">Volume IV — No. 112</p>
+</div>
+<div class="rotate-90 origin-left translate-x-4 pt-32">
+<p class="font-label text-[10px] uppercase tracking-[0.3em] text-outline opacity-60">Established MCMXCVIII</p>
+</div>
+</div>
+</aside>
+<section class="grid grid-cols-12 gap-8 items-start">
+<!-- Hero Content: Asymmetric Layout (Span 7) -->
+<div class="col-span-12 md:col-span-7 mt-12">
+<div class="space-y-12">
+<h2 class="font-display font-light text-7xl lg:text-9xl leading-[0.95] text-on-surface">
+                        THE GREAT <br/>
+<span class="italic font-light text-primary">LIBRARY</span>
+</h2>
+<div class="max-w-xl pl-1 md:pl-24 space-y-8">
+<p class="text-xl lg:text-2xl leading-relaxed text-on-surface-variant font-light italic">
+                            A curated repository of ancient wisdom and modern inquiry, preserved for the silent observers of the digital age.
+                        </p>
+<div class="pt-8">
+<button class="bg-primary text-on-primary px-12 py-5 font-label text-xs uppercase tracking-[0.2em] transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/10">
+                                Enter the Sanctum
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Ritualistic Object Placement -->
+<div class="col-span-12 md:col-span-5 relative mt-24 md:mt-0">
+<div class="aspect-[3/4] w-full bg-surface-container-low overflow-hidden relative group">
+<img alt="Ancient library" class="object-cover w-full h-full grayscale transition-transform duration-[2000ms] group-hover:scale-110 opacity-80" data-alt="Monochrome photograph of an ancient mahogany library shelf filled with vellum-bound books in soft misty morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwKbI7-teYiqIJ6kXaNBR7DqWns13C8bCoRBkMBz-sXBSXf56wfaLZtUBnoj4EbkRrNa6qCjJH5r2rNDZ8WBZxEz44E3ggRmHRVjGG0GEBZp-oXIw16iT6-29qhhyLwl1PCS2s6HW2yvEMGZGH46vDX0iz__l7PsIM8sLYNaiVfSjbSvto_MsZcauj2d2riCzvhK6N0oB14HlNTS4Ju6O_xmbagm30HQjfj9acNtGDLIVE81oap2mTVwNoEgo6OGnChG5MIX1AQ84y"/>
+<div class="absolute inset-0 bg-primary/5 mix-blend-multiply"></div>
+</div>
+<div class="absolute -bottom-16 -left-16 w-64 aspect-square bg-surface-container-highest p-8 hidden lg:block border border-outline-variant/10">
+<p class="font-label text-[10px] uppercase tracking-widest text-primary mb-4">Current Entry</p>
+<p class="font-display text-lg italic leading-tight">The Hermetic Traditions of the First Dynasty</p>
+<div class="mt-6 h-px w-8 bg-primary"></div>
+</div>
+</div>
+</section>
+<!-- Secondary Section: Intentional Negative Space -->
+<section class="mt-64 grid grid-cols-12 gap-8">
+<div class="col-span-12 md:col-start-3 md:col-span-8">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-16 border-b border-outline-variant/20 pb-4">
+<h3 class="font-label text-xs uppercase tracking-[0.3em] text-outline">Featured Collections</h3>
+<a class="font-label text-[10px] uppercase tracking-[0.15em] text-primary border-b border-primary/30 pb-1" href="#">View Archive Directory</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<!-- Collection 1 -->
+<div class="space-y-6 group cursor-pointer">
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img alt="Philosophy" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="Old open book on a wooden table with dramatic shadows and golden sunlight hitting the pages" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTBLBZEiy0SiiOAUxPuyn2D5-7dm1m5EVZvreYUP-16iRaISPeavkPkS7bGhAe5jOtmtzdp0rwDHvR_1OtkGwNHc8cNfexKnlF96e5xfzQhpKmBIRnK_g86DqRpjxapNM7wNGMgyD_mJnx3VHLNkWLGkuR6-R9TmRvLIIDeUxCbFyphLzEUHn-PZKXVmcwVx3Uek60ADi4DVmOxxbw9cCb8uOctk5mWLKGhtI9PzZCtWLkaTRS8QK-4a4Mnd0NbEsrVyYWY9fgbu4A"/>
+</div>
+<div class="space-y-2">
+<h4 class="font-display text-2xl group-hover:text-primary transition-colors">Philosophies</h4>
+<p class="font-body text-on-surface-variant leading-relaxed text-sm">Tracing the lineage of thought from pre-Socratic whispers to existential silence.</p>
+</div>
+</div>
+<!-- Collection 2 -->
+<div class="space-y-6 group cursor-pointer mt-12">
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img alt="Rituals" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="Atmospheric shot of melting wax from a lit candle on an old manuscript at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLpvPDVxSUEPmksdU3CpaDISixzEmRDSKOc72TjGfqALSDk3NHVfG3IaJ7z7dZwdjRWoNZvGUa_1Zsgs3zNayQC4bKmraUetJ5oYp6__8z7xRHYykxPLRZvWGo8cXs9CNlZW3xFtFRH2Gd0FQkFnPumgPxI5HDujAXGsk-1daCX9SjgH_mcKvNZ-gudcltVLG5diCrLM_yhNbGPe_dx2ovZQSN7D27PEAbUJYZXUuk3464w3qYVGzwYbfqZ8F6UDnjTBQ3DHdlCzWi"/>
+</div>
+<div class="space-y-2">
+<h4 class="font-display text-2xl group-hover:text-primary transition-colors">Rituals</h4>
+<p class="font-body text-on-surface-variant leading-relaxed text-sm">The physical manifestations of the unseen: mapping the traditions of the keepers.</p>
+</div>
+</div>
+<!-- Collection 3 -->
+<div class="space-y-6 group cursor-pointer">
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img alt="History" class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="Close up of a dusty old globe and vintage navigation instruments in an explorer's study" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9M6-eho7UDqJFzwOQlVhrPp5_2LEmP1fLIkUVfRoygiqN-D1XgJnUcCuxUxjKWwS2_02_54edtYzVzKV0T3F1_YQ-QY_-8l1RZGdcrL59VoZ_6IhZ9eycUHILitiVTb_kNkrf1htMim4BUItHMFkNV3qWTbvkw3XBX8-YNo9IOF-jAkuEjUV5uFsYqYdOoHVU1BCyB2T2bkxcWePVt1HT5dRIosrZg8kJJPnBbWacCDYZzftDA8klQFqe0yhY6OdPzZvTDcjzBYhM"/>
+</div>
+<div class="space-y-2">
+<h4 class="font-display text-2xl group-hover:text-primary transition-colors">History</h4>
+<p class="font-body text-on-surface-variant leading-relaxed text-sm">Unearthing the narratives that time attempted to bury beneath the silt of progress.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Journal-Style Quote -->
+<section class="mt-64 flex justify-center py-32 bg-surface-container-low">
+<div class="max-w-2xl text-center space-y-8 px-4">
+<span class="material-symbols-outlined text-primary/40 text-4xl" data-icon="format_quote">format_quote</span>
+<p class="font-display text-4xl lg:text-5xl leading-tight font-light italic text-on-surface">
+                    "Information is but a vessel; truth is the water that shapes its container."
+                </p>
+<p class="font-label text-[10px] uppercase tracking-[0.4em] text-outline">The Curator — Preface to Vol. I</p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Fragment (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-12 py-8 bg-[#fcf9f2]/80 dark:bg-[#1c1c18]/80 backdrop-blur-xl z-50">
+<a class="flex flex-col items-center justify-center text-[#725b37] dark:text-[#c4a77d] scale-110 active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 hover:text-[#725b37] active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 hover:text-[#725b37] active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 hover:text-[#725b37] active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="fingerprint">fingerprint</span>
+</a>
+</nav>
+<footer class="pt-24 pb-32 md:pb-24 px-8 border-t border-outline-variant/10">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-4 space-y-6">
+<h2 class="text-sm font-['Inter'] font-medium tracking-[0.2em] text-[#1c1c18] dark:text-[#fcf9f2]">THE CANONICAL ARCHIVE</h2>
+<p class="font-body text-sm text-on-surface-variant max-w-xs leading-relaxed italic">
+                    A digital sanctum for the preservation of human thought and ritual. Designed for the deep reader, the researcher, and the curious soul.
+                </p>
+</div>
+<div class="md:col-start-6 md:col-span-2 space-y-6">
+<h5 class="font-label text-[10px] uppercase tracking-[0.2em] text-primary">Explore</h5>
+<ul class="space-y-3 font-label text-[10px] uppercase tracking-widest text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Manifesto</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Registry</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contribution</a></li>
+</ul>
+</div>
+<div class="md:col-span-2 space-y-6">
+<h5 class="font-label text-[10px] uppercase tracking-[0.2em] text-primary">Metadata</h5>
+<ul class="space-y-3 font-label text-[10px] uppercase tracking-widest text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Script</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Legal Grimoire</a></li>
+</ul>
+</div>
+<div class="md:col-span-3 space-y-6">
+<h5 class="font-label text-[10px] uppercase tracking-[0.2em] text-primary">Correspondence</h5>
+<div class="relative group">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 font-label text-[10px] tracking-widest focus:ring-0 focus:border-primary placeholder:text-outline-variant transition-all" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="absolute right-0 top-1/2 -translate-y-1/2 text-primary">
+<span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-24 pt-12 border-t border-outline-variant/10 text-center">
+<p class="font-label text-[9px] uppercase tracking-[0.5em] text-outline opacity-40">
+                © MMXXIV THE CANONICAL ARCHIVE • ALL RIGHTS RESERVED
+            </p>
+</div>
+</footer>
+</body></html>

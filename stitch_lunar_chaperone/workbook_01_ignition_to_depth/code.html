@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&amp;family=Inter:wght@300;400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#c4a77d",
+                        "surface-bright": "#fcf9f2",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#281800",
+                        "secondary-container": "#e5e2de",
+                        "surface-container-highest": "#e5e2db",
+                        "secondary": "#5f5e5c",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#e1c296",
+                        "primary-fixed-dim": "#e1c296",
+                        "outline-variant": "#d0c5b7",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#b9c7e3",
+                        "surface-container-low": "#f6f3ec",
+                        "secondary-fixed-dim": "#c9c6c3",
+                        "inverse-on-surface": "#f3f0e9",
+                        "on-primary-container": "#503c1b",
+                        "outline": "#7f766a",
+                        "tertiary-fixed": "#d5e3ff",
+                        "surface-dim": "#dcdad3",
+                        "on-tertiary-container": "#324057",
+                        "surface-container": "#f1eee7",
+                        "primary": "#725b37",
+                        "surface-tint": "#725b37",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#e5e2de",
+                        "on-secondary-fixed-variant": "#474744",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fcf9f2",
+                        "tertiary": "#515f77",
+                        "on-secondary-fixed": "#1c1c1a",
+                        "inverse-surface": "#31312c",
+                        "tertiary-container": "#9eacc7",
+                        "surface-variant": "#e5e2db",
+                        "on-primary-fixed-variant": "#584321",
+                        "on-tertiary-fixed": "#0d1c31",
+                        "on-tertiary-fixed-variant": "#3a475e",
+                        "surface": "#fcf9f2",
+                        "on-secondary-container": "#656461",
+                        "on-surface-variant": "#4d463c",
+                        "surface-container-high": "#ebe8e1",
+                        "on-surface": "#1c1c18",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#fedeb0",
+                        "on-background": "#1c1c18"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fcf9f2;
+            color: #1c1c18;
+            -webkit-font-smoothing: antialiased;
+        }
+        .thin-border-b { border-bottom: 0.5px solid rgba(114, 91, 55, 0.2); }
+        .thin-border-l { border-left: 0.5px solid rgba(114, 91, 55, 0.2); }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container/30">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col p-8 z-40 bg-[#f5f2eb] dark:bg-[#141412] docked left-0 h-full w-72 transition-all ease-in-out duration-400">
+<div class="mb-12">
+<div class="w-12 h-12 mb-4 bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-surface text-2xl" data-icon="auto_stories">auto_stories</span>
+</div>
+<h2 class="text-lg font-bold text-[#1c1c18] dark:text-[#fcf9f2] font-label uppercase tracking-[0.1em]">Workbook Index</h2>
+<p class="font-label uppercase tracking-[0.1em] text-[10px] text-[#1c1c18]/80 dark:text-[#fcf9f2]/80">Series Alpha-Omega</p>
+</div>
+<nav class="flex-1 space-y-6">
+<a class="flex items-center space-x-3 text-[#1c1c18]/80 dark:text-[#fcf9f2]/80 font-label uppercase tracking-[0.1em] text-[10px] hover:bg-[#fcf9f2]/50 transition-all duration-400" href="#">
+<span class="material-symbols-outlined" data-icon="brightness_3">brightness_3</span>
+<span>Current Moon</span>
+</a>
+<a class="flex items-center space-x-3 text-[#725b37] dark:text-[#c4a77d] font-bold translate-x-2 font-label uppercase tracking-[0.1em] text-[10px]" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span>Archival Ledger</span>
+</a>
+<a class="flex items-center space-x-3 text-[#1c1c18]/80 dark:text-[#fcf9f2]/80 font-label uppercase tracking-[0.1em] text-[10px] hover:bg-[#fcf9f2]/50 transition-all duration-400" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span>Celestial Map</span>
+</a>
+<a class="flex items-center space-x-3 text-[#1c1c18]/80 dark:text-[#fcf9f2]/80 font-label uppercase tracking-[0.1em] text-[10px] hover:bg-[#fcf9f2]/50 transition-all duration-400" href="#">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span>Scholar Notes</span>
+</a>
+<a class="flex items-center space-x-3 text-[#1c1c18]/80 dark:text-[#fcf9f2]/80 font-label uppercase tracking-[0.1em] text-[10px] hover:bg-[#fcf9f2]/50 transition-all duration-400" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-8 thin-border-t">
+<button class="w-full py-4 bg-primary text-on-primary font-label uppercase tracking-widest text-xs mb-8 transition-opacity active:opacity-70">
+                New Transcription
+            </button>
+<a class="flex items-center space-x-3 text-[#1c1c18]/80 dark:text-[#fcf9f2]/80 font-label uppercase tracking-[0.1em] text-[10px]" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span>Library Help</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-72 min-h-screen">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-12 py-6 w-full bg-[#fcf9f2] dark:bg-[#1c1c18] font-['Noto_Serif'] font-light tracking-tight sticky top-0 z-30">
+<div class="text-2xl font-['Noto_Serif'] italic text-[#1c1c18] dark:text-[#fcf9f2]">Sacred Ledger</div>
+<div class="flex items-center space-x-8">
+<nav class="hidden md:flex space-x-8">
+<a class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 font-['Inter'] uppercase tracking-[0.15em] text-xs hover:text-[#725b37] transition-colors duration-300" href="#">The Archive</a>
+<a class="text-[#725b37] dark:text-[#c4a77d] border-b border-[#725b37] pb-1 font-['Inter'] uppercase tracking-[0.15em] text-xs" href="#">Half-Cycle</a>
+<a class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 font-['Inter'] uppercase tracking-[0.15em] text-xs hover:text-[#725b37] transition-colors duration-300" href="#">Rituals</a>
+</nav>
+<div class="flex items-center space-x-4 text-primary">
+<span class="material-symbols-outlined cursor-pointer" data-icon="menu_book">menu_book</span>
+<span class="material-symbols-outlined cursor-pointer" data-icon="history_edu">history_edu</span>
+<div class="w-8 h-8 bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img alt="Curator Profile" class="object-cover" data-alt="close-up portrait of an elderly scholar with a silver beard and thoughtful expression in soft library lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpbb3J6mI1wWwp6lxqNhnSO-GXKXief_ErQr1sVBoRkNJ3Y_RLCbZM7uNV-QnhWuOMhsKcuZF3RzwzAPIViZkqSFkfL6xwNxBHbKP1oTyR4LkXI7aHpeBxeKBjKfPPkSwS7ixwG5cS7Krahf34NA9i3Ib7HE23WoglE9FSipSMuAOd1xyYp7ExvfRaBuoBDoEk2A5I4Y_AFHt7pJRtobTU5U2DJ1PThw_IQQUKI8Hnt2MR425o9vVGXUM1QUy-XaBhKjf3ndiX1sDR"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Workbook Content -->
+<div class="max-w-5xl mx-auto px-12 py-20">
+<!-- Title Section (Intentional Asymmetry) -->
+<div class="mb-32">
+<p class="font-label uppercase tracking-[0.2em] text-[10px] text-primary mb-4">Workbook #01 // Volume I</p>
+<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+<h1 class="text-7xl font-headline font-light leading-tight max-w-xl">
+                        Ignition to <br/> <span class="italic pl-16">Depth</span>
+</h1>
+<div class="max-w-xs thin-border-l pl-6 mb-2">
+<p class="text-sm font-label uppercase tracking-widest text-secondary leading-relaxed">
+                            Sequence: Aries New Moon <br/> through Scorpio Full Moon
+                        </p>
+</div>
+</div>
+</div>
+<!-- Bento-Style Grid for Core Insights -->
+<section class="grid grid-cols-12 gap-12 mb-32">
+<!-- Lunar Context -->
+<div class="col-span-12 md:col-span-7 bg-surface-container-low p-12 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-9xl" data-icon="brightness_3">brightness_3</span>
+</div>
+<h3 class="font-label uppercase tracking-widest text-xs text-primary mb-8">01. Lunar Context</h3>
+<div class="space-y-6 relative z-10">
+<h4 class="text-3xl font-headline font-light italic">The Arc of Emergence</h4>
+<p class="text-lg leading-relaxed text-on-surface-variant">
+                            The transit from Aries to Scorpio represents the soul's movement from the 
+                            <span class="text-primary italic">Primal Spark</span> of the individual self to the 
+                            <span class="text-primary italic">Alchemical Descent</span> into collective or hidden depths. 
+                            It is the cycle of becoming, followed by the necessity of transformation.
+                        </p>
+<div class="pt-6 flex gap-12">
+<div>
+<span class="block font-label text-[10px] uppercase tracking-widest text-secondary">Starting Point</span>
+<span class="font-headline text-xl italic">Aries New Moon</span>
+</div>
+<div>
+<span class="block font-label text-[10px] uppercase tracking-widest text-secondary">Culmination</span>
+<span class="font-headline text-xl italic">Scorpio Full Moon</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Somatic Attunements -->
+<div class="col-span-12 md:col-span-5 flex flex-col space-y-12">
+<div class="p-8 border border-outline-variant/15 bg-surface-container-lowest">
+<h3 class="font-label uppercase tracking-widest text-xs text-primary mb-6">02. Somatic Attunements</h3>
+<div class="space-y-8">
+<div class="group">
+<div class="flex items-center gap-4 mb-2">
+<span class="w-2 h-2 bg-primary"></span>
+<span class="font-label uppercase text-[10px] tracking-widest">Fire (Aries)</span>
+</div>
+<p class="text-sm italic leading-relaxed pl-6">
+                                    Focus on the solar plexus. Rapid, rhythmic movement. The impulse to act before the mind clarifies.
+                                </p>
+</div>
+<div class="group">
+<div class="flex items-center gap-4 mb-2">
+<span class="w-2 h-2 bg-primary-container"></span>
+<span class="font-label uppercase text-[10px] tracking-widest">Water (Scorpio)</span>
+</div>
+<p class="text-sm italic leading-relaxed pl-6">
+                                    Focus on the pelvic floor. Deep, stillness-based breathing. The feeling of magnetic pull.
+                                </p>
+</div>
+</div>
+</div>
+<div class="relative h-full min-h-[200px]">
+<img alt="Ritual abstract" class="w-full h-full object-cover grayscale opacity-80 mix-blend-multiply" data-alt="Abstract macro photography of ink diffusing in clear water with golden flecks and soft ethereal lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX1wLUwkJ86I-z83royrIhDQsM6LdcBk13S1_m6W2VO_JX2IXBwX9kQxD2Bv1NcCwPZcez_Tm5ma90CWBVF5sK7X9lZiq_gDx_w0JARLXt0hPyHpbufFW8j7uKr9z5LRWqJ2T1VwbRfw4cLYjOsL86dhe1sYp1XHCWEVO2NSVVNJEIGRMYP29_fqXaUTUUtcn7V19MF89YzqeGHBKLDIaqIlxLpdcjnCxUhFDU8lSjJJkFPE_RfwkEg3QrXOGorYpVLpSprF4Huc_F"/>
+<div class="absolute inset-0 border border-primary/20 m-4"></div>
+</div>
+</div>
+</section>
+<!-- 14-Day Integration Protocol Table -->
+<section class="mb-32">
+<div class="mb-12">
+<h3 class="font-label uppercase tracking-widest text-xs text-primary mb-2">03. 14-Day Integration Protocol</h3>
+<p class="font-headline italic text-2xl">The Transitional Bridge</p>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="p-6 font-label uppercase tracking-[0.15em] text-[10px] text-primary">Phase</th>
+<th class="p-6 font-label uppercase tracking-[0.15em] text-[10px] text-primary">Daily Action</th>
+<th class="p-6 font-label uppercase tracking-[0.15em] text-[10px] text-primary">Somatic Focus</th>
+<th class="p-6 font-label uppercase tracking-[0.15em] text-[10px] text-primary">Outcome</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr>
+<td class="p-6 italic font-headline">Days 1—4 (Ignition)</td>
+<td class="p-6 text-sm">Unfiltered journaling; 5am wake cycle.</td>
+<td class="p-6 text-sm">Chest expansion.</td>
+<td class="p-6 text-sm font-label uppercase text-[9px] tracking-widest">Pure Potential</td>
+</tr>
+<tr>
+<td class="p-6 italic font-headline">Days 5—9 (Development)</td>
+<td class="p-6 text-sm">Drafting structure; testing boundaries.</td>
+<td class="p-6 text-sm">Core stabilization.</td>
+<td class="p-6 text-sm font-label uppercase text-[9px] tracking-widest">Resistance Found</td>
+</tr>
+<tr>
+<td class="p-6 italic font-headline">Days 10—14 (Descent)</td>
+<td class="p-6 text-sm">Editing; quiet observation; shadow work.</td>
+<td class="p-6 text-sm">Fluidity / Hips.</td>
+<td class="p-6 text-sm font-label uppercase text-[9px] tracking-widest">Deep Synthesis</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Research Prompt / Marginalia -->
+<section class="grid grid-cols-12 gap-12 items-start mb-20">
+<div class="col-span-12 md:col-span-8 p-12 bg-surface-container-highest border border-outline-variant/20">
+<h3 class="font-label uppercase tracking-widest text-xs text-primary mb-8">04. Research Prompt</h3>
+<h4 class="text-4xl font-headline font-light mb-8">Phenomenology of Impulse</h4>
+<p class="text-xl leading-relaxed mb-12">
+                        "Investigate the precise moment an impulse arises in the body before the mind categorizes it. 
+                        In the transition from Fire to Water, where does the heat go? Trace the thermodynamics of 
+                        desire as it cools into obsession."
+                    </p>
+<div class="thin-border-b pb-2 mb-2">
+<input class="w-full bg-transparent border-none focus:ring-0 italic font-headline text-lg placeholder:text-primary/30" placeholder="Enter archival response here..." type="text"/>
+</div>
+</div>
+<!-- Marginalia -->
+<aside class="col-span-12 md:col-span-4 space-y-8 pt-12">
+<div class="text-[10px] font-label uppercase tracking-[0.2em] text-secondary leading-loose">
+<span class="block text-primary font-bold mb-1">METADATA_REF</span>
+                        ENTRY_ID: 2024_NM_01<br/>
+                        LOCATION: THE_SILENT_ROOM<br/>
+                        TEMP: 18.5_CELSIUS<br/>
+                        STATUS: ACTIVE_INTEGRATION
+                    </div>
+<div class="p-4 bg-primary/5 italic text-xs leading-relaxed text-on-surface-variant border-l-2 border-primary">
+                        "The archive does not merely store facts; it preserves the frequency of the search." — Librarian Alpha
+                    </div>
+</aside>
+</section>
+</div>
+<!-- Footer Decoration -->
+<footer class="h-64 flex flex-col items-center justify-center space-y-4 opacity-40">
+<div class="w-[1px] h-32 bg-primary"></div>
+<p class="font-label uppercase tracking-[0.4em] text-[9px]">End of Chapter 01</p>
+</footer>
+</main>
+</body></html>

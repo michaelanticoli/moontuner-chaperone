@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Inter:wght@300;400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#584321",
+                        "on-secondary-fixed": "#1c1c1a",
+                        "on-surface-variant": "#4d463c",
+                        "on-background": "#1c1c18",
+                        "background": "#fcf9f2",
+                        "surface-container-highest": "#e5e2db",
+                        "surface-container-high": "#ebe8e1",
+                        "surface-variant": "#e5e2db",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#fedeb0",
+                        "on-tertiary-container": "#324057",
+                        "primary-fixed-dim": "#e1c296",
+                        "primary-container": "#c4a77d",
+                        "surface-tint": "#725b37",
+                        "secondary-fixed": "#e5e2de",
+                        "on-surface": "#1c1c18",
+                        "inverse-on-surface": "#f3f0e9",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#5f5e5c",
+                        "surface-dim": "#dcdad3",
+                        "secondary-container": "#e5e2de",
+                        "outline": "#7f766a",
+                        "on-tertiary-fixed-variant": "#3a475e",
+                        "surface-container-low": "#f6f3ec",
+                        "surface-container": "#f1eee7",
+                        "outline-variant": "#d0c5b7",
+                        "on-tertiary-fixed": "#0d1c31",
+                        "on-secondary-fixed-variant": "#474744",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#515f77",
+                        "inverse-primary": "#e1c296",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#503c1b",
+                        "surface-bright": "#fcf9f2",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#31312c",
+                        "on-primary-fixed": "#281800",
+                        "surface": "#fcf9f2",
+                        "tertiary-fixed": "#d5e3ff",
+                        "on-secondary-container": "#656461",
+                        "secondary-fixed-dim": "#c9c6c3",
+                        "tertiary-container": "#9eacc7",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#b9c7e3",
+                        "primary": "#725b37"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Newsreader', serif; }
+        .nav-label { font-family: 'Inter', sans-serif; }
+        .italic-serif { font-family: 'Noto Serif', serif; font-style: italic; }
+        .ghost-border { border: 0.5px solid rgba(208, 197, 183, 0.3); }
+        .asymmetric-grid { display: grid; grid-template-columns: 1fr 2fr; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen selection:bg-primary-container/30">
+<!-- Sidebar Navigation -->
+<aside class="fixed h-screen w-72 left-0 top-0 bg-[#f5f2eb] dark:bg-[#151512] flex flex-col py-12 px-8 gap-8 border-r border-outline-variant/10">
+<div class="flex flex-col gap-2">
+<div class="w-12 h-12 bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+<h1 class="font-['Noto_Serif'] italic text-xl text-[#725b37]">LUNAR CHAPERONE</h1>
+<p class="font-['Inter'] uppercase tracking-[0.15em] text-[10px] text-[#1c1c18]/50">Graduate Research Suite</p>
+</div>
+<nav class="flex flex-col gap-4 mt-8">
+<a class="flex items-center gap-4 text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] transition-all p-2 group" href="#">
+<span class="material-symbols-outlined text-lg">first_page</span>
+<span class="font-['Inter'] uppercase tracking-[0.15em] text-[11px]">WAXING PHASE</span>
+</a>
+<a class="flex items-center gap-4 text-[#725b37] dark:text-[#c4a77d] font-bold translate-x-2 transition-transform p-2" href="#">
+<span class="material-symbols-outlined text-lg">brightness_7</span>
+<span class="font-['Inter'] uppercase tracking-[0.15em] text-[11px]">FULL MOON</span>
+</a>
+<a class="flex items-center gap-4 text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] transition-all p-2 group" href="#">
+<span class="material-symbols-outlined text-lg">last_page</span>
+<span class="font-['Inter'] uppercase tracking-[0.15em] text-[11px]">WANING PHASE</span>
+</a>
+<a class="flex items-center gap-4 text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] transition-all p-2 group" href="#">
+<span class="material-symbols-outlined text-lg">brightness_3</span>
+<span class="font-['Inter'] uppercase tracking-[0.15em] text-[11px]">NEW MOON</span>
+</a>
+<a class="flex items-center gap-4 text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] transition-all p-2 group" href="#">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="font-['Inter'] uppercase tracking-[0.15em] text-[11px]">RESEARCH LOGS</span>
+</a>
+</nav>
+<div class="mt-auto pt-8 border-t border-outline-variant/20">
+<button class="w-full bg-primary py-4 px-6 text-on-primary font-['Inter'] uppercase tracking-[0.2em] text-[10px] hover:opacity-90 transition-opacity">
+                INITIATE PROTOCOL
+            </button>
+<div class="flex gap-4 mt-6">
+<div class="flex items-center gap-2 text-[#1c1c18]/50 text-[9px] font-['Inter'] uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">biotech</span> EQUIPMENT
+                </div>
+<div class="flex items-center gap-2 text-[#1c1c18]/50 text-[9px] font-['Inter'] uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">format_quote</span> CITATIONS
+                </div>
+</div>
+</div>
+</aside>
+<!-- Main Content Stage -->
+<main class="ml-72 min-h-screen">
+<!-- Header Section -->
+<header class="bg-[#fcf9f2] dark:bg-[#1c1c18] flex justify-between items-center w-full px-12 py-8 border-b-[0.5px] border-[#c4a77d]/20 sticky top-0 z-40">
+<div class="font-['Inter'] uppercase tracking-[0.2em] text-xs font-bold text-[#1c1c18] dark:text-[#fcf9f2]">
+                WB-26 // ECLIPSE PORTAL
+            </div>
+<nav class="flex gap-12">
+<a class="text-[#1c1c18]/60 font-['Inter'] uppercase tracking-widest text-[10px] hover:text-[#725b37] transition-colors" href="#">ARCHIVE</a>
+<a class="text-[#725b37] border-b border-[#725b37] pb-1 font-['Inter'] uppercase tracking-widest text-[10px]" href="#">PROTOCOLS</a>
+<a class="text-[#1c1c18]/60 font-['Inter'] uppercase tracking-widest text-[10px] hover:text-[#725b37] transition-colors" href="#">EXEGESIS</a>
+</nav>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-[#725b37] cursor-pointer">menu_book</span>
+<span class="material-symbols-outlined text-[#725b37] cursor-pointer" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="max-w-6xl mx-auto px-12 py-20">
+<!-- Hero Title & Asymmetric Metadata -->
+<div class="grid grid-cols-12 gap-8 mb-32 items-end">
+<div class="col-span-8">
+<span class="font-['Inter'] uppercase tracking-[0.3em] text-[10px] text-primary block mb-6">SEQUENTIAL JOURNEY 26 OF 26</span>
+<h2 class="text-7xl font-light font-['Noto_Serif'] leading-tight text-on-surface">
+                        Pisces–Virgo<br/>
+<span class="italic text-primary-container">Eclipse Portal</span>
+</h2>
+</div>
+<div class="col-span-4 border-l border-outline-variant/30 pl-8 pb-4">
+<p class="font-['Inter'] uppercase tracking-widest text-[9px] text-on-surface-variant mb-4">ARCHIVAL METADATA</p>
+<div class="flex flex-col gap-2 font-['Inter'] text-[11px] text-on-surface-variant/80">
+<div class="flex justify-between"><span>SEQUENCE:</span><span>OMEGA</span></div>
+<div class="flex justify-between"><span>STATUS:</span><span>ACTIVE</span></div>
+<div class="flex justify-between"><span>COORD:</span><span>33.9N / 118.2W</span></div>
+</div>
+</div>
+</div>
+<!-- Bento Layout for Core Insight -->
+<div class="grid grid-cols-10 gap-6 mb-32">
+<!-- Large Image Context -->
+<div class="col-span-6 aspect-[16/10] bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-700" data-alt="abstract cosmic photography with swirling golden dust and deep indigo textures representing the spiritual insight of Pisces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcsXIw8y1opAspjYdz0wECMYsfsDJQylvJPu1K8i12TnpGq3uLg01cv-c238xkSG4OIW2IRV1FwxNR1isTdquyASYru5skMUxExJ4cdhEwz1tnFYm3YYvUf8WXUxq0sKkgLB4z8XVcCjwrgFX8yfVXGkqMgIc-RWvJ604EUvH40rw8A3Ns2DWKpTw05GNBrnFCn7Wp-pZBpVG0wa9DVacz36b3Ho7zxmiwvipTsgWFdE_mmXOYAivXEnj1Alt22YAVXtjiN97jtnI9"/>
+</div>
+<!-- Archetypal Card -->
+<div class="col-span-4 bg-surface-container-low p-10 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-4xl">auto_awesome</span>
+<div>
+<h3 class="font-['Inter'] uppercase tracking-[0.2em] text-xs mb-6">ARCHETYPAL JOURNEY</h3>
+<p class="text-2xl font-['Noto_Serif'] italic leading-relaxed text-on-primary-container">
+                            "Spiritual insight grounding itself into humble, rhythmic service."
+                        </p>
+</div>
+</div>
+<!-- Small Grid Items -->
+<div class="col-span-3 border-[0.5px] border-outline-variant/30 p-8">
+<h4 class="font-['Inter'] uppercase tracking-widest text-[9px] mb-4">CORRESPONDENCE A</h4>
+<p class="font-['Noto_Serif'] text-lg">Feet &amp; Etheric Body</p>
+<div class="mt-4 h-[1px] w-12 bg-primary"></div>
+</div>
+<div class="col-span-3 border-[0.5px] border-outline-variant/30 p-8">
+<h4 class="font-['Inter'] uppercase tracking-widest text-[9px] mb-4">CORRESPONDENCE B</h4>
+<p class="font-['Noto_Serif'] text-lg">Digestive System</p>
+<div class="mt-4 h-[1px] w-12 bg-primary"></div>
+</div>
+<div class="col-span-4 bg-primary text-on-primary p-8">
+<p class="font-['Newsreader'] italic text-xl">The bridge between the infinite and the infinitesimal.</p>
+</div>
+</div>
+<!-- Protocol Section (The "Desk" Layout) -->
+<section class="grid grid-cols-12 gap-16 mb-40">
+<div class="col-span-4 sticky top-40 h-fit">
+<h3 class="font-['Inter'] uppercase tracking-[0.25em] text-xs mb-8 border-b border-primary/20 pb-4">14-Day Protocol</h3>
+<p class="text-on-surface-variant font-['Newsreader'] text-lg leading-relaxed italic">
+                        A systematic integration of high-vibration data into cellular reality. 
+                    </p>
+</div>
+<div class="col-span-8 flex flex-col gap-12">
+<!-- Protocol Items -->
+<div class="group cursor-pointer">
+<div class="flex justify-between items-baseline mb-4">
+<span class="font-['Inter'] text-[10px] tracking-widest text-primary">PHASE 01 // DAYS 1-4</span>
+<span class="font-['Inter'] text-[10px] tracking-widest text-outline">DISSOLUTION</span>
+</div>
+<h4 class="text-2xl font-['Noto_Serif'] mb-4 group-hover:pl-4 transition-all duration-300">The Pisces Purge</h4>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-6">
+                            Active rest protocols. Eliminating sensory input to allow the subconscious reservoir to drain. Focus on hydrotherapy and silent meditation.
+                        </p>
+<div class="w-full h-[0.5px] bg-outline-variant/30"></div>
+</div>
+<div class="group cursor-pointer">
+<div class="flex justify-between items-baseline mb-4">
+<span class="font-['Inter'] text-[10px] tracking-widest text-primary">PHASE 02 // DAYS 5-9</span>
+<span class="font-['Inter'] text-[10px] tracking-widest text-outline">TRANSIT</span>
+</div>
+<h4 class="text-2xl font-['Noto_Serif'] mb-4 group-hover:pl-4 transition-all duration-300">Somatic Research Prompts</h4>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-6">
+                            Walk in varying terrains (sand, grass, stone). Observe where the body resists the weight of gravity. Record the transition from 'feeling' to 'analysing'.
+                        </p>
+<div class="w-full h-[0.5px] bg-outline-variant/30"></div>
+</div>
+<div class="group cursor-pointer">
+<div class="flex justify-between items-baseline mb-4">
+<span class="font-['Inter'] text-[10px] tracking-widest text-primary">PHASE 03 // DAYS 10-14</span>
+<span class="font-['Inter'] text-[10px] tracking-widest text-outline">GROUNDING</span>
+</div>
+<h4 class="text-2xl font-['Noto_Serif'] mb-4 group-hover:pl-4 transition-all duration-300">Virgo Systematization</h4>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-6">
+                            The introduction of micro-rituals. Cleaning the physical space as an act of prayer. Cataloging insights into actionable daily habits.
+                        </p>
+<div class="w-full h-[0.5px] bg-outline-variant/30"></div>
+</div>
+</div>
+</section>
+<!-- Final Ritual Insight -->
+<div class="relative w-full h-[600px] overflow-hidden bg-surface-dim">
+<img class="w-full h-full object-cover opacity-60" data-alt="dramatic silhouette of a mountain ridge under a clear starry night sky with a subtle eclipse halo appearing behind a peak" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqziqvk1lL9wq4ATswStfYqdYhFzIriuruWtedVUs2j1Q2m3DdveNyEOtNnG8ilP7cOI4IGg_tSULcN5IE7TA-h6fyoSG9VIS32AJGL9xCSMTkqZSvTXNXVatAYivtLL7WCPNRxtd_Avw-6eI9Mu9x_ZbqubpuPcl5M1LNB45rZKOQqGeQ4CE2ifIWw1R5lwIh_ksLAMniIMAxWJpi_nslZQ11z4WFtfeQZW-r1W8uIzaba0vq_v8qpKu1_tQGTApl4cI5bvqdSBPT"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-surface/90 backdrop-blur-md p-16 max-w-2xl text-center border-[0.5px] border-outline-variant/50">
+<span class="material-symbols-outlined text-primary mb-6 scale-150">flare</span>
+<h3 class="text-3xl font-['Noto_Serif'] italic mb-8">"That which is perceived in the depths must be articulated in the daylight."</h3>
+<div class="flex justify-center gap-12">
+<div class="text-center">
+<p class="font-['Inter'] uppercase tracking-widest text-[9px] mb-2">PISCES</p>
+<p class="font-['Inter'] text-xs font-bold">THE VOID</p>
+</div>
+<div class="h-8 w-[0.5px] bg-outline-variant"></div>
+<div class="text-center">
+<p class="font-['Inter'] uppercase tracking-widest text-[9px] mb-2">VIRGO</p>
+<p class="font-['Inter'] text-xs font-bold">THE VESSEL</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Marginalia -->
+<div class="absolute bottom-8 right-8 font-['Inter'] text-[9px] uppercase tracking-[0.4em] text-on-surface-variant transform rotate-90 origin-bottom-right">
+                    CONCLUDING SEQUENCE 2024.IV
+                </div>
+</div>
+<!-- Footer Details -->
+<footer class="mt-40 pt-12 border-t border-outline-variant/30 grid grid-cols-4 gap-8">
+<div>
+<h5 class="font-['Inter'] uppercase tracking-widest text-[9px] mb-4">CONTRIBUTOR</h5>
+<p class="font-['Newsreader'] italic">Lead Academic Curator</p>
+</div>
+<div>
+<h5 class="font-['Inter'] uppercase tracking-widest text-[9px] mb-4">PUBLICATION</h5>
+<p class="font-['Newsreader'] italic">Lunar Chaperone Journals</p>
+</div>
+<div>
+<h5 class="font-['Inter'] uppercase tracking-widest text-[9px] mb-4">DATED</h5>
+<p class="font-['Newsreader'] italic">14 September, 2024</p>
+</div>
+<div class="flex justify-end items-end">
+<button class="ghost-border px-8 py-3 font-['Inter'] uppercase tracking-[0.2em] text-[10px] hover:bg-primary hover:text-on-primary transition-all">
+                        DOWNLOAD PDF
+                    </button>
+</div>
+</footer>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,400&amp;family=Inter:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#9eacc7",
+                        "secondary-fixed": "#e5e2de",
+                        "secondary-container": "#e5e2de",
+                        "background": "#fcf9f2",
+                        "secondary-fixed-dim": "#c9c6c3",
+                        "tertiary-fixed-dim": "#b9c7e3",
+                        "surface-container-high": "#ebe8e1",
+                        "on-surface": "#1c1c18",
+                        "surface-container-highest": "#e5e2db",
+                        "surface": "#fcf9f2",
+                        "primary-fixed-dim": "#e1c296",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f3f0e9",
+                        "on-secondary-fixed": "#1c1c1a",
+                        "tertiary": "#515f77",
+                        "secondary": "#5f5e5c",
+                        "on-tertiary-fixed-variant": "#3a475e",
+                        "on-background": "#1c1c18",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#324057",
+                        "on-primary-fixed-variant": "#584321",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#281800",
+                        "surface-dim": "#dcdad3",
+                        "surface-bright": "#fcf9f2",
+                        "surface-container": "#f1eee7",
+                        "tertiary-fixed": "#d5e3ff",
+                        "on-surface-variant": "#4d463c",
+                        "on-secondary-container": "#656461",
+                        "on-primary-container": "#503c1b",
+                        "inverse-surface": "#31312c",
+                        "inverse-primary": "#e1c296",
+                        "on-tertiary-fixed": "#0d1c31",
+                        "surface-tint": "#725b37",
+                        "primary-container": "#c4a77d",
+                        "primary": "#725b37",
+                        "outline-variant": "#d0c5b7",
+                        "outline": "#7f766a",
+                        "primary-fixed": "#fedeb0",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f6f3ec",
+                        "on-secondary-fixed-variant": "#474744",
+                        "surface-variant": "#e5e2db"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fcf9f2;
+            color: #1c1c18;
+            -webkit-font-smoothing: antialiased;
+        }
+        .marginalia {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: rgba(28, 28, 24, 0.4);
+        }
+        .input-underline {
+            border: none;
+            border-bottom: 1px solid #d0c5b7;
+            background: transparent;
+            border-radius: 0;
+            padding: 0.5rem 0;
+        }
+        .input-underline:focus {
+            outline: none;
+            border-bottom: 1px solid #725b37;
+            ring: 0;
+        }
+    </style>
+</head>
+<body class="font-body">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-12 h-20 w-full bg-[#fcf9f2] dark:bg-stone-950 border-b border-[#1c1c18]/10 dark:border-[#fcf9f2]/10">
+<div class="flex items-center gap-8">
+<span class="font-noto-serif italic font-light text-[#725b37] dark:text-[#c4a77d] text-xl">THE CANONICAL ARCHIVE</span>
+<div class="hidden md:flex gap-6">
+<a class="font-inter uppercase tracking-widest text-[10px] text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 hover:text-[#725b37] transition-colors duration-300" href="#">The Archive</a>
+<a class="text-[#725b37] dark:text-[#c4a77d] border-b-0.5 border-[#725b37] pb-1 font-inter uppercase tracking-widest text-[10px]" href="#">Research Logs</a>
+</div>
+</div>
+<div class="flex items-center gap-4 text-[#725b37] dark:text-[#c4a77d]">
+<span class="material-symbols-outlined cursor-pointer active:opacity-70">menu_book</span>
+<span class="material-symbols-outlined cursor-pointer active:opacity-70">history_edu</span>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-20 h-[calc(100vh-5rem)] w-72 flex flex-col py-8 overflow-y-auto bg-[#fcf9f2] border-r border-[#1c1c18]/5">
+<div class="px-8 mb-8">
+<h3 class="font-inter uppercase tracking-[0.15em] text-[11px] text-[#725b37] dark:text-[#c4a77d] font-bold">CURRENT WORKBOOK</h3>
+<p class="font-body italic text-sm text-on-surface-variant">Lunar Chaperone Series</p>
+</div>
+<nav class="flex-grow space-y-1">
+<!-- Phase List -->
+<div class="flex items-center py-2 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 font-inter uppercase tracking-[0.15em] text-[11px] hover:text-[#725b37] hover:bg-[#fcf9f2] cursor-pointer">
+<span class="material-symbols-outlined text-[14px] mr-3">radio_button_unchecked</span> Phase I
+            </div>
+<div class="flex items-center py-2 transition-all duration-200 ease-in-out text-[#725b37] dark:text-[#c4a77d] font-bold border-l-2 border-[#725b37] pl-4 font-inter uppercase tracking-[0.15em] text-[11px] cursor-pointer">
+<span class="material-symbols-outlined text-[14px] mr-3" data-weight="fill" style="font-variation-settings: 'FILL' 1;">radio_button_unchecked</span> Phase II
+            </div>
+<!-- ... condensed for UI ... -->
+<div class="flex items-center py-2 transition-all duration-200 ease-in-out text-[#1c1c18]/40 pl-4 font-inter uppercase tracking-[0.15em] text-[11px] hover:text-[#725b37] cursor-pointer">
+<span class="material-symbols-outlined text-[14px] mr-3">radio_button_unchecked</span> Phase III
+            </div>
+<div class="flex items-center py-2 transition-all duration-200 ease-in-out text-[#1c1c18]/40 pl-4 font-inter uppercase tracking-[0.15em] text-[11px] hover:text-[#725b37] cursor-pointer">
+<span class="material-symbols-outlined text-[14px] mr-3">radio_button_unchecked</span> Phase IV
+            </div>
+</nav>
+<div class="px-8 mt-auto pt-8">
+<button class="w-full bg-primary text-on-primary font-inter uppercase tracking-widest text-[11px] py-4 hover:opacity-90 transition-opacity">Begin Ritual</button>
+</div>
+</aside>
+<!-- Main Content Stage -->
+<main class="ml-72 pt-20 min-h-screen bg-surface">
+<div class="max-w-5xl mx-auto px-16 py-16">
+<!-- Header Section with Asymmetry -->
+<header class="mb-24 relative">
+<div class="marginalia absolute -left-12 top-0 vertical-rl transform -rotate-180 h-32 flex items-center justify-end">
+                    LOG_ID: ARC-770 // ENERGY_MAPPING
+                </div>
+<div class="pl-12">
+<h1 class="font-headline font-light text-5xl md:text-7xl text-on-surface leading-tight max-w-2xl mb-6">
+                        The Descent of the Spark
+                    </h1>
+<div class="flex items-baseline gap-4">
+<span class="font-inter uppercase tracking-[0.2em] text-xs text-primary font-bold">Phase II: Aries to Scorpio</span>
+<div class="h-px w-24 bg-outline-variant"></div>
+</div>
+</div>
+</header>
+<!-- Qualitative Asymmetric Layout -->
+<section class="grid grid-cols-12 gap-8 mb-32 items-start">
+<div class="col-span-12 md:col-span-5 pt-4">
+<p class="font-body text-xl italic text-on-surface-variant leading-relaxed">
+                        "The primary impulse is a fire that consumes its own oxygen. To descend is not to vanish, but to transmute current into depth."
+                    </p>
+</div>
+<div class="col-span-12 md:col-span-7 pl-0 md:pl-12">
+<div class="space-y-12">
+<div class="group">
+<label class="font-inter uppercase tracking-widest text-[10px] text-primary mb-2 block">Inquiry 01</label>
+<p class="font-headline text-2xl mb-6 leading-snug">Where does impulse become depth?</p>
+<textarea class="w-full input-underline min-h-[120px] text-lg font-body" placeholder="Describe the moment of transition..."></textarea>
+</div>
+</div>
+</div>
+</section>
+<!-- Quantitative Mapping Section (Glassmorphism-like cards without shadows) -->
+<section class="mb-32">
+<h2 class="font-inter uppercase tracking-[0.2em] text-xs text-outline mb-12 border-b border-outline-variant pb-2 inline-block">Quantitative Energy Intensity</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 bg-surface-container-low border border-outline-variant/20">
+<div class="p-12 border-r border-outline-variant/20 group hover:bg-surface-container transition-colors duration-500">
+<span class="marginalia block mb-4">Metric 01</span>
+<h4 class="font-headline text-xl mb-8">Aries Pulse</h4>
+<div class="flex items-end gap-2 mb-4">
+<input class="w-16 input-underline text-4xl font-headline" type="number" value="0"/>
+<span class="font-inter text-[10px] mb-2 text-outline">Hz</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed opacity-60">Frequency of raw initiative and undirected movement.</p>
+</div>
+<div class="p-12 border-r border-outline-variant/20 group hover:bg-surface-container transition-colors duration-500">
+<span class="marginalia block mb-4">Metric 02</span>
+<h4 class="font-headline text-xl mb-8">Scorpio Gravity</h4>
+<div class="flex items-end gap-2 mb-4">
+<input class="w-16 input-underline text-4xl font-headline" type="number" value="0"/>
+<span class="font-inter text-[10px] mb-2 text-outline">kN</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed opacity-60">Pressure of internal alchemy and psychological weight.</p>
+</div>
+<div class="p-12 group hover:bg-surface-container transition-colors duration-500">
+<span class="marginalia block mb-4">Metric 03</span>
+<h4 class="font-headline text-xl mb-8">Transition Ratio</h4>
+<div class="flex items-end gap-2 mb-4">
+<input class="w-16 input-underline text-4xl font-headline" type="text" value="1:1"/>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed opacity-60">The coefficient of friction between desire and manifestation.</p>
+</div>
+</div>
+</section>
+<!-- Integration Step Table -->
+<section class="mb-32">
+<header class="mb-12 flex justify-between items-end">
+<h2 class="font-headline text-3xl">Integration Protocols</h2>
+<span class="marginalia">Tabular Reference V.II</span>
+</header>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="border-b border-primary/20">
+<th class="pb-4 font-inter uppercase tracking-widest text-[10px] text-primary">Stage</th>
+<th class="pb-4 font-inter uppercase tracking-widest text-[10px] text-primary">Requirement</th>
+<th class="pb-4 font-inter uppercase tracking-widest text-[10px] text-primary">Clinical Observation</th>
+</tr>
+</thead>
+<tbody class="font-body text-lg">
+<tr class="group">
+<td class="py-8 border-b border-outline-variant/10">
+<span class="font-headline italic pr-8">Release</span>
+</td>
+<td class="py-8 border-b border-outline-variant/10">
+<input class="w-full input-underline" placeholder="Identification of baggage..." type="text"/>
+</td>
+<td class="py-8 border-b border-outline-variant/10 italic text-on-surface-variant/60">
+                                    Decreased surface tension.
+                                </td>
+</tr>
+<tr class="group">
+<td class="py-8 border-b border-outline-variant/10">
+<span class="font-headline italic pr-8">Reframe</span>
+</td>
+<td class="py-8 border-b border-outline-variant/10">
+<input class="w-full input-underline" placeholder="Cognitive shift parameters..." type="text"/>
+</td>
+<td class="py-8 border-b border-outline-variant/10 italic text-on-surface-variant/60">
+                                    Neutralization of shadow.
+                                </td>
+</tr>
+<tr class="group">
+<td class="py-8">
+<span class="font-headline italic pr-8">Emergent</span>
+</td>
+<td class="py-8">
+<input class="w-full input-underline" placeholder="New structural formation..." type="text"/>
+</td>
+<td class="py-8 italic text-on-surface-variant/60">
+                                    Final stabilization.
+                                </td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Visual Meditation Space (Bento Style) -->
+<section class="grid grid-cols-12 gap-4 h-[500px]">
+<div class="col-span-8 relative overflow-hidden bg-surface-container-highest">
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="Abstract charcoal and gold leaf painting on aged parchment paper with delicate textures and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu3BKm25mYcnrR0C1YGzTVEHs7J0v9uOubwHd56aRxkgR_dIE15iwYVh5-1ThFRXjW1zFIy8Ghe9cU3uT7AyCZHnY94D04wJz6RnUU1xh-GMygVRdZBkNgMjx32s5BxO69I9HE6kl0gxc3TUT6sXXSf4YLthQpHZ8ZvWCvwUyQRSWXIlxuma9vHS6TywPJSgawbCmvaovAFLH1Xb_gZHAH97jriXrIVQ6i9mujNEo0LU-nli3ljWzWzWc5nttQLEn2Ai4DGBRro25i"/>
+<div class="absolute inset-0 bg-primary/5"></div>
+<div class="absolute bottom-8 left-8">
+<span class="marginalia text-white/60">Fragment 08-B</span>
+</div>
+</div>
+<div class="col-span-4 grid grid-rows-2 gap-4">
+<div class="bg-surface-container p-8 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+<p class="font-body italic text-sm">"The archivist notes that the spark does not die; it simply changes state."</p>
+</div>
+<div class="bg-primary p-8 text-on-primary flex flex-col justify-end">
+<p class="font-inter uppercase tracking-widest text-[10px] mb-2">Internal Verification</p>
+<p class="font-headline text-xl leading-tight">Seal the entry with the following realization.</p>
+<div class="mt-4 border-b border-on-primary/30 h-8"></div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer Footer -->
+<footer class="max-w-5xl mx-auto px-16 py-12 flex justify-between items-center border-t border-outline-variant/20">
+<div class="flex gap-12">
+<div class="flex flex-col">
+<span class="marginalia mb-2">Reference Code</span>
+<span class="text-xs font-inter uppercase">TEXT_70_MAPPING</span>
+</div>
+<div class="flex flex-col">
+<span class="marginalia mb-2">Status</span>
+<span class="text-xs font-inter uppercase flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Active Transcription
+                    </span>
+</div>
+</div>
+<button class="font-inter uppercase tracking-widest text-[10px] border border-outline-variant px-8 py-3 hover:bg-surface-container-high transition-colors">
+                Archive Entry
+            </button>
+</footer>
+</main>
+<!-- FAB Suppression: This is an internal workbook page, navigation is through the sidebar and TopAppBar -->
+</body></html>

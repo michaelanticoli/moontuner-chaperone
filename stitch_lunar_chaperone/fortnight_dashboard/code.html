@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#ebe8e1",
+                    "on-primary-fixed-variant": "#584321",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#324057",
+                    "on-error-container": "#93000a",
+                    "secondary": "#5f5e5c",
+                    "inverse-primary": "#e1c296",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f3f0e9",
+                    "background": "#fcf9f2",
+                    "surface-container": "#f1eee7",
+                    "on-secondary-fixed-variant": "#474744",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#e5e2de",
+                    "on-surface-variant": "#4d463c",
+                    "on-primary-container": "#503c1b",
+                    "on-background": "#1c1c18",
+                    "on-secondary-fixed": "#1c1c1a",
+                    "surface-bright": "#fcf9f2",
+                    "tertiary-fixed-dim": "#b9c7e3",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#281800",
+                    "surface-variant": "#e5e2db",
+                    "surface-tint": "#725b37",
+                    "outline-variant": "#d0c5b7",
+                    "surface": "#fcf9f2",
+                    "tertiary-container": "#9eacc7",
+                    "on-surface": "#1c1c18",
+                    "surface-dim": "#dcdad3",
+                    "on-secondary-container": "#656461",
+                    "tertiary": "#515f77",
+                    "on-tertiary-fixed": "#0d1c31",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e5e2db",
+                    "primary-fixed-dim": "#e1c296",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#31312c",
+                    "surface-container-low": "#f6f3ec",
+                    "secondary-fixed-dim": "#c9c6c3",
+                    "on-error": "#ffffff",
+                    "primary-container": "#c4a77d",
+                    "outline": "#7f766a",
+                    "on-tertiary-fixed-variant": "#3a475e",
+                    "primary": "#725b37",
+                    "tertiary-fixed": "#d5e3ff",
+                    "secondary-container": "#e5e2de",
+                    "primary-fixed": "#fedeb0"
+            },
+            fontFamily: {
+              headline: ["Noto Serif", "serif"],
+              body: ["Newsreader", "serif"],
+              label: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fcf9f2;
+            color: #1c1c18;
+        }
+        .marginalia {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    </style>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<header class="bg-gradient-to-b from-[#fcf9f2] to-[#f5f2eb] dark:from-stone-950 dark:to-stone-900 flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto top-0 z-50 fixed">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#725b37] text-2xl">menu_book</span>
+<span class="text-lg font-headline uppercase tracking-[0.15em] text-stone-900 dark:text-stone-100">The Canonical Archive</span>
+</div>
+<nav class="hidden md:flex gap-12 font-label text-[10px] uppercase tracking-[0.2em]">
+<a class="text-[#725b37] border-b-[0.5px] border-[#725b37] pb-1" href="#">Archive Home</a>
+<a class="text-stone-500 hover:text-[#c4a77d] transition-colors" href="#">The Lab</a>
+<a class="text-stone-500 hover:text-[#c4a77d] transition-colors" href="#">Lore</a>
+</nav>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#725b37]">history_edu</span>
+</div>
+</header>
+<!-- Navigation Drawer (Desktop Sidebar) -->
+<aside class="hidden lg:flex flex-col h-screen fixed left-0 top-0 w-80 py-12 px-10 border-r-[0.5px] border-stone-200 bg-[#fcf9f2] z-40">
+<div class="mt-16">
+<h2 class="font-headline text-xl tracking-widest text-stone-900 mb-12">THE ARCHIVE</h2>
+<nav class="flex flex-col gap-8">
+<a class="flex items-center gap-4 text-[#725b37] font-bold translate-x-2 transition-transform font-label text-xs uppercase tracking-[0.2em]" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+                14-Day Arc
+            </a>
+<a class="flex items-center gap-4 text-stone-400 hover:bg-[#f5f2eb] transition-all p-2 font-label text-xs uppercase tracking-[0.2em]" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+                Ritual Scripts
+            </a>
+<a class="flex items-center gap-4 text-stone-400 hover:bg-[#f5f2eb] transition-all p-2 font-label text-xs uppercase tracking-[0.2em]" href="#">
+<span class="material-symbols-outlined">self_improvement</span>
+                Somatic Guides
+            </a>
+<a class="flex items-center gap-4 text-stone-400 hover:bg-[#f5f2eb] transition-all p-2 font-label text-xs uppercase tracking-[0.2em]" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+                Esoteric Toolkit
+            </a>
+</nav>
+</div>
+<div class="mt-auto border-t border-stone-200 pt-8">
+<div class="text-[10px] font-label text-stone-400 uppercase tracking-widest leading-loose">
+            Current Fortnight:<br/>
+            Bone (Saturn) → Heart (Sun)
+        </div>
+</div>
+</aside>
+<main class="lg:ml-80 pt-32 px-6 md:px-16 pb-32 max-w-7xl">
+<!-- Hero Header Section -->
+<section class="flex flex-col md:flex-row items-start justify-between gap-12 mb-24">
+<div class="max-w-xl">
+<p class="font-label text-[10px] uppercase tracking-[0.3em] text-primary mb-4">Fortnight Transmutation</p>
+<h1 class="font-headline text-5xl md:text-7xl font-light italic tracking-tight text-on-background mb-8 leading-tight">
+                From Bone <br/>to Heart
+            </h1>
+<p class="text-xl text-on-surface-variant font-light leading-relaxed max-w-md italic">
+                A transitional alchemy between the Saturnian structure of Capricorn and the solar sovereignty of Leo.
+            </p>
+</div>
+<div class="relative w-full md:w-80 aspect-[4/5] bg-surface-container overflow-hidden group">
+<img alt="abstract artistic composition of aged paper, dried leaves, and a faint gold circular sigil with dramatic shadows" class="w-full h-full object-cover mix-blend-multiply opacity-80 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn-SpA61y1s-ebCeEr6HTIiSD0ABx3VcdpcxvtJhcaD6dh9H4dJP4qFYCH78RK_ddntv8-eyUnwd8u_27M2qd51E760WZzRTgxWYPjtxy02yahsHmc6Zqk1uAxQnP0ud3mDfKfFdKb7pivv3Ytgm8IsXEGfV74_GP6WnlUI7FThsHWL9j0a4QJOjwBd4P6C8S7iHfvMsjB4S06Pjn9tYUaBS-mJvYSGBI0bcCBUJbeSaSurVQaISENoupiLYyK6Q1VlF_PjVjd-Meb"/>
+<div class="absolute bottom-6 right-6 text-right">
+<p class="font-label text-[9px] uppercase tracking-widest text-primary">Plate No. 042</p>
+<p class="font-headline italic text-xs">The Calcination Process</p>
+</div>
+</div>
+</section>
+<!-- Progress Tracker & Marginalia -->
+<section class="mb-32 grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-1 hidden md:block">
+<div class="marginalia font-label text-[9px] uppercase tracking-widest text-stone-400 sticky top-48">
+                THE 14-DAY ARC // BONE TO HEART
+            </div>
+</div>
+<div class="md:col-span-11 bg-surface-container-low p-12 relative">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-outline-variant pb-8">
+<div>
+<h3 class="font-label text-xs uppercase tracking-[0.2em] mb-2">Arc Completion</h3>
+<div class="font-headline text-4xl">0 <span class="text-xl text-stone-400">of</span> 14 <span class="text-lg italic text-primary">consecutive days</span></div>
+</div>
+<div class="text-right mt-6 md:mt-0">
+<span class="font-label text-[10px] uppercase tracking-widest text-stone-500 block mb-2">Sequential State</span>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-primary"></span>
+<span class="font-headline text-lg">New Moon / Point of Origin</span>
+</div>
+</div>
+</div>
+<!-- 14-Day Horizontal Calendar (New Moon to Full Moon) -->
+<div class="grid grid-cols-2 sm:grid-cols-7 lg:grid-cols-14 gap-px bg-outline-variant border border-outline-variant">
+<!-- Day 01: New Moon -->
+<div class="bg-surface p-4 aspect-square flex flex-col justify-between hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<span class="font-label text-[10px] text-primary">01</span>
+<div class="opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm">circle</span>
+<p class="font-label text-[8px] uppercase mt-1">New Moon</p>
+</div>
+</div>
+<div class="bg-surface p-4 aspect-square flex flex-col justify-between hover:bg-surface-container-lowest transition-colors cursor-pointer group">
+<span class="font-label text-[10px] text-stone-400">02</span>
+<div class="opacity-20 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm">brightness_1</span>
+<p class="font-label text-[8px] uppercase mt-1">Waxing</p>
+</div>
+</div>
+<div class="bg-surface p-4 aspect-square flex flex-col justify-between opacity-50"><span class="font-label text-[10px] text-stone-400">03</span></div>
+<div class="bg-surface p-4 aspect-square flex flex-col justify-between opacity-50"><span class="font-label text-[10px] text-stone-400">04</span></div>
+<div class="bg-surface p-4 aspect-square flex flex-col justify-between opacity-50"><span class="font-label text-[10px] text-stone-400">05</span></div>
+<div class="bg-surface p-4 aspect-square flex flex-col justify-between opacity-50"><span class="font-label text-[10px] text-stone-400">06</span></div>
+<div class="bg-surface p-4 aspect-square flex flex-col justify-between group">
+<span class="font-label text-[10px] text-stone-400">07</span>
+<div class="opacity-20 group-hover:opacity-100 transition-opacity text-stone-400">
+<span class="material-symbols-outlined text-sm">first_quarter</span>
+<p class="font-label text-[8px] uppercase mt-1">Quarter</p>
+</div>
+</div>
+<div class="bg-surface p-4 aspect-square flex flex-col justify-between opacity-50"><span class="font-label text-[10px] text-stone-400">08</span></div>
+<div class="bg-surface p-4 aspect-square flex flex-col justify-between opacity-50"><span class="font-label text-[10px] text-stone-400">09</span></div>
+<div class="bg-surface p-4 aspect-square flex flex-col justify-between opacity-50"><span class="font-label text-[10px] text-stone-400">10</span></div>
+<div class="bg-surface p-4 aspect-square flex flex-col justify-between opacity-50"><span class="font-label text-[10px] text-stone-400">11</span></div>
+<div class="bg-surface p-4 aspect-square flex flex-col justify-between opacity-50"><span class="font-label text-[10px] text-stone-400">12</span></div>
+<div class="bg-surface p-4 aspect-square flex flex-col justify-between opacity-50"><span class="font-label text-[10px] text-stone-400">13</span></div>
+<!-- Day 14: Full Moon -->
+<div class="bg-surface p-4 aspect-square flex flex-col justify-between group border-l border-primary/20">
+<span class="font-label text-[10px] text-stone-400">14</span>
+<div class="opacity-40 group-hover:opacity-100 transition-opacity text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">brightness_1</span>
+<p class="font-label text-[8px] uppercase mt-1">Full Moon</p>
+</div>
+</div>
+</div>
+<div class="mt-8 flex justify-between items-center font-label text-[9px] uppercase tracking-widest text-stone-400">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full border border-stone-300"></span>
+                    START: THE BONE (NEW MOON)
+                </div>
+<div class="flex items-center gap-2">
+                    END: THE HEART (FULL MOON)
+                    <span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+</div>
+</div>
+</section>
+<!-- Arc at a Glance Section -->
+<section class="mb-32">
+<div class="flex items-baseline gap-4 mb-16">
+<h2 class="font-headline text-3xl font-light italic">The 14-Day Arc Sequence</h2>
+<div class="flex-grow h-px bg-outline-variant opacity-30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<!-- Column 1 -->
+<div class="space-y-6">
+<div class="font-label text-[10px] uppercase tracking-[0.2em] text-primary flex items-center gap-2">
+<span class="w-8 h-[0.5px] bg-primary"></span>
+                    Days 01-04
+                </div>
+<h4 class="font-headline text-xl">Calcination of Bone</h4>
+<p class="text-sm leading-relaxed text-on-surface-variant font-body">
+                    Commencing at the New Moon. Identifying the 'bones' that no longer support the weight of your emerging heart.
+                </p>
+</div>
+<!-- Column 2 -->
+<div class="space-y-6 md:mt-12">
+<div class="font-label text-[10px] uppercase tracking-[0.2em] text-primary flex items-center gap-2">
+<span class="w-8 h-[0.5px] bg-primary"></span>
+                    Days 05-07
+                </div>
+<h4 class="font-headline text-xl">The First Quarter Stirring</h4>
+<p class="text-sm leading-relaxed text-on-surface-variant font-body">
+                    A moment of deliberate stillness to allow the calcined remains to settle. Transitioning from structure to vital pulse.
+                </p>
+</div>
+<!-- Column 3 -->
+<div class="space-y-6 lg:mt-24">
+<div class="font-label text-[10px] uppercase tracking-[0.2em] text-primary flex items-center gap-2">
+<span class="w-8 h-[0.5px] bg-primary"></span>
+                    Days 08-11
+                </div>
+<h4 class="font-headline text-xl">Ignition of Solar Heat</h4>
+<p class="text-sm leading-relaxed text-on-surface-variant font-body">
+                    The first spark of Solar energy. Leonine warmth begins to pulse within the structural framework established at the New Moon.
+                </p>
+</div>
+<!-- Column 4 -->
+<div class="space-y-6 md:mt-32">
+<div class="font-label text-[10px] uppercase tracking-[0.2em] text-primary flex items-center gap-2">
+<span class="w-8 h-[0.5px] bg-primary"></span>
+                    Days 12-14
+                </div>
+<h4 class="font-headline text-xl">Sovereignty of Heart</h4>
+<p class="text-sm leading-relaxed text-on-surface-variant font-body">
+                    Culminating at the Full Moon. Embodying the sovereignty of Leo. Directing the heat of the heart to shape a new external reality.
+                </p>
+</div>
+</div>
+</section>
+<!-- Navigation Call to Action -->
+<section class="border-t border-stone-200 pt-24 mb-16">
+<div class="bg-surface-container-highest p-1 bg-gradient-to-tr from-[#c4a77d]/20 to-transparent">
+<a class="group flex flex-col md:flex-row items-center justify-between p-12 bg-surface hover:bg-surface-container-lowest transition-all duration-500 border border-transparent hover:border-primary/20" href="#">
+<div class="max-w-md text-center md:text-left mb-8 md:mb-0">
+<h2 class="font-headline text-3xl mb-4 italic">Arc References</h2>
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-stone-500 mb-6">Correspondences, Rituals &amp; Lore</p>
+<p class="text-sm italic text-on-surface-variant">Access the complete pharmacological and astrological data required for the 14-day transition.</p>
+</div>
+<div class="flex items-center gap-6">
+<span class="font-label text-xs uppercase tracking-widest text-primary group-hover:translate-x-[-10px] transition-transform">Explore the Lore</span>
+<div class="w-16 h-16 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-8 pt-2 bg-[#fcf9f2]/80 backdrop-blur-xl border-t-[0.5px] border-stone-200 z-50">
+<a class="flex flex-col items-center justify-center text-[#725b37] border-t-2 border-[#725b37] pt-2" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 pt-2 hover:text-stone-900 transition-colors" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 pt-2 hover:text-stone-900 transition-colors" href="#">
+<span class="material-symbols-outlined">hourglass_empty</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 pt-2 hover:text-stone-900 transition-colors" href="#">
+<span class="material-symbols-outlined">auto_fix_high</span>
+</a>
+</nav>
+<!-- Marginalia: Absolute Footer Element -->
+<footer class="lg:ml-80 px-16 py-12 flex flex-col md:flex-row justify-between items-center text-[9px] font-label uppercase tracking-[0.3em] text-stone-400 border-t border-stone-100/50">
+<div>Proprietary Material of The Archive © 1894-2024</div>
+<div class="mt-4 md:mt-0">Fragment 08-B // 14-Day Alchemical Sequence</div>
+</footer>
+</body></html>

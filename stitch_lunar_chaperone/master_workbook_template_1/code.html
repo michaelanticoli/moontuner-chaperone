@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;family=Newsreader:ital,wght@0,300;0,400;0,500;1,400&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#725b37",
+                    "on-surface": "#1c1c18",
+                    "background": "#fcf9f2",
+                    "surface": "#fcf9f2",
+                    "surface-container-low": "#f6f3ec",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#d0c5b7",
+                    "primary-container": "#c4a77d",
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif", "serif"],
+                    "body": ["Newsreader", "serif"],
+                    "label": ["Inter", "sans-serif"],
+                    "display": ["Cormorant Garamond", "serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .dotted-area {
+            background-image: radial-gradient(#d0c5b7 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .journal-line {
+            border: none;
+            border-bottom: 1px solid #d0c5b7;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        .journal-line:focus {
+            outline: none;
+            border-bottom: 1px solid #725b37;
+            padding-left: 8px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container/30">
+<!-- TopAppBar Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f2] dark:bg-stone-950 border-b border-[#1c1c18]/10 flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#725b37]" data-icon="menu_book">menu_book</span>
+<span class="font-notoSerif text-lg tracking-widest uppercase text-[#725b37] dark:text-[#c4a77d]">Sacred Ledger</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label text-[10px] tracking-[0.15em] uppercase font-medium text-[#1c1c18]/60 hover:text-[#725b37] transition-colors duration-300" href="#">Archive</a>
+<a class="font-label text-[10px] tracking-[0.15em] uppercase font-medium text-[#725b37] border-b border-[#725b37]" href="#">Library</a>
+<a class="font-label text-[10px] tracking-[0.15em] uppercase font-medium text-[#1c1c18]/60 hover:text-[#725b37] transition-colors duration-300" href="#">Research</a>
+</div>
+<div class="font-notoSerif italic text-[#725b37] dark:text-[#c4a77d] text-2xl">MOONTUNER</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-32 text-center md:text-left">
+<div class="font-label text-[10px] tracking-[0.3em] uppercase text-primary mb-4">Master Workbook Template</div>
+<h1 class="font-display text-5xl md:text-7xl font-light leading-tight mb-6">
+                Pisces <span class="text-primary-container italic">→</span> Libra:<br/>
+                From Soul to Balance
+            </h1>
+<p class="font-label text-[12px] tracking-widest uppercase opacity-60">Workbook No. 02 • Seasonal Transition Protocol</p>
+</header>
+<!-- Section 1: Context & Framing -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-40">
+<div class="lg:col-span-5">
+<div class="sticky top-32">
+<h2 class="font-display text-3xl mb-8 italic">Lunar Awakening</h2>
+<p class="text-lg leading-relaxed mb-8 opacity-80">
+                        The shift from Pisces to Libra is a journey from the deep, boundless waters of the subconscious into the refined, social air of partnership. It is where the dream takes form through the lens of another. 
+                    </p>
+<div class="p-8 bg-surface-container-low border-l border-primary/20">
+<span class="font-label text-[10px] tracking-widest uppercase block mb-4">Curator's Note</span>
+<p class="italic font-display text-xl text-primary">"True equilibrium is not a static point, but a rhythmic dance between solitude and communion."</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 space-y-16">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="group">
+<label class="font-label text-[10px] tracking-widest uppercase mb-3 block opacity-50">Dream Scribe</label>
+<input class="w-full journal-line font-body text-xl py-2" placeholder="Record the first image upon waking..." type="text"/>
+</div>
+<div class="group">
+<label class="font-label text-[10px] tracking-widest uppercase mb-3 block opacity-50">Foot Bath</label>
+<input class="w-full journal-line font-body text-xl py-2" placeholder="Salts, botanicals, or intentions..." type="text"/>
+</div>
+<div class="group">
+<label class="font-label text-[10px] tracking-widest uppercase mb-3 block opacity-50">Ephemeral Art</label>
+<input class="w-full journal-line font-body text-xl py-2" placeholder="A momentary arrangement of light/shadow..." type="text"/>
+</div>
+<div class="group">
+<label class="font-label text-[10px] tracking-widest uppercase mb-3 block opacity-50">Body Tide</label>
+<input class="w-full journal-line font-body text-xl py-2" placeholder="The internal weight felt at noon..." type="text"/>
+</div>
+</div>
+<div class="pt-8">
+<label class="font-label text-[10px] tracking-widest uppercase mb-4 block opacity-50">Extended Attunement Reflection</label>
+<div class="dotted-area h-48 w-full p-6">
+<span class="font-display italic text-primary/40">Enter into the silence...</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Energy Mapping -->
+<section class="mb-40">
+<div class="border-y border-outline-variant/30 py-20 flex flex-col md:flex-row gap-16">
+<div class="md:w-1/3">
+<h2 class="font-display text-4xl mb-6">Water <span class="material-symbols-outlined align-middle mx-2" data-icon="trending_flat">trending_flat</span> Air</h2>
+<p class="font-label text-[11px] uppercase tracking-[0.2em] leading-loose opacity-60">
+                        The Alchemy of Transition: Processing the emotional depth of the Piscean ocean through the intellectual clarity of Libran wind.
+                    </p>
+</div>
+<div class="md:w-2/3">
+<div class="bg-surface-container-low p-1">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="font-label text-[9px] tracking-[0.2em] uppercase opacity-50 border-b border-outline-variant/20">
+<th class="p-6 font-medium">Phase</th>
+<th class="p-6 font-medium">Integration Step</th>
+<th class="p-6 font-medium">Metric</th>
+</tr>
+</thead>
+<tbody class="font-body text-lg">
+<tr class="border-b border-outline-variant/10">
+<td class="p-6 font-display italic">Release</td>
+<td class="p-6 italic">Shedding the Piscean shadow-weight.</td>
+<td class="p-6 font-label text-[10px] uppercase opacity-70">Emotional Buoyancy</td>
+</tr>
+<tr class="border-b border-outline-variant/10">
+<td class="p-6 font-display italic">Reframe</td>
+<td class="p-6 italic">Viewing solitude as preparation for union.</td>
+<td class="p-6 font-label text-[10px] uppercase opacity-70">Cognitive Pivot</td>
+</tr>
+<tr>
+<td class="p-6 font-display italic">Emergent</td>
+<td class="p-6 italic">Stepping into the Libra scales of justice.</td>
+<td class="p-6 font-label text-[10px] uppercase opacity-70">Interpersonal Flow</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Anchor Protocols -->
+<section class="mb-40">
+<h2 class="font-label text-[10px] tracking-[0.4em] uppercase text-center mb-20">Anchor Protocols</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1px bg-outline-variant/20">
+<!-- Physical -->
+<div class="bg-background p-12 flex flex-col gap-8">
+<div class="h-12 w-12 border border-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="accessibility_new">accessibility_new</span>
+</div>
+<div>
+<h3 class="font-display text-2xl mb-2">Physical Domain</h3>
+<p class="font-label text-[10px] tracking-widest uppercase opacity-50">Somatic Stabilizers</p>
+</div>
+<ul class="space-y-6 font-body text-xl">
+<li class="flex items-start gap-4">
+<span class="text-primary italic mt-1">01</span>
+<span>Mirror Stretch: Symmetry as visual prayer.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="text-primary italic mt-1">02</span>
+<span>Balance: Single-leg stands for 3 minutes daily.</span>
+</li>
+</ul>
+</div>
+<!-- Emotional -->
+<div class="bg-background p-12 flex flex-col gap-8 md:border-x border-outline-variant/20">
+<div class="h-12 w-12 border border-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="favorite_border">favorite_border</span>
+</div>
+<div>
+<h3 class="font-display text-2xl mb-2">Emotional Domain</h3>
+<p class="font-label text-[10px] tracking-widest uppercase opacity-50">Vulnerability Arts</p>
+</div>
+<ul class="space-y-6 font-body text-xl">
+<li class="flex items-start gap-4">
+<span class="text-primary italic mt-1">01</span>
+<span>Forgiveness Letter: Written, then dissolved in water.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="text-primary italic mt-1">02</span>
+<span>70/30 Listening: The ratio of silence to speech.</span>
+</li>
+</ul>
+</div>
+<!-- Spiritual -->
+<div class="bg-background p-12 flex flex-col gap-8">
+<div class="h-12 w-12 border border-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div>
+<h3 class="font-display text-2xl mb-2">Spiritual Domain</h3>
+<p class="font-label text-[10px] tracking-widest uppercase opacity-50">Transcendence Rituals</p>
+</div>
+<ul class="space-y-6 font-body text-xl">
+<li class="flex items-start gap-4">
+<span class="text-primary italic mt-1">01</span>
+<span>Equal Breath: 4-count inhale, 4-count exhale.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="text-primary italic mt-1">02</span>
+<span>Two-Candles Ritual: Honoring the self and the other.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Section 4: 14-Day Integration Plan -->
+<section class="mb-40">
+<div class="flex justify-between items-end mb-12">
+<h2 class="font-display text-4xl">14-Day Integration</h2>
+<div class="font-label text-[10px] tracking-widest uppercase opacity-50">Continuous Trajectory</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-7 border-t border-l border-outline-variant/30">
+<!-- Days Generator Loop Visualized -->
+<script>
+                    const grid = document.currentScript.parentElement;
+                    for(let i=1; i<=14; i++) {
+                        const day = document.createElement('div');
+                        day.className = "p-6 border-r border-b border-outline-variant/30 aspect-square flex flex-col justify-between group hover:bg-surface-container-low transition-colors duration-500";
+                        day.innerHTML = `
+                            <span class="font-label text-[10px] tracking-tighter opacity-30 group-hover:text-primary group-hover:opacity-100">${i.toString().padStart(2, '0')}</span>
+                            <div class="w-2 h-2 rounded-full border border-primary/40 group-hover:bg-primary-container"></div>
+                        `;
+                        grid.appendChild(day);
+                    }
+                </script>
+</div>
+<div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div>
+<label class="font-label text-[10px] tracking-widest uppercase block mb-2 opacity-50">Primary Actions</label>
+<p class="font-body italic text-sm text-primary/60">What was initiated today?</p>
+</div>
+<div>
+<label class="font-label text-[10px] tracking-widest uppercase block mb-2 opacity-50">Observations</label>
+<p class="font-body italic text-sm text-primary/60">Notable sensory shifts.</p>
+</div>
+<div>
+<label class="font-label text-[10px] tracking-widest uppercase block mb-2 opacity-50">Outcome Measure</label>
+<p class="font-body italic text-sm text-primary/60">Numerical or symbolic value.</p>
+</div>
+</div>
+</section>
+<!-- Section 5: Daily Rhythm Log -->
+<section class="mb-40 grid grid-cols-1 md:grid-cols-2 gap-24">
+<div class="relative">
+<div class="absolute -left-12 top-0 h-full w-[1px] bg-gradient-to-b from-primary/40 via-transparent to-transparent hidden md:block"></div>
+<h3 class="font-display text-2xl mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="light_mode">light_mode</span>
+                    Morning Micro-Practice
+                </h3>
+<div class="space-y-12">
+<div class="journal-field">
+<label class="font-label text-[10px] tracking-widest uppercase opacity-40">Initial Intention</label>
+<input class="w-full journal-line font-body py-2" type="text"/>
+</div>
+<div class="journal-field">
+<label class="font-label text-[10px] tracking-widest uppercase opacity-40">Intentionality Rating (1-10)</label>
+<div class="flex justify-between pt-4">
+<span class="w-6 h-6 border border-outline-variant flex items-center justify-center text-[10px] font-label hover:bg-primary hover:text-white cursor-pointer transition-all">1</span>
+<span class="w-6 h-6 border border-outline-variant flex items-center justify-center text-[10px] font-label hover:bg-primary hover:text-white cursor-pointer transition-all">2</span>
+<span class="w-6 h-6 border border-outline-variant flex items-center justify-center text-[10px] font-label hover:bg-primary hover:text-white cursor-pointer transition-all">3</span>
+<span class="w-6 h-6 border border-outline-variant flex items-center justify-center text-[10px] font-label hover:bg-primary hover:text-white cursor-pointer transition-all">4</span>
+<span class="w-6 h-6 border border-outline-variant flex items-center justify-center text-[10px] font-label hover:bg-primary hover:text-white cursor-pointer transition-all">5</span>
+<span class="w-6 h-6 border border-outline-variant flex items-center justify-center text-[10px] font-label bg-primary text-white cursor-pointer transition-all">6</span>
+<span class="w-6 h-6 border border-outline-variant flex items-center justify-center text-[10px] font-label hover:bg-primary hover:text-white cursor-pointer transition-all">7</span>
+<span class="w-6 h-6 border border-outline-variant flex items-center justify-center text-[10px] font-label hover:bg-primary hover:text-white cursor-pointer transition-all">8</span>
+<span class="w-6 h-6 border border-outline-variant flex items-center justify-center text-[10px] font-label hover:bg-primary hover:text-white cursor-pointer transition-all">9</span>
+<span class="w-6 h-6 border border-outline-variant flex items-center justify-center text-[10px] font-label hover:bg-primary hover:text-white cursor-pointer transition-all">10</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-display text-2xl mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="dark_mode">dark_mode</span>
+                    Evening Micro-Practice
+                </h3>
+<div class="space-y-12">
+<div class="journal-field">
+<label class="font-label text-[10px] tracking-widest uppercase opacity-40">Integration Review</label>
+<input class="w-full journal-line font-body py-2" type="text"/>
+</div>
+<div class="journal-field">
+<label class="font-label text-[10px] tracking-widest uppercase opacity-40">Gratitude to the Other</label>
+<input class="w-full journal-line font-body py-2" type="text"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Research & Seminar -->
+<section class="p-16 bg-on-surface text-surface mb-24 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary-container opacity-10 rounded-full blur-[100px] -mr-48 -mt-48"></div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-24">
+<div>
+<h2 class="font-display text-3xl mb-8">Practice-as-Data</h2>
+<p class="font-body text-xl mb-12 opacity-80 leading-relaxed">
+                        Design Outline: This workbook serves as a structured collection of somatic and psychological data points. Each entry is a pixel in the larger portrait of your spiritual evolution.
+                    </p>
+<div class="space-y-6">
+<div class="flex justify-between items-center border-b border-surface/10 pb-4">
+<span class="font-label text-[10px] tracking-widest uppercase">Subject Identifier</span>
+<span class="font-body italic opacity-60">P-L_002_WKBK</span>
+</div>
+<div class="flex justify-between items-center border-b border-surface/10 pb-4">
+<span class="font-label text-[10px] tracking-widest uppercase">Batch Status</span>
+<span class="font-body italic opacity-60">In-Processing</span>
+</div>
+</div>
+</div>
+<div>
+<h2 class="font-display text-3xl mb-8">Faculty Feedback Rubric</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="h-10 w-10 border border-surface/20 flex-shrink-0 flex items-center justify-center">
+<span class="font-label text-[10px]">A</span>
+</div>
+<div>
+<h4 class="font-label text-[10px] tracking-widest uppercase mb-1">Depth of Attunement</h4>
+<p class="text-sm opacity-50 font-body">The degree to which the student perceives the subtle Piscean nuances before transition.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="h-10 w-10 border border-surface/20 flex-shrink-0 flex items-center justify-center">
+<span class="font-label text-[10px]">B</span>
+</div>
+<div>
+<h4 class="font-label text-[10px] tracking-widest uppercase mb-1">Structural Fidelity</h4>
+<p class="text-sm opacity-50 font-body">Commitment to the 14-day protocol without deviation or neglect.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="h-10 w-10 border border-surface/20 flex-shrink-0 flex items-center justify-center">
+<span class="font-label text-[10px]">C</span>
+</div>
+<div>
+<h4 class="font-label text-[10px] tracking-widest uppercase mb-1">Synthesis Clarity</h4>
+<p class="text-sm opacity-50 font-body">The ability to articulate the emergence of balance in interpersonal dynamics.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Decoration -->
+<footer class="text-center pt-24 border-t border-outline-variant/20">
+<div class="font-display italic text-4xl text-primary mb-8">Finis Opus</div>
+<div class="font-label text-[9px] tracking-[0.4em] uppercase opacity-40">Sacred Ledger © MMXXIV • All Rituals Reserved</div>
+</footer>
+</main>
+<!-- Bottom Navigation for Mobile -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-[#fcf9f2] dark:bg-stone-950 flex justify-around items-center px-4 pb-4 pt-2 border-t border-[#1c1c18]/10">
+<a class="flex flex-col items-center justify-center text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 pt-2" href="#">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="font-label text-[10px] tracking-[0.15em] uppercase font-medium mt-1">Archive</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#725b37] dark:text-[#c4a77d] font-bold border-t-2 border-[#725b37] -mt-[1px] pt-2" href="#">
+<span class="material-symbols-outlined" data-icon="local_library">local_library</span>
+<span class="font-label text-[10px] tracking-[0.15em] uppercase font-medium mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 pt-2" href="#">
+<span class="material-symbols-outlined" data-icon="microscope">magnification_small</span>
+<span class="font-label text-[10px] tracking-[0.15em] uppercase font-medium mt-1">Research</span>
+</a>
+</nav>
+<!-- Marginalia Decoration -->
+<div class="fixed left-6 top-1/2 -translate-y-1/2 hidden xl:block mix-blend-multiply opacity-20 hover:opacity-100 transition-opacity duration-700">
+<div class="font-label text-[9px] uppercase tracking-[0.3em] rotate-180 [writing-mode:vertical-rl] space-y-4">
+<span class="text-primary">Phase: Dissolution</span>
+<span>Ref: MOON-B2</span>
+<span>Coord: 34.0522 N</span>
+</div>
+</div>
+</body></html>

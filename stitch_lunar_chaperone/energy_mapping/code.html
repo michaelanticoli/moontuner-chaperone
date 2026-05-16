@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Water to Air Transition | THE SACRED LEDGER</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Inter:wght@300;400;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,400&amp;family=Noto+Serif:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#e5e2de",
+                    "outline": "#7f766a",
+                    "on-tertiary-fixed-variant": "#3a475e",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#dcdad3",
+                    "secondary": "#5f5e5c",
+                    "inverse-on-surface": "#f3f0e9",
+                    "secondary-fixed": "#e5e2de",
+                    "on-surface": "#1c1c18",
+                    "surface-tint": "#725b37",
+                    "primary-fixed-dim": "#e1c296",
+                    "primary-container": "#c4a77d",
+                    "on-tertiary-container": "#324057",
+                    "surface-container-highest": "#e5e2db",
+                    "surface-container-high": "#ebe8e1",
+                    "primary-fixed": "#fedeb0",
+                    "surface-variant": "#e5e2db",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#4d463c",
+                    "on-background": "#1c1c18",
+                    "background": "#fcf9f2",
+                    "on-secondary-fixed": "#1c1c1a",
+                    "on-primary-fixed-variant": "#584321",
+                    "primary": "#725b37",
+                    "tertiary-fixed-dim": "#b9c7e3",
+                    "secondary-fixed-dim": "#c9c6c3",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#9eacc7",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface": "#fcf9f2",
+                    "on-secondary-container": "#656461",
+                    "tertiary-fixed": "#d5e3ff",
+                    "on-primary-fixed": "#281800",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#fcf9f2",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#31312c",
+                    "on-primary-container": "#503c1b",
+                    "on-secondary-fixed-variant": "#474744",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#0d1c31",
+                    "tertiary": "#515f77",
+                    "inverse-primary": "#e1c296",
+                    "surface-container-low": "#f6f3ec",
+                    "surface-container": "#f1eee7",
+                    "outline-variant": "#d0c5b7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif", "serif"],
+                    "body": ["Newsreader", "serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .dotted-input {
+            background-image: radial-gradient(#d0c5b7 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f2] dark:bg-[#1c1c18] flex justify-between items-center px-12 py-6 max-w-none w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d]">menu_book</span>
+<span class="font-serif text-2xl tracking-[0.15em] uppercase text-[#725b37] dark:text-[#c4a77d]">THE SACRED LEDGER</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label text-sm tracking-[0.15em] uppercase text-[#725b37] dark:text-[#c4a77d] border-b-2 border-[#725b37] transition-colors duration-300" href="#">RESEARCH</a>
+<a class="font-label text-sm tracking-[0.15em] uppercase text-[#725b37]/60 dark:text-[#c4a77d]/60 hover:text-[#725b37] dark:hover:text-[#c4a77d] transition-colors duration-300" href="#">JOURNAL</a>
+<a class="font-label text-sm tracking-[0.15em] uppercase text-[#725b37]/60 dark:text-[#c4a77d]/60 hover:text-[#725b37] dark:hover:text-[#c4a77d] transition-colors duration-300" href="#">LIBRARY</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d]">history_edu</span>
+</div>
+</header>
+<main class="pt-32 pb-40 px-6 md:px-12 max-w-screen-2xl mx-auto">
+<!-- Header Section: Asymmetric Layout -->
+<div class="grid grid-cols-12 gap-8 mb-24">
+<div class="col-span-12 md:col-span-8">
+<span class="font-label text-xs tracking-[0.2em] uppercase text-primary mb-4 block">Archive Section 02 // Elemental Calibration</span>
+<h1 class="font-headline text-5xl md:text-7xl font-light tracking-tight text-on-surface mb-8">Water to Air Transition</h1>
+<p class="text-xl md:text-2xl font-light italic text-on-surface-variant max-w-2xl leading-relaxed">
+                    The process of sublimation. Turning heavy emotional density into the clear, objective atmosphere of intellectual equilibrium.
+                </p>
+</div>
+<div class="col-span-12 md:col-span-4 flex flex-col justify-end">
+<div class="p-6 bg-surface-container-low border-l-[0.5px] border-primary/30">
+<span class="font-label text-[10px] tracking-[0.2em] uppercase text-primary mb-2 block">Reference Code</span>
+<p class="font-label text-sm text-on-surface">DOCUMENT_8: ENERGY_MAPPING</p>
+</div>
+</div>
+</div>
+<!-- Energy Mapping Fields -->
+<section class="mb-32">
+<div class="grid grid-cols-12 gap-12">
+<div class="col-span-12 md:col-span-6 space-y-16">
+<div>
+<label class="font-label text-xs tracking-[0.2em] uppercase text-primary mb-6 block">Over-Saturation Mapping</label>
+<div class="relative">
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary transition-all duration-300 placeholder:italic placeholder:text-on-surface-variant/40" placeholder="Describe the feeling of emotional drowning..." type="text"/>
+<span class="absolute right-0 bottom-4 font-label text-[10px] text-outline-variant italic">Marginalia 01</span>
+</div>
+</div>
+<div>
+<label class="font-label text-xs tracking-[0.2em] uppercase text-primary mb-6 block">Under-Watering Detection</label>
+<div class="relative">
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary transition-all duration-300 placeholder:italic placeholder:text-on-surface-variant/40" placeholder="Locate the drought in the somatic field..." type="text"/>
+<span class="absolute right-0 bottom-4 font-label text-[10px] text-outline-variant italic">Marginalia 02</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 md:col-start-8">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden group">
+<img class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-700" data-alt="Abstract art representing fluid blue water textures morphing into ethereal golden air wisps with a vintage paper texture overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP4g5HWNLPBlYnikQVpWpvWYGTKxF_15MRHsUEFCQHGYD4RGJEP5teWRzV40MXPS2Fb71oG96SYqFXBX96gbM-LIkYWGz8zYgjhWa-ooFVWkEuGt_yMpi-19Qjp-BSh30IWCphidLYH-iJCaxvISwAYqlixlXO_vIB2VRh-J6LmqUscdmUR5LoX3UYIUmhxhHnMFN0I67upGd7QBPonQPEIomKtWuyPXlBNji3Vo8BopHtj1aDN0VhfpKewEvRCe1uP9YqduugDJDU"/>
+</div>
+<p class="mt-4 font-label text-[10px] tracking-widest text-outline uppercase text-center">Visual Catalyst: Sublimation Phase</p>
+</div>
+</div>
+</section>
+<!-- Practice Table: Structured Journaling -->
+<section class="mb-32">
+<div class="flex items-baseline gap-4 mb-12 border-b border-primary/10 pb-4">
+<h2 class="font-headline text-3xl font-light">The Practice Table</h2>
+<span class="font-label text-[10px] tracking-widest text-primary/60 uppercase">Operational Framework</span>
+</div>
+<div class="grid grid-cols-12 gap-0 border-t border-outline-variant/30">
+<!-- Table Headers -->
+<div class="col-span-3 py-6 px-4 bg-surface-container-low font-label text-[10px] tracking-[0.2em] uppercase text-primary border-r border-outline-variant/30">Primary State</div>
+<div class="col-span-3 py-6 px-4 bg-surface-container-low font-label text-[10px] tracking-[0.2em] uppercase text-primary border-r border-outline-variant/30">Release (Water)</div>
+<div class="col-span-3 py-6 px-4 bg-surface-container-low font-label text-[10px] tracking-[0.2em] uppercase text-primary border-r border-outline-variant/30">Reframe (Air)</div>
+<div class="col-span-3 py-6 px-4 bg-surface-container-low font-label text-[10px] tracking-[0.2em] uppercase text-primary">Emergent Libra</div>
+<!-- Row 1 -->
+<div class="col-span-3 py-10 px-4 border-r border-b border-outline-variant/30 flex flex-col justify-center">
+<h3 class="font-headline text-xl italic">Emotional Flooding</h3>
+</div>
+<div class="col-span-3 py-10 px-4 border-r border-b border-outline-variant/30">
+<p class="text-sm font-light leading-relaxed">Let the weight of the collective sorrow drain through the somatic floor.</p>
+</div>
+<div class="col-span-3 py-10 px-4 border-r border-b border-outline-variant/30">
+<p class="text-sm font-light leading-relaxed">Observe the wave as a data point in a larger rhythmic cycle.</p>
+</div>
+<div class="col-span-3 py-10 px-4 border-b border-outline-variant/30">
+<p class="text-sm font-semibold tracking-wide text-primary">Measured Empathy</p>
+</div>
+<!-- Row 2 -->
+<div class="col-span-3 py-10 px-4 border-r border-b border-outline-variant/30 flex flex-col justify-center">
+<h3 class="font-headline text-xl italic">Dissolution</h3>
+</div>
+<div class="col-span-3 py-10 px-4 border-r border-b border-outline-variant/30">
+<p class="text-sm font-light leading-relaxed">Shed the identifying mask of the 'caregiver' or 'sufferer'.</p>
+</div>
+<div class="col-span-3 py-10 px-4 border-r border-b border-outline-variant/30">
+<p class="text-sm font-light leading-relaxed">Define the architecture of the space between self and other.</p>
+</div>
+<div class="col-span-3 py-10 px-4 border-b border-outline-variant/30">
+<p class="text-sm font-semibold tracking-wide text-primary">Clear Boundaries</p>
+</div>
+<!-- Row 3 -->
+<div class="col-span-3 py-10 px-4 border-r border-outline-variant/30 flex flex-col justify-center">
+<h3 class="font-headline text-xl italic">Boundlessness</h3>
+</div>
+<div class="col-span-3 py-10 px-4 border-r border-outline-variant/30">
+<p class="text-sm font-light leading-relaxed">Surrender the need to fix or anchor the drifting spirit.</p>
+</div>
+<div class="col-span-3 py-10 px-4 border-r border-outline-variant/30">
+<p class="text-sm font-light leading-relaxed">Translate the infinite into a structured sequence of breath.</p>
+</div>
+<div class="col-span-3 py-10 px-4">
+<p class="text-sm font-semibold tracking-wide text-primary">Poetic Structure</p>
+</div>
+</div>
+</section>
+<!-- Mini Research Prompt Section -->
+<section class="max-w-4xl">
+<div class="p-12 border-[0.5px] border-primary/20 bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" data-weight="fill">analytics</span>
+<h2 class="font-label text-xs tracking-[0.2em] uppercase text-on-surface">Mini Research Prompt</h2>
+</div>
+<p class="font-body text-lg mb-8 leading-relaxed italic">
+                    "Identify one aqueous habit that currently hinders your intellectual ascent. How does it manifest in your dialogue with the 'Other'?"
+                </p>
+<textarea class="w-full h-48 bg-transparent border border-dashed border-outline-variant p-6 focus:ring-0 focus:border-primary font-body text-lg leading-relaxed placeholder:text-on-surface-variant/30 dotted-input" placeholder="Begin the transcription here..."></textarea>
+<div class="mt-6 flex justify-between items-center">
+<span class="font-label text-[10px] text-outline-variant uppercase tracking-widest">Entry Ref: P2-E24</span>
+<button class="font-label text-[10px] tracking-[0.2em] uppercase text-primary border-b border-primary/40 pb-1 hover:border-primary transition-all">Archive Response</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-8 pb-8 pt-4 bg-[#fcf9f2]/80 dark:bg-[#1c1c18]/80 backdrop-blur-md z-50 border-t-[0.5px] border-[#725b37]/20 shadow-[0_-20px_40px_rgba(28,28,24,0.04)]">
+<button class="flex flex-col items-center justify-center text-[#725b37]/40 dark:text-[#c4a77d]/40 hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined mb-1">edit_note</span>
+<span class="font-sans text-[10px] tracking-[0.2em] uppercase font-light">JOURNAL</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#725b37]/40 dark:text-[#c4a77d]/40 hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined mb-1">local_library</span>
+<span class="font-sans text-[10px] tracking-[0.2em] uppercase font-light">LIBRARY</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#725b37] dark:text-[#c4a77d] opacity-100 transition-opacity duration-300">
+<span class="material-symbols-outlined mb-1">analytics</span>
+<span class="font-sans text-[10px] tracking-[0.2em] uppercase font-light">RESEARCH</span>
+</button>
+</nav>
+<!-- Marginalia Decoration -->
+<aside class="fixed right-6 top-1/2 -translate-y-1/2 hidden lg:block vertical-text">
+<p class="font-label text-[10px] tracking-[0.4em] uppercase text-outline-variant rotate-90 origin-right whitespace-nowrap">The Sacred Ledger // Page 002 // Libra Axis</p>
+</aside>
+</body></html>

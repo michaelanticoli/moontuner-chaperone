@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,600;1,6..72,400&amp;family=Inter:wght@300;400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#725b37",
+                        "on-error": "#ffffff",
+                        "outline": "#7f766a",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#1c1c1a",
+                        "on-secondary-container": "#656461",
+                        "tertiary-container": "#9eacc7",
+                        "primary-fixed-dim": "#e1c296",
+                        "on-tertiary-fixed-variant": "#3a475e",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#503c1b",
+                        "on-surface": "#1c1c18",
+                        "on-primary-fixed": "#281800",
+                        "tertiary-fixed-dim": "#b9c7e3",
+                        "surface-tint": "#725b37",
+                        "surface-container-highest": "#e5e2db",
+                        "surface-dim": "#dcdad3",
+                        "primary-fixed": "#fedeb0",
+                        "primary-container": "#c4a77d",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#e5e2de",
+                        "tertiary-fixed": "#d5e3ff",
+                        "surface-bright": "#fcf9f2",
+                        "inverse-primary": "#e1c296",
+                        "error": "#ba1a1a",
+                        "tertiary": "#515f77",
+                        "surface-variant": "#e5e2db",
+                        "on-surface-variant": "#4d463c",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#474744",
+                        "secondary": "#5f5e5c",
+                        "on-primary-fixed-variant": "#584321",
+                        "inverse-on-surface": "#f3f0e9",
+                        "surface-container": "#f1eee7",
+                        "surface": "#fcf9f2",
+                        "on-background": "#1c1c18",
+                        "on-tertiary-container": "#324057",
+                        "surface-container-low": "#f6f3ec",
+                        "surface-container-high": "#ebe8e1",
+                        "on-tertiary-fixed": "#0d1c31",
+                        "inverse-surface": "#31312c",
+                        "secondary-fixed-dim": "#c9c6c3",
+                        "secondary-fixed": "#e5e2de",
+                        "outline-variant": "#d0c5b7",
+                        "on-tertiary": "#ffffff",
+                        "background": "#fcf9f2"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "notoserif": ["Noto Serif", "serif"],
+                        "newsreader": ["Newsreader", "serif"],
+                        "inter": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+    font-size: 20px
+    }
+.paper-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBwaoDhNW2bk_7hWtIaG-ecyJquiREVngX_bcBQk-RwIpKr2WV7-hKcv6wvPVUA5Pk_lT1hZDGdV5x8iajNmUt7NdM_4zDTCC7Pe4pV6KOcN-r3hmXWaYA_uBpnJaP4FC36v1hnowR_bjIfxaWCB--G2bF7zx5YvFSBBGCrMLOA65qk3D7l5FnnHMVCef8tcroh76gFWuRt8Nc5NoeUl6HidGmRzF3kyZl9ZAeYFZug-Dblv4hGA4elwogwM61T-aI5k76W0uFV0bL2)
+    }
+.marginalia-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed
+    }</style>
+</head>
+<body class="bg-surface text-on-surface font-newsreader selection:bg-primary-container selection:text-on-primary-container paper-texture">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#fcf9f2] dark:bg-stone-950 flex justify-between items-center px-12 py-6 border-b-[0.5px] border-stone-200">
+<div class="text-xl font-light italic text-[#725b37] dark:text-[#c4a77d] font-notoserif">The Sacred Ledger</div>
+<nav class="hidden md:flex space-x-12">
+<a class="font-notoserif text-[#725b37] dark:text-[#c4a77d] border-b-[0.5px] border-[#725b37] pb-1 uppercase tracking-[0.15em] text-xs" href="#">Archive</a>
+<a class="font-notoserif text-[#1c1c18]/60 dark:text-stone-400 hover:text-[#725b37] dark:hover:text-[#c4a77d] transition-colors duration-300 uppercase tracking-[0.15em] text-xs" href="#">Metadata</a>
+<a class="font-notoserif text-[#1c1c18]/60 dark:text-stone-400 hover:text-[#725b37] dark:hover:text-[#c4a77d] transition-colors duration-300 uppercase tracking-[0.15em] text-xs" href="#">Protocols</a>
+</nav>
+<div class="flex items-center space-x-6">
+<span class="material-symbols-outlined text-primary cursor-pointer">history_edu</span>
+<span class="material-symbols-outlined text-primary cursor-pointer">menu_book</span>
+<div class="w-8 h-8 bg-surface-container-highest border-[0.5px] border-outline-variant overflow-hidden">
+<img alt="Librarian profile" class="w-full h-full object-cover grayscale opacity-80" data-alt="close-up portrait of an elderly academic scholar with a thoughtful expression in a dimly lit library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsInTYqZ2RWOFX5pedcn_z-7BrI4nvcfuyhsmaKycqCv1hw_K8vAE_DvOdTb_bKeCEi8gpE7J4DqWOmM4ijquPw-h4tEqYLADvjb2Ss9cpgi-RUbLRy95gHSRr_GrbpJex7xBg-PM757IkE__P_pGlHys5vgtvjg8iZJAuTVdmck9Stome3Q-L_WX5AHalginbWRJ6XurfUTgvPFHYrd5m_d_DrhHpJ8jgSbXy8svvpsg1u5XrXdp5ZB848YXgdBFUCvHrfvsOBLz7"/>
+</div>
+</div>
+</header>
+<div class="flex min-h-screen pt-24">
+<!-- SideNavBar -->
+<aside class="fixed left-0 h-full w-64 bg-stone-100 dark:bg-stone-900 border-r-[0.5px] border-stone-200 dark:border-stone-800 flex flex-col py-8 px-6 space-y-8">
+<div class="mb-4">
+<div class="w-12 h-12 bg-primary mb-3 flex items-center justify-center">
+<span class="material-symbols-outlined text-surface" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+</div>
+<h2 class="text-lg font-notoserif italic text-[#1c1c18] dark:text-stone-100">Volume Indexing</h2>
+<p class="font-inter uppercase tracking-[0.12em] text-[10px] font-medium text-stone-500">The Sacred Ledger</p>
+</div>
+<nav class="flex-1 space-y-4">
+<div class="flex items-center space-x-3 text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.12em] text-[10px] font-medium hover:bg-stone-200/50 p-2 transition-all cursor-pointer">
+<span class="material-symbols-outlined">auto_stories</span>
+<span>Volume I</span>
+</div>
+<div class="flex items-center space-x-3 text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.12em] text-[10px] font-medium hover:bg-stone-200/50 p-2 transition-all cursor-pointer">
+<span class="material-symbols-outlined">menu_book</span>
+<span>Volume II</span>
+</div>
+<div class="flex items-center space-x-3 text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.12em] text-[10px] font-medium hover:bg-stone-200/50 p-2 transition-all cursor-pointer">
+<span class="material-symbols-outlined">collections_bookmark</span>
+<span>Volume III</span>
+</div>
+<div class="flex items-center space-x-3 text-[#725b37] dark:text-[#c4a77d] font-bold translate-x-2 transition-transform font-inter uppercase tracking-[0.12em] text-[10px] p-2 bg-stone-200/30">
+<span class="material-symbols-outlined">flare</span>
+<span>Ritual Index</span>
+</div>
+<div class="flex items-center space-x-3 text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.12em] text-[10px] font-medium hover:bg-stone-200/50 p-2 transition-all cursor-pointer">
+<span class="material-symbols-outlined">self_care</span>
+<span>Somatic Logs</span>
+</div>
+</nav>
+<button class="w-full bg-primary text-on-primary font-inter uppercase tracking-widest text-[10px] py-4 hover:opacity-90 transition-all">New Entry</button>
+<div class="pt-6 border-t border-stone-200 space-y-4">
+<div class="flex items-center space-x-3 text-stone-500 font-inter uppercase tracking-[0.12em] text-[10px] cursor-pointer">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</div>
+<div class="flex items-center space-x-3 text-stone-500 font-inter uppercase tracking-[0.12em] text-[10px] cursor-pointer">
+<span class="material-symbols-outlined">help_outline</span>
+<span>Support</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 flex-1 px-16 py-12 max-w-7xl mx-auto">
+<!-- Marginalia Right -->
+<div class="fixed right-8 top-1/2 -translate-y-1/2 hidden xl:block">
+<p class="marginalia-text font-inter uppercase tracking-[0.2em] text-[9px] text-primary/40">Workbook 19/26 • Scorpio-Taurus Axis • Ref 882-Lunar</p>
+</div>
+<!-- Hero Section / Archival Header -->
+<header class="mb-24 flex flex-col md:flex-row items-baseline gap-12">
+<div class="flex-1">
+<div class="flex items-center gap-4 mb-4">
+<span class="h-[1px] w-12 bg-primary/30"></span>
+<span class="font-inter uppercase tracking-[0.15em] text-[10px] text-primary font-bold">LUNAR CHAPERONE ARCHIVE</span>
+</div>
+<h1 class="text-6xl font-notoserif font-light leading-tight text-on-surface mb-6">Depth Rooting <br/><span class="italic text-primary">in Earth</span></h1>
+<p class="text-xl italic font-newsreader text-on-surface-variant max-w-lg leading-relaxed">
+                        An archetypal journey from the transformative fires of the Scorpio Full Moon toward the tangible grounding of the Taurus New Moon.
+                    </p>
+</div>
+<div class="w-full md:w-80 p-8 border-[0.5px] border-outline-variant bg-surface-container-low">
+<h3 class="font-inter uppercase tracking-[0.15em] text-[10px] font-bold mb-4 border-b border-outline-variant pb-2">Archival Metadata</h3>
+<div class="space-y-4 text-xs font-inter leading-relaxed">
+<div>
+<span class="text-primary/60 block uppercase tracking-tighter mb-1">Sequence ID</span>
+<span class="font-medium">SCR-TAU-FM-NM-19</span>
+</div>
+<div>
+<span class="text-primary/60 block uppercase tracking-tighter mb-1">Archetypal Polarity</span>
+<span class="font-medium italic font-notoserif">Shadow/Transformation → Throat/Stability</span>
+</div>
+<div>
+<span class="text-primary/60 block uppercase tracking-tighter mb-1">Protocol Period</span>
+<span class="font-medium">14 Lunar Solar Days</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Protocol Summary Bento Grid -->
+<section class="mb-32">
+<div class="flex items-center gap-4 mb-12">
+<h2 class="text-2xl font-notoserif italic text-on-surface">14-Day Protocol Summary</h2>
+<div class="h-[0.5px] flex-1 bg-outline-variant"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-px bg-outline-variant/30 border-[0.5px] border-outline-variant">
+<!-- Phase 1: Submersion -->
+<div class="md:col-span-4 bg-surface-container-lowest p-8 flex flex-col justify-between hover:bg-surface-bright transition-colors">
+<div>
+<span class="text-primary font-notoserif text-4xl italic opacity-20 block mb-4">01</span>
+<h4 class="font-inter uppercase tracking-[0.12em] text-xs font-bold mb-6">Submersion Phase</h4>
+<p class="text-sm font-newsreader leading-relaxed text-on-surface-variant">Identify the Scorpio shadow artifacts. What power dynamics are currently being composted? Excavate the roots before the grounding begins.</p>
+</div>
+<div class="mt-12 text-[10px] font-inter text-primary/60 uppercase">Duration: 4 Days</div>
+</div>
+<!-- Phase 2: Transmutation -->
+<div class="md:col-span-5 bg-surface p-8 relative overflow-hidden group">
+<div class="absolute inset-0 opacity-10 grayscale group-hover:opacity-20 transition-opacity pointer-events-none">
+<img alt="Earth texture" class="w-full h-full object-cover" data-alt="extreme close-up of cracked dry earth textures with a single gold leaf vein running through the center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGpkPyc1FdISYPaNvxN-xnCphzMzVxT3roortYL0F1kmtqC9OZYVTfP2jXhWCnV6A05cUrBR6DrdvzFfyvB9N0pHMq3jsIr7PYm0rvfscKYD58120wupAM8NFNVVs1Oy8VfBFUHyY2Pmw1iuYjsMiT4_eavkL96iZDeIHVij9xph9hlFFqtsX-GQ9faaFgg76SdY4Ut3v4UknvaxCStBKTF7-PtfNLkkbxsajQZGGHY1wLnp-9FXOmffbrOikKBotgdNgO8A1hby9h"/>
+</div>
+<div class="relative z-10">
+<span class="text-primary font-notoserif text-4xl italic opacity-20 block mb-4">02</span>
+<h4 class="font-inter uppercase tracking-[0.12em] text-xs font-bold mb-6">Alchemy of Voice</h4>
+<p class="text-sm font-newsreader leading-relaxed mb-6">The transition from the deep pelvic bowl (Scorpio) to the throat center (Taurus). Speak the hidden truths to solidify them into physical reality.</p>
+<ul class="text-[10px] font-inter uppercase tracking-widest space-y-2">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> Vocal Toning Protocols</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary"></span> Root Lock Maintenance</li>
+</ul>
+</div>
+</div>
+<!-- Phase 3: Embodiment -->
+<div class="md:col-span-3 bg-surface-container-low p-8 flex flex-col">
+<span class="text-primary font-notoserif text-4xl italic opacity-20 block mb-4">03</span>
+<h4 class="font-inter uppercase tracking-[0.12em] text-xs font-bold mb-6">Solidification</h4>
+<p class="text-sm font-newsreader leading-relaxed">The New Moon in Taurus arrival. Tangible embodiment. Physical rituals involving clay, soil, and nutrient-dense intake.</p>
+<div class="mt-auto pt-8">
+<span class="material-symbols-outlined text-primary">flare</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Somatic Check-In Fields (Journal Style) -->
+<section class="mb-32 grid md:grid-cols-2 gap-24 items-start">
+<div>
+<h3 class="text-3xl font-notoserif font-light mb-8 italic">Somatic Check-In</h3>
+<p class="text-on-surface-variant font-newsreader mb-12 text-lg">Observe the physical vessel as it bridges these two signs. Record the sensations in the marginalia of your consciousness.</p>
+<div class="space-y-12">
+<div class="relative group">
+<label class="font-inter uppercase tracking-[0.15em] text-[10px] font-bold text-primary block mb-2 transition-all group-focus-within:translate-x-2">Throat Constriction / Expansion</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 focus:ring-0 focus:border-primary placeholder:text-outline/40 font-newsreader text-lg italic" placeholder="Note the resonance of your voice today..." type="text"/>
+</div>
+<div class="relative group">
+<label class="font-inter uppercase tracking-[0.15em] text-[10px] font-bold text-primary block mb-2 transition-all group-focus-within:translate-x-2">Rooting Depth Index</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 focus:ring-0 focus:border-primary placeholder:text-outline/40 font-newsreader text-lg italic" placeholder="Sense the connection between feet and floor..." type="text"/>
+</div>
+<div class="relative group">
+<label class="font-inter uppercase tracking-[0.15em] text-[10px] font-bold text-primary block mb-2 transition-all group-focus-within:translate-x-2">Gut Intuition vs Physical Hunger</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 focus:ring-0 focus:border-primary placeholder:text-outline/40 font-newsreader text-lg italic resize-none" placeholder="Differentiate the craving from the calling..." rows="2"></textarea>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high p-12 border-[0.5px] border-outline-variant shadow-sm relative">
+<div class="absolute -top-4 -left-4 w-8 h-8 bg-primary/10 border-[0.5px] border-primary/20 flex items-center justify-center">
+<span class="text-[10px] font-inter font-bold text-primary">§</span>
+</div>
+<h4 class="font-inter uppercase tracking-[0.15em] text-xs font-bold mb-8">Observation of Power</h4>
+<p class="font-newsreader italic text-on-surface-variant leading-relaxed mb-8 text-sm">
+                        "Power is not a static possession but a kinetic transition. In the Scorpio phase, power is the ability to destroy. In the Taurus phase, power is the ability to sustain."
+                    </p>
+<div class="border-t border-outline-variant pt-6">
+<p class="text-[10px] font-inter uppercase text-primary/60 tracking-widest mb-4">Prompt 19.A</p>
+<p class="text-xs font-inter leading-relaxed">How has the 'shedding' of the Full Moon created fertile soil for the New Moon's planting? Be specific about the loss and the gain.</p>
+</div>
+</div>
+</section>
+<!-- Research Prompts (University Level) -->
+<section class="mb-24">
+<div class="flex items-center gap-4 mb-16">
+<div class="h-[0.5px] w-12 bg-outline-variant"></div>
+<h2 class="text-xs font-inter uppercase tracking-[0.3em] font-bold text-primary">Department of Somatic Archaeology</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-12">
+<div class="space-y-6">
+<h5 class="font-notoserif italic text-xl border-b border-primary/20 pb-2">The Biomechanics of Stability</h5>
+<p class="text-sm font-newsreader leading-relaxed text-on-surface-variant">Analyze the relationship between pelvic floor engagement and the freedom of the vocal folds. Conduct a 48-hour longitudinal study on your own tonal variations.</p>
+<a class="inline-block font-inter uppercase tracking-widest text-[9px] border-b-[0.5px] border-primary pb-1 text-primary hover:opacity-70" href="#">Review Methodology</a>
+</div>
+<div class="space-y-6">
+<h5 class="font-notoserif italic text-xl border-b border-primary/20 pb-2">The Myth of the Minotaur</h5>
+<p class="text-sm font-newsreader leading-relaxed text-on-surface-variant">Explore the Labyrinth as a metaphor for the Scorpio descent and the Bull (Taurus) as the physical manifestation of that which is hidden at the center.</p>
+<a class="inline-block font-inter uppercase tracking-widest text-[9px] border-b-[0.5px] border-primary pb-1 text-primary hover:opacity-70" href="#">Cross-Reference Volume II</a>
+</div>
+<div class="space-y-6">
+<h5 class="font-notoserif italic text-xl border-b border-primary/20 pb-2">Mineral Transmutation</h5>
+<p class="text-sm font-newsreader leading-relaxed text-on-surface-variant">Investigate the grounding properties of Copper (Venus/Taurus) versus Iron (Mars/Scorpio). How do these metals interact within the cellular fluid?</p>
+<a class="inline-block font-inter uppercase tracking-widest text-[9px] border-b-[0.5px] border-primary pb-1 text-primary hover:opacity-70" href="#">Laboratory Notes</a>
+</div>
+</div>
+</section>
+<!-- Footer Quote / Ritual End -->
+<footer class="mt-48 pt-12 border-t border-outline-variant/30 flex flex-col items-center text-center">
+<div class="w-px h-24 bg-primary/20 mb-8"></div>
+<p class="font-notoserif italic text-2xl text-on-surface-variant max-w-2xl mb-12">
+                    "To root is to descend with the intention of eventual ascent, carrying the depth of the earth into the clarity of the light."
+                </p>
+<div class="flex items-center gap-8 mb-24">
+<span class="w-12 h-12 border-[0.5px] border-outline-variant rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/40">dark_mode</span>
+</span>
+<span class="font-inter uppercase tracking-[0.2em] text-[10px] text-primary/60">Finalized for Archive Entry #0882</span>
+<span class="w-12 h-12 border-[0.5px] border-outline-variant rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary/40">light_mode</span>
+</span>
+</div>
+</footer>
+</main>
+</div>
+<!-- Marginalia Left (Static) -->
+<div class="fixed left-6 bottom-12 hidden lg:block">
+<div class="text-[9px] font-inter uppercase tracking-[0.2em] text-primary/30 marginalia-text rotate-180">
+            CONFIDENTIAL • FOR THE LIBRARIAN ONLY • NON-DISTRIBUTABLE
+        </div>
+</div>
+</body></html>

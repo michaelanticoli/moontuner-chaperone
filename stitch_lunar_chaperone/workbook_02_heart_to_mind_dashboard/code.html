@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Sacred Ledger | Workbook 02</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Inter:wght@300;400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&amp;family=Noto+Serif:ital,wght@0,300;0,400;1,300&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed": "#0d1c31",
+                      "on-tertiary-container": "#324057",
+                      "inverse-surface": "#31312c",
+                      "secondary-container": "#e5e2de",
+                      "tertiary": "#515f77",
+                      "on-secondary-container": "#656461",
+                      "on-surface": "#1c1c18",
+                      "surface-variant": "#e5e2db",
+                      "surface-container-highest": "#e5e2db",
+                      "primary": "#725b37",
+                      "background": "#fcf9f2",
+                      "secondary": "#5f5e5c",
+                      "error": "#ba1a1a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed": "#1c1c1a",
+                      "on-primary": "#ffffff",
+                      "primary-fixed-dim": "#e1c296",
+                      "tertiary-fixed": "#d5e3ff",
+                      "tertiary-container": "#9eacc7",
+                      "primary-container": "#c4a77d",
+                      "surface-tint": "#725b37",
+                      "on-primary-fixed": "#281800",
+                      "tertiary-fixed-dim": "#b9c7e3",
+                      "on-tertiary-fixed-variant": "#3a475e",
+                      "surface": "#fcf9f2",
+                      "on-background": "#1c1c18",
+                      "outline-variant": "#d0c5b7",
+                      "error-container": "#ffdad6",
+                      "on-secondary": "#ffffff",
+                      "surface-container-low": "#f6f3ec",
+                      "surface-bright": "#fcf9f2",
+                      "secondary-fixed-dim": "#c9c6c3",
+                      "inverse-on-surface": "#f3f0e9",
+                      "surface-dim": "#dcdad3",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#4d463c",
+                      "on-secondary-fixed-variant": "#474744",
+                      "inverse-primary": "#e1c296",
+                      "secondary-fixed": "#e5e2de",
+                      "on-primary-container": "#503c1b",
+                      "outline": "#7f766a",
+                      "surface-container": "#f1eee7",
+                      "primary-fixed": "#fedeb0",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed-variant": "#584321",
+                      "surface-container-high": "#ebe8e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Noto Serif", "serif"],
+                      "body": ["Newsreader", "serif"],
+                      "label": ["Inter", "sans-serif"],
+                      "serif-accent": ["Cormorant Garamond", "serif"]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .tonal-shift-no-border {
+            background-color: #f2eee1;
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fcf9f2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #725b37;
+        }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center px-6 py-4 w-full fixed top-0 z-50 bg-[#fcf9f2] dark:bg-stone-950">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#725b37]">menu_book</span>
+<span class="text-lg font-['Inter'] uppercase tracking-[0.15em] text-[#1c1c18] dark:text-stone-300">The Sacred Ledger</span>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8 items-center">
+<span class="text-[#1c1c18]/60 dark:text-stone-400 font-normal font-['Inter'] text-[10px] uppercase tracking-[0.1em] hover:bg-[#f2eee1] transition-colors px-2 py-1 cursor-pointer">Archive</span>
+<span class="text-[#725b37] dark:text-[#c4a77d] font-bold font-['Inter'] text-[10px] uppercase tracking-[0.1em] px-2 py-1 cursor-pointer border-b border-[#725b37]">Library</span>
+<span class="text-[#1c1c18]/60 dark:text-stone-400 font-normal font-['Inter'] text-[10px] uppercase tracking-[0.1em] hover:bg-[#f2eee1] transition-colors px-2 py-1 cursor-pointer">Research</span>
+</nav>
+<span class="material-symbols-outlined text-[#725b37] cursor-pointer">settings</span>
+</div>
+</header>
+<main class="pt-24 pb-32 min-h-screen max-w-7xl mx-auto px-6 md:px-12">
+<!-- Hero Section: Asymmetrical Academic Layout -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-24 items-end">
+<div class="md:col-span-1 hidden md:block">
+<p class="text-xs font-label uppercase tracking-[0.2em] text-outline rotate-180 [writing-mode:vertical-lr] pb-4">VOLUME 02 / SEQUENCE IV</p>
+</div>
+<div class="md:col-span-7">
+<p class="font-label uppercase tracking-[0.15em] text-xs text-primary mb-4">TRANSITION PROTOCOL</p>
+<h1 class="font-serif-accent text-5xl md:text-7xl font-light leading-tight">
+                    Full Moon in <span class="italic">Scorpio</span> <br/>
+                    to New Moon in <span class="italic">Taurus</span>
+</h1>
+<p class="mt-8 text-xl font-body italic text-on-surface-variant max-w-lg leading-relaxed">
+                    A shift from the depth of emotional waters to the grounded stability of the earth, moving creative identity from the personal heart into the collective innovation of the higher mind.
+                </p>
+</div>
+<div class="md:col-span-4 relative">
+<div class="w-full aspect-[3/4] bg-surface-container-low overflow-hidden">
+<img alt="Ancient astronomical diagram" class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="vintage astronomical chart of the moon phases and constellations on aged parchment paper with ink stains and elegant script" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPkVqxLpfIJY1W7rsGEx3JKx1awSNDDoxfv8ld20FrRqIeRXWV6eWuEXqpTcQe_R2yS3afEK_-ZatNd7P5Vo2jN7LgAI7NwkWNg5F3IfG0dObP5tHA-5by44Nf-wIoyQcS9Rl7KjrxjzM86ErzL4BQrnxgyJotuao_CnEf7heQhwpHInoYl9cfAbFG7g1PcnIT7QJqYxZ60uYWCDVAOGderzChAlQ8rdcAa19o4rApXlivuwjhsd0MB9re8aeBFNU1iPFHFsJ2usq-"/>
+</div>
+<div class="absolute -bottom-4 -left-4 bg-primary p-4">
+<span class="text-on-primary font-label uppercase text-[10px] tracking-widest">Active Sequence</span>
+</div>
+</div>
+</section>
+<!-- Energy Axis: Bento Style Asymmetry -->
+<section class="mb-32">
+<div class="mb-12 flex items-baseline gap-4">
+<h2 class="font-serif-accent text-3xl font-light">The Energy <span class="italic">Axis</span></h2>
+<div class="h-[0.5px] flex-grow bg-outline-variant"></div>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Section 02.1</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1 px-1 bg-outline-variant">
+<div class="bg-surface p-10 flex flex-col justify-between min-h-[400px]">
+<div>
+<span class="font-label uppercase text-[10px] tracking-[0.2em] text-primary">Anchor Point</span>
+<h3 class="font-serif-accent text-4xl mt-4">Heart &amp; Solar <span class="italic">Plexus</span></h3>
+</div>
+<div class="space-y-6">
+<p class="text-sm leading-relaxed text-on-surface-variant">The seat of personal sovereignty and deep-seated identity. Here, Scorpio's transformative fire burns away the ego's dross to reveal the core essence of the creative spark.</p>
+<div class="h-[1px] w-12 bg-primary"></div>
+</div>
+</div>
+<div class="bg-surface-container-low p-10 flex flex-col items-center justify-center text-center">
+<div class="w-px h-32 bg-primary mb-8"></div>
+<p class="font-serif-accent italic text-2xl px-6">"The descent into the depths is but the preparation for the ascent into the light."</p>
+<div class="w-px h-32 bg-primary mt-8"></div>
+</div>
+<div class="bg-surface p-10 flex flex-col justify-between min-h-[400px]">
+<div>
+<span class="font-label uppercase text-[10px] tracking-[0.2em] text-primary">Destination</span>
+<h3 class="font-serif-accent text-4xl mt-4">Nervous System &amp; <span class="italic">Higher Mind</span></h3>
+</div>
+<div class="space-y-6">
+<p class="text-sm leading-relaxed text-on-surface-variant">The Taurus influence grounds the intuition into collective innovation. Shifting from feeling to knowing, from reactive emotion to deliberate structural change.</p>
+<div class="h-[1px] w-12 bg-primary"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Progress Tracker: Journal Line Style -->
+<section class="mb-32">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-4">
+<h2 class="font-serif-accent text-3xl font-light mb-6">The 14-Day <span class="italic">Descent</span></h2>
+<p class="text-on-surface-variant font-body leading-relaxed mb-8">
+                        Track the transition of the creative identity as it sheds old skins. Record the subtle shifts in your nervous system's capacity for innovation.
+                    </p>
+<div class="p-6 bg-surface-container-low border-l-2 border-primary">
+<span class="font-label uppercase text-[10px] tracking-widest text-primary block mb-2">Current Phase</span>
+<p class="text-sm font-medium">Day 08: Integrating the Void</p>
+</div>
+</div>
+<div class="md:col-span-8 space-y-8">
+<!-- Journal Line Items -->
+<div class="group cursor-pointer">
+<div class="flex justify-between items-end pb-2 border-b border-outline-variant group-hover:border-primary transition-colors">
+<div class="flex gap-4 items-baseline">
+<span class="font-label text-[10px] text-outline">01</span>
+<span class="font-serif-accent text-xl italic">Full Moon Illumination</span>
+</div>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="mt-2 pl-8 opacity-0 group-hover:opacity-100 transition-opacity">
+<p class="text-[10px] font-label uppercase tracking-widest text-outline">Log: Intense emotional purging observed.</p>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="flex justify-between items-end pb-2 border-b border-outline-variant group-hover:border-primary transition-colors">
+<div class="flex gap-4 items-baseline">
+<span class="font-label text-[10px] text-outline">04</span>
+<span class="font-serif-accent text-xl">The First Shedding</span>
+</div>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="flex justify-between items-end pb-2 border-b border-primary transition-colors">
+<div class="flex gap-4 items-baseline">
+<span class="font-label text-[10px] text-primary">08</span>
+<span class="font-serif-accent text-xl italic text-primary">Integrating the Void</span>
+</div>
+<span class="material-symbols-outlined text-primary">radio_button_checked</span>
+</div>
+<div class="mt-4 pl-8">
+<div class="w-full h-24 bg-surface-container-low p-4 flex flex-col justify-end">
+<div class="w-full h-[0.5px] bg-outline-variant relative">
+<div class="absolute left-1/4 -top-1 w-2 h-2 bg-primary rotate-45"></div>
+</div>
+<span class="text-[9px] font-label uppercase tracking-[0.2em] mt-2 text-outline">Hand-drawn path: Silence observed in the heart center.</span>
+</div>
+</div>
+</div>
+<div class="group opacity-40">
+<div class="flex justify-between items-end pb-2 border-b border-outline-variant">
+<div class="flex gap-4 items-baseline">
+<span class="font-label text-[10px] text-outline">11</span>
+<span class="font-serif-accent text-xl">The Nervous System Re-wiring</span>
+</div>
+<span class="material-symbols-outlined text-outline">radio_button_unchecked</span>
+</div>
+</div>
+<div class="group opacity-40">
+<div class="flex justify-between items-end pb-2 border-b border-outline-variant">
+<div class="flex gap-4 items-baseline">
+<span class="font-label text-[10px] text-outline">14</span>
+<span class="font-serif-accent text-xl italic">New Moon Emergence</span>
+</div>
+<span class="material-symbols-outlined text-outline">radio_button_unchecked</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Marginalia Notes -->
+<aside class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-outline-variant pt-12">
+<div>
+<p class="font-label uppercase text-[10px] tracking-widest text-primary mb-2">Ritualistic Note</p>
+<p class="text-xs leading-relaxed italic text-on-surface-variant">The ledger demands absolute honesty in the recording of emotional shifts. Do not bypass the shadow.</p>
+</div>
+<div>
+<p class="font-label uppercase text-[10px] tracking-widest text-primary mb-2">Metadata</p>
+<p class="text-xs leading-relaxed text-on-surface-variant font-label">LOC: 51.5074° N, 0.1278° W <br/> TMP: 14°C <br/> SIG: SCORPIO_TAURUS_AXIS</p>
+</div>
+<div class="flex justify-end items-end">
+<button class="bg-primary text-on-primary font-label uppercase text-[10px] tracking-[0.2em] px-8 py-4 hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300">
+                    Seal Today's Entry
+                </button>
+</div>
+</aside>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 bg-[#fcf9f2] bg-opacity-95 backdrop-blur-md border-t-[0.5px] border-[#1c1c18]/10 shadow-[0_-20px_50px_rgba(28,28,24,0.04)]">
+<div class="flex flex-col items-center justify-center text-[#1c1c18]/50 dark:text-stone-500 pt-2 hover:text-[#725b37] transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-1">history_edu</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.1em] font-medium">Archive</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#725b37] dark:text-[#c4a77d] border-t-2 border-[#725b37] -mt-[1px] pt-2 cursor-pointer">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">local_library</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.1em] font-medium">Library</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#1c1c18]/50 dark:text-stone-500 pt-2 hover:text-[#725b37] transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-1">biotech</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.1em] font-medium">Research</span>
+</div>
+</nav>
+<!-- Marginalia Fixed Note -->
+<div class="fixed top-1/2 -right-12 -rotate-90 hidden lg:block">
+<span class="font-label uppercase text-[9px] tracking-[0.3em] text-outline opacity-50">CURATED BY THE SACRED LEDGER</span>
+</div>
+</body></html>

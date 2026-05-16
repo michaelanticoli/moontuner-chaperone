@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUNAR CHAPERONE | Workbook 22</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&amp;family=Noto+Serif:ital,wght@0,300;0,400;1,300&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#584321",
+                        "on-secondary-fixed": "#1c1c1a",
+                        "on-surface-variant": "#4d463c",
+                        "on-background": "#1c1c18",
+                        "background": "#fcf9f2",
+                        "surface-container-highest": "#e5e2db",
+                        "surface-container-high": "#ebe8e1",
+                        "surface-variant": "#e5e2db",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#fedeb0",
+                        "on-tertiary-container": "#324057",
+                        "primary-fixed-dim": "#e1c296",
+                        "primary-container": "#c4a77d",
+                        "surface-tint": "#725b37",
+                        "secondary-fixed": "#e5e2de",
+                        "on-surface": "#1c1c18",
+                        "inverse-on-surface": "#f3f0e9",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#5f5e5c",
+                        "surface-dim": "#dcdad3",
+                        "secondary-container": "#e5e2de",
+                        "outline": "#7f766a",
+                        "on-tertiary-fixed-variant": "#3a475e",
+                        "surface-container-low": "#f6f3ec",
+                        "surface-container": "#f1eee7",
+                        "outline-variant": "#d0c5b7",
+                        "on-tertiary-fixed": "#0d1c31",
+                        "on-secondary-fixed-variant": "#474744",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#515f77",
+                        "inverse-primary": "#e1c296",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#503c1b",
+                        "surface-bright": "#fcf9f2",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#31312c",
+                        "on-primary-fixed": "#281800",
+                        "surface": "#fcf9f2",
+                        "tertiary-fixed": "#d5e3ff",
+                        "on-secondary-container": "#656461",
+                        "secondary-fixed-dim": "#c9c6c3",
+                        "tertiary-container": "#9eacc7",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#b9c7e3",
+                        "primary": "#725b37"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        body {
+            background-color: #fcf9f2;
+            color: #1c1c18;
+            font-family: 'Newsreader', serif;
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopNavBar -->
+<nav class="bg-[#fcf9f2] dark:bg-[#1c1c18] docked full-width top-0 z-50 border-b-[0.5px] border-[#c4a77d]/20 flex justify-between items-center w-full px-12 py-6 sticky">
+<div class="font-['Inter'] uppercase tracking-[0.2em] text-sm font-bold text-[#1c1c18] dark:text-[#fcf9f2]">
+            LUNAR CHAPERONE
+        </div>
+<div class="hidden md:flex gap-12">
+<a class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 font-['Inter'] uppercase tracking-widest text-[10px] hover:text-[#725b37] transition-colors duration-300" href="#">ARCHIVE</a>
+<a class="text-[#725b37] border-b border-[#725b37] pb-1 font-['Inter'] uppercase tracking-widest text-[10px]" href="#">PROTOCOLS</a>
+<a class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 font-['Inter'] uppercase tracking-widest text-[10px] hover:text-[#725b37] transition-colors duration-300" href="#">EXEGESIS</a>
+</div>
+<div class="flex items-center gap-6 text-[#725b37]">
+<span class="material-symbols-outlined cursor-pointer" data-icon="menu_book">menu_book</span>
+<span class="material-symbols-outlined cursor-pointer" data-icon="account_balance">account_balance</span>
+</div>
+</nav>
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col h-screen w-72 bg-[#f5f2eb] dark:bg-[#151512] sticky top-0 py-12 px-8 gap-8 bg-gradient-to-r from-transparent to-[#c4a77d]/5 border-r border-[#c4a77d]/10">
+<div class="mb-8">
+<div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="history_edu">history_edu</span>
+</div>
+<h2 class="font-['Noto_Serif'] italic text-xl text-[#725b37]">LUNAR CHAPERONE</h2>
+<p class="font-['Inter'] uppercase tracking-[0.15em] text-[9px] opacity-60">Graduate Research Suite</p>
+</div>
+<nav class="flex flex-col gap-6">
+<a class="text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 font-['Inter'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] transition-all flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="first_page">first_page</span> WAXING PHASE
+                </a>
+<a class="text-[#725b37] dark:text-[#c4a77d] font-bold translate-x-2 transition-transform font-['Inter'] uppercase tracking-[0.15em] text-[11px] flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="brightness_7">brightness_7</span> FULL MOON
+                </a>
+<a class="text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 font-['Inter'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] transition-all flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="last_page">last_page</span> WANING PHASE
+                </a>
+<a class="text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 font-['Inter'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] transition-all flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="brightness_3">brightness_3</span> NEW MOON
+                </a>
+<a class="text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 font-['Inter'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] transition-all flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span> RESEARCH LOGS
+                </a>
+</nav>
+<div class="mt-auto flex flex-col gap-4 border-t border-[#c4a77d]/10 pt-8">
+<a class="text-[#1c1c18]/50 font-['Inter'] uppercase tracking-[0.15em] text-[10px] flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-xs" data-icon="biotech">biotech</span> EQUIPMENT
+                </a>
+<button class="bg-primary text-on-primary font-['Inter'] uppercase tracking-[0.2em] text-[10px] py-4 px-6 text-left">
+                    INITIATE PROTOCOL
+                </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 px-8 lg:px-24 py-16 max-w-7xl">
+<!-- Archival Metadata Header -->
+<div class="mb-24 flex justify-between items-start border-b border-outline-variant/30 pb-4">
+<div class="space-y-1">
+<p class="font-label uppercase tracking-widest text-[10px] text-outline">Journal Entry / Series 22.26</p>
+<p class="font-label uppercase tracking-widest text-[10px] text-primary">Sequential: Gemini → Cancer</p>
+</div>
+<div class="text-right">
+<p class="font-label uppercase tracking-widest text-[10px] text-outline">Accession No.</p>
+<p class="font-label text-[10px] font-bold">LC-2024-W22</p>
+</div>
+</div>
+<!-- Hero Section Asymmetric -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-32">
+<div class="lg:col-span-8">
+<h1 class="font-headline italic text-6xl lg:text-8xl text-on-surface leading-tight mb-8">
+                        Voice Nourishing <br/> <span class="pl-12 lg:pl-32">to Womb</span>
+</h1>
+<div class="lg:ml-32 max-w-xl">
+<p class="font-body text-2xl text-on-surface-variant italic leading-relaxed">
+                            "The ripening of communication into the soft, silent sanctuary of the emotional body. A descent from the airy heights of Gemini to the moon-lit waters of Cancer."
+                        </p>
+</div>
+</div>
+<div class="lg:col-span-4 relative">
+<div class="aspect-[3/4] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-80 mix-blend-multiply" data-alt="abstract double exposure of ethereal lunar surface and delicate human ribcage anatomy illustration in soft sepia tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASKGs-6-6K8IDl4DTLTcFDs4rtOkMDFwTCPuXn8vbBgW4C7bLVea0K0jlUxqUnAbf58wEUQgI4E7Y1zgS1Jzu19PdWnf-Z1HOLt7uldLh1tuf-tCW3xW54P3-4rwUo5_mWCmoqLU_ia40YinNd3Ljq0PcF5EUL9dtOsf3O3jZ1zhqUR9XCZKNbFVSGwskBUFatqbzElzmoev0276ndhLyuDDcpIFz4GbEJVKg5vEM4W-8DYd61DpbIrBapwnzAM8rDpiahN4XcUI-P"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface p-4 border border-outline-variant/20 shadow-sm max-w-[180px]">
+<p class="font-label uppercase tracking-tighter text-[9px] text-outline leading-tight">
+                            Fig 1.1: Somatic resonance patterns observed between vocal folds and pelvic diaphragm.
+                        </p>
+</div>
+</div>
+</section>
+<!-- 14-Day Protocol Bento Grid -->
+<section class="mb-32">
+<div class="flex items-center gap-4 mb-12">
+<h2 class="font-label uppercase tracking-[0.3em] text-xs text-primary">14-Day Protocol Summary</h2>
+<div class="h-px flex-1 bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-1">
+<!-- Phase 1 -->
+<div class="bg-surface-container-low p-8 border border-outline-variant/10 aspect-square flex flex-col justify-between">
+<div>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest">Days 01-04</span>
+<h3 class="font-headline italic text-2xl mt-4">The Air Churn</h3>
+</div>
+<p class="font-body text-sm text-on-surface-variant">Active Gemini engagement. Rapid vocalization and breathwork focusing on the Lungs and Arms.</p>
+</div>
+<!-- Phase 2 -->
+<div class="bg-primary p-8 border border-outline-variant/10 aspect-square flex flex-col justify-between text-on-primary">
+<div>
+<span class="font-label text-[10px] opacity-80 uppercase tracking-widest">Days 05-08</span>
+<h3 class="font-headline italic text-2xl mt-4">Vocal Condensation</h3>
+</div>
+<p class="font-body text-sm opacity-90">Transitional phase. Hum-toning focusing resonance into the thoracic cavity and upper stomach.</p>
+</div>
+<!-- Phase 3 -->
+<div class="bg-surface-container-low p-8 border border-outline-variant/10 aspect-square flex flex-col justify-between md:col-span-2">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest">Days 09-14</span>
+<h3 class="font-headline italic text-2xl mt-4">The Deep Well</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="water_drop">water_drop</span>
+</div>
+<p class="font-body text-base text-on-surface-variant max-w-xs">Full Cancer maturation. Emotional sanctuary protocol. Silence alternating with primal vocal sighs focused on the Womb and Stomach.</p>
+</div>
+</div>
+</section>
+<!-- Somatic Research & Archetypal Narrative -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-24 mb-32">
+<div>
+<h3 class="font-headline italic text-4xl mb-12">Somatic Research Prompts</h3>
+<div class="space-y-12">
+<div class="group relative pl-8 border-l border-outline-variant/30">
+<span class="absolute left-[-5px] top-1 w-2 h-2 bg-primary"></span>
+<h4 class="font-label uppercase tracking-widest text-[11px] mb-2 text-primary">Inquiry I</h4>
+<p class="font-body text-xl text-on-surface leading-relaxed">
+                                How does the tension in your hands (Gemini) mirror the grip of your digestive tract (Cancer)? Track the pulse between palm and solar plexus.
+                            </p>
+</div>
+<div class="group relative pl-8 border-l border-outline-variant/30">
+<span class="absolute left-[-5px] top-1 w-2 h-2 bg-primary"></span>
+<h4 class="font-label uppercase tracking-widest text-[11px] mb-2 text-primary">Inquiry II</h4>
+<p class="font-body text-xl text-on-surface leading-relaxed">
+                                Observe the transition from "Speaking About" (Air) to "Feeling Through" (Water). Where does the voice go when it is no longer seeking to be understood?
+                            </p>
+</div>
+<div class="group relative pl-8 border-l border-outline-variant/30">
+<span class="absolute left-[-5px] top-1 w-2 h-2 bg-primary"></span>
+<h4 class="font-label uppercase tracking-widest text-[11px] mb-2 text-primary">Inquiry III</h4>
+<p class="font-body text-xl text-on-surface leading-relaxed">
+                                Locate the "Sanctuary Breath" in the back-body. Does the breath expand the ribs or soften the belly?
+                            </p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high p-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 opacity-10">
+<span class="material-symbols-outlined text-[200px]" data-icon="tempest">storm</span>
+</div>
+<h3 class="font-label uppercase tracking-[0.2em] text-xs mb-8 text-outline">Archetypal Journey</h3>
+<p class="font-body text-2xl leading-relaxed text-on-surface mb-8">
+                        The Gemini influence provides the <span class="italic">lexicon</span>—the names of our ghosts. As we move into Cancer, the lexicon dissolves into <span class="italic">presence</span>. The lungs (communication) serve only to draw the light down into the stomach (sustenance).
+                    </p>
+<div class="border-t border-outline-variant pt-8">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label uppercase tracking-widest text-[10px]">Body Correspondence</span>
+<span class="font-label uppercase tracking-widest text-[10px] text-primary">Active Shift</span>
+</div>
+<div class="flex justify-between text-2xl font-headline italic">
+<span>Lungs &amp; Arms</span>
+<span class="material-symbols-outlined self-center text-outline" data-icon="arrow_forward">arrow_forward</span>
+<span>Breast &amp; Stomach</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Marginalia Component -->
+<section class="border-t border-outline-variant/30 pt-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="col-span-2">
+<p class="font-body text-lg italic text-on-surface-variant max-w-lg mb-8">
+                        "The archive remembers what the body forgets. Every workbook is a step toward the integration of the lunar cycle within the cellular memory."
+                    </p>
+<div class="flex gap-4">
+<button class="px-8 py-3 bg-transparent border border-outline-variant text-[#1c1c18] font-['Inter'] uppercase tracking-widest text-[10px] hover:bg-surface-container-low transition-colors">
+                            DOWNLOAD LOG
+                        </button>
+<button class="px-8 py-3 bg-primary text-on-primary font-['Inter'] uppercase tracking-widest text-[10px]">
+                            CONTINUE PROTOCOL
+                        </button>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-1 h-1 rounded-full bg-primary"></div>
+<span class="font-label uppercase tracking-widest text-[9px] text-outline">Observation Log 22.a: 14% Humid.</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-1 h-1 rounded-full bg-primary"></div>
+<span class="font-label uppercase tracking-widest text-[9px] text-outline">Archive Status: Sealed &amp; Encrypted.</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-1 h-1 rounded-full bg-primary"></div>
+<span class="font-label uppercase tracking-widest text-[9px] text-outline">Next Phase: Leo Heart Ignition.</span>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Floating Action Element -->
+<div class="fixed bottom-12 right-12 flex flex-col gap-4 items-end">
+<div class="bg-surface shadow-2xl p-6 border border-outline-variant/10 hidden md:block">
+<p class="font-label uppercase tracking-widest text-[10px] mb-2 text-primary">Current Phase</p>
+<p class="font-headline italic text-xl">Waxing Crescent</p>
+<div class="w-full bg-outline-variant/20 h-1 mt-4">
+<div class="bg-primary h-full w-2/3"></div>
+</div>
+</div>
+<button class="w-16 h-16 bg-primary text-on-primary flex items-center justify-center shadow-xl hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</div>
+</body></html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#9eacc7",
+                    "secondary-fixed": "#e5e2de",
+                    "secondary-container": "#e5e2de",
+                    "background": "#fcf9f2",
+                    "secondary-fixed-dim": "#c9c6c3",
+                    "tertiary-fixed-dim": "#b9c7e3",
+                    "surface-container-high": "#ebe8e1",
+                    "on-surface": "#1c1c18",
+                    "surface-container-highest": "#e5e2db",
+                    "surface": "#fcf9f2",
+                    "primary-fixed-dim": "#e1c296",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f3f0e9",
+                    "on-secondary-fixed": "#1c1c1a",
+                    "tertiary": "#515f77",
+                    "secondary": "#5f5e5c",
+                    "on-tertiary-fixed-variant": "#3a475e",
+                    "on-background": "#1c1c18",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#324057",
+                    "on-primary-fixed-variant": "#584321",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#281800",
+                    "surface-dim": "#dcdad3",
+                    "surface-bright": "#fcf9f2",
+                    "surface-container": "#f1eee7",
+                    "tertiary-fixed": "#d5e3ff",
+                    "on-surface-variant": "#4d463c",
+                    "on-secondary-container": "#656461",
+                    "on-primary-container": "#503c1b",
+                    "inverse-surface": "#31312c",
+                    "inverse-primary": "#e1c296",
+                    "on-tertiary-fixed": "#0d1c31",
+                    "surface-tint": "#725b37",
+                    "primary-container": "#c4a77d",
+                    "primary": "#725b37",
+                    "outline-variant": "#d0c5b7",
+                    "outline": "#7f766a",
+                    "primary-fixed": "#fedeb0",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f6f3ec",
+                    "on-secondary-fixed-variant": "#474744",
+                    "surface-variant": "#e5e2db"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Newsreader"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fcf9f2;
+            color: #1c1c18;
+            font-family: 'Newsreader', serif;
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 2rem;
+        }
+        .marginalia {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #7f766a;
+        }
+        .glass-vellum {
+            background: rgba(252, 249, 242, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f2] dark:bg-stone-950 border-b border-[#1c1c18]/10 dark:border-[#fcf9f2]/10 flex justify-between items-center px-12 h-20 w-full">
+<div class="flex items-center gap-4">
+<span class="font-noto-serif italic font-light text-[#725b37] dark:text-[#c4a77d] text-xl">THE CANONICAL ARCHIVE</span>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="font-inter uppercase tracking-widest text-[10px] text-[#1c1c18]/60 hover:text-[#725b37] transition-colors duration-300 cursor-pointer active:opacity-70" href="#">The Archive</a>
+<a class="font-noto-serif text-lg tracking-tight text-[#725b37] dark:text-[#c4a77d] border-b-0.5 border-[#725b37] pb-1 cursor-pointer active:opacity-70" href="#">Research Logs</a>
+</nav>
+<div class="flex items-center gap-6 text-[#725b37]">
+<span class="material-symbols-outlined cursor-pointer">menu_book</span>
+<span class="material-symbols-outlined cursor-pointer">history_edu</span>
+</div>
+</header>
+<!-- Side Navigation Anchor -->
+<aside class="fixed left-0 top-20 h-[calc(100vh-5rem)] w-72 bg-[#fcf9f2] border-r border-[#1c1c18]/5 flex flex-col py-8 overflow-y-auto z-40">
+<div class="px-8 mb-10">
+<h3 class="font-inter uppercase tracking-[0.15em] text-[11px] text-[#725b37] opacity-60 mb-1">CURRENT WORKBOOK</h3>
+<p class="font-noto-serif text-lg">Lunar Chaperone Series</p>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#725b37] dark:text-[#c4a77d] font-bold border-l-2 border-[#725b37] pl-4" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase I</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase II</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase III</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase IV</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase V</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase VI</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase VII</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase VIII</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase IX</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase X</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase XI</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase XII</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase XIII</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">done_all</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase XIV</span></a>
+</nav>
+<div class="mt-auto px-8 py-6 border-t border-[#1c1c18]/5">
+<button class="w-full bg-[#725b37] text-white py-4 font-inter uppercase tracking-widest text-[11px] mb-6 hover:bg-[#503c1b] transition-colors">Begin Ritual</button>
+<div class="flex flex-col gap-4">
+<a class="flex items-center gap-4 text-[#1c1c18]/40 hover:text-[#725b37] transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">settings</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Settings</span></a>
+<a class="flex items-center gap-4 text-[#1c1c18]/40 hover:text-[#725b37] transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">help</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Support</span></a>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="ml-72 pt-32 pb-24 px-16 min-h-screen">
+<div class="max-w-6xl mx-auto">
+<!-- Hero / Header Section -->
+<div class="mb-24 flex flex-col items-center text-center">
+<span class="marginalia mb-4">Internal Workbook // Ritual Script 01</span>
+<h1 class="font-headline text-7xl font-light text-on-surface tracking-tight mb-8">The Coagulation of Fire</h1>
+<div class="w-24 h-px bg-primary opacity-30 mb-8"></div>
+<p class="font-body text-2xl italic text-on-surface-variant max-w-2xl leading-relaxed">
+                    A deep-immersion protocol for the Scorpio Full Moon. Transforming leaden intention into crystalline action through the crucible of focused will.
+                </p>
+</div>
+<!-- Asymmetric Content Layout -->
+<div class="asymmetric-grid mb-32">
+<!-- Left Sidebar: Material List -->
+<div class="pt-12">
+<div class="sticky top-32">
+<h4 class="font-label uppercase tracking-[0.2em] text-xs text-primary mb-8 border-b border-outline-variant pb-2">Material Requirements</h4>
+<ul class="space-y-6">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">lens</span>
+<span class="font-body text-lg">Pure Beeswax Candle (Crimson)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">lens</span>
+<span class="font-body text-lg">Obsidian or Smoked Quartz Focal</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">lens</span>
+<span class="font-body text-lg">Distilled Water in Silver Vessel</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">lens</span>
+<span class="font-body text-lg">Saffron and Myrrh Incense</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Center Content: The Script -->
+<div class="bg-surface-container-low p-16 space-y-16">
+<section>
+<div class="flex justify-between items-end mb-6">
+<h2 class="font-headline text-4xl italic">Phase I: The Incubation</h2>
+<span class="marginalia">Duration: 22 Minutes</span>
+</div>
+<p class="font-body text-xl leading-relaxed mb-8">
+                            Sit in absolute stillness. Allow the environment to fade until only the breath remains. This is the stage of *Nigredo*—the blackening. Acknowledge the shadows of the past lunar cycle without judgment.
+                        </p>
+<div class="p-8 border-l border-primary/20 bg-surface italic text-on-surface-variant leading-relaxed">
+                            "I descend into the depth of the waters, where the fire is born. I seek the root of the desire that will not be quenched."
+                        </div>
+</section>
+<section>
+<div class="flex justify-between items-end mb-6">
+<h2 class="font-headline text-4xl italic">Phase II: The Coagulation</h2>
+<span class="marginalia">Duration: 33 Minutes</span>
+</div>
+<p class="font-body text-xl leading-relaxed mb-8">
+                            Ignite the primary flame. As the wax softens, visualize your singular intent becoming tangible. Focus on the transmutation of liquid thought into solid commitment. 
+                        </p>
+<div class="grid grid-cols-1 gap-6">
+<div class="bg-white/40 p-10 border-b border-outline-variant">
+<label class="font-label uppercase tracking-widest text-[10px] block mb-4">Scripted Utterance</label>
+<p class="font-headline text-2xl leading-snug">
+                                    "As this flame devours the wick, so does my resolve consume the hesitation of the spirit. What was fluid now becomes stone."
+                                </p>
+</div>
+</div>
+</section>
+<section>
+<div class="flex justify-between items-end mb-6">
+<h2 class="font-headline text-4xl italic">Phase III: The Fixation</h2>
+<span class="marginalia">Duration: 11 Minutes</span>
+</div>
+<p class="font-body text-xl leading-relaxed mb-8">
+                            The sealing of the pact. This is the moment of sacred commitment. Use the input field below to record the specific anchor of your transformation.
+                        </p>
+<div class="mt-12 group">
+<label class="font-label uppercase tracking-widest text-[10px] text-primary/60 group-focus-within:text-primary group-focus-within:translate-x-2 transition-all block mb-2">Sacred Commitment Field</label>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:ring-0 focus:border-primary font-headline text-3xl py-4 placeholder:italic placeholder:opacity-30" placeholder="Specify the fixed intent..." type="text"/>
+</div>
+</section></div>
+</div>
+<!-- Right Sidebar: Metadata & Visuals -->
+<div class="pt-12">
+<div class="space-y-12">
+<div class="p-6 bg-surface-container-highest border border-outline-variant/10">
+<h5 class="marginalia mb-4">Astro-Metaphysical Alignment</h5>
+<div class="space-y-3">
+<div class="flex justify-between text-xs font-label">
+<span>LUNAR MANSION:</span>
+<span class="font-bold">THE STINGER</span>
+</div>
+<div class="flex justify-between text-xs font-label">
+<span>ELEMENT:</span>
+<span class="font-bold">FIXED WATER</span>
+</div>
+<div class="flex justify-between text-xs font-label">
+<span>RULING PLANET:</span>
+<span class="font-bold">MARS / PLUTO</span>
+</div>
+</div>
+</div>
+<img class="w-full grayscale brightness-75 hover:grayscale-0 transition-all duration-700 cursor-crosshair" data-alt="abstract macro photography of molten wax and glowing embers in a dark ritualistic setting with warm golden light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV2DAcquLoLU1D6FRhodfWiq3nOZQYxhjx7E3o26ZlXzQq0ev7exC_SL6bws8mWYROJ7Bhb0dVRyaVJETewekcCxyokEYalavsQSwIEpXglJMNm1ZQkmyPdLTKiO2tknzWhwtXsRuOlbU-D9MTDrUKTQxbkkBVx08alyWPnqmuI-Yxx-2CRE8j9BdOSAzLLXs8m9fEKbP1H-XuRdu15nbvSqk8vtlKos2l157Re7qnEELzj_mrQ8y5yhn5OFOFBXdYvdODnPf2Y3qs"/>
+<div class="border-l border-primary/40 pl-6 italic font-body text-lg text-on-surface-variant">
+                            "The secret of the fire is found in the stillness of the water."
+                        </div>
+</div>
+</div>
+</div>
+<!-- Ritual Map / Bento Section -->
+<div class="grid grid-cols-12 gap-8 mb-32">
+<div class="col-span-12">
+<h3 class="font-headline text-5xl mb-12 text-center">Spatiotemporal Anchors</h3>
+</div>
+<div class="col-span-8 h-96 relative bg-surface-container overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="dramatic aerial landscape of a volcanic crater lake at dusk with misty atmosphere and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkqjbKNfVuhuceUxjUgrxT42IEV103ZzDhhM-g52eruFTKQujP7lFylmA1-sJquRF8kZnnSBW4_o-K2wa2vvQSAjKJdWIgFURjbjJzLXh6QnS_WKtWJSr2dgpkqwaNUEhah67SNbvTXoAX1sVHZ8NAGwDXZTQyRHenS0sq6NwjkDZXBfzqj1UWZIl_WlEghgY6v_70nMfjrTdTagAYwsyntx46slp7xAIyzhkvyYgTaV91mT8NutjbUj4atDxIByaVVcBAr22axFu-"/>
+<div class="absolute bottom-8 left-8 z-20">
+<span class="marginalia text-white bg-black/40 px-4 py-2 backdrop-blur-md">Location: The Silent Obsidian Plateau</span>
+</div>
+</div>
+<div class="col-span-4 bg-primary text-on-primary p-12 flex flex-col justify-between">
+<span class="material-symbols-outlined text-6xl" data-weight="fill">auto_awesome</span>
+<div>
+<h4 class="font-headline text-3xl mb-4">Ritual Efficiency</h4>
+<p class="font-body text-xl opacity-80">This protocol utilizes the maximum energetic output of the Scorpio-Taurus axis. Recommended for advanced practitioners only.</p>
+</div>
+</div>
+<div class="col-span-4 h-64 bg-surface-container-high flex items-center justify-center border border-outline-variant/20">
+<div class="text-center">
+<span class="font-label text-4xl block mb-2">01:33</span>
+<span class="marginalia">Total Timebox</span>
+</div>
+</div>
+<div class="col-span-8 bg-surface-container-lowest p-12 border border-outline-variant/10 flex items-center gap-12">
+<div class="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-4xl text-primary">verified_user</span>
+</div>
+<div>
+<h4 class="font-headline text-2xl mb-2">Archival Verification</h4>
+<p class="font-body text-lg opacity-70">This script has been cross-referenced with the 14th Century Venetian Grimoires and validated for contemporary usage.</p>
+</div>
+</div>
+</div>
+<!-- Footer Action -->
+<footer class="border-t border-outline-variant pt-16 flex flex-col items-center">
+<p class="font-label uppercase tracking-[0.3em] text-xs text-primary mb-12">Seal the Entry</p>
+<div class="flex gap-12">
+<button class="font-inter uppercase tracking-widest text-[11px] border border-outline-variant px-12 py-5 hover:bg-on-surface hover:text-surface transition-all">Export Log</button>
+<button class="font-inter uppercase tracking-widest text-[11px] bg-primary text-on-primary px-12 py-5 hover:bg-on-primary-container transition-all">Submit to Archive</button>
+</div>
+<div class="mt-24 mb-12 marginalia opacity-30">
+                    © THE CANONICAL ARCHIVE // LUNAR CHAPERONE SERIES
+                </div>
+</footer>
+</main>
+<!-- Marginalia Notes (Floating elements) -->
+<div class="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-12">
+<div class="rotate-90 origin-right whitespace-nowrap">
+<span class="marginalia opacity-50">REF: {{DATA:TEXT:TEXT_70}}</span>
+</div>
+<div class="rotate-90 origin-right whitespace-nowrap">
+<span class="marginalia opacity-50">STAMP: VOL. 01 // NO. 04</span>
+</div>
+</div>
+</body></html>

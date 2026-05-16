@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Somatic Alchemy | THE CANONICAL ARCHIVE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@300;400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#9eacc7",
+                    "secondary-fixed": "#e5e2de",
+                    "secondary-container": "#e5e2de",
+                    "background": "#fcf9f2",
+                    "secondary-fixed-dim": "#c9c6c3",
+                    "tertiary-fixed-dim": "#b9c7e3",
+                    "surface-container-high": "#ebe8e1",
+                    "on-surface": "#1c1c18",
+                    "surface-container-highest": "#e5e2db",
+                    "surface": "#fcf9f2",
+                    "primary-fixed-dim": "#e1c296",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#f3f0e9",
+                    "on-secondary-fixed": "#1c1c1a",
+                    "tertiary": "#515f77",
+                    "secondary": "#5f5e5c",
+                    "on-tertiary-fixed-variant": "#3a475e",
+                    "on-background": "#1c1c18",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#324057",
+                    "on-primary-fixed-variant": "#584321",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#281800",
+                    "surface-dim": "#dcdad3",
+                    "surface-bright": "#fcf9f2",
+                    "surface-container": "#f1eee7",
+                    "tertiary-fixed": "#d5e3ff",
+                    "on-surface-variant": "#4d463c",
+                    "on-secondary-container": "#656461",
+                    "on-primary-container": "#503c1b",
+                    "inverse-surface": "#31312c",
+                    "inverse-primary": "#e1c296",
+                    "on-tertiary-fixed": "#0d1c31",
+                    "surface-tint": "#725b37",
+                    "primary-container": "#c4a77d",
+                    "primary": "#725b37",
+                    "outline-variant": "#d0c5b7",
+                    "outline": "#7f766a",
+                    "primary-fixed": "#fedeb0",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f6f3ec",
+                    "on-secondary-fixed-variant": "#474744",
+                    "surface-variant": "#e5e2db"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Newsreader"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .noto-serif-italic { font-family: 'Noto Serif', serif; font-style: italic; }
+        .font-noto-serif { font-family: 'Noto Serif', serif; }
+        .font-newsreader { font-family: 'Newsreader', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #d0c5b7; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-newsreader selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-12 h-20 bg-[#fcf9f2] dark:bg-stone-950 border-b border-[#1c1c18]/10 dark:border-[#fcf9f2]/10">
+<div class="font-noto-serif italic font-light text-[#725b37] dark:text-[#c4a77d] text-2xl tracking-tighter">
+            THE CANONICAL ARCHIVE
+        </div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="text-[#725b37] dark:text-[#c4a77d] border-b-0.5 border-[#725b37] pb-1 font-noto-serif text-lg tracking-tight transition-colors duration-300" href="#">The Archive</a>
+<a class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 font-inter uppercase tracking-widest text-[10px] hover:text-[#725b37] transition-colors duration-300" href="#">Research Logs</a>
+</div>
+<div class="flex items-center gap-6 text-[#725b37] dark:text-[#c4a77d]">
+<span class="material-symbols-outlined cursor-pointer active:opacity-70" data-icon="menu_book">menu_book</span>
+<span class="material-symbols-outlined cursor-pointer active:opacity-70" data-icon="history_edu">history_edu</span>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-20 h-[calc(100vh-5rem)] w-72 bg-[#fcf9f2] dark:bg-stone-900 border-r border-[#1c1c18]/5 flex flex-col py-8 overflow-y-auto z-40">
+<div class="px-8 mb-10">
+<h3 class="font-inter uppercase tracking-[0.15em] text-[11px] text-[#1c1c18]/40 mb-1">CURRENT WORKBOOK</h3>
+<p class="font-noto-serif text-xl text-[#725b37]">Lunar Chaperone Series</p>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Phase Tabs - Active state: Phase I as start of Series -->
+<div class="group flex items-center py-2 text-[#725b37] dark:text-[#c4a77d] font-bold border-l-2 border-[#725b37] pl-4 cursor-pointer transition-all duration-200">
+<span class="material-symbols-outlined text-sm mr-3" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase I</span>
+</div>
+<!-- Iterating through JSON nav labels -->
+<div class="group flex items-center py-2 text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] dark:hover:bg-stone-800 hover:text-[#725b37] cursor-pointer transition-all duration-200">
+<span class="material-symbols-outlined text-sm mr-3" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase II</span>
+</div>
+<div class="group flex items-center py-2 text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] dark:hover:bg-stone-800 hover:text-[#725b37] cursor-pointer transition-all duration-200">
+<span class="material-symbols-outlined text-sm mr-3" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase III</span>
+</div>
+<div class="group flex items-center py-2 text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] dark:hover:bg-stone-800 hover:text-[#725b37] cursor-pointer transition-all duration-200">
+<span class="material-symbols-outlined text-sm mr-3" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase IV</span>
+</div>
+<div class="group flex items-center py-2 text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] dark:hover:bg-stone-800 hover:text-[#725b37] cursor-pointer transition-all duration-200">
+<span class="material-symbols-outlined text-sm mr-3" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase V</span>
+</div>
+<div class="group flex items-center py-2 text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] dark:hover:bg-stone-800 hover:text-[#725b37] cursor-pointer transition-all duration-200">
+<span class="material-symbols-outlined text-sm mr-3" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+<span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase VI</span>
+</div>
+</nav>
+<div class="px-8 mt-auto pt-8 border-t border-[#1c1c18]/5">
+<button class="w-full py-4 bg-primary text-on-primary font-inter uppercase tracking-widest text-[10px] mb-8 hover:bg-primary/90 transition-colors">
+                Begin Ritual
+            </button>
+<div class="space-y-4">
+<div class="flex items-center gap-3 text-[#1c1c18]/40 text-[11px] font-inter uppercase tracking-widest cursor-pointer hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="settings">settings</span>
+                    Settings
+                </div>
+<div class="flex items-center gap-3 text-[#1c1c18]/40 text-[11px] font-inter uppercase tracking-widest cursor-pointer hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="help">help</span>
+                    Support
+                </div>
+</div>
+</div>
+</aside>
+<!-- Main Content Stage -->
+<main class="ml-72 pt-20 min-h-screen">
+<div class="max-w-6xl mx-auto px-16 py-20">
+<!-- Header Section -->
+<header class="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="max-w-xl">
+<span class="font-inter uppercase tracking-[0.2em] text-[10px] text-primary mb-4 block">Archive Record: TEXT_70</span>
+<h1 class="font-headline text-7xl font-light text-on-surface tracking-tight leading-none mb-8">
+                        Somatic <span class="noto-serif-italic">Alchemy</span>
+</h1>
+<p class="text-xl text-on-surface-variant font-newsreader leading-relaxed italic opacity-80">
+                        A physiological sequence designed to anchor the cerebral current into the nervous system. Required for transitions from Aries initiation through Scorpio transmutation.
+                    </p>
+</div>
+<div class="text-right">
+<div class="font-inter uppercase tracking-[0.15em] text-[9px] text-outline mb-2">SEQUENCE LATENCY</div>
+<div class="font-headline text-3xl font-light">44m <span class="text-sm uppercase tracking-widest font-inter opacity-40">Est.</span></div>
+</div>
+</header>
+<!-- Protocols: The Asymmetric Layout -->
+<section class="space-y-32">
+<!-- Protocol 01: Crown Breathing -->
+<article class="grid grid-cols-12 gap-12 group">
+<div class="col-span-12 md:col-span-5 relative">
+<div class="aspect-[4/5] bg-surface-container overflow-hidden">
+<img alt="Crown Breathing Visualization" class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="abstract minimalist overhead view of calm water ripples in soft warm beige light with fine texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRNthPMIAoiQ3LxOb-lDLH0c2umzvvLOqeFzq8teJ2cQLjxA_iSvpRHAt-VpmlM-GRYq6h4-YssN1UIClw-gL4fEG-_9GjzoE7cEJR1LDdNd1064jXdHtNvaNmUQAX6xD9yZjYdnfzDGsNx73whoaVT9jEY8HCy4qlc_YrgInTXPUOEWyexdotZab7PUBY9ItzyN2SBzZ2EJMCs6Efv4RPcVlHrRtNv34tk-PDDd3plF_vuqfir2Hk3odH-yZK2djg1Js9SUTEHpMY"/>
+</div>
+<div class="absolute -top-6 -right-6 bg-surface p-4 border border-outline-variant/30">
+<span class="font-inter text-xs tracking-widest uppercase">Pr-01</span>
+</div>
+</div>
+<div class="col-span-12 md:col-span-7 flex flex-col justify-center">
+<h2 class="font-headline text-4xl mb-6 tracking-tight">Crown Breathing</h2>
+<div class="space-y-6 text-lg text-on-surface-variant max-w-md">
+<p>Direct the inhalation to the apex of the skull. Visualize the breath as a silver filament entering the fontanelle. Hold for a count of four, allowing the pressure to equalize the intracranial fluid.</p>
+<ul class="font-inter uppercase text-[10px] tracking-[0.1em] space-y-2 border-l border-primary/20 pl-6">
+<li>Tempo: 4-4-8</li>
+<li>Posture: Vertical spine</li>
+<li>Focus: Pituitary gland</li>
+</ul>
+</div>
+</div>
+</article>
+<!-- Protocol 02: Throat Sounding -->
+<article class="grid grid-cols-12 gap-12 flex-row-reverse">
+<div class="col-span-12 md:col-span-7 md:order-2 flex flex-col justify-center items-end text-right">
+<h2 class="font-headline text-4xl mb-6 tracking-tight">Throat Sounding</h2>
+<div class="space-y-6 text-lg text-on-surface-variant max-w-md">
+<p>Generate a low-frequency hum (Vagus activation). The resonance should be felt in the upper chest and thyroid region. This protocol clears the "Archival Static" built up during Phase III research.</p>
+<ul class="font-inter uppercase text-[10px] tracking-[0.1em] space-y-2 border-r border-primary/20 pr-6 inline-block">
+<li>Resonance: 128Hz approx.</li>
+<li>Duration: 12 repetitions</li>
+<li>Vibration: Vagus Nerve</li>
+</ul>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 md:order-1 relative">
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img alt="Throat Sounding Visualization" class="w-full h-full object-cover mix-blend-multiply opacity-60" data-alt="blurred ethereal silhouette of a throat and jawline in high-key soft warm light with grainy film texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1v1XwoerC-x7trh33sgbzhERVYPPOfY1h_KzvqlONi_t-Wc1CICIETS1xrhIus5tX3z2MsqDCDTh-hruR-F-CYRVfFS5PXHdUAC2AWtCdzi1xiRQkN5QeCzpBLhdSlkF207CrJnGKAV4ZqvKyHKLsu2TQx9K1SCxYvIt-aVKXg43ObmXPisw1DxVwuvHAlD8p5VFeI3zFVmzpwPkI6Rptp5_Obx64ijPNhRgVzV0i6An-zCPeNRptgAe-nZDCyD_-S-uLwIbVIhbd"/>
+</div>
+<div class="absolute bottom-12 -left-8 text-primary/30 font-headline text-8xl -z-10 select-none">Vagus</div>
+</div>
+</article>
+<!-- Protocol 03: Descent Stretch -->
+<article class="grid grid-cols-12 gap-12">
+<div class="col-span-12 md:col-span-5">
+<div class="aspect-[3/4] bg-surface-container-low overflow-hidden">
+<img alt="Descent Stretch Anatomy" class="w-full h-full object-cover mix-blend-luminosity grayscale opacity-70" data-alt="fine art photography of human spine vertebrae with dramatic chiaroscuro lighting on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAASPse45lyrkdMUCngijwxbT_XYp-TTGH-1Am8_V04QMdLfIyHubY3U9YrEe5Ja5b37Y3BjBNacRfqOyxxa9oxzztf-bM_MHMovZrDFIiEzAqliCKXGUfY4esM3Nga2CvkBc_9odihvgro_xRNRcKA5gC2ofHZD24QedT4D92EogxD4edauAzP5Avk-8Sor1FPcGbARXmSC18Ll7bZyz0yYmcpOjFHm24zptp_knctzbOpd7bFashBBKRpWwPAQDy8axa75WbvFEXt"/>
+</div>
+</div>
+<div class="col-span-12 md:col-span-7 flex flex-col justify-center">
+<h2 class="font-headline text-4xl mb-6 tracking-tight">The Descent Stretch</h2>
+<div class="space-y-6 text-lg text-on-surface-variant max-w-lg">
+<p>A slow articulation of the sacrum. Beginning from a forward fold, unroll the vertebrae one by one, imagining a lead weight pulling the tailbone toward the center of the earth. This anchors the Scorpio transmutation protocols.</p>
+<div class="grid grid-cols-2 gap-8 pt-6">
+<div>
+<span class="block font-inter uppercase text-[9px] tracking-widest text-outline mb-1">MANDATORY</span>
+<p class="text-sm">Exhale on the down-curve.</p>
+</div>
+<div>
+<span class="block font-inter uppercase text-[9px] tracking-widest text-outline mb-1">DANGER</span>
+<p class="text-sm">Avoid rapid ascension.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- N=1 Variables Tracking Dashboard -->
+<section class="mt-48 pt-24 border-t border-outline-variant/20">
+<div class="mb-16">
+<h3 class="font-headline text-3xl mb-2">Practice Logs</h3>
+<p class="font-inter uppercase tracking-widest text-[11px] text-outline">N=1 Variable Quantification</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/10">
+<div class="bg-surface p-10 border border-outline-variant/10">
+<label class="font-inter uppercase tracking-widest text-[10px] text-outline block mb-4">Breath Rate</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:ring-0 focus:border-primary transition-all text-xl font-headline placeholder:opacity-20" placeholder="BPM" type="text"/>
+<p class="mt-4 text-[10px] font-inter uppercase tracking-widest text-primary/50 italic leading-relaxed">Post-Ritual baseline</p>
+</div>
+<div class="bg-surface p-10 border border-outline-variant/10">
+<label class="font-inter uppercase tracking-widest text-[10px] text-outline block mb-4">Heart Rate</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:ring-0 focus:border-primary transition-all text-xl font-headline placeholder:opacity-20" placeholder="Beats/Min" type="text"/>
+<p class="mt-4 text-[10px] font-inter uppercase tracking-widest text-primary/50 italic leading-relaxed">Measure during descent</p>
+</div>
+<div class="bg-surface p-10 border border-outline-variant/10">
+<label class="font-inter uppercase tracking-widest text-[10px] text-outline block mb-4">Vagal Tone</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:ring-0 focus:border-primary transition-all text-xl font-headline appearance-none">
+<option>Dormant</option>
+<option>Resonant</option>
+<option>Harmonized</option>
+</select>
+</div>
+<div class="bg-surface p-10 border border-outline-variant/10">
+<label class="font-inter uppercase tracking-widest text-[10px] text-outline block mb-4">Archival Load</label>
+<input class="w-full h-1 bg-surface-container appearance-none cursor-pointer accent-primary mt-4" type="range"/>
+<div class="flex justify-between mt-2 font-inter text-[8px] uppercase tracking-tighter opacity-40">
+<span>Empty</span>
+<span>Saturated</span>
+</div>
+</div>
+</div>
+<div class="mt-12 bg-surface-container-low p-12">
+<label class="font-inter uppercase tracking-widest text-[10px] text-outline block mb-4">Notes from the Field (Phenomenological Observations)</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary transition-all text-lg font-newsreader placeholder:italic placeholder:opacity-40 leading-relaxed" placeholder="Record internal states, temperature shifts, or visions..." rows="4"></textarea>
+</div>
+<div class="mt-12 flex justify-end">
+<button class="flex items-center gap-4 text-primary font-inter uppercase tracking-[0.2em] text-xs py-2 hover:translate-x-2 transition-transform border-b border-primary/40 pb-4">
+                        Archive Session Entry
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Marginalia -->
+<footer class="mt-32 pt-12 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between opacity-40">
+<div class="font-inter text-[9px] uppercase tracking-widest">
+                    TSA-0982: Somatic Interface / Workbook 01
+                </div>
+<div class="font-inter text-[9px] uppercase tracking-widest mt-4 md:mt-0">
+                    Proprietary of the Canonical Archive © 2024
+                </div>
+</footer>
+</div>
+</main>
+<!-- Marginalia Floating Note -->
+<div class="fixed right-8 top-32 w-32 hidden xl:block">
+<div class="font-inter text-[9px] uppercase tracking-[0.2em] text-outline leading-loose border-l border-outline-variant/30 pl-4">
+<span class="text-primary block mb-2">ANNOTATION</span>
+            The Aries cycle requires strict adherence to breathing protocols to prevent burnout of the solar plexus.
+        </div>
+</div>
+</body></html>

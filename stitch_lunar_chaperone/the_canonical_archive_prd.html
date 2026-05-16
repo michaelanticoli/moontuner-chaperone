@@ -1,0 +1,44 @@
+# The Canonical Archive: Design Specification
+
+## 1. Core Philosophy
+* **The Medium:** The interface is not a "website"; it is a "Paper Archive."
+* **The Tone:** Quiet, intentional, and authoritative.
+* **The Contrast:** Heavy use of #1A1A18 (Ink) on #F4F1EA (Paper), accented by #C4A77D (Gold).
+
+## 2. Color Palette
+* **Paper (Primary BG):** `#F4F1EA` (Warm ivory)
+* **Paper Dark (Secondary BG):** `#EAE5DB`
+* **Ink (Primary Text):** `#1A1A18` (Deep charcoal/black)
+* **Ink Light (Secondary Text):** `#4A4A46`
+* **Ink Muted (Tertiary/Placeholder):** `#8C8C85`
+* **Gold (Accent):** `#C4A77D` (Muted metallic)
+
+## 3. Typography Hierarchy
+* **Primary Sans (Inter):** Metadata, labels, structural UI. Uppercase, tracking (0.2em to 0.4em), text-xs to text-sm. Clinical, Archival vibe.
+* **Secondary Serif (Cormorant Garamond):** Titles, body text, quotes. Italicized frequently, light weight (300). Literary, Ancient, Human vibe.
+* **Signature Title:** Mix regular and italic serif within the same heading (e.g., *From* Bone *to* Heart).
+
+## 4. UI Elements & Details
+* **Thin Borders:** `border-ink/5` or `border-ink/10`.
+* **The "Journal Line":** Single bottom border for inputs instead of boxes.
+* **The "Dotted Area":** Radial-gradient background for textareas to simulate lined paper.
+
+## 5. Graphic Language
+* **Line Weight:** Stroke width 0.5 to 1.5. No heavy, filled icons.
+* **Geometry:** Basic forms (Circles, Triangles).
+* **Radiating Circles:** Concentric circles with varying opacities (5% - 20%) to create "fields" of energy.
+
+## 6. Animation Principles
+* **Entrance:** "CircOut" easing, opacity 0 -> 1, y: 20 -> 0.
+* **Hover:** Lift slightly (y: -4).
+* **The Pulse:** Infinite scale on small gold circles for active states.
+
+## 7. Global CSS Flourishes
+* **Selection:** Gold background with white text.
+* **Scrollbar:** Thin gold thumb on paper track.
+* **Nav:** Mix-blend-difference for context-aware text color.
+
+## 8. Composition
+* **Asymmetry:** 12-column grid, spans of 5 or 7.
+* **Negative Space:** High priority (60% breathing room).
+* **Lowercase Headers:** Soften long-form headers with lowercase.

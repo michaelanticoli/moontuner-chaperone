@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=Inter:wght@300;400;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&amp;family=Noto+Serif:ital,wght@0,300;0,400;1,300;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "background": "#fcf9f2",
+                        "surface": "#fcf9f2",
+                        "on-surface-variant": "#4d463c",
+                        "on-surface": "#1c1c18",
+                        "secondary": "#5f5e5c",
+                        "on-secondary-fixed-variant": "#474744",
+                        "on-tertiary-fixed-variant": "#3a475e",
+                        "secondary-fixed-dim": "#c9c6c3",
+                        "inverse-primary": "#e1c296",
+                        "tertiary-fixed-dim": "#b9c7e3",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#c4a77d",
+                        "on-secondary-container": "#656461",
+                        "surface-dim": "#dcdad3",
+                        "surface-container": "#f1eee7",
+                        "on-tertiary-fixed": "#0d1c31",
+                        "on-background": "#1c1c18",
+                        "on-primary-container": "#503c1b",
+                        "tertiary-container": "#9eacc7",
+                        "on-secondary-fixed": "#1c1c1a",
+                        "secondary-fixed": "#e5e2de",
+                        "surface-container-high": "#ebe8e1",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e5e2db",
+                        "outline": "#7f766a",
+                        "inverse-surface": "#31312c",
+                        "primary": "#725b37",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fcf9f2",
+                        "secondary-container": "#e5e2de",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e5e2db",
+                        "primary-fixed": "#fedeb0",
+                        "inverse-on-surface": "#f3f0e9",
+                        "on-primary-fixed": "#281800",
+                        "outline-variant": "#d0c5b7",
+                        "surface-tint": "#725b37",
+                        "error": "#ba1a1a",
+                        "tertiary": "#515f77",
+                        "primary-fixed-dim": "#e1c296",
+                        "on-tertiary-container": "#324057",
+                        "tertiary-fixed": "#d5e3ff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f6f3ec",
+                        "on-primary-fixed-variant": "#584321"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif", "serif"],
+                        "body": ["Newsreader", "serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .paper-dots {
+            background-image: radial-gradient(#d0c5b7 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .journal-lines {
+            background-image: linear-gradient(#d0c5b7 1px, transparent 1px);
+            background-size: 100% 32px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container font-body">
+<!-- TopNavBar -->
+<header class="bg-[#fcf9f2] dark:bg-stone-950 flex justify-between items-center w-full px-12 py-6 sticky top-0 z-50 bg-gradient-to-b from-stone-200/50 to-transparent">
+<div class="text-2xl font-serif lowercase tracking-tighter text-[#725b37] dark:text-[#c4a77d]">
+            Lunar Chaperone
+        </div>
+<nav class="hidden md:flex gap-12 items-center">
+<a class="text-stone-500 font-sans uppercase tracking-[0.15em] text-[10px] hover:text-[#725b37] transition-colors duration-300" href="#">The Archive</a>
+<a class="text-stone-500 font-sans uppercase tracking-[0.15em] text-[10px] hover:text-[#725b37] transition-colors duration-300" href="#">Phases</a>
+<a class="text-stone-500 font-sans uppercase tracking-[0.15em] text-[10px] hover:text-[#725b37] transition-colors duration-300" href="#">Rituals</a>
+<a class="text-[#725b37] border-b border-[#725b37] pb-1 font-sans uppercase tracking-[0.15em] text-[10px]" href="#">Metadata</a>
+</nav>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#725b37] cursor-pointer">menu_book</span>
+<span class="material-symbols-outlined text-[#725b37] cursor-pointer">settings</span>
+<div class="w-8 h-8 bg-surface-container-highest flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-80" data-alt="close-up portrait of an academic curator with spectacles in a softly lit library setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtdytdVD_o2AHMjhzz24XXdzlNiD_iJRt2CW3JCl700ujuHhGrqBLL48b-TDYJaqsmtPGS8YMcXytZ2jHl0w423HdCsY4-T-lu8KHlJRBd5GB_-kJFwkQSwwTSjUW7WBpnzzPBU0s9am29kOS5hv7NK2KdzXHllJzFynUJq0lFVvW_fY9YBq5RQIg_eTnJO075Kbhr4A5LpQP_u7ZpQPaJh0mu8soJyhK-7fXk-ejRaocVUuXdQBuaHfuZRLJl8WNsYW6xGTmdvbfp"/>
+</div>
+</div>
+</header>
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col h-full sticky top-24 w-72 bg-[#fcf9f2] p-8 border-r-[0.5px] border-stone-200">
+<div class="mb-12">
+<div class="flex items-center gap-3 mb-2">
+<img class="w-8 h-8 grayscale" data-alt="a vintage wax seal with a lunar motif on aged parchment paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcFq0xtYdYnAbZIdpB7UswYK0hXVEIu67SxrzxPeJHu0psycb5u8pPAiIlBEf4Tj7JZW6DkhPoeC35T3qy-EcYEo4cOUa7RZX1eLOEfTd7oU1Xgjw85athYWVZMkA89IX1rl5Q4AOJXQDoRp4kNI9HHl2WbrTo0e-bV2M1fRAT4P6XTXU5skfMqy8ECr2QbTGI73yAp_TtsQgcbOdLh1UqlA1yYKHNH7LRKEQkNBHb38gy0yfFq_fkrgGQyKTtEJBUkI7vMJro-TXI"/>
+<h2 class="font-serif italic text-lg text-stone-800">INDEX LUMINARIS</h2>
+</div>
+<p class="font-sans uppercase tracking-[0.2em] text-[9px] font-light text-stone-400">V. 2.0.4 // ARCHIVE</p>
+</div>
+<nav class="flex flex-col gap-6 flex-grow">
+<div class="flex items-center gap-4 text-stone-400 font-sans uppercase tracking-[0.2em] text-[11px] font-light hover:bg-stone-200/20 p-2 cursor-pointer transition-all">
+<span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span>
+                    Introduction
+                </div>
+<div class="flex items-center gap-4 text-stone-400 font-sans uppercase tracking-[0.2em] text-[11px] font-light hover:bg-stone-200/20 p-2 cursor-pointer transition-all">
+<span class="material-symbols-outlined text-[18px]">last_page</span>
+                    Waxing Crescent
+                </div>
+<div class="flex items-center gap-4 text-[#725b37] font-bold translate-x-2 font-sans uppercase tracking-[0.2em] text-[11px] p-2 cursor-pointer transition-all">
+<span class="material-symbols-outlined text-[18px]">brightness_1</span>
+                    Full Moon
+                </div>
+<div class="flex items-center gap-4 text-stone-400 font-sans uppercase tracking-[0.2em] text-[11px] font-light hover:bg-stone-200/20 p-2 cursor-pointer transition-all">
+<span class="material-symbols-outlined text-[18px]">first_page</span>
+                    Waning Gibbous
+                </div>
+<div class="flex items-center gap-4 text-stone-400 font-sans uppercase tracking-[0.2em] text-[11px] font-light hover:bg-stone-200/20 p-2 cursor-pointer transition-all">
+<span class="material-symbols-outlined text-[18px]">circle</span>
+                    New Moon
+                </div>
+</nav>
+<button class="mt-12 bg-primary text-on-primary py-4 px-6 font-label uppercase tracking-widest text-[10px] hover:opacity-90 transition-opacity">
+                Record Observation
+            </button>
+<div class="mt-auto pt-8 border-t-[0.5px] border-stone-200 flex flex-col gap-4">
+<div class="flex items-center gap-4 text-stone-400 font-sans uppercase tracking-[0.2em] text-[10px] font-light">
+<span class="material-symbols-outlined text-[16px]">help_outline</span>
+                    Support
+                </div>
+<div class="flex items-center gap-4 text-stone-400 font-sans uppercase tracking-[0.2em] text-[10px] font-light">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+                    References
+                </div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-12 lg:p-24 overflow-x-hidden">
+<!-- Header Section -->
+<div class="max-w-5xl mx-auto mb-24">
+<div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-12">
+<div class="max-w-2xl">
+<span class="font-label uppercase tracking-[0.3em] text-[11px] text-primary mb-4 block">Workbook 05 // Series: Lunar Chaperone</span>
+<h1 class="font-headline text-7xl font-light italic leading-tight mb-6">Soul to Balance</h1>
+<p class="text-xl font-body text-stone-600 italic max-w-lg leading-relaxed">
+                            A comparative analysis of somatic density as we navigate the crossing from the oceanic depths of Pisces to the atmospheric equilibrium of Libra.
+                        </p>
+</div>
+<div class="text-right">
+<div class="font-label uppercase tracking-widest text-[10px] text-stone-400 mb-2">Protocol Window</div>
+<div class="font-serif text-2xl text-primary">14 Days</div>
+<div class="mt-4 flex gap-4 justify-end">
+<div class="w-12 h-[0.5px] bg-primary-container self-center"></div>
+<span class="font-label uppercase tracking-widest text-[9px] text-stone-500">Practice-as-Data</span>
+</div>
+</div>
+</div>
+<!-- Bento Grid of Metrics -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-[0.5px] border-outline-variant">
+<div class="p-8 border-r-[0.5px] border-outline-variant bg-surface-container-low">
+<h3 class="font-label uppercase tracking-widest text-[10px] text-stone-500 mb-6">Celestial Transition</h3>
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary">waves</span>
+<span class="font-serif text-lg">Pisces Full Moon</span>
+</div>
+<div class="flex items-center justify-center py-2">
+<span class="material-symbols-outlined text-outline-variant">south</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">air</span>
+<span class="font-serif text-lg">Libra New Moon</span>
+</div>
+</div>
+<div class="p-8 border-r-[0.5px] border-outline-variant paper-dots">
+<h3 class="font-label uppercase tracking-widest text-[10px] text-stone-500 mb-6">Somatic Correspondence</h3>
+<div class="space-y-4">
+<div>
+<span class="font-label text-[9px] uppercase tracking-tighter text-stone-400 block">Primary Anchor</span>
+<span class="font-serif text-xl italic">Feet / Etheric Body</span>
+</div>
+<div class="h-[0.5px] w-full bg-outline-variant/30"></div>
+<div>
+<span class="font-label text-[9px] uppercase tracking-tighter text-stone-400 block">Emergent Focus</span>
+<span class="font-serif text-xl italic">Kidneys / Lower Back</span>
+</div>
+</div>
+</div>
+<div class="p-8 bg-surface-container-highest">
+<h3 class="font-label uppercase tracking-widest text-[10px] text-stone-500 mb-4">Research Intent</h3>
+<p class="font-body text-sm leading-relaxed text-stone-700">
+                            Quantifying the shift from water-bound intuition to intellectual atmospheric balance. We document the "weight" of the soul as it enters the scales.
+                        </p>
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white border border-outline-variant text-[9px] font-label uppercase tracking-widest">Somatic</span>
+<span class="px-3 py-1 bg-white border border-outline-variant text-[9px] font-label uppercase tracking-widest">Empirical</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Protocol Section -->
+<section class="max-w-5xl mx-auto mb-32 relative">
+<div class="absolute -left-12 top-0 h-full w-[0.5px] bg-outline-variant opacity-30 hidden xl:block"></div>
+<header class="mb-16 flex items-baseline justify-between">
+<h2 class="font-headline text-4xl italic font-light">Somatic Attunements</h2>
+<span class="font-label text-[10px] tracking-[0.4em] text-stone-400 uppercase">Archive Entry 05-A</span>
+</header>
+<div class="space-y-24">
+<!-- Practice 01 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<div class="md:col-span-4">
+<div class="aspect-square bg-surface-container-high overflow-hidden mb-6">
+<img class="w-full h-full object-cover grayscale mix-blend-multiply opacity-80" data-alt="minimalist overhead shot of a single candle and an open leather journal on a textured cream surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClrNX-RAKgiM5QOuocTw1rGXlYPJm9WstY_8HUfKHF_bOzv38sQ9ciqcx8uai6aCG9xhxDjivURutmMWMacJ5MnkaYyHV--Ts0dkyWhqz5klPuV83D4AoBuxqbWQ8F_vaEXI4zRUd7Ap8SFNvTeeqD0pKqesPvDN4iLxlPnLrGVJREaava9s4MtV1YWQXIpFgDUfK4xOAdTCpscS0b1OvGXtBD5WzSmpTQxqXPCN8ROS24RJJ565UxjCKrc7eyw6VHe_n_6T0LjaYE"/>
+</div>
+<div class="font-label text-[10px] tracking-widest uppercase text-primary mb-2">Phase One: Descent</div>
+<h3 class="font-serif text-3xl italic mb-4 text-stone-800">The Dream Scribe</h3>
+<p class="text-sm leading-relaxed text-stone-500 mb-6">
+                                Capturing the residual fog of the Pisces Full Moon before the morning light dissolves the etheric bridge.
+                            </p>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-primary"></span>
+<span class="font-label text-[10px] tracking-widest uppercase">Daily Interval: 04:00 - 06:00</span>
+</div>
+</div>
+<div class="md:col-span-8 bg-surface-container-lowest p-12 journal-lines">
+<div class="mb-8">
+<label class="font-label uppercase tracking-widest text-[10px] text-stone-400 block mb-4">Initial Observation / Resonance</label>
+<textarea class="w-full bg-transparent border-none focus:ring-0 font-body text-lg italic text-stone-600 resize-none h-32 leading-8" placeholder="Begin transcription here..."></textarea>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<label class="font-label uppercase tracking-widest text-[10px] text-stone-400 block mb-2">Fluidity Level</label>
+<input class="w-full accent-primary bg-stone-200 h-1" type="range"/>
+</div>
+<div>
+<label class="font-label uppercase tracking-widest text-[10px] text-stone-400 block mb-2">Density (g)</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-primary outline-none py-1 font-serif text-xl" placeholder="0.00" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Practice 02 -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<div class="md:col-span-8 order-2 md:order-1 bg-surface-container-low p-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]">water_drop</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-serif text-3xl italic mb-8 text-stone-800">The Ritual Foot Bath</h3>
+<div class="space-y-6 mb-12">
+<p class="text-sm font-body leading-relaxed text-stone-700 italic">"To balance the scales, one must first ensure the foundation is clear of the oceanic debris."</p>
+<ul class="space-y-4 font-label text-[11px] tracking-wider text-stone-600">
+<li class="flex items-start gap-4">
+<span class="text-primary font-bold">01</span>
+                                            Prepare infusion of Epsom, Mugwort, and Sea Salt.
+                                        </li>
+<li class="flex items-start gap-4">
+<span class="text-primary font-bold">02</span>
+                                            Maintain temperature at 38°C for precisely 14 minutes.
+                                        </li>
+<li class="flex items-start gap-4">
+<span class="text-primary font-bold">03</span>
+                                            Document shift from 'Sinking' to 'Buoyant' sensation.
+                                        </li>
+</ul>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<button class="border border-outline-variant py-4 font-label text-[9px] uppercase tracking-widest hover:bg-white transition-colors">Start Timer</button>
+<button class="border border-outline-variant py-4 font-label text-[9px] uppercase tracking-widest hover:bg-white transition-colors">Log Temp</button>
+<button class="bg-stone-900 text-white py-4 font-label text-[9px] uppercase tracking-widest">Complete</button>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 order-1 md:order-2">
+<div class="font-label text-[10px] tracking-widest uppercase text-primary mb-2">Phase Two: Transition</div>
+<h3 class="font-serif text-2xl italic mb-4 text-stone-800">Somatic Grounding</h3>
+<p class="text-sm leading-relaxed text-stone-500 italic">
+                                The feet are the receptors of the previous lunar cycle. We cleanse the path for the upcoming air-heavy transit of Libra.
+                            </p>
+<div class="mt-8 p-4 border-l-2 border-primary-container bg-surface-container">
+<span class="font-label text-[9px] uppercase tracking-[0.2em] text-stone-500 block mb-2 underline decoration-primary-container decoration-2 underline-offset-4">Marginalia</span>
+<span class="font-body text-xs text-stone-600">Reference comparative data from Series 04 (Cancer/Capricorn) for fluid retention deltas.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Energy Mapping Section -->
+<section class="max-w-4xl mx-auto mb-32 bg-stone-900 p-16 text-white relative">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 paper-dots pointer-events-none"></div>
+<div class="relative z-10">
+<span class="font-label text-[10px] tracking-[0.5em] text-primary-container uppercase block mb-8 text-center">Interactive Energy Map</span>
+<h2 class="font-headline text-5xl italic font-light text-center mb-16">The Equilibrium Scan</h2>
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 flex justify-center">
+<div class="relative w-64 h-96 border border-stone-700 p-4">
+<!-- Abstract Body Silhouette SVG -->
+<svg class="w-full h-full text-stone-800 fill-current opacity-50" viewbox="0 0 100 200">
+<path d="M50 10 C60 10 70 20 70 35 C70 50 60 60 50 60 C40 60 30 50 30 35 C30 20 40 10 50 10 Z M30 65 L70 65 L75 120 L65 120 L68 180 L52 180 L50 130 L48 180 L32 180 L35 120 L25 120 Z"></path>
+</svg>
+<!-- Interactive Points -->
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 w-4 h-4 bg-primary animate-pulse"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 w-3 h-3 bg-white/20 border border-white"></div>
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-2 h-2 bg-white/20 border border-white"></div>
+</div>
+</div>
+<div class="w-full md:w-1/2 space-y-12">
+<div>
+<h4 class="font-label text-[11px] uppercase tracking-widest text-primary-container mb-4">Focus 01: The Pelvic Scale</h4>
+<p class="text-sm font-body leading-relaxed text-stone-400 italic">Observe the lateral shift in weight during standing meditation. Does the right kidney feel 'heavier' than the left?</p>
+<div class="mt-4 flex gap-2">
+<div class="flex-1 h-10 border border-stone-700 flex items-center justify-center font-label text-[9px] uppercase tracking-widest cursor-pointer hover:bg-stone-800 transition-colors">Left Lean</div>
+<div class="flex-1 h-10 border border-stone-700 flex items-center justify-center font-label text-[9px] uppercase tracking-widest cursor-pointer hover:bg-stone-800 transition-colors">Centered</div>
+<div class="flex-1 h-10 border border-stone-700 flex items-center justify-center font-label text-[9px] uppercase tracking-widest cursor-pointer hover:bg-stone-800 transition-colors">Right Lean</div>
+</div>
+</div>
+<div>
+<h4 class="font-label text-[11px] uppercase tracking-widest text-primary-container mb-4">Focus 02: Respiratory Float</h4>
+<p class="text-sm font-body leading-relaxed text-stone-400 italic">Measuring the duration of the 'gap' between inhale and exhale. The Libra air point.</p>
+<div class="mt-4 flex items-center gap-4">
+<span class="font-serif text-4xl text-white">0.0</span>
+<span class="font-label text-[9px] uppercase tracking-widest text-stone-500">Seconds of Silence</span>
+<div class="ml-auto flex gap-2">
+<span class="material-symbols-outlined text-primary cursor-pointer">play_arrow</span>
+<span class="material-symbols-outlined text-stone-500 cursor-pointer">refresh</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Comparative Analysis Footer -->
+<section class="max-w-5xl mx-auto border-t-[0.5px] border-outline-variant pt-24 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-1">
+<h5 class="font-label uppercase tracking-[0.2em] text-[10px] text-stone-400 mb-8">Metadata / Summary</h5>
+<div class="space-y-4">
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="font-label text-[9px] uppercase text-stone-500">Protocol ID</span>
+<span class="font-label text-[9px] text-on-surface">LC-05-S2B</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="font-label text-[9px] uppercase text-stone-500">Curator</span>
+<span class="font-label text-[9px] text-on-surface">A. ELARA</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="font-label text-[9px] uppercase text-stone-500">Domain</span>
+<span class="font-label text-[9px] text-on-surface">Somatic/Spirit</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-3">
+<div class="bg-surface-container p-12 journal-lines">
+<h4 class="font-serif text-2xl italic mb-6">Reflective Postscript</h4>
+<p class="font-body text-lg italic text-stone-600 leading-relaxed mb-8">
+                            As the moon wanes, the burden of emotion (Pisces) transforms into the responsibility of decision (Libra). Document any sudden shifts in physical posture or the urge to organize your physical surroundings.
+                        </p>
+<div class="flex justify-end items-center gap-8">
+<span class="font-label text-[10px] tracking-widest uppercase text-stone-400 italic">Signature of Practitioner</span>
+<div class="w-48 h-[0.5px] bg-stone-900"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Marginalia Fixed Note (Desktop only) -->
+<div class="fixed right-8 top-1/2 -translate-y-1/2 hidden xl:block pointer-events-none">
+<div class="rotate-90 origin-right flex items-center gap-4">
+<span class="w-12 h-[0.5px] bg-primary"></span>
+<span class="font-label text-[9px] uppercase tracking-[0.4em] text-stone-400 whitespace-nowrap">Academic Restraint // Digital Grimoire v2.0</span>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,400&amp;family=Inter:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#c4a77d",
+                        "surface-bright": "#fcf9f2",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#281800",
+                        "secondary-container": "#e5e2de",
+                        "surface-container-highest": "#e5e2db",
+                        "secondary": "#5f5e5c",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#e1c296",
+                        "primary-fixed-dim": "#e1c296",
+                        "outline-variant": "#d0c5b7",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#b9c7e3",
+                        "surface-container-low": "#f6f3ec",
+                        "secondary-fixed-dim": "#c9c6c3",
+                        "inverse-on-surface": "#f3f0e9",
+                        "on-primary-container": "#503c1b",
+                        "outline": "#7f766a",
+                        "tertiary-fixed": "#d5e3ff",
+                        "surface-dim": "#dcdad3",
+                        "on-tertiary-container": "#324057",
+                        "surface-container": "#f1eee7",
+                        "primary": "#725b37",
+                        "surface-tint": "#725b37",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#e5e2de",
+                        "on-secondary-fixed-variant": "#474744",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fcf9f2",
+                        "tertiary": "#515f77",
+                        "on-secondary-fixed": "#1c1c1a",
+                        "inverse-surface": "#31312c",
+                        "tertiary-container": "#9eacc7",
+                        "surface-variant": "#e5e2db",
+                        "on-primary-fixed-variant": "#584321",
+                        "on-tertiary-fixed": "#0d1c31",
+                        "on-tertiary-fixed-variant": "#3a475e",
+                        "surface": "#fcf9f2",
+                        "on-secondary-container": "#656461",
+                        "on-surface-variant": "#4d463c",
+                        "surface-container-high": "#ebe8e1",
+                        "on-surface": "#1c1c18",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#fedeb0",
+                        "on-background": "#1c1c18"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fcf9f2;
+            color: #1c1c18;
+            font-family: 'Newsreader', serif;
+        }
+        .marginalia {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #1c1c18;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Shell -->
+<nav class="flex justify-between items-center px-12 py-6 w-full fixed top-0 bg-[#fcf9f2] z-50">
+<div class="text-2xl font-['Noto_Serif'] italic text-[#1c1c18]">Sacred Ledger</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-[#725b37] border-b border-[#725b37] pb-1 font-['Inter'] uppercase tracking-[0.15em] text-xs" href="#">The Archive</a>
+<a class="text-[#1c1c18]/60 font-['Inter'] uppercase tracking-[0.15em] text-xs hover:text-[#725b37] transition-colors duration-300" href="#">Half-Cycle</a>
+<a class="text-[#1c1c18]/60 font-['Inter'] uppercase tracking-[0.15em] text-xs hover:text-[#725b37] transition-colors duration-300" href="#">Rituals</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary cursor-pointer">menu_book</span>
+<span class="material-symbols-outlined text-primary cursor-pointer">history_edu</span>
+<div class="w-8 h-8 bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">person</span>
+</div>
+</div>
+</nav>
+<!-- Side Navigation Shell -->
+<aside class="fixed left-0 top-0 h-full flex flex-col p-8 z-40 bg-[#f5f2eb] w-72 pt-32 hidden lg:flex">
+<div class="mb-12">
+<div class="text-lg font-bold text-[#1c1c18] font-label">Workbook Index</div>
+<div class="text-[10px] uppercase tracking-widest opacity-60">Series Alpha-Omega</div>
+</div>
+<nav class="flex flex-col gap-6 flex-grow">
+<a class="flex items-center gap-4 text-[#1c1c18]/80 hover:bg-[#fcf9f2]/50 p-2 transition-all group" href="#">
+<span class="material-symbols-outlined text-primary">brightness_3</span>
+<span class="font-['Inter'] uppercase tracking-[0.1em] text-[10px]">Current Moon</span>
+</a>
+<a class="flex items-center gap-4 text-[#725b37] font-bold translate-x-2 p-2 transition-all" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-['Inter'] uppercase tracking-[0.1em] text-[10px]">Archival Ledger</span>
+</a>
+<a class="flex items-center gap-4 text-[#1c1c18]/80 hover:bg-[#fcf9f2]/50 p-2 transition-all" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-['Inter'] uppercase tracking-[0.1em] text-[10px]">Celestial Map</span>
+</a>
+<a class="flex items-center gap-4 text-[#1c1c18]/80 hover:bg-[#fcf9f2]/50 p-2 transition-all" href="#">
+<span class="material-symbols-outlined">edit_note</span>
+<span class="font-['Inter'] uppercase tracking-[0.1em] text-[10px]">Scholar Notes</span>
+</a>
+<a class="flex items-center gap-4 text-[#1c1c18]/80 hover:bg-[#fcf9f2]/50 p-2 transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Inter'] uppercase tracking-[0.1em] text-[10px]">Settings</span>
+</a>
+</nav>
+<button class="mt-auto bg-primary text-on-primary p-4 font-label uppercase text-[10px] tracking-widest">
+            New Transcription
+        </button>
+<div class="mt-8 flex items-center gap-4 text-[#1c1c18]/80 hover:bg-[#fcf9f2]/50 p-2">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="font-['Inter'] uppercase tracking-[0.1em] text-[10px]">Library Help</span>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="lg:ml-72 pt-32 px-8 md:px-16 lg:px-24 pb-24 max-w-7xl mx-auto">
+<!-- Hero Section: Workbook Identity -->
+<header class="mb-24 flex flex-col md:flex-row items-baseline justify-between gap-8 border-b border-outline-variant/20 pb-12">
+<div class="max-w-2xl">
+<div class="marginalia mb-4">Volume II / Seq. 002</div>
+<h1 class="text-6xl md:text-8xl font-headline font-light tracking-tighter mb-6 text-on-surface">Depth to Root</h1>
+<p class="text-2xl font-body italic text-primary leading-relaxed">
+                    A cartography of transformation from the subterranean waters of Scorpio to the fertile soil of Taurus.
+                </p>
+</div>
+<div class="text-right">
+<div class="marginalia">Phase Entry</div>
+<div class="text-4xl font-headline font-light">02</div>
+<div class="marginalia mt-2">Design Workbook</div>
+</div>
+</header>
+<!-- Section 1: Lunar Context -->
+<section class="mb-32 grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+<div class="md:col-span-4 sticky top-40">
+<h2 class="font-label uppercase tracking-[0.2em] text-xs text-primary mb-6">01. Lunar Context</h2>
+<div class="aspect-[3/4] bg-surface-container-low mb-6 overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="Monochrome fine art photograph of a dark moon reflecting on still water with deep shadows and ethereal light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjmwEvOFWKXQnZ2BAHZ3xkXGu9xdm0wPOqiMFkAvvywwJ42FcNZzL220pJc0LYgSAsoKLUK4MRbw8C8fsdC92TbdwoJClF-cA3H87g-XczFH4y7kEFgNNxM1keyNqWZWMKgWIALd94QU1-iR2F2HjH_fFMWpkeoh5_Y_ol6RxcnO-j6TBNVoBevXAJxuGRHbQoLwzKJRQ3PvecmiBReT3f50eu__htEMPaBt6xAwBBd4V6e6jC9A-CDHCGlHjSXDPPbEUaJuYCbCtX"/>
+</div>
+<div class="marginalia">Observed Path: Scorpio FM → Taurus NM</div>
+</div>
+<div class="md:col-span-8 flex flex-col gap-12">
+<div class="p-12 bg-surface-container-lowest border-l border-primary/20">
+<h3 class="text-3xl font-headline italic mb-8">The Descents</h3>
+<p class="text-xl font-body leading-relaxed mb-6">
+                        The journey begins in the Scorpio Full Moon—a peak of emotional intensity and psychological transparency. This is the "Depth," where we unearth the hidden narratives of the psyche. As the moon wanes, we strip back the non-essential, moving toward the dark moon's silence.
+                    </p>
+<p class="text-xl font-body leading-relaxed">
+                        The arc concludes at the Taurus New Moon, where we plant these refined insights into the physical realm. "Rooting" is the act of making the psychological tangible.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="p-8 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+<div class="font-label text-[10px] uppercase tracking-widest mb-2">Primary Element</div>
+<div class="text-2xl font-headline">Fixed Water</div>
+</div>
+<div class="p-8 border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'FILL' 1;">terrain</span>
+<div class="font-label text-[10px] uppercase tracking-widest mb-2">Arrival Element</div>
+<div class="text-2xl font-headline">Fixed Earth</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Somatic Attunements -->
+<section class="mb-32">
+<div class="flex items-center gap-8 mb-16">
+<h2 class="font-label uppercase tracking-[0.2em] text-xs text-primary">02. Somatic Attunements</h2>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-0">
+<div class="p-12 bg-surface-container-low group hover:bg-surface-container transition-colors">
+<div class="marginalia mb-8">Phase A</div>
+<h4 class="text-2xl font-headline mb-4">Visceral Release</h4>
+<p class="font-body text-lg leading-relaxed opacity-80">Focus on the pelvic bowl and deep psoas. Scorpio demands the release of stored tension through slow, rhythmic fluid movement.</p>
+</div>
+<div class="p-12 border-x border-outline-variant/20 group hover:bg-white transition-colors">
+<div class="marginalia mb-8">Phase B</div>
+<h4 class="text-2xl font-headline mb-4">The Neutral Void</h4>
+<p class="font-body text-lg leading-relaxed opacity-80">Breathwork focused on the pause between exhales. Finding the stillness in the transition from water to soil.</p>
+</div>
+<div class="p-12 bg-surface-container-low group hover:bg-surface-container transition-colors">
+<div class="marginalia mb-8">Phase C</div>
+<h4 class="text-2xl font-headline mb-4">Sensory Grounding</h4>
+<p class="font-body text-lg leading-relaxed opacity-80">Taurus arrival. Focus on skin contact, texture, and the weight of the body against the earth. Establishing somatic safety.</p>
+</div>
+</div>
+</section>
+<!-- Section 3: 14-Day Integration Protocol -->
+<section class="mb-32">
+<h2 class="font-label uppercase tracking-[0.2em] text-xs text-primary mb-12">03. 14-Day Integration Protocol</h2>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-on-surface/10">
+<th class="py-6 font-label text-[10px] uppercase tracking-widest opacity-60">Day Range</th>
+<th class="py-6 font-label text-[10px] uppercase tracking-widest opacity-60">Focus Area</th>
+<th class="py-6 font-label text-[10px] uppercase tracking-widest opacity-60">Daily Ritual</th>
+<th class="py-6 font-label text-[10px] uppercase tracking-widest opacity-60">Archive Key</th>
+</tr>
+</thead>
+<tbody class="font-body text-xl">
+<tr class="group border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors">
+<td class="py-8 font-label text-xs tracking-tighter italic">01 — 04</td>
+<td class="py-8 font-headline">Emotional Excavation</td>
+<td class="py-8 opacity-70">Journaling the "Shadow Impulse" upon waking.</td>
+<td class="py-8 font-label text-[10px] text-primary">SCORP_01</td>
+</tr>
+<tr class="group border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors">
+<td class="py-8 font-label text-xs tracking-tighter italic">05 — 09</td>
+<td class="py-8 font-headline">The Great Thinning</td>
+<td class="py-8 opacity-70">Digital fast; removal of excess sensory input.</td>
+<td class="py-8 font-label text-[10px] text-primary">VOID_02</td>
+</tr>
+<tr class="group border-b border-outline-variant/10 hover:bg-surface-container-low transition-colors">
+<td class="py-8 font-label text-xs tracking-tighter italic">10 — 14</td>
+<td class="py-8 font-headline">Material Anchoring</td>
+<td class="py-8 opacity-70">Manual labor; gardening or tactile creation.</td>
+<td class="py-8 font-label text-[10px] text-primary">TAUR_03</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Section 4: Research Prompt -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-24">
+<div class="md:col-span-5 relative">
+<div class="absolute -top-4 -left-4 text-primary opacity-20 text-8xl font-headline italic">“</div>
+<div class="p-12 border border-primary/30">
+<h2 class="font-label uppercase tracking-[0.2em] text-xs text-primary mb-8">04. Research Prompt</h2>
+<h3 class="text-4xl font-headline font-light mb-8 leading-tight">Psychological Mastery to Embodiment</h3>
+<p class="font-body text-xl italic leading-relaxed opacity-90 mb-6">
+                        "How does the truth of the abyss transform when it is carried into the mundane chores of the daylight world?"
+                    </p>
+<div class="h-[1px] w-12 bg-primary mb-6"></div>
+<div class="marginalia text-primary">Assigned Inquiry</div>
+</div>
+</div>
+<div class="md:col-span-7 flex flex-col justify-center gap-8">
+<div class="relative group">
+<label class="font-label text-[10px] uppercase tracking-widest absolute -top-3 left-4 bg-surface px-2 transition-all group-focus-within:text-primary">Transcription Area</label>
+<textarea class="w-full bg-transparent border border-outline-variant/30 p-8 font-body text-xl min-h-[300px] focus:outline-none focus:border-primary focus:ring-0 transition-all resize-none" placeholder="Enter your observations here..."></textarea>
+</div>
+<div class="flex justify-end">
+<button class="flex items-center gap-4 text-primary hover:gap-6 transition-all">
+<span class="font-label text-[10px] uppercase tracking-widest">Seal Entry</span>
+<span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Footer / Marginalia Stack -->
+<footer class="mt-48 pt-12 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-end gap-12">
+<div class="max-w-md">
+<div class="marginalia mb-4">Bibliographic Reference</div>
+<p class="font-body italic text-sm opacity-60">
+                    Jung, C.G. (1933). Modern Man in Search of a Soul. <br/>
+                    Leopold, A. (1949). A Sand County Almanac.
+                </p>
+</div>
+<div class="text-right">
+<div class="flex items-center gap-2 justify-end mb-2">
+<div class="w-2 h-2 bg-primary"></div>
+<div class="marginalia">Certified Archival Copy</div>
+</div>
+<div class="text-xs font-label opacity-40">System Stamp: 44.20N, 70.32W | Cycle 02.Alpha</div>
+</div>
+</footer>
+</main>
+<!-- FAB Suppression: On Detail Pages we suppress global FABs to focus on transcription -->
+</body></html>

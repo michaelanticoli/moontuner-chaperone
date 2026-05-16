@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Newsreader', serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .font-noto-serif { font-family: 'Noto Serif', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+        
+        /* Custom scrollbar for archival feel */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #fcf9f2; }
+        ::-webkit-scrollbar-thumb { background: #d0c5b7; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1c1c18",
+                        "surface": "#fcf9f2",
+                        "primary-container": "#c4a77d",
+                        "primary": "#725b37",
+                        "outline-variant": "#d0c5b7",
+                        "surface-container-low": "#f6f3ec",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e5e2db"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Newsreader"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 w-full bg-[#fcf9f2] dark:bg-stone-950 border-b-[0.5px] border-stone-200 dark:border-stone-800 flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d]" data-icon="menu_book">menu_book</span>
+<h1 class="text-lg font-normal tracking-[0.15em] uppercase text-[#1c1c18] dark:text-stone-200 font-noto-serif">THE CANONICAL ARCHIVE</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8 text-[10px] tracking-[0.2em] font-inter uppercase font-medium">
+<a class="text-[#725b37] dark:text-[#c4a77d] transition-colors duration-300" href="#">Archive</a>
+<a class="text-stone-400 dark:text-stone-600 hover:text-[#725b37] transition-colors duration-300" href="#">Library</a>
+<a class="text-stone-400 dark:text-stone-600 hover:text-[#725b37] transition-colors duration-300" href="#">Research</a>
+</nav>
+<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d]" data-icon="search">search</span>
+</div>
+</header>
+<main class="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
+<!-- Hero Section: Asymmetric -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-32 items-end">
+<div class="lg:col-span-7">
+<p class="font-inter text-[10px] tracking-[0.3em] uppercase text-primary mb-6">Series Index / Vol. 2024</p>
+<h2 class="text-6xl md:text-8xl font-cormorant font-light italic leading-tight text-on-surface">
+                    The Lunar <br/> <span class="pl-12 lg:pl-24">Chaperone</span>
+</h2>
+</div>
+<div class="lg:col-span-5 pb-4">
+<div class="border-l border-outline-variant/30 pl-8">
+<p class="text-lg font-body leading-relaxed text-on-surface/80 italic mb-6">
+                        "A master directory of twenty-six workbooks curated by MOONTUNER. A ritualistic journey through the celestial tides, from the calcification of Bone to the pulse of the Heart."
+                    </p>
+<button class="font-inter text-[10px] tracking-[0.2em] uppercase border-b border-primary/40 pb-1 hover:text-primary transition-all">Begin Inquiry</button>
+</div>
+</div>
+</section>
+<!-- Series One -->
+<section class="mb-32">
+<div class="flex items-baseline gap-4 mb-16 overflow-hidden">
+<span class="font-inter text-[10px] tracking-[0.2em] text-primary whitespace-nowrap">SECTION I</span>
+<div class="h-[0.5px] w-full bg-outline-variant/30"></div>
+<h3 class="font-cormorant text-3xl italic whitespace-nowrap px-4">Series One: Full Moon → New Moon</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/20 border border-outline-variant/20">
+<!-- Manual loop through workbooks for layout control -->
+<div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors duration-500">
+<span class="font-inter text-[10px] tracking-widest text-primary/50 block mb-12">01</span>
+<h4 class="font-cormorant text-2xl mb-4 group-hover:italic transition-all">Capricorn → Aquarius</h4>
+<p class="text-sm font-body text-on-surface/60 leading-relaxed">The Foundation: Structural integrity and the architecture of the void.</p>
+</div>
+<div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors duration-500">
+<span class="font-inter text-[10px] tracking-widest text-primary/50 block mb-12">02</span>
+<h4 class="font-cormorant text-2xl mb-4 group-hover:italic transition-all">Aquarius → Pisces</h4>
+<p class="text-sm font-body text-on-surface/60 leading-relaxed">The Dissolve: Navigating the currents of the collective subconscious.</p>
+</div>
+<div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors duration-500 md:col-span-2 lg:col-span-2">
+<div class="flex h-full gap-8">
+<div class="w-1/2">
+<span class="font-inter text-[10px] tracking-widest text-primary/50 block mb-12">03</span>
+<h4 class="font-cormorant text-2xl mb-4 group-hover:italic transition-all">Pisces → Aries</h4>
+<p class="text-sm font-body text-on-surface/60 leading-relaxed">The Spark: Emergence from the deep primordial waters.</p>
+</div>
+<div class="w-1/2 h-full bg-surface-container-highest overflow-hidden relative">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-40 group-hover:scale-105 transition-transform duration-1000" data-alt="abstract monochromatic celestial patterns reminiscent of moon craters and ink on parchment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKqrYF2c07Zv3KBjju-xBBbnHPguPByeMp7zV9umIyQJPPt9_Ec4WRSpgg4-h8Rj53ba6KbUXuzkBaREVnvFGtNb4YUa8toxeFoSidrzWIPSala4x7z2tAzCMPePIj_zQIM8p7WnZrOFvMMfPmwrx2Ct4dD5-VzqJGHoLT3zQ8A4SDgNYlW_EMTG9T1_iv1tqXUviZgmKCvWBzhUyQwlOZxnU6tSsL-Vl0wnX04bGAdLe9XHSVkKBxDGqdI-HZC1fZ0D8sjxJTFay8"/>
+</div>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors duration-500">
+<span class="font-inter text-[10px] tracking-widest text-primary/50 block mb-12">04-11</span>
+<h4 class="font-cormorant text-2xl mb-4 group-hover:italic transition-all">Mid-Cycle Transits</h4>
+<p class="text-sm font-body text-on-surface/60 leading-relaxed">Refining the internal landscape through the cardinal turns.</p>
+</div>
+<div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors duration-500 lg:col-span-3">
+<div class="flex justify-between items-end h-full">
+<div>
+<span class="font-inter text-[10px] tracking-widest text-primary/50 block mb-12">12</span>
+<h4 class="font-cormorant text-4xl mb-4 group-hover:italic transition-all">Capricorn → Leo: From Bone to Heart</h4>
+<p class="max-w-md text-sm font-body text-on-surface/60 leading-relaxed italic">The culmination of the first descent. Hardening the vessel to protect the warmth within. The final alchemy of Series One.</p>
+</div>
+<span class="material-symbols-outlined text-4xl text-primary/20 p-4" data-icon="tempest">storm</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Series Two: Asymmetric List -->
+<section class="mb-32">
+<div class="flex items-baseline gap-4 mb-16">
+<h3 class="font-cormorant text-3xl italic whitespace-nowrap pr-4">Series Two: New Moon → Full Moon</h3>
+<div class="h-[0.5px] w-full bg-outline-variant/30"></div>
+<span class="font-inter text-[10px] tracking-[0.2em] text-primary whitespace-nowrap">SECTION II</span>
+</div>
+<div class="space-y-0 border-t border-outline-variant/30">
+<!-- Workbook 13-24 (Editorial List Style) -->
+<div class="group flex flex-col md:flex-row justify-between py-12 border-b border-outline-variant/10 hover:bg-surface-container-low px-4 transition-colors">
+<div class="flex items-baseline gap-8">
+<span class="font-inter text-[10px] tracking-tighter text-primary/40 w-8">13-18</span>
+<h4 class="font-cormorant text-3xl">The Waxing Crescent Anthology</h4>
+</div>
+<div class="mt-4 md:mt-0 flex items-center gap-12">
+<p class="text-sm font-body italic text-on-surface/50 max-w-xs text-right">Building the momentum of the silver thread.</p>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform" data-icon="north_east">north_east</span>
+</div>
+</div>
+<div class="group flex flex-col md:flex-row justify-between py-12 border-b border-outline-variant/10 hover:bg-surface-container-low px-4 transition-colors">
+<div class="flex items-baseline gap-8">
+<span class="font-inter text-[10px] tracking-tighter text-primary/40 w-8">19-24</span>
+<h4 class="font-cormorant text-3xl">The Gibbous Illuminations</h4>
+</div>
+<div class="mt-4 md:mt-0 flex items-center gap-12">
+<p class="text-sm font-body italic text-on-surface/50 max-w-xs text-right">The peak of preparation before the archival overflow.</p>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform" data-icon="north_east">north_east</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Advanced Section: Bento Glassmorphism -->
+<section class="mb-32">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-[#725b37] p-12 text-white relative overflow-hidden flex flex-col justify-between aspect-square lg:aspect-video">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/20 rounded-full blur-[80px] -mr-32 -mt-32"></div>
+<div>
+<span class="font-inter text-[10px] tracking-[0.3em] uppercase opacity-60">Advanced Protocol</span>
+<h3 class="font-cormorant text-5xl mt-6">Eclipse Portal Specials</h3>
+</div>
+<div class="flex justify-between items-end border-t border-white/20 pt-8">
+<p class="font-body italic text-white/80 max-w-xs">Two rare workbooks for the non-linear practitioner. Accessible only during celestial alignment.</p>
+<div class="flex gap-2">
+<span class="material-symbols-outlined" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="material-symbols-outlined" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container-high p-8 border border-outline-variant/30 flex flex-col justify-between">
+<h5 class="font-inter text-[10px] tracking-widest text-primary mb-4">APPENDIX A</h5>
+<p class="font-cormorant text-xl leading-snug">The Solar Shade: Reclaiming Shadow in the Peak of Light</p>
+<button class="mt-8 self-start font-inter text-[9px] tracking-widest border border-primary/30 px-4 py-2 hover:bg-primary hover:text-white transition-colors uppercase">Acquire</button>
+</div>
+<div class="bg-surface-container-high p-8 border border-outline-variant/30 flex flex-col justify-between">
+<h5 class="font-inter text-[10px] tracking-widest text-primary mb-4">APPENDIX B</h5>
+<p class="font-cormorant text-xl leading-snug">The Blood Moon Ritual: Transmuting Lineage into Legacy</p>
+<button class="mt-8 self-start font-inter text-[9px] tracking-widest border border-primary/30 px-4 py-2 hover:bg-primary hover:text-white transition-colors uppercase">Acquire</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Marginalia/Metadata Section -->
+<footer class="mt-32 pt-16 border-t border-outline-variant/30 grid grid-cols-1 md:grid-cols-4 gap-12 text-on-surface/40">
+<div>
+<p class="font-inter text-[9px] tracking-widest uppercase mb-4 text-on-surface">Curated By</p>
+<p class="font-body text-sm italic">MOONTUNER ARCHIVES<br/>EST. MMXXIV</p>
+</div>
+<div>
+<p class="font-inter text-[9px] tracking-widest uppercase mb-4 text-on-surface">Classification</p>
+<p class="font-body text-sm italic">Esoteric / Lunar / Workbook<br/>Volume I-XXVI</p>
+</div>
+<div class="md:col-span-2 text-right hidden md:block">
+<span class="material-symbols-outlined text-6xl opacity-10" data-icon="all_inclusive">all_inclusive</span>
+</div>
+</footer>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#fcf9f2]/80 dark:bg-stone-950/80 backdrop-blur-md border-t-[0.5px] border-stone-200 dark:border-stone-800 flex justify-around items-center px-4 h-16 z-50">
+<a class="flex flex-col items-center justify-center text-[#725b37] border-t border-[#725b37] -mt-[0.5px] px-4 h-full" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-inter uppercase text-[10px] tracking-[0.15em] font-medium mt-1">Archive</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 px-4 h-full" href="#">
+<span class="material-symbols-outlined" data-icon="local_library">local_library</span>
+<span class="font-inter uppercase text-[10px] tracking-[0.15em] font-medium mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 px-4 h-full" href="#">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+<span class="font-inter uppercase text-[10px] tracking-[0.15em] font-medium mt-1">Research</span>
+</a>
+</nav>
+</body></html>
