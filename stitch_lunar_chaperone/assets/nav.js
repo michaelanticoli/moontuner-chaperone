@@ -44,12 +44,13 @@
   ];
 
   /* ── Helpers ───────────────────────────────────────────────────────────── */
+  var WORKBOOK_FILE = 'code.html';
   function pad(n) { return n < 10 ? '0' + n : String(n); }
 
   /** Build a relative path from a workbook folder back up to the site root and
    *  then down into the target folder. Works from any depth-1 subfolder. */
   function wbHref(folder) {
-    return '../' + folder + '/code.html';
+    return '../' + folder + '/' + WORKBOOK_FILE;
   }
 
   function indexHref() { return '../the_lunar_chaperone_master_index/code.html'; }
