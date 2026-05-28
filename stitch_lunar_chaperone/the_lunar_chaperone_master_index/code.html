@@ -1,232 +1,282 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
+<html class="light" lang="en">
+<head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Lunar Chaperone — Master Index</title>
+<link rel="stylesheet" href="../assets/style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="../assets/tailwind-config.js"></script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            font-family: 'Newsreader', serif;
-            -webkit-font-smoothing: antialiased;
-        }
-        .font-noto-serif { font-family: 'Noto Serif', serif; }
-        .font-inter { font-family: 'Inter', sans-serif; }
-        .font-cormorant { font-family: 'Cormorant Garamond', serif; }
-        
-        /* Custom scrollbar for archival feel */
-        ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #fcf9f2; }
-        ::-webkit-scrollbar-thumb { background: #d0c5b7; }
-    </style>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-surface": "#1c1c18",
-                        "surface": "#fcf9f2",
-                        "primary-container": "#c4a77d",
-                        "primary": "#725b37",
-                        "outline-variant": "#d0c5b7",
-                        "surface-container-low": "#f6f3ec",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-container-highest": "#e5e2db"
-                    },
-                    "fontFamily": {
-                        "headline": ["Noto Serif"],
-                        "body": ["Newsreader"],
-                        "label": ["Inter"]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-surface text-on-surface selection:bg-primary-container/30">
-<!-- TopAppBar -->
-<header class="fixed top-0 z-50 w-full bg-[#fcf9f2] dark:bg-stone-950 border-b-[0.5px] border-stone-200 dark:border-stone-800 flex justify-between items-center px-6 py-4">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d]" data-icon="menu_book">menu_book</span>
-<h1 class="text-lg font-normal tracking-[0.15em] uppercase text-[#1c1c18] dark:text-stone-200 font-noto-serif">THE CANONICAL ARCHIVE</h1>
-</div>
-<div class="flex items-center gap-6">
-<nav class="hidden md:flex gap-8 text-[10px] tracking-[0.2em] font-inter uppercase font-medium">
-<a class="text-[#725b37] dark:text-[#c4a77d] transition-colors duration-300" href="#">Archive</a>
-<a class="text-stone-400 dark:text-stone-600 hover:text-[#725b37] transition-colors duration-300" href="#">Library</a>
-<a class="text-stone-400 dark:text-stone-600 hover:text-[#725b37] transition-colors duration-300" href="#">Research</a>
-</nav>
-<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d]" data-icon="search">search</span>
-</div>
+  /* Page-specific overrides */
+  body { padding-top: 0 !important; } /* master index has its own header */
+
+  /* Filter sidebar */
+  .filter-btn {
+    display: block; width: 100%;
+    text-align: left;
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    padding: 0.6rem 0.75rem;
+    background: none;
+    border: none;
+    color: var(--lc-ink-60);
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+    border-left: 2px solid transparent;
+  }
+  .filter-btn:hover { color: var(--lc-gold); background: var(--lc-bg-low); }
+  .filter-btn.active { color: var(--lc-gold); border-left-color: var(--lc-gold); background: var(--lc-bg-low); }
+
+  .grid-section { display: none; }
+  .grid-section.visible { display: block; }
+
+  /* Eclipse cards dark invert */
+  .wb-card.eclipse .wb-num,
+  .wb-card.eclipse .wb-journey,
+  .wb-card.eclipse .wb-desc { color: rgba(243,240,233,0.7); }
+  .wb-card.eclipse .wb-title { color: #fcf9f2; }
+  .wb-card.eclipse .badge-eclipse { background: rgba(255,255,255,0.08); }
+
+  /* Hover arrow */
+  .wb-card .arrow { opacity: 0; transform: translateX(-4px); transition: opacity 0.2s, transform 0.2s; }
+  .wb-card:hover .arrow { opacity: 1; transform: translateX(0); }
+</style>
+</head>
+<body class="bg-surface text-on-surface radiating-circles">
+
+<!-- ── Top App Bar ─────────────────────────────────────────────────────── -->
+<header id="lc-nav" style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(252,249,242,0.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--lc-outline-variant);">
+  <div style="max-width:1280px;margin:0 auto;padding:0.75rem clamp(1.5rem,5vw,5rem);display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
+    <a href="../the_great_library/code.html" style="font-family:'Inter',sans-serif;font-size:0.625rem;letter-spacing:0.2em;text-transform:uppercase;color:#725b37;text-decoration:none;font-weight:500;">✦ The Great Library</a>
+    <span style="font-family:'Inter',sans-serif;font-size:0.625rem;letter-spacing:0.2em;text-transform:uppercase;color:#1c1c18;">The Lunar Chaperone — Master Index</span>
+    <a href="../the_great_library/code.html" style="font-family:'Inter',sans-serif;font-size:0.625rem;letter-spacing:0.2em;text-transform:uppercase;color:#725b37;text-decoration:none;">← Return</a>
+  </div>
 </header>
-<main class="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
-<!-- Hero Section: Asymmetric -->
-<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-32 items-end">
-<div class="lg:col-span-7">
-<p class="font-inter text-[10px] tracking-[0.3em] uppercase text-primary mb-6">Series Index / Vol. 2024</p>
-<h2 class="text-6xl md:text-8xl font-cormorant font-light italic leading-tight text-on-surface">
-                    The Lunar <br/> <span class="pl-12 lg:pl-24">Chaperone</span>
-</h2>
-</div>
-<div class="lg:col-span-5 pb-4">
-<div class="border-l border-outline-variant/30 pl-8">
-<p class="text-lg font-body leading-relaxed text-on-surface/80 italic mb-6">
-                        "A master directory of twenty-six workbooks curated by MOONTUNER. A ritualistic journey through the celestial tides, from the calcification of Bone to the pulse of the Heart."
-                    </p>
-<button class="font-inter text-[10px] tracking-[0.2em] uppercase border-b border-primary/40 pb-1 hover:text-primary transition-all">Begin Inquiry</button>
-</div>
-</div>
-</section>
-<!-- Series One -->
-<section class="mb-32">
-<div class="flex items-baseline gap-4 mb-16 overflow-hidden">
-<span class="font-inter text-[10px] tracking-[0.2em] text-primary whitespace-nowrap">SECTION I</span>
-<div class="h-[0.5px] w-full bg-outline-variant/30"></div>
-<h3 class="font-cormorant text-3xl italic whitespace-nowrap px-4">Series One: Full Moon → New Moon</h3>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/20 border border-outline-variant/20">
-<!-- Manual loop through workbooks for layout control -->
-<div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors duration-500">
-<span class="font-inter text-[10px] tracking-widest text-primary/50 block mb-12">01</span>
-<h4 class="font-cormorant text-2xl mb-4 group-hover:italic transition-all">Capricorn → Aquarius</h4>
-<p class="text-sm font-body text-on-surface/60 leading-relaxed">The Foundation: Structural integrity and the architecture of the void.</p>
-</div>
-<div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors duration-500">
-<span class="font-inter text-[10px] tracking-widest text-primary/50 block mb-12">02</span>
-<h4 class="font-cormorant text-2xl mb-4 group-hover:italic transition-all">Aquarius → Pisces</h4>
-<p class="text-sm font-body text-on-surface/60 leading-relaxed">The Dissolve: Navigating the currents of the collective subconscious.</p>
-</div>
-<div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors duration-500 md:col-span-2 lg:col-span-2">
-<div class="flex h-full gap-8">
-<div class="w-1/2">
-<span class="font-inter text-[10px] tracking-widest text-primary/50 block mb-12">03</span>
-<h4 class="font-cormorant text-2xl mb-4 group-hover:italic transition-all">Pisces → Aries</h4>
-<p class="text-sm font-body text-on-surface/60 leading-relaxed">The Spark: Emergence from the deep primordial waters.</p>
-</div>
-<div class="w-1/2 h-full bg-surface-container-highest overflow-hidden relative">
-<img class="w-full h-full object-cover mix-blend-multiply opacity-40 group-hover:scale-105 transition-transform duration-1000" data-alt="abstract monochromatic celestial patterns reminiscent of moon craters and ink on parchment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKqrYF2c07Zv3KBjju-xBBbnHPguPByeMp7zV9umIyQJPPt9_Ec4WRSpgg4-h8Rj53ba6KbUXuzkBaREVnvFGtNb4YUa8toxeFoSidrzWIPSala4x7z2tAzCMPePIj_zQIM8p7WnZrOFvMMfPmwrx2Ct4dD5-VzqJGHoLT3zQ8A4SDgNYlW_EMTG9T1_iv1tqXUviZgmKCvWBzhUyQwlOZxnU6tSsL-Vl0wnX04bGAdLe9XHSVkKBxDGqdI-HZC1fZ0D8sjxJTFay8"/>
-</div>
-</div>
-</div>
-<!-- Row 2 -->
-<div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors duration-500">
-<span class="font-inter text-[10px] tracking-widest text-primary/50 block mb-12">04-11</span>
-<h4 class="font-cormorant text-2xl mb-4 group-hover:italic transition-all">Mid-Cycle Transits</h4>
-<p class="text-sm font-body text-on-surface/60 leading-relaxed">Refining the internal landscape through the cardinal turns.</p>
-</div>
-<div class="bg-surface p-8 group hover:bg-surface-container-low transition-colors duration-500 lg:col-span-3">
-<div class="flex justify-between items-end h-full">
-<div>
-<span class="font-inter text-[10px] tracking-widest text-primary/50 block mb-12">12</span>
-<h4 class="font-cormorant text-4xl mb-4 group-hover:italic transition-all">Capricorn → Leo: From Bone to Heart</h4>
-<p class="max-w-md text-sm font-body text-on-surface/60 leading-relaxed italic">The culmination of the first descent. Hardening the vessel to protect the warmth within. The final alchemy of Series One.</p>
-</div>
-<span class="material-symbols-outlined text-4xl text-primary/20 p-4" data-icon="tempest">storm</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Series Two: Asymmetric List -->
-<section class="mb-32">
-<div class="flex items-baseline gap-4 mb-16">
-<h3 class="font-cormorant text-3xl italic whitespace-nowrap pr-4">Series Two: New Moon → Full Moon</h3>
-<div class="h-[0.5px] w-full bg-outline-variant/30"></div>
-<span class="font-inter text-[10px] tracking-[0.2em] text-primary whitespace-nowrap">SECTION II</span>
-</div>
-<div class="space-y-0 border-t border-outline-variant/30">
-<!-- Workbook 13-24 (Editorial List Style) -->
-<div class="group flex flex-col md:flex-row justify-between py-12 border-b border-outline-variant/10 hover:bg-surface-container-low px-4 transition-colors">
-<div class="flex items-baseline gap-8">
-<span class="font-inter text-[10px] tracking-tighter text-primary/40 w-8">13-18</span>
-<h4 class="font-cormorant text-3xl">The Waxing Crescent Anthology</h4>
-</div>
-<div class="mt-4 md:mt-0 flex items-center gap-12">
-<p class="text-sm font-body italic text-on-surface/50 max-w-xs text-right">Building the momentum of the silver thread.</p>
-<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform" data-icon="north_east">north_east</span>
-</div>
-</div>
-<div class="group flex flex-col md:flex-row justify-between py-12 border-b border-outline-variant/10 hover:bg-surface-container-low px-4 transition-colors">
-<div class="flex items-baseline gap-8">
-<span class="font-inter text-[10px] tracking-tighter text-primary/40 w-8">19-24</span>
-<h4 class="font-cormorant text-3xl">The Gibbous Illuminations</h4>
-</div>
-<div class="mt-4 md:mt-0 flex items-center gap-12">
-<p class="text-sm font-body italic text-on-surface/50 max-w-xs text-right">The peak of preparation before the archival overflow.</p>
-<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform" data-icon="north_east">north_east</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Advanced Section: Bento Glassmorphism -->
-<section class="mb-32">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-<div class="bg-[#725b37] p-12 text-white relative overflow-hidden flex flex-col justify-between aspect-square lg:aspect-video">
-<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/20 rounded-full blur-[80px] -mr-32 -mt-32"></div>
-<div>
-<span class="font-inter text-[10px] tracking-[0.3em] uppercase opacity-60">Advanced Protocol</span>
-<h3 class="font-cormorant text-5xl mt-6">Eclipse Portal Specials</h3>
-</div>
-<div class="flex justify-between items-end border-t border-white/20 pt-8">
-<p class="font-body italic text-white/80 max-w-xs">Two rare workbooks for the non-linear practitioner. Accessible only during celestial alignment.</p>
-<div class="flex gap-2">
-<span class="material-symbols-outlined" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
-<span class="material-symbols-outlined" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
-</div>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="bg-surface-container-high p-8 border border-outline-variant/30 flex flex-col justify-between">
-<h5 class="font-inter text-[10px] tracking-widest text-primary mb-4">APPENDIX A</h5>
-<p class="font-cormorant text-xl leading-snug">The Solar Shade: Reclaiming Shadow in the Peak of Light</p>
-<button class="mt-8 self-start font-inter text-[9px] tracking-widest border border-primary/30 px-4 py-2 hover:bg-primary hover:text-white transition-colors uppercase">Acquire</button>
-</div>
-<div class="bg-surface-container-high p-8 border border-outline-variant/30 flex flex-col justify-between">
-<h5 class="font-inter text-[10px] tracking-widest text-primary mb-4">APPENDIX B</h5>
-<p class="font-cormorant text-xl leading-snug">The Blood Moon Ritual: Transmuting Lineage into Legacy</p>
-<button class="mt-8 self-start font-inter text-[9px] tracking-widest border border-primary/30 px-4 py-2 hover:bg-primary hover:text-white transition-colors uppercase">Acquire</button>
-</div>
-</div>
-</div>
-</section>
-<!-- Marginalia/Metadata Section -->
-<footer class="mt-32 pt-16 border-t border-outline-variant/30 grid grid-cols-1 md:grid-cols-4 gap-12 text-on-surface/40">
-<div>
-<p class="font-inter text-[9px] tracking-widest uppercase mb-4 text-on-surface">Curated By</p>
-<p class="font-body text-sm italic">MOONTUNER ARCHIVES<br/>EST. MMXXIV</p>
-</div>
-<div>
-<p class="font-inter text-[9px] tracking-widest uppercase mb-4 text-on-surface">Classification</p>
-<p class="font-body text-sm italic">Esoteric / Lunar / Workbook<br/>Volume I-XXVI</p>
-</div>
-<div class="md:col-span-2 text-right hidden md:block">
-<span class="material-symbols-outlined text-6xl opacity-10" data-icon="all_inclusive">all_inclusive</span>
-</div>
-</footer>
+
+<main style="padding-top:calc(56px + 2rem);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(1.5rem,5vw,5rem) 6rem;">
+
+    <!-- ── Hero ─────────────────────────────────────────────────────── -->
+    <section style="padding:4rem 0 5rem;display:grid;grid-template-columns:1fr;gap:2rem;" class="lg:grid-cols-12">
+      <div class="hero-enter lg:col-span-8">
+        <p style="font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--lc-gold);margin-bottom:1.5rem;">Moontuner Archives · Vol. 2024</p>
+        <h1 style="font-family:var(--font-display);font-weight:300;font-size:clamp(3.5rem,8vw,6rem);line-height:1;color:var(--lc-ink);">
+          The Lunar<br/><span style="font-style:italic;color:var(--lc-gold);padding-left:clamp(1rem,6vw,5rem);">Chaperone</span>
+        </h1>
+        <p style="font-family:var(--font-body);font-size:var(--text-lg);font-style:italic;color:var(--lc-ink-60);max-width:42rem;margin-top:2rem;line-height:1.75;">
+          A master directory of twenty-six workbooks curated by MOONTUNER.
+          A ritualistic journey through the celestial tides, from the calcification of Bone to the pulse of the Heart.
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:flex-end;gap:1rem;padding-bottom:0.5rem;" class="hero-enter lg:col-span-4">
+        <div style="border-left:1px solid var(--lc-outline-variant);padding-left:1.5rem;">
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1rem;">
+            <span class="badge badge-cycle1">Cycle 1 · 12 Workbooks</span>
+            <span class="badge badge-cycle2">Cycle 2 · 12 Workbooks</span>
+            <span class="badge badge-eclipse">Eclipse · 2 Portals</span>
+          </div>
+          <p style="font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:0.15em;text-transform:uppercase;color:var(--lc-outline);">26 Workbooks · Full Moon → New Moon → Eclipse</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule" style="margin-bottom:3rem;"/>
+
+    <!-- ── Layout: sidebar + grid ────────────────────────────────────── -->
+    <div style="display:grid;grid-template-columns:1fr;gap:3rem;" class="lg:grid-cols-[220px_1fr]">
+
+      <!-- Sidebar filters -->
+      <aside style="position:sticky;top:calc(56px + 2rem);height:fit-content;" class="hidden lg:block">
+        <p style="font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--lc-outline);margin-bottom:1rem;padding:0 0.75rem;">Filter Series</p>
+        <button class="filter-btn active" data-filter="all">All 26 Workbooks</button>
+        <button class="filter-btn" data-filter="cycle1">Cycle 1 · Full → New Moon</button>
+        <button class="filter-btn" data-filter="cycle2">Cycle 2 · New → Full Moon</button>
+        <button class="filter-btn" data-filter="eclipse">Eclipse Portals</button>
+
+        <hr class="rule" style="margin:1.5rem 0.75rem;"/>
+
+        <p style="font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--lc-outline);margin-bottom:1rem;padding:0 0.75rem;">Begin Journey</p>
+        <a href="../workbook_01_ignition_to_depth/code.html"
+           style="display:block;margin:0 0.75rem;padding:0.75rem 1rem;background:var(--lc-gold);color:#fff;font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;text-decoration:none;text-align:center;transition:opacity 0.2s;"
+           onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+          Start at Workbook 01
+        </a>
+      </aside>
+
+      <!-- Workbook grid sections -->
+      <div>
+
+        <!-- Mobile filters -->
+        <div class="lg:hidden" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem;">
+          <button class="filter-btn active" data-filter="all" style="width:auto;padding:0.4rem 0.8rem;border:1px solid var(--lc-outline-variant);">All</button>
+          <button class="filter-btn" data-filter="cycle1" style="width:auto;padding:0.4rem 0.8rem;border:1px solid var(--lc-outline-variant);">Cycle 1</button>
+          <button class="filter-btn" data-filter="cycle2" style="width:auto;padding:0.4rem 0.8rem;border:1px solid var(--lc-outline-variant);">Cycle 2</button>
+          <button class="filter-btn" data-filter="eclipse" style="width:auto;padding:0.4rem 0.8rem;border:1px solid var(--lc-outline-variant);">Eclipse</button>
+        </div>
+
+        <!-- CYCLE 1 -->
+        <section class="grid-section visible" data-section="cycle1">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem;overflow:hidden;">
+            <span style="font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--lc-gold);white-space:nowrap;">Section I</span>
+            <hr class="rule" style="flex:1;border:none;border-top:1px solid var(--lc-outline-variant);"/>
+            <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-style:italic;white-space:nowrap;padding:0 1rem;">Cycle One · Full Moon → New Moon</h2>
+            <hr class="rule" style="flex:0.5;border:none;border-top:1px solid var(--lc-outline-variant);"/>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--lc-outline-variant);border:1px solid var(--lc-outline-variant);" id="grid-cycle1">
+            <!-- cards injected by JS -->
+          </div>
+        </section>
+
+        <!-- CYCLE 2 -->
+        <section class="grid-section visible" data-section="cycle2" style="margin-top:4rem;">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem;overflow:hidden;">
+            <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-style:italic;white-space:nowrap;padding:0 1rem;">Cycle Two · New Moon → Full Moon</h2>
+            <hr class="rule" style="flex:1;border:none;border-top:1px solid var(--lc-outline-variant);"/>
+            <span style="font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--lc-gold);white-space:nowrap;">Section II</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--lc-outline-variant);border:1px solid var(--lc-outline-variant);" id="grid-cycle2">
+          </div>
+        </section>
+
+        <!-- ECLIPSE PORTALS -->
+        <section class="grid-section visible" data-section="eclipse" style="margin-top:4rem;">
+          <div style="display:flex;align-items:center;gap:1rem;margin-bottom:2rem;overflow:hidden;">
+            <span style="font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--lc-gold);white-space:nowrap;">Special</span>
+            <hr class="rule" style="flex:1;border:none;border-top:1px solid var(--lc-outline-variant);"/>
+            <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-style:italic;white-space:nowrap;padding:0 1rem;">Eclipse Portal Workbooks</h2>
+            <hr class="rule" style="flex:0.5;border:none;border-top:1px solid var(--lc-outline-variant);"/>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--lc-outline-variant);border:1px solid var(--lc-outline-variant);" id="grid-eclipse">
+          </div>
+        </section>
+
+        <!-- Full cycle timeline strip -->
+        <div style="margin-top:5rem;padding:2rem;background:var(--lc-bg-low);border:1px solid var(--lc-outline-variant);">
+          <p style="font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--lc-outline);margin-bottom:1rem;">26-Workbook Cycle · Position Map</p>
+          <div class="timeline-strip" id="master-timeline"></div>
+          <div style="display:flex;gap:1.5rem;margin-top:1rem;flex-wrap:wrap;">
+            <span style="display:flex;align-items:center;gap:0.4rem;font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:0.1em;color:var(--lc-outline);">
+              <span class="timeline-dot done" style="display:inline-block;"></span> Cycle 1
+            </span>
+            <span style="display:flex;align-items:center;gap:0.4rem;font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:0.1em;color:var(--lc-outline);">
+              <span class="timeline-dot current" style="display:inline-block;"></span> Cycle 2
+            </span>
+            <span style="display:flex;align-items:center;gap:0.4rem;font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:0.1em;color:var(--lc-outline);">
+              <span class="timeline-dot eclipse" style="display:inline-block;"></span> Eclipse Portal
+            </span>
+          </div>
+        </div>
+
+      </div><!-- /grid area -->
+    </div><!-- /layout -->
+  </div>
 </main>
-<!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#fcf9f2]/80 dark:bg-stone-950/80 backdrop-blur-md border-t-[0.5px] border-stone-200 dark:border-stone-800 flex justify-around items-center px-4 h-16 z-50">
-<a class="flex flex-col items-center justify-center text-[#725b37] border-t border-[#725b37] -mt-[0.5px] px-4 h-full" href="#">
-<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
-<span class="font-inter uppercase text-[10px] tracking-[0.15em] font-medium mt-1">Archive</span>
-</a>
-<a class="flex flex-col items-center justify-center text-stone-400 px-4 h-full" href="#">
-<span class="material-symbols-outlined" data-icon="local_library">local_library</span>
-<span class="font-inter uppercase text-[10px] tracking-[0.15em] font-medium mt-1">Library</span>
-</a>
-<a class="flex flex-col items-center justify-center text-stone-400 px-4 h-full" href="#">
-<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
-<span class="font-inter uppercase text-[10px] tracking-[0.15em] font-medium mt-1">Research</span>
-</a>
-</nav>
-</body></html>
+
+<!-- Footer -->
+<footer style="border-top:1px solid var(--lc-outline-variant);margin-top:4rem;padding:3rem clamp(1.5rem,5vw,5rem);max-width:1280px;margin-left:auto;margin-right:auto;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+    <p style="font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:var(--tracking-widest);text-transform:uppercase;color:var(--lc-outline);opacity:0.6;">© MMXXIV Moontuner Archives · The Lunar Chaperone Series</p>
+    <a href="../the_great_library/code.html" style="font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--lc-gold);text-decoration:none;">← The Great Library</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var WORKBOOKS = [
+    { num: 1,  title: 'From Bone to Heart',              journey: 'Capricorn → Leo',           desc: 'Structure shifting into expressive heart-based creativity; Bones/Knees → Heart/Solar Plexus',    cycle: 1,        folder: 'workbook_01_ignition_to_depth' },
+    { num: 2,  title: 'From Heart to Mind',              journey: 'Leo → Aquarius',             desc: 'Creative identity expanding into collective innovation; Heart/Solar Plexus → Nervous System',       cycle: 1,        folder: 'workbook_02_depth_to_root' },
+    { num: 3,  title: 'From Mind to Gut',                journey: 'Aquarius → Virgo',           desc: 'Visionary concepts grounding through service and analysis; Higher Mind → Digestive System',         cycle: 1,        folder: 'workbook_03_root_to_vision' },
+    { num: 4,  title: 'From Gut to Soul',                journey: 'Virgo → Pisces',             desc: 'Precision dissolving into universal compassion; Gut Instinct → Feet/Etheric Body',                 cycle: 1,        folder: 'workbook_04_vision_to_voice' },
+    { num: 5,  title: 'From Soul to Balance',            journey: 'Pisces → Libra',             desc: 'Mystical awareness forming relational harmony; Etheric Body → Balance',                            cycle: 1,        folder: 'workbook_05_soul_to_balance' },
+    { num: 6,  title: 'From Balance to Fire',            journey: 'Libra → Aries',              desc: 'Harmony igniting bold individual action; Balance → Head/Initiation',                               cycle: 1,        folder: 'workbook_06_balance_to_fire' },
+    { num: 7,  title: 'From Fire to Depth',              journey: 'Aries → Scorpio',            desc: 'Raw energy deepening into transformative power; Head/Initiative → Reproductive Organs/Shadow',      cycle: 1,        folder: 'workbook_07_fire_to_depth' },
+    { num: 8,  title: 'From Depth to Root',              journey: 'Scorpio → Taurus',           desc: 'Hidden power grounding into embodied voice; Shadow/Power → Throat/Voice',                          cycle: 1,        folder: 'workbook_08_depth_to_root' },
+    { num: 9,  title: 'From Root to Vision',             journey: 'Taurus → Sagittarius',       desc: 'Stability opening into philosophical exploration; Throat/Stability → Hips/Expansion',              cycle: 1,        folder: 'workbook_09_root_to_vision' },
+    { num: 10, title: 'From Vision to Voice',            journey: 'Sagittarius → Gemini',       desc: 'Wisdom translated into communication; Hips/Expansion → Lungs/Communication',                      cycle: 1,        folder: 'workbook_10_vision_to_voice' },
+    { num: 11, title: 'From Voice to Womb',              journey: 'Gemini → Cancer',            desc: 'Intellectual connection softening into emotional nourishment; Communication → Breast/Nurturing',    cycle: 1,        folder: 'workbook_11_voice_to_womb' },
+    { num: 12, title: 'From Womb to Bone',               journey: 'Cancer → Capricorn',         desc: 'Emotional grounding forming long-term structure; Nurturing → Knees/Bones',                         cycle: 1,        folder: 'workbook_12_womb_to_bone' },
+    { num: 13, title: 'Heart Expanding to Mind',         journey: 'Leo → Aquarius',             desc: 'Creativity building toward visionary leadership; Heart/Solar Plexus → Higher Mind',                cycle: 2,        folder: 'workbook_13_heart_expanding_to_mind' },
+    { num: 14, title: 'Mind Manifesting Through Gut',    journey: 'Aquarius → Virgo',           desc: 'Innovation becoming practical implementation; Higher Mind → Digestive System',                      cycle: 2,        folder: 'workbook_14_mind_manifesting_through_gut' },
+    { num: 15, title: 'Gut Flowing to Soul',             journey: 'Virgo → Pisces',             desc: 'Practical wisdom flowing into spiritual unity; Digestive System → Feet/Etheric Body',              cycle: 2,        folder: 'workbook_15_gut_flowing_to_soul' },
+    { num: 16, title: 'Soul Balancing Through Harmony',  journey: 'Pisces → Libra',             desc: 'Transcendence manifesting as relational harmony; Etheric Body → Balance',                          cycle: 2,        folder: 'workbook_16_soul_balancing_through_harmony' },
+    { num: 17, title: 'Balance Igniting to Fire',        journey: 'Libra → Aries',              desc: 'Diplomatic groundwork sparking courageous initiation; Balance → Head/Brain',                       cycle: 2,        folder: 'workbook_17_balance_igniting_to_fire' },
+    { num: 18, title: 'Fire Deepening to Shadow',        journey: 'Aries → Scorpio',            desc: 'Action evolving into psychological mastery; Head/Initiative → Reproductive Organs/Transformation', cycle: 2,        folder: 'workbook_18_fire_deepening_to_shadow' },
+    { num: 19, title: 'Depth Rooting in Earth',          journey: 'Scorpio → Taurus',           desc: 'Transformed power grounding into tangible embodiment; Shadow → Throat/Stability',                  cycle: 2,        folder: 'workbook_19_depth_rooting_in_earth' },
+    { num: 20, title: 'Root Expanding to Vision',        journey: 'Taurus → Sagittarius',       desc: 'Embodied values evolving into philosophical wisdom; Throat/Stability → Hips/Expansion',            cycle: 2,        folder: 'workbook_20_root_expanding_to_vision' },
+    { num: 21, title: 'Vision Speaking Through Voice',   journey: 'Sagittarius → Gemini',       desc: 'Grand vision becoming articulate expression; Hips/Philosophy → Lungs/Communication',              cycle: 2,        folder: 'workbook_21_vision_speaking_through_voice_1' },
+    { num: 22, title: 'Voice Nourishing to Womb',        journey: 'Gemini → Cancer',            desc: 'Communication ripening into emotional sanctuary; Communication → Breast/Nurturing',                cycle: 2,        folder: 'workbook_22_voice_nourishing_to_womb' },
+    { num: 23, title: 'Womb Structuring to Bone',        journey: 'Cancer → Capricorn',         desc: 'Care forming long-term foundations; Nurturing → Knees/Bones',                                      cycle: 2,        folder: 'workbook_23_womb_structuring_to_bone' },
+    { num: 24, title: 'Bone Warming to Heart',           journey: 'Capricorn → Leo',            desc: 'Structure growing into joyful expression; Knees/Bones → Heart/Solar Plexus',                      cycle: 2,        folder: 'workbook_24_bone_warming_to_heart' },
+    { num: 25, title: 'Virgo–Aries Eclipse Portal',      journey: 'Virgo → Aries',              desc: 'Eclipse transformation: releasing perfectionism for bold initiation; Analysis → Head/Initiative',  cycle: 'eclipse', folder: 'workbook_25_virgo_aries_eclipse_portal' },
+    { num: 26, title: 'Pisces–Virgo Eclipse Portal',     journey: 'Pisces → Virgo',             desc: 'Eclipse completion: spiritual insight grounding into service; Etheric Body → Digestive System',    cycle: 'eclipse', folder: 'workbook_26_pisces_virgo_eclipse_portal' },
+  ];
+
+  function pad(n) { return n < 10 ? '0' + n : String(n); }
+
+  function makeCard(wb) {
+    var isEclipse = wb.cycle === 'eclipse';
+    var badgeHtml = isEclipse
+      ? '<span class="badge badge-eclipse">Eclipse Portal</span>'
+      : wb.cycle === 1
+        ? '<span class="badge badge-cycle1">Cycle 1</span>'
+        : '<span class="badge badge-cycle2">Cycle 2</span>';
+
+    return '<a href="../' + wb.folder + '/code.html" class="wb-card' + (isEclipse ? ' eclipse' : '') + '" style="background:' + (isEclipse ? 'var(--lc-eclipse)' : 'var(--lc-surface)') + ';">'
+      + '<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.5rem;">'
+      + '<span class="wb-num" style="font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:var(--tracking-wider);text-transform:uppercase;color:' + (isEclipse ? 'rgba(243,240,233,0.45)' : 'var(--lc-gold)') + ';">' + pad(wb.num) + '</span>'
+      + badgeHtml
+      + '</div>'
+      + '<h3 class="wb-title" style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:300;line-height:1.2;margin-bottom:0.5rem;transition:font-style 0.2s;color:' + (isEclipse ? '#fcf9f2' : 'var(--lc-ink)') + ';">' + wb.title + '</h3>'
+      + '<p class="wb-journey" style="font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:' + (isEclipse ? 'var(--lc-gold-fixed-dim)' : 'var(--lc-gold)') + ';margin-bottom:1rem;">' + wb.journey + '</p>'
+      + '<p class="wb-desc" style="font-family:var(--font-body);font-size:var(--text-sm);line-height:1.6;color:' + (isEclipse ? 'rgba(243,240,233,0.65)' : 'var(--lc-ink-60)') + ';font-style:italic;">' + wb.desc + '</p>'
+      + '<div style="margin-top:1.5rem;display:flex;justify-content:flex-end;align-items:center;">'
+      + '<span class="arrow" style="font-family:var(--font-label);font-size:var(--text-2xs);letter-spacing:0.1em;color:' + (isEclipse ? 'var(--lc-gold-fixed-dim)' : 'var(--lc-gold)') + ';">Enter →</span>'
+      + '</div>'
+      + '</a>';
+  }
+
+  // Render grids
+  var g1 = document.getElementById('grid-cycle1');
+  var g2 = document.getElementById('grid-cycle2');
+  var ge = document.getElementById('grid-eclipse');
+  WORKBOOKS.forEach(function (wb) {
+    var html = makeCard(wb);
+    if (wb.cycle === 1)        g1.innerHTML += html;
+    else if (wb.cycle === 2)   g2.innerHTML += html;
+    else                       ge.innerHTML += html;
+  });
+
+  // Timeline
+  var tl = document.getElementById('master-timeline');
+  WORKBOOKS.forEach(function (wb) {
+    var cls = 'timeline-dot' + (wb.cycle === 'eclipse' ? ' eclipse' : wb.cycle === 1 ? ' done' : ' current');
+    tl.innerHTML += '<a href="../' + wb.folder + '/code.html" title="WB ' + pad(wb.num) + ': ' + wb.title + '" style="display:inline-block;text-decoration:none;"><span class="' + cls + '" style="display:block;"></span></a>';
+  });
+
+  // Filter buttons
+  var filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
+  var sections   = { cycle1: document.querySelector('[data-section="cycle1"]'), cycle2: document.querySelector('[data-section="cycle2"]'), eclipse: document.querySelector('[data-section="eclipse"]') };
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.getAttribute('data-filter');
+      if (f === 'all') {
+        Object.values(sections).forEach(function (s) { s.classList.add('visible'); s.style.display = 'block'; });
+      } else {
+        Object.entries(sections).forEach(function (entry) {
+          if (entry[0] === f) { entry[1].classList.add('visible'); entry[1].style.display = 'block'; }
+          else                { entry[1].classList.remove('visible'); entry[1].style.display = 'none'; }
+        });
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
