@@ -1,0 +1,252 @@
+{
+  "_meta": {
+    "title": "MOONtuner Lunar Chaperone — Canonical Sequence",
+    "version": "1.0.0",
+    "generated": "2026-07-01",
+    "description": "Single source of truth for the 24-workbook lunar sequence. This is ONE continuous 24-step loop, not two separate 12-workbook cycles and not a 24+2 structure — every entry's end_sign/end_phase equals the next entry's start_sign/start_phase with zero gaps, including the WB24-to-WB01 wraparound. There is no calendar day without an active workbook, and no fork: eclipses are not separate destinations (see eclipse_seasons).",
+    "eclipse_note": "An eclipse is not a 25th event — it IS one of the 24 regular New/Full Moons, the one that happens to fall close enough to a lunar node that year. eclipse_seasons below tags which of the 24 regular workbooks carries the eclipse for a given year. This must be updated annually against a live ephemeris/eclipse calendar — the exact workbook slot shifts as the lunar nodes migrate (~18 months per axis, full cycle ~18.6 years)."
+  },
+  "elements": {
+    "Aries": "Fire",
+    "Taurus": "Earth",
+    "Gemini": "Air",
+    "Cancer": "Water",
+    "Leo": "Fire",
+    "Virgo": "Earth",
+    "Libra": "Air",
+    "Scorpio": "Water",
+    "Sagittarius": "Fire",
+    "Capricorn": "Earth",
+    "Aquarius": "Air",
+    "Pisces": "Water"
+  },
+  "body_axis": {
+    "Aries": "Head",
+    "Taurus": "Throat",
+    "Gemini": "Lungs",
+    "Cancer": "Breast",
+    "Leo": "Heart",
+    "Virgo": "Digestive System",
+    "Libra": "Kidneys",
+    "Scorpio": "Reproductive Organs",
+    "Sagittarius": "Hips",
+    "Capricorn": "Knees",
+    "Aquarius": "Nervous System",
+    "Pisces": "Feet"
+  },
+  "core_cycle": [
+    {
+      "id": "wb01",
+      "sequence_number": 1,
+      "start_sign": "Aries",
+      "start_phase": "New",
+      "end_sign": "Libra",
+      "end_phase": "Full"
+    },
+    {
+      "id": "wb02",
+      "sequence_number": 2,
+      "start_sign": "Libra",
+      "start_phase": "Full",
+      "end_sign": "Taurus",
+      "end_phase": "New"
+    },
+    {
+      "id": "wb03",
+      "sequence_number": 3,
+      "start_sign": "Taurus",
+      "start_phase": "New",
+      "end_sign": "Scorpio",
+      "end_phase": "Full"
+    },
+    {
+      "id": "wb04",
+      "sequence_number": 4,
+      "start_sign": "Scorpio",
+      "start_phase": "Full",
+      "end_sign": "Gemini",
+      "end_phase": "New"
+    },
+    {
+      "id": "wb05",
+      "sequence_number": 5,
+      "start_sign": "Gemini",
+      "start_phase": "New",
+      "end_sign": "Sagittarius",
+      "end_phase": "Full"
+    },
+    {
+      "id": "wb06",
+      "sequence_number": 6,
+      "start_sign": "Sagittarius",
+      "start_phase": "Full",
+      "end_sign": "Cancer",
+      "end_phase": "New"
+    },
+    {
+      "id": "wb07",
+      "sequence_number": 7,
+      "start_sign": "Cancer",
+      "start_phase": "New",
+      "end_sign": "Capricorn",
+      "end_phase": "Full"
+    },
+    {
+      "id": "wb08",
+      "sequence_number": 8,
+      "start_sign": "Capricorn",
+      "start_phase": "Full",
+      "end_sign": "Leo",
+      "end_phase": "New"
+    },
+    {
+      "id": "wb09",
+      "sequence_number": 9,
+      "start_sign": "Leo",
+      "start_phase": "New",
+      "end_sign": "Aquarius",
+      "end_phase": "Full"
+    },
+    {
+      "id": "wb10",
+      "sequence_number": 10,
+      "start_sign": "Aquarius",
+      "start_phase": "Full",
+      "end_sign": "Virgo",
+      "end_phase": "New"
+    },
+    {
+      "id": "wb11",
+      "sequence_number": 11,
+      "start_sign": "Virgo",
+      "start_phase": "New",
+      "end_sign": "Pisces",
+      "end_phase": "Full"
+    },
+    {
+      "id": "wb12",
+      "sequence_number": 12,
+      "start_sign": "Pisces",
+      "start_phase": "Full",
+      "end_sign": "Libra",
+      "end_phase": "New"
+    },
+    {
+      "id": "wb13",
+      "sequence_number": 13,
+      "start_sign": "Libra",
+      "start_phase": "New",
+      "end_sign": "Aries",
+      "end_phase": "Full"
+    },
+    {
+      "id": "wb14",
+      "sequence_number": 14,
+      "start_sign": "Aries",
+      "start_phase": "Full",
+      "end_sign": "Scorpio",
+      "end_phase": "New"
+    },
+    {
+      "id": "wb15",
+      "sequence_number": 15,
+      "start_sign": "Scorpio",
+      "start_phase": "New",
+      "end_sign": "Taurus",
+      "end_phase": "Full"
+    },
+    {
+      "id": "wb16",
+      "sequence_number": 16,
+      "start_sign": "Taurus",
+      "start_phase": "Full",
+      "end_sign": "Sagittarius",
+      "end_phase": "New"
+    },
+    {
+      "id": "wb17",
+      "sequence_number": 17,
+      "start_sign": "Sagittarius",
+      "start_phase": "New",
+      "end_sign": "Gemini",
+      "end_phase": "Full"
+    },
+    {
+      "id": "wb18",
+      "sequence_number": 18,
+      "start_sign": "Gemini",
+      "start_phase": "Full",
+      "end_sign": "Capricorn",
+      "end_phase": "New"
+    },
+    {
+      "id": "wb19",
+      "sequence_number": 19,
+      "start_sign": "Capricorn",
+      "start_phase": "New",
+      "end_sign": "Cancer",
+      "end_phase": "Full"
+    },
+    {
+      "id": "wb20",
+      "sequence_number": 20,
+      "start_sign": "Cancer",
+      "start_phase": "Full",
+      "end_sign": "Aquarius",
+      "end_phase": "New"
+    },
+    {
+      "id": "wb21",
+      "sequence_number": 21,
+      "start_sign": "Aquarius",
+      "start_phase": "New",
+      "end_sign": "Leo",
+      "end_phase": "Full"
+    },
+    {
+      "id": "wb22",
+      "sequence_number": 22,
+      "start_sign": "Leo",
+      "start_phase": "Full",
+      "end_sign": "Pisces",
+      "end_phase": "New"
+    },
+    {
+      "id": "wb23",
+      "sequence_number": 23,
+      "start_sign": "Pisces",
+      "start_phase": "New",
+      "end_sign": "Virgo",
+      "end_phase": "Full"
+    },
+    {
+      "id": "wb24",
+      "sequence_number": 24,
+      "start_sign": "Virgo",
+      "start_phase": "Full",
+      "end_sign": "Aries",
+      "end_phase": "New"
+    }
+  ],
+  "eclipse_seasons": {
+    "2026": {
+      "node_axis": "Pisces-Virgo through 2026-07-26, then Aquarius-Leo",
+      "tagged_workbook": "wb09",
+      "events": [
+        {
+          "type": "solar",
+          "date": "2026-08-12",
+          "degree": "20° Leo",
+          "coincides_with": "wb09 start (Leo New Moon)"
+        },
+        {
+          "type": "lunar",
+          "date": "2026-08-27",
+          "degree": "4° Aquarius",
+          "coincides_with": "wb09 end (Aquarius Full Moon)"
+        }
+      ],
+      "source": "verified via web search against current astrological reporting, July 2026 — recheck yearly"
+    }
+  }
+}
