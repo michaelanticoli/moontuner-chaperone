@@ -1,1 +1,706 @@
-<!DOCTYPE html><html><body>placeholder</body></html>
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Lunar Chaperone — All 26 Workbooks</title>
+<meta name="description" content="Twenty-six workbooks. One living cycle. Enter wherever you are now."/>
+<link rel="stylesheet" href="../assets/style.css"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif:ital,wght@0,300;0,400;1,300&family=Newsreader:ital,opsz,wght@0,6..72,300;1,6..72,300&family=Inter:wght@300;400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          'primary':                '#725b37',
+          'primary-container':      '#c4a77d',
+          'primary-fixed':          '#fedeb0',
+          'primary-fixed-dim':      '#e1c296',
+          'on-primary':             '#ffffff',
+          'on-primary-container':   '#503c1b',
+          'secondary':              '#5f5e5c',
+          'secondary-container':    '#e5e2de',
+          'on-secondary':           '#ffffff',
+          'on-secondary-container': '#656461',
+          'surface':                '#fcf9f2',
+          'surface-bright':         '#fcf9f2',
+          'surface-dim':            '#dcdad3',
+          'surface-variant':        '#e5e2db',
+          'surface-container':      '#f1eee7',
+          'surface-container-low':  '#f6f3ec',
+          'surface-container-high': '#ebe8e1',
+          'surface-container-highest': '#e5e2db',
+          'on-surface':             '#1c1c18',
+          'on-surface-variant':     '#4d463c',
+          'background':             '#fcf9f2',
+          'on-background':          '#1c1c18',
+          'outline':                '#7f766a',
+          'outline-variant':        '#d0c5b7',
+          'inverse-surface':        '#31312c',
+          'inverse-on-surface':     '#f3f0e9',
+          'inverse-primary':        '#e1c296',
+          'error':                  '#ba1a1a',
+          'tertiary':               '#515f77',
+          'tertiary-container':     '#9eacc7',
+        },
+        borderRadius: { DEFAULT: '0px', lg: '0px', xl: '0px', full: '9999px' },
+        fontFamily: {
+          display:  ['Cormorant Garamond', 'Noto Serif', 'serif'],
+          headline: ['Noto Serif', 'Georgia', 'serif'],
+          body:     ['Newsreader', 'Noto Serif', 'serif'],
+          label:    ['Inter', 'system-ui', 'sans-serif'],
+        },
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+  }
+  /* Current-workbook glow */
+  .wb-card.lc-current {
+    border-color: #725b37;
+    box-shadow: 0 0 0 2px rgba(114,91,55,0.18), 0 6px 28px rgba(114,91,55,0.14);
+  }
+  .wb-card.lc-current .wb-current-badge {
+    display: inline-block;
+  }
+  .wb-current-badge {
+    display: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #725b37;
+    background: rgba(196,167,125,0.15);
+    border: 1px solid rgba(114,91,55,0.35);
+    padding: 0.15em 0.5em;
+    margin-bottom: 0.5rem;
+  }
+  /* Phase-group banding */
+  .cycle-1-card { background: #f9f6ee; }
+  .cycle-2-card { background: #f4f1ea; }
+  .eclipse-card  { background: #2b2925; color: #f3f0e9; border-color: rgba(243,240,233,0.15); }
+  .eclipse-card:hover { border-color: rgba(243,240,233,0.40) !important; }
+  .eclipse-card .wb-num,
+  .eclipse-card .wb-title,
+  .eclipse-card .wb-sub { color: #f3f0e9 !important; opacity: 0.9; }
+  /* Smooth image hover */
+  .wb-img-wrap img { transition: transform 0.6s ease, filter 0.4s ease; filter: grayscale(100%) opacity(0.75); }
+  .wb-card:hover .wb-img-wrap img { transform: scale(1.04); filter: grayscale(30%) opacity(0.9); }
+  /* Timeline strip in hero */
+  .tl-dot { width:7px; height:7px; border:1px solid #d0c5b7; flex-shrink:0; }
+  .tl-dot.done    { background:#c4a77d; border-color:#c4a77d; }
+  .tl-dot.active  { background:#725b37; border-color:#725b37; }
+  .tl-dot.eclipse { background:#31312c; border-color:#31312c; }
+  /* Hero entrance */
+  .hero-enter { opacity:0; animation: heroIn 0.7s ease 0.1s forwards; }
+  @keyframes heroIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- ── Top navigation ─────────────────────────────────────────────────────── -->
+<header class="bg-surface/95 backdrop-blur-sm sticky top-0 z-50 border-b border-outline-variant/30" id="site-header">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-4 flex items-center justify-between gap-4">
+    <a href="../the_lunar_chaperone_master_index/code.html"
+       class="font-label text-xs font-medium tracking-[0.2em] uppercase text-primary whitespace-nowrap"
+       aria-current="page">
+      ✦ The Lunar Chaperone
+    </a>
+    <nav class="hidden md:flex items-center gap-8" aria-label="Site">
+      <a href="../the_great_library/code.html"
+         class="font-label text-[10px] uppercase tracking-[0.18em] text-outline hover:text-primary transition-colors">
+        Great Library
+      </a>
+      <a href="../workbook_25_virgo_aries_eclipse_portal/code.html"
+         class="font-label text-[10px] uppercase tracking-[0.18em] text-outline hover:text-primary transition-colors">
+        Eclipse Portals
+      </a>
+    </nav>
+    <a href="#workbooks"
+       class="font-label text-[10px] uppercase tracking-[0.18em] text-primary border border-primary/40 px-4 py-2 hover:bg-primary/5 transition-colors">
+      Jump In →
+    </a>
+  </div>
+</header>
+
+<!-- ── Hero ───────────────────────────────────────────────────────────────── -->
+<section class="pt-20 pb-24 px-6 md:px-12 max-w-[1440px] mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end">
+
+    <!-- Left: title & intro -->
+    <div class="md:col-span-7 hero-enter">
+      <p class="font-label text-[10px] uppercase tracking-[0.3em] text-outline mb-6">
+        Moontuner · 26-Workbook Series
+      </p>
+      <h1 class="font-display font-light text-7xl md:text-9xl leading-[0.9] text-on-surface mb-8">
+        The Lunar<br/><span class="italic text-primary">Chaperone</span>
+      </h1>
+      <p class="font-body text-xl md:text-2xl italic text-on-surface-variant leading-relaxed max-w-lg mb-10">
+        A living practice of twenty-six 14-day cycles, each one a somatic and celestial transit.
+        Enter wherever you are. Time is now.
+      </p>
+
+      <!-- Current-workbook callout (populated by JS) -->
+      <div id="lc-callout" class="hidden border border-primary/30 p-6 max-w-sm mb-10 bg-surface-container-low">
+        <p class="font-label text-[10px] uppercase tracking-[0.25em] text-primary mb-3">Your Current Cycle</p>
+        <a id="lc-callout-link" href="#workbooks"
+           class="font-display text-2xl italic text-on-surface hover:text-primary transition-colors block mb-3">—</a>
+        <span id="lc-callout-num" class="font-label text-[10px] uppercase tracking-[0.2em] text-outline"></span>
+      </div>
+
+      <div class="flex flex-wrap gap-4">
+        <a id="lc-enter-btn" href="#workbooks"
+           class="bg-primary text-on-primary font-label text-xs uppercase tracking-[0.2em] px-10 py-4 hover:opacity-90 transition-opacity">
+          Enter Your Cycle
+        </a>
+        <a href="../the_great_library/code.html"
+           class="border border-primary/40 text-primary font-label text-xs uppercase tracking-[0.2em] px-10 py-4 hover:bg-primary/5 transition-colors">
+          About the Program
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: hero image + timeline dots -->
+    <div class="md:col-span-5 mt-12 md:mt-0">
+      <div class="aspect-[4/5] bg-surface-container overflow-hidden relative group">
+        <img src="../assets/images/the_great_library_1.png"
+             alt="The Lunar Chaperone program"
+             class="w-full h-full object-cover grayscale opacity-80 transition-transform duration-700 group-hover:scale-105"/>
+        <div class="absolute inset-0 bg-primary/5 mix-blend-multiply pointer-events-none"></div>
+      </div>
+      <!-- 26-dot timeline -->
+      <div class="mt-6 flex flex-wrap gap-[6px] items-center" aria-hidden="true" id="lc-timeline">
+        <!-- dots injected by JS -->
+      </div>
+      <p class="mt-3 font-label text-[9px] uppercase tracking-[0.25em] text-outline/50">
+        26 workbooks · 1 continuous cycle
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── Philosophy strip ───────────────────────────────────────────────────── -->
+<section class="border-y border-outline-variant/20 py-12 px-6 md:px-12 bg-surface-container-low">
+  <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+    <div>
+      <p class="font-label text-[10px] uppercase tracking-[0.25em] text-primary mb-3">Begin Anywhere</p>
+      <p class="font-body text-base text-on-surface-variant leading-relaxed italic">
+        There is no wrong entry point. If you arrive at Workbook 15, let 15 be your first. Your cycle begins where you begin.
+      </p>
+    </div>
+    <div>
+      <p class="font-label text-[10px] uppercase tracking-[0.25em] text-primary mb-3">14 Days Each</p>
+      <p class="font-body text-base text-on-surface-variant leading-relaxed italic">
+        Each workbook guides a 14-day somatic and celestial transit. Move through six inner sections, then pass to the next.
+      </p>
+    </div>
+    <div>
+      <p class="font-label text-[10px] uppercase tracking-[0.25em] text-primary mb-3">Always Cycling</p>
+      <p class="font-body text-base text-on-surface-variant leading-relaxed italic">
+        After Workbook 24 comes Workbook 1 again — deeper. The program is not linear. It is a spiral.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── All 26 Workbooks ───────────────────────────────────────────────────── -->
+<section id="workbooks" class="pt-20 pb-32 px-6 md:px-12 max-w-[1440px] mx-auto">
+
+  <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-14 pb-4 border-b border-outline-variant/20 gap-4">
+    <h2 class="font-label text-xs uppercase tracking-[0.3em] text-outline">All 26 Workbooks</h2>
+    <p class="font-body text-sm italic text-on-surface-variant">
+      Tap any workbook to begin your current rotation
+    </p>
+  </div>
+
+  <!-- ── Cycle 1: Workbooks 01–12 ── -->
+  <div class="mb-4">
+    <p class="font-label text-[9px] uppercase tracking-[0.3em] text-outline/50 mb-6">
+      First Rotation · Workbooks 01–12
+    </p>
+  </div>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
+
+    <a href="../workbook_01_ignition_to_depth/code.html" class="wb-card cycle-1-card" data-wb="1">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_01_ignition_to_depth_1.png" alt="Ignition to Depth" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">01</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Ignition to Depth</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Aries → Scorpio</p>
+    </a>
+
+    <a href="../workbook_02_depth_to_root/code.html" class="wb-card cycle-1-card" data-wb="2">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_02_depth_to_root.png" alt="Depth to Root" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">02</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Depth to Root</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Scorpio → Taurus</p>
+    </a>
+
+    <a href="../workbook_03_root_to_vision/code.html" class="wb-card cycle-1-card" data-wb="3">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_03_root_to_vision_1.png" alt="Root to Vision" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">03</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Root to Vision</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Taurus → Sagittarius</p>
+    </a>
+
+    <a href="../workbook_04_vision_to_voice/code.html" class="wb-card cycle-1-card" data-wb="4">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_04_vision_to_voice_1.png" alt="Vision to Voice" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">04</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Vision to Voice</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Sagittarius → Gemini</p>
+    </a>
+
+    <a href="../workbook_05_soul_to_balance/code.html" class="wb-card cycle-1-card" data-wb="5">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_05_soul_to_balance_1.png" alt="Soul to Balance" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">05</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Soul to Balance</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Gemini → Capricorn</p>
+    </a>
+
+    <a href="../workbook_06_balance_to_fire/code.html" class="wb-card cycle-1-card" data-wb="6">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_06_balance_to_fire_1.png" alt="Balance to Fire" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">06</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Balance to Fire</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Capricorn → Cancer</p>
+    </a>
+
+    <a href="../workbook_07_fire_to_depth/code.html" class="wb-card cycle-1-card" data-wb="7">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_07_fire_to_depth_2.png" alt="Fire to Depth" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">07</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Fire to Depth</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Cancer → Aquarius</p>
+    </a>
+
+    <a href="../workbook_08_depth_to_root/code.html" class="wb-card cycle-1-card" data-wb="8">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_08_depth_to_root_1.png" alt="Depth to Root" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">08</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Depth to Root</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Aquarius → Leo</p>
+    </a>
+
+    <a href="../workbook_09_root_to_vision/code.html" class="wb-card cycle-1-card" data-wb="9">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_09_root_to_vision_1.png" alt="Root to Vision" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">09</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Root to Vision</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Leo → Pisces</p>
+    </a>
+
+    <a href="../workbook_10_vision_to_voice/code.html" class="wb-card cycle-1-card" data-wb="10">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_10_vision_to_voice_1.png" alt="Vision to Voice" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">10</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Vision to Voice</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Pisces → Virgo</p>
+    </a>
+
+    <a href="../workbook_11_voice_to_womb/code.html" class="wb-card cycle-1-card" data-wb="11">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_11_voice_to_womb_1.png" alt="Voice to Womb" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">11</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Voice to Womb</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Virgo → Pisces</p>
+    </a>
+
+    <a href="../workbook_12_womb_to_bone/code.html" class="wb-card cycle-1-card" data-wb="12">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_12_womb_to_bone_1.png" alt="Womb to Bone" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">12</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Womb to Bone</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Pisces → Libra</p>
+    </a>
+
+  </div><!-- /cycle-1 grid -->
+
+  <!-- ── Cycle 2: Workbooks 13–24 ── -->
+  <div class="mb-4">
+    <p class="font-label text-[9px] uppercase tracking-[0.3em] text-outline/50 mb-6">
+      Second Rotation · Workbooks 13–24
+    </p>
+  </div>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
+
+    <a href="../workbook_13_heart_expanding_to_mind/code.html" class="wb-card cycle-2-card" data-wb="13">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_13_heart_expanding_to_mind_1.png" alt="Heart Expanding to Mind" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">13</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Heart Expanding to Mind</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Libra → Aries</p>
+    </a>
+
+    <a href="../workbook_14_mind_manifesting_through_gut/code.html" class="wb-card cycle-2-card" data-wb="14">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_14_mind_manifesting_through_gut_2.png" alt="Mind Manifesting Through Gut" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">14</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Mind Manifesting Through Gut</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Aries → Scorpio</p>
+    </a>
+
+    <a href="../workbook_15_gut_flowing_to_soul/code.html" class="wb-card cycle-2-card" data-wb="15">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_15_gut_flowing_to_soul_1.png" alt="Gut Flowing to Soul" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">15</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Gut Flowing to Soul</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Scorpio → Taurus</p>
+    </a>
+
+    <a href="../workbook_16_soul_balancing_through_harmony/code.html" class="wb-card cycle-2-card" data-wb="16">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_16_soul_balancing_through_harmony_1.png" alt="Soul Balancing Through Harmony" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">16</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Soul Balancing Through Harmony</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Taurus → Sagittarius</p>
+    </a>
+
+    <a href="../workbook_17_balance_igniting_to_fire/code.html" class="wb-card cycle-2-card" data-wb="17">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_17_balance_igniting_to_fire_1.png" alt="Balance Igniting to Fire" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">17</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Balance Igniting to Fire</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Sagittarius → Gemini</p>
+    </a>
+
+    <a href="../workbook_18_fire_deepening_to_shadow/code.html" class="wb-card cycle-2-card" data-wb="18">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_18_fire_deepening_to_shadow_1.png" alt="Fire Deepening to Shadow" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">18</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Fire Deepening to Shadow</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Gemini → Capricorn</p>
+    </a>
+
+    <a href="../workbook_19_depth_rooting_in_earth/code.html" class="wb-card cycle-2-card" data-wb="19">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_19_depth_rooting_in_earth_1.png" alt="Depth Rooting in Earth" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">19</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Depth Rooting in Earth</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Capricorn → Cancer</p>
+    </a>
+
+    <a href="../workbook_20_root_expanding_to_vision/code.html" class="wb-card cycle-2-card" data-wb="20">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_20_root_expanding_to_vision_1.png" alt="Root Expanding to Vision" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">20</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Root Expanding to Vision</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Cancer → Aquarius</p>
+    </a>
+
+    <a href="../workbook_21_vision_speaking_through_voice_1/code.html" class="wb-card cycle-2-card" data-wb="21">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_21_vision_speaking_through_voice_1_1.png" alt="Vision Speaking Through Voice" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">21</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Vision Speaking Through Voice</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Aquarius → Leo</p>
+    </a>
+
+    <a href="../workbook_22_voice_nourishing_to_womb/code.html" class="wb-card cycle-2-card" data-wb="22">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_22_voice_nourishing_to_womb.png" alt="Voice Nourishing to Womb" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">22</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Voice Nourishing to Womb</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Leo → Pisces</p>
+    </a>
+
+    <a href="../workbook_23_womb_structuring_to_bone/code.html" class="wb-card cycle-2-card" data-wb="23">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_23_womb_structuring_to_bone_1.png" alt="Womb Structuring to Bone" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">23</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Womb Structuring to Bone</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Pisces → Virgo</p>
+    </a>
+
+    <a href="../workbook_24_bone_warming_to_heart/code.html" class="wb-card cycle-2-card" data-wb="24">
+      <span class="wb-current-badge">Your cycle now</span>
+      <div class="wb-img-wrap aspect-square bg-surface-container overflow-hidden mb-4">
+        <img src="../assets/images/workbook_24_bone_warming_to_heart.png" alt="Bone Warming to Heart" class="w-full h-full object-cover"/>
+      </div>
+      <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] text-outline mb-1">24</p>
+      <h3 class="wb-title font-display text-xl italic text-on-surface leading-tight mb-1">Bone Warming to Heart</h3>
+      <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em] text-outline/60">Virgo → Aries</p>
+    </a>
+
+  </div><!-- /cycle-2 grid -->
+
+  <!-- ── Eclipse Portals ── -->
+  <div class="mb-4">
+    <p class="font-label text-[9px] uppercase tracking-[0.3em] text-outline/50 mb-2">
+      Eclipse Portals · Special Threshold Workbooks
+    </p>
+    <p class="font-body text-sm italic text-on-surface-variant mb-8">
+      These two workbooks appear when the celestial geometry calls — an eclipse falling within the cycle.
+      They are available to any practitioner at any time.
+    </p>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+    <a href="../workbook_25_virgo_aries_eclipse_portal/code.html"
+       class="wb-card eclipse-card" data-wb="25"
+       style="display:flex;align-items:center;gap:2rem;padding:2.5rem;">
+      <div class="wb-img-wrap w-32 h-32 flex-shrink-0 overflow-hidden">
+        <img src="../assets/images/workbook_25_virgo_aries_eclipse_portal_1.png"
+             alt="Virgo–Aries Eclipse Portal" class="w-full h-full object-cover" style="filter:grayscale(40%) opacity(0.8)"/>
+      </div>
+      <div>
+        <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] mb-2" style="color:rgba(243,240,233,0.5);">
+          Eclipse Portal · 25
+        </p>
+        <h3 class="wb-title font-display text-2xl italic leading-tight mb-2">Virgo–Aries Eclipse Portal</h3>
+        <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em]" style="color:rgba(243,240,233,0.5);">
+          Releasing perfectionism for bold initiation
+        </p>
+      </div>
+    </a>
+
+    <a href="../workbook_26_pisces_virgo_eclipse_portal/code.html"
+       class="wb-card eclipse-card" data-wb="26"
+       style="display:flex;align-items:center;gap:2rem;padding:2.5rem;">
+      <div class="wb-img-wrap w-32 h-32 flex-shrink-0 overflow-hidden">
+        <img src="../assets/images/workbook_26_pisces_virgo_eclipse_portal_1.png"
+             alt="Pisces–Virgo Eclipse Portal" class="w-full h-full object-cover" style="filter:grayscale(40%) opacity(0.8)"/>
+      </div>
+      <div>
+        <p class="wb-num font-label text-[9px] uppercase tracking-[0.25em] mb-2" style="color:rgba(243,240,233,0.5);">
+          Eclipse Portal · 26
+        </p>
+        <h3 class="wb-title font-display text-2xl italic leading-tight mb-2">Pisces–Virgo Eclipse Portal</h3>
+        <p class="wb-sub font-label text-[9px] uppercase tracking-[0.15em]" style="color:rgba(243,240,233,0.5);">
+          Spiritual insight grounding into service
+        </p>
+      </div>
+    </a>
+
+  </div><!-- /eclipse grid -->
+
+</section>
+
+<!-- ── Quote banner ───────────────────────────────────────────────────────── -->
+<section class="bg-surface-container-low py-24 px-6 md:px-12 text-center">
+  <div class="max-w-2xl mx-auto">
+    <p class="font-label text-[9px] uppercase tracking-[0.4em] text-outline/50 mb-6">✦</p>
+    <blockquote class="font-display text-3xl md:text-4xl italic font-light text-on-surface leading-tight mb-6">
+      "Begin where you are.<br/>
+       The moon does not wait."
+    </blockquote>
+    <p class="font-label text-[10px] uppercase tracking-[0.3em] text-outline/60">The Lunar Chaperone</p>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────────────────────── -->
+<footer class="border-t border-outline-variant/20 py-20 px-6 md:px-12">
+  <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+    <div class="md:col-span-4 space-y-4">
+      <h2 class="font-label text-xs font-medium tracking-[0.2em] uppercase text-on-surface">
+        The Lunar Chaperone
+      </h2>
+      <p class="font-body text-sm italic text-on-surface-variant leading-relaxed max-w-xs">
+        Twenty-six somatic workbooks for the lunar practitioner. One living cycle.
+        Enter anywhere. Repeat forever.
+      </p>
+    </div>
+    <div class="md:col-start-6 md:col-span-2 space-y-4">
+      <h5 class="font-label text-[10px] uppercase tracking-[0.2em] text-primary">Navigate</h5>
+      <ul class="space-y-3 font-label text-[10px] uppercase tracking-widest text-on-surface-variant">
+        <li><a class="hover:text-primary transition-colors" href="../the_lunar_chaperone_master_index/code.html">All Workbooks</a></li>
+        <li><a class="hover:text-primary transition-colors" href="../the_great_library/code.html">Great Library</a></li>
+        <li><a class="hover:text-primary transition-colors" href="../workbook_01_ignition_to_depth/code.html">Start at 01</a></li>
+      </ul>
+    </div>
+    <div class="md:col-span-2 space-y-4">
+      <h5 class="font-label text-[10px] uppercase tracking-[0.2em] text-primary">Thresholds</h5>
+      <ul class="space-y-3 font-label text-[10px] uppercase tracking-widest text-on-surface-variant">
+        <li><a class="hover:text-primary transition-colors" href="../workbook_25_virgo_aries_eclipse_portal/code.html">Eclipse Portal I</a></li>
+        <li><a class="hover:text-primary transition-colors" href="../workbook_26_pisces_virgo_eclipse_portal/code.html">Eclipse Portal II</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-[1440px] mx-auto mt-16 pt-8 border-t border-outline-variant/10 text-center">
+    <p class="font-label text-[9px] uppercase tracking-[0.4em] text-outline/40">
+      © MOONTUNER · The Lunar Chaperone Series · All Rights Reserved
+    </p>
+  </div>
+</footer>
+
+<!-- ── JavaScript: current-workbook awareness ─────────────────────────────── -->
+<script>
+(function () {
+  'use strict';
+
+  var WORKBOOKS = [
+    [1,  'Ignition to Depth',              '../workbook_01_ignition_to_depth/code.html'],
+    [2,  'Depth to Root',                  '../workbook_02_depth_to_root/code.html'],
+    [3,  'Root to Vision',                 '../workbook_03_root_to_vision/code.html'],
+    [4,  'Vision to Voice',                '../workbook_04_vision_to_voice/code.html'],
+    [5,  'Soul to Balance',                '../workbook_05_soul_to_balance/code.html'],
+    [6,  'Balance to Fire',                '../workbook_06_balance_to_fire/code.html'],
+    [7,  'Fire to Depth',                  '../workbook_07_fire_to_depth/code.html'],
+    [8,  'Depth to Root',                  '../workbook_08_depth_to_root/code.html'],
+    [9,  'Root to Vision',                 '../workbook_09_root_to_vision/code.html'],
+    [10, 'Vision to Voice',                '../workbook_10_vision_to_voice/code.html'],
+    [11, 'Voice to Womb',                  '../workbook_11_voice_to_womb/code.html'],
+    [12, 'Womb to Bone',                   '../workbook_12_womb_to_bone/code.html'],
+    [13, 'Heart Expanding to Mind',        '../workbook_13_heart_expanding_to_mind/code.html'],
+    [14, 'Mind Manifesting Through Gut',   '../workbook_14_mind_manifesting_through_gut/code.html'],
+    [15, 'Gut Flowing to Soul',            '../workbook_15_gut_flowing_to_soul/code.html'],
+    [16, 'Soul Balancing Through Harmony', '../workbook_16_soul_balancing_through_harmony/code.html'],
+    [17, 'Balance Igniting to Fire',       '../workbook_17_balance_igniting_to_fire/code.html'],
+    [18, 'Fire Deepening to Shadow',       '../workbook_18_fire_deepening_to_shadow/code.html'],
+    [19, 'Depth Rooting in Earth',         '../workbook_19_depth_rooting_in_earth/code.html'],
+    [20, 'Root Expanding to Vision',       '../workbook_20_root_expanding_to_vision/code.html'],
+    [21, 'Vision Speaking Through Voice',  '../workbook_21_vision_speaking_through_voice_1/code.html'],
+    [22, 'Voice Nourishing to Womb',       '../workbook_22_voice_nourishing_to_womb/code.html'],
+    [23, 'Womb Structuring to Bone',       '../workbook_23_womb_structuring_to_bone/code.html'],
+    [24, 'Bone Warming to Heart',          '../workbook_24_bone_warming_to_heart/code.html']
+  ];
+
+  /**
+   * Compute an approximate current workbook from the lunar calendar.
+   * Anchor: wb09 starts Leo New Moon ≈ 2026-08-12 (eclipse data).
+   * Each workbook ≈ 14.77 days (half of 29.53-day lunar cycle).
+   */
+  function computeCurrentWB() {
+    var ANCHOR      = new Date('2026-08-12T00:00:00Z');
+    var ANCHOR_NUM  = 9;
+    var HALF_CYCLE  = 14.77;
+    var now         = new Date();
+    var daysDiff    = (now - ANCHOR) / 86400000;
+    var steps       = Math.round(daysDiff / HALF_CYCLE);
+    var idx         = ((ANCHOR_NUM - 1 + steps) % 24 + 24) % 24;
+    return idx + 1;  /* 1-based, 1–24 */
+  }
+
+  function pad2(n) { return String(n).padStart(2, '0'); }
+
+  function findWB(num) {
+    for (var i = 0; i < WORKBOOKS.length; i++) {
+      if (WORKBOOKS[i][0] === num) return WORKBOOKS[i];
+    }
+    return null;
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+    /* ── Determine current workbook number ── */
+    var stored = null;
+    try { stored = localStorage.getItem('lc-current-workbook'); } catch (e) {}
+    var currentNum = stored ? parseInt(stored, 10) : computeCurrentWB();
+    if (isNaN(currentNum) || currentNum < 1 || currentNum > 26) {
+      currentNum = computeCurrentWB();
+    }
+
+    /* ── Build timeline dots ── */
+    var timeline = document.getElementById('lc-timeline');
+    if (timeline) {
+      var frag = document.createDocumentFragment();
+      for (var i = 1; i <= 26; i++) {
+        var dot = document.createElement('span');
+        dot.className = 'tl-dot' +
+          (i === currentNum ? ' active' : '') +
+          (i >= 25 ? ' eclipse' : '');
+        dot.title = 'Workbook ' + pad2(i);
+        frag.appendChild(dot);
+      }
+      timeline.appendChild(frag);
+    }
+
+    /* ── Highlight card in the grid ── */
+    var card = document.querySelector('[data-wb="' + currentNum + '"]');
+    if (card) {
+      card.classList.add('lc-current');
+    }
+
+    /* ── Populate hero callout ── */
+    var wb = findWB(currentNum);
+    if (wb) {
+      var callout    = document.getElementById('lc-callout');
+      var calloutLink= document.getElementById('lc-callout-link');
+      var calloutNum = document.getElementById('lc-callout-num');
+      var enterBtn   = document.getElementById('lc-enter-btn');
+      if (callout && calloutLink && calloutNum) {
+        callout.classList.remove('hidden');
+        calloutLink.textContent = wb[1];
+        calloutLink.href        = wb[2];
+        calloutNum.textContent  = 'Workbook ' + pad2(currentNum) + ' of 24';
+        if (enterBtn) {
+          enterBtn.href        = wb[2];
+          enterBtn.textContent = 'Enter Workbook ' + pad2(currentNum);
+        }
+      }
+    }
+
+    /* ── Allow clicking any card to set as "current" ── */
+    var allCards = document.querySelectorAll('[data-wb]');
+    for (var j = 0; j < allCards.length; j++) {
+      allCards[j].addEventListener('click', function () {
+        var n = parseInt(this.getAttribute('data-wb'), 10);
+        if (n && n <= 24) {
+          try { localStorage.setItem('lc-current-workbook', n); } catch (e) {}
+        }
+      });
+    }
+
+  });
+
+})();
+</script>
+
+</body>
+</html>

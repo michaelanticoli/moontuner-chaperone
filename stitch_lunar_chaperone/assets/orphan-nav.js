@@ -3,7 +3,7 @@
  *
  * Injects a minimal fixed top nav bar on pages that are not part of the
  * main 26-workbook navigation flow (prototype screens, dashboards, templates,
- * supplementary modules). Provides "Return to Library" and "All Workbooks"
+ * supplementary modules). Provides "Lunar Chaperone" home and "All Workbooks"
  * links so no page in the collection is a dead end.
  *
  * Usage: <script src="../assets/orphan-nav.js"></script>
@@ -32,16 +32,16 @@
 
   nav.innerHTML = '<div style="max-width:1280px;margin:0 auto;padding:0.75rem clamp(1.5rem,5vw,5rem);'
     + 'display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">'
-    + '<a href="../the_great_library/code.html" aria-label="The Great Library — home" '
+    + '<a href="../the_lunar_chaperone_master_index/code.html" aria-label="The Lunar Chaperone — home" '
     + 'style="font-family:\'Inter\',system-ui,sans-serif;font-size:0.625rem;letter-spacing:0.2em;'
     + 'text-transform:uppercase;color:#725b37;text-decoration:none;font-weight:500;white-space:nowrap;">'
     + '✦ Moontuner</a>'
     + '<nav aria-label="Site navigation" style="display:flex;align-items:center;gap:1.5rem;">'
-    + '<a href="../the_great_library/code.html" '
+    + '<a href="../the_lunar_chaperone_master_index/code.html" '
     + 'style="font-family:\'Inter\',system-ui,sans-serif;font-size:0.625rem;letter-spacing:0.2em;'
     + 'text-transform:uppercase;color:#7f766a;text-decoration:none;transition:color 0.2s;" '
     + 'onmouseover="this.style.color=\'#725b37\'" onmouseout="this.style.color=\'#7f766a\'">'
-    + '← The Great Library</a>'
+    + '← Lunar Chaperone</a>'
     + '<a href="../the_lunar_chaperone_master_index/code.html" '
     + 'style="font-family:\'Inter\',system-ui,sans-serif;font-size:0.625rem;letter-spacing:0.2em;'
     + 'text-transform:uppercase;color:#7f766a;text-decoration:none;transition:color 0.2s;" '
