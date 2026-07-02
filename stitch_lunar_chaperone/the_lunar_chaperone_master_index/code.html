@@ -678,7 +678,7 @@
         callout.classList.remove('hidden');
         calloutLink.textContent = wb[1];
         calloutLink.href        = wb[2];
-        calloutNum.textContent  = 'Workbook ' + pad2(currentNum) + ' of 24';
+        calloutNum.textContent  = 'Workbook ' + pad2(currentNum) + ' of 26';
         if (enterBtn) {
           enterBtn.href        = wb[2];
           enterBtn.textContent = 'Enter Workbook ' + pad2(currentNum);
@@ -691,7 +691,7 @@
     for (var j = 0; j < allCards.length; j++) {
       allCards[j].addEventListener('click', function () {
         var n = parseInt(this.getAttribute('data-wb'), 10);
-        if (n && n <= 24) {
+        if (n && n <= 26) {
           try { localStorage.setItem('lc-current-workbook', n); } catch (e) {}
         }
       });
