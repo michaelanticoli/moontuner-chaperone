@@ -4,115 +4,51 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>THE SACRED LEDGER | Womb to Bone</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Newsreader:ital,wght@0,400;0,600;1,400&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "inverse-primary": "#e1c296",
-                    "surface-container-highest": "#e5e2db",
-                    "surface-container-low": "#f6f3ec",
-                    "on-primary-fixed": "#281800",
-                    "surface": "#fcf9f2",
-                    "primary-container": "#c4a77d",
-                    "on-secondary": "#ffffff",
-                    "on-tertiary-fixed": "#0d1c31",
-                    "surface-container-high": "#ebe8e1",
-                    "tertiary-fixed": "#d5e3ff",
-                    "error-container": "#ffdad6",
-                    "secondary-fixed": "#e5e2de",
-                    "inverse-on-surface": "#f3f0e9",
-                    "outline": "#7f766a",
-                    "on-tertiary": "#ffffff",
-                    "on-surface": "#1c1c18",
-                    "on-primary-container": "#503c1b",
-                    "surface-container": "#f1eee7",
-                    "on-error-container": "#93000a",
-                    "surface-dim": "#dcdad3",
-                    "surface-bright": "#fcf9f2",
-                    "secondary-fixed-dim": "#c9c6c3",
-                    "on-tertiary-container": "#324057",
-                    "on-primary-fixed-variant": "#584321",
-                    "on-secondary-fixed-variant": "#474744",
-                    "on-primary": "#ffffff",
-                    "surface-tint": "#725b37",
-                    "tertiary-container": "#9eacc7",
-                    "secondary-container": "#e5e2de",
-                    "background": "#fcf9f2",
-                    "primary-fixed": "#fedeb0",
-                    "on-secondary-container": "#656461",
-                    "outline-variant": "#d0c5b7",
-                    "surface-variant": "#e5e2db",
-                    "secondary": "#5f5e5c",
-                    "on-background": "#1c1c18",
-                    "tertiary": "#515f77",
-                    "on-tertiary-fixed-variant": "#3a475e",
-                    "primary-fixed-dim": "#e1c296",
-                    "surface-container-lowest": "#ffffff",
-                    "inverse-surface": "#31312c",
-                    "error": "#ba1a1a",
-                    "on-surface-variant": "#4d463c",
-                    "tertiary-fixed-dim": "#b9c7e3",
-                    "primary": "#725b37",
-                    "on-error": "#ffffff",
-                    "on-secondary-fixed": "#1c1c1a"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0px",
-                    "lg": "0px",
-                    "xl": "0px",
-                    "full": "9999px"
-            },
-            "fontFamily": {
-                    "headline": ["Noto Serif"],
-                    "body": ["Newsreader"],
-                    "label": ["Inter"]
-            }
-          },
-        },
-      }
-    </script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+
+
 <style>
       .material-symbols-outlined {
         font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
       }
-      .font-notoSerif { font-family: 'Noto Serif', serif; }
-      .font-newsreader { font-family: 'Newsreader', serif; }
+      .font-notoSerif { font-family: 'Playfair Display', serif; }
+      .font-newsreader { font-family: 'DM Sans', serif; }
       .font-inter { font-family: 'Inter', sans-serif; }
       ::-webkit-scrollbar { width: 4px; }
-      ::-webkit-scrollbar-track { background: #fcf9f2; }
-      ::-webkit-scrollbar-thumb { background: #d0c5b7; }
+      ::-webkit-scrollbar-track { background: #efe7d3; }
+      ::-webkit-scrollbar-thumb { background: #cfc3a4; }
     </style>
 
-<link rel="stylesheet" href="../assets/style.css"/>
+
 <script src="../assets/nav.js" data-workbook="12"></script>
+
+<script src="../assets/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/style.css"/>
 </head>
 <body class="bg-surface text-on-surface font-newsreader selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar -->
-<nav class="docked full-width top-0 z-50 fixed flex justify-between items-center w-full px-12 py-6 bg-[#fcf9f2] dark:bg-stone-950 bg-gradient-to-b from-stone-200/20 to-transparent">
+<nav class="docked full-width top-0 z-50 fixed flex justify-between items-center w-full px-12 py-6 bg-[#efe7d3] dark:bg-stone-950 bg-gradient-to-b from-stone-200/20 to-transparent">
 <div class="text-2xl font-notoSerif tracking-tighter text-stone-900 dark:text-stone-100 italic">
             THE SACRED LEDGER
         </div>
 <div class="hidden md:flex gap-12 items-center">
-<a class="text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.15em] text-[10px] hover:text-[#c4a77d] transition-colors duration-300" href="../the_lunar_chaperone_master_index/code.html">The Archive</a>
-<a class="text-[#725b37] dark:text-[#c4a77d] border-b-0.5 border-[#725b37] pb-1 font-inter uppercase tracking-[0.15em] text-[10px] italic" href="#">Curations</a>
-<a class="text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.15em] text-[10px] hover:text-[#c4a77d] transition-colors duration-300" href="#">Glossary</a>
-<a class="text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.15em] text-[10px] hover:text-[#c4a77d] transition-colors duration-300" href="#">Rituals</a>
+<a class="text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.15em] text-[10px] hover:text-[#b6852a] transition-colors duration-300" href="../the_lunar_chaperone_master_index/code.html">The Archive</a>
+<a class="text-[#1f7d88] dark:text-[#b6852a] border-b-0.5 border-[#1f7d88] pb-1 font-inter uppercase tracking-[0.15em] text-[10px] italic" href="#">Curations</a>
+<a class="text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.15em] text-[10px] hover:text-[#b6852a] transition-colors duration-300" href="#">Glossary</a>
+<a class="text-stone-500 dark:text-stone-400 font-inter uppercase tracking-[0.15em] text-[10px] hover:text-[#b6852a] transition-colors duration-300" href="#">Rituals</a>
 </div>
 <div class="flex items-center gap-6">
-<span class="material-symbols-outlined text-[#725b37] cursor-pointer">menu_book</span>
+<span class="material-symbols-outlined text-[#1f7d88] cursor-pointer">menu_book</span>
 <div class="w-8 h-8 bg-surface-container-highest border border-outline-variant flex items-center justify-center overflow-hidden">
 <img alt="Scholar Profile" class="w-full h-full object-cover grayscale opacity-80" data-alt="close-up portrait of an elderly academic with spectacles in a dimly lit library setting" src="../assets/images/workbook_12_womb_to_bone_1.png"/>
 </div>
 </div>
 </nav>
 <!-- SideNavBar -->
-<aside class="fixed flex flex-col h-full py-12 px-8 h-screen w-72 left-0 top-0 border-r-0.5 border-stone-200/30 bg-[#f5f2eb] dark:bg-stone-900/50 mt-20">
+<aside class="fixed flex flex-col h-full py-12 px-8 h-screen w-72 left-0 top-0 border-r-0.5 border-stone-200/30 bg-[#f4eedd] dark:bg-stone-900/50 mt-20">
 <div class="mb-12">
 <div class="w-12 h-12 mb-4 bg-primary text-on-primary flex items-center justify-center">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_stories</span>

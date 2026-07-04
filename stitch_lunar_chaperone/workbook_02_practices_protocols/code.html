@@ -4,89 +4,31 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Workbook 02: Practices &amp; Protocols</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=Inter:wght@100;300;400;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,400;1,6..72,400&amp;family=Noto+Serif:ital,wght@0,100;0,400;1,100&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface-variant": "#e5e2db",
-                    "on-secondary-container": "#656461",
-                    "on-surface-variant": "#4d463c",
-                    "on-primary": "#ffffff",
-                    "on-primary-fixed": "#281800",
-                    "error-container": "#ffdad6",
-                    "secondary-container": "#e5e2de",
-                    "on-tertiary-container": "#324057",
-                    "on-background": "#1c1c18",
-                    "on-error": "#ffffff",
-                    "primary-fixed-dim": "#e1c296",
-                    "on-secondary-fixed-variant": "#474744",
-                    "inverse-primary": "#e1c296",
-                    "on-secondary-fixed": "#1c1c1a",
-                    "background": "#fcf9f2",
-                    "surface-dim": "#dcdad3",
-                    "surface-container-highest": "#e5e2db",
-                    "primary": "#725b37",
-                    "surface": "#fcf9f2",
-                    "outline": "#7f766a",
-                    "on-tertiary-fixed": "#0d1c31",
-                    "tertiary-fixed": "#d5e3ff",
-                    "primary-container": "#c4a77d",
-                    "primary-fixed": "#fedeb0",
-                    "error": "#ba1a1a",
-                    "on-tertiary": "#ffffff",
-                    "on-error-container": "#93000a",
-                    "outline-variant": "#d0c5b7",
-                    "tertiary-fixed-dim": "#b9c7e3",
-                    "on-tertiary-fixed-variant": "#3a475e",
-                    "tertiary": "#515f77",
-                    "on-secondary": "#ffffff",
-                    "surface-container-lowest": "#ffffff",
-                    "secondary-fixed-dim": "#c9c6c3",
-                    "surface-container": "#f1eee7",
-                    "on-surface": "#1c1c18",
-                    "on-primary-container": "#503c1b",
-                    "surface-bright": "#fcf9f2",
-                    "surface-tint": "#725b37",
-                    "surface-container-low": "#f6f3ec",
-                    "on-primary-fixed-variant": "#584321",
-                    "inverse-surface": "#31312c",
-                    "surface-container-high": "#ebe8e1",
-                    "tertiary-container": "#9eacc7",
-                    "inverse-on-surface": "#f3f0e9",
-                    "secondary-fixed": "#e5e2de",
-                    "secondary": "#5f5e5c"
-            },
-            fontFamily: {
-                    "headline": ["Noto Serif", "serif"],
-                    "body": ["Newsreader", "serif"],
-                    "label": ["Inter", "sans-serif"]
-            }
-          },
-        },
-      }
-    </script>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
             font-size: 20px;
         }
         .text-ritual-gradient {
-            background: linear-gradient(to right, #725b37, #c4a77d);
+            background: linear-gradient(to right, #1f7d88, #b6852a);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
     </style>
+
+<script src="../assets/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/style.css"/>
 </head>
 <body class="bg-surface text-on-surface font-body selection:bg-primary-container/30">
 <div class="flex min-h-screen">
 <!-- Sidebar Navigation -->
-<aside class="hidden md:flex flex-col h-screen sticky top-0 w-72 bg-[#fcf9f2] dark:bg-stone-900 border-r-[0.5px] border-outline-variant/30 py-12 px-6 gap-8">
+<aside class="hidden md:flex flex-col h-screen sticky top-0 w-72 bg-[#efe7d3] dark:bg-stone-900 border-r-[0.5px] border-outline-variant/30 py-12 px-6 gap-8">
 <div class="mb-8">
 <span class="font-noto-serif italic text-xl text-on-surface">Lunar Chaperone</span>
 <p class="font-inter uppercase tracking-[0.12em] text-[10px] text-on-surface/50 mt-1">Archival Metadata v.04</p>
@@ -97,7 +39,7 @@
 <span class="material-symbols-outlined">dark_mode</span>
 <span>Phase I: Waxing</span>
 </a>
-<a class="flex items-center gap-4 text-[#725b37] font-bold translate-x-2 transition-transform font-inter uppercase tracking-[0.12em] text-[10px] p-2" href="#">
+<a class="flex items-center gap-4 text-[#1f7d88] font-bold translate-x-2 transition-transform font-inter uppercase tracking-[0.12em] text-[10px] p-2" href="#">
 <span class="material-symbols-outlined">light_mode</span>
 <span>Phase II: Zenith</span>
 </a>
@@ -126,11 +68,11 @@
 <!-- Main Canvas -->
 <main class="flex-grow bg-surface overflow-x-hidden">
 <!-- Top App Bar -->
-<header class="flex justify-between items-center w-full px-8 py-4 bg-[#fcf9f2] border-b-[0.5px] border-outline-variant/30">
+<header class="flex justify-between items-center w-full px-8 py-4 bg-[#efe7d3] border-b-[0.5px] border-outline-variant/30">
 <div class="font-noto-serif uppercase tracking-[0.15em] text-xs font-light flex gap-8">
-<a class="text-on-surface/60 hover:text-[#725b37] transition-colors duration-300" href="#">Catalog</a>
-<a class="text-on-surface/60 hover:text-[#725b37] transition-colors duration-300" href="#">Archives</a>
-<a class="text-[#725b37] border-b border-[#725b37] pb-1" href="#">Log</a>
+<a class="text-on-surface/60 hover:text-[#1f7d88] transition-colors duration-300" href="#">Catalog</a>
+<a class="text-on-surface/60 hover:text-[#1f7d88] transition-colors duration-300" href="#">Archives</a>
+<a class="text-[#1f7d88] border-b border-[#1f7d88] pb-1" href="#">Log</a>
 </div>
 <div class="flex items-center gap-6">
 <div class="relative flex items-center">
@@ -297,7 +239,7 @@
 </main>
 </div>
 <!-- Mobile Bottom Navigation -->
-<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-[#fcf9f2] border-t-[0.5px] border-outline-variant/30 flex justify-around py-4 z-50">
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-[#efe7d3] border-t-[0.5px] border-outline-variant/30 flex justify-around py-4 z-50">
 <a class="flex flex-col items-center gap-1 text-on-surface/40" href="#">
 <span class="material-symbols-outlined">menu_book</span>
 <span class="font-inter uppercase text-[8px] tracking-tighter">Library</span>

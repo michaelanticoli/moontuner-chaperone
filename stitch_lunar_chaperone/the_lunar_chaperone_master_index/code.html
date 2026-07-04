@@ -5,57 +5,10 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>The Lunar Chaperone — All 26 Workbooks</title>
 <meta name="description" content="Twenty-six workbooks. One living cycle. Enter wherever you are now."/>
-<link rel="stylesheet" href="../assets/style.css"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif:ital,wght@0,300;0,400;1,300&family=Newsreader:ital,opsz,wght@0,6..72,300;1,6..72,300&family=Inter:wght@300;400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: 'class',
-    theme: {
-      extend: {
-        colors: {
-          'primary':                '#725b37',
-          'primary-container':      '#c4a77d',
-          'primary-fixed':          '#fedeb0',
-          'primary-fixed-dim':      '#e1c296',
-          'on-primary':             '#ffffff',
-          'on-primary-container':   '#503c1b',
-          'secondary':              '#5f5e5c',
-          'secondary-container':    '#e5e2de',
-          'on-secondary':           '#ffffff',
-          'on-secondary-container': '#656461',
-          'surface':                '#fcf9f2',
-          'surface-bright':         '#fcf9f2',
-          'surface-dim':            '#dcdad3',
-          'surface-variant':        '#e5e2db',
-          'surface-container':      '#f1eee7',
-          'surface-container-low':  '#f6f3ec',
-          'surface-container-high': '#ebe8e1',
-          'surface-container-highest': '#e5e2db',
-          'on-surface':             '#1c1c18',
-          'on-surface-variant':     '#4d463c',
-          'background':             '#fcf9f2',
-          'on-background':          '#1c1c18',
-          'outline':                '#7f766a',
-          'outline-variant':        '#d0c5b7',
-          'inverse-surface':        '#31312c',
-          'inverse-on-surface':     '#f3f0e9',
-          'inverse-primary':        '#e1c296',
-          'error':                  '#ba1a1a',
-          'tertiary':               '#515f77',
-          'tertiary-container':     '#9eacc7',
-        },
-        borderRadius: { DEFAULT: '0px', lg: '0px', xl: '0px', full: '9999px' },
-        fontFamily: {
-          display:  ['Cormorant Garamond', 'Noto Serif', 'serif'],
-          headline: ['Noto Serif', 'Georgia', 'serif'],
-          body:     ['Newsreader', 'Noto Serif', 'serif'],
-          label:    ['Inter', 'system-ui', 'sans-serif'],
-        },
-      },
-    },
-  }
-</script>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
 <style>
   .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
@@ -63,8 +16,8 @@
   }
   /* Current-workbook glow */
   .wb-card.lc-current {
-    border-color: #725b37;
-    box-shadow: 0 0 0 2px rgba(114,91,55,0.18), 0 6px 28px rgba(114,91,55,0.14);
+    border-color: #1f7d88;
+    box-shadow: 0 0 0 2px rgba(138,127,100,0.18), 0 6px 28px rgba(138,127,100,0.14);
   }
   .wb-card.lc-current .wb-current-badge {
     display: inline-block;
@@ -75,32 +28,36 @@
     font-size: 0.55rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #725b37;
+    color: #1f7d88;
     background: rgba(196,167,125,0.15);
-    border: 1px solid rgba(114,91,55,0.35);
+    border: 1px solid rgba(138,127,100,0.35);
     padding: 0.15em 0.5em;
     margin-bottom: 0.5rem;
   }
   /* Phase-group banding */
   .cycle-1-card { background: #f9f6ee; }
   .cycle-2-card { background: #f4f1ea; }
-  .eclipse-card  { background: #2b2925; color: #f3f0e9; border-color: rgba(243,240,233,0.15); }
+  .eclipse-card  { background: #111110; color: #ece7dc; border-color: rgba(243,240,233,0.15); }
   .eclipse-card:hover { border-color: rgba(243,240,233,0.40) !important; }
   .eclipse-card .wb-num,
   .eclipse-card .wb-title,
-  .eclipse-card .wb-sub { color: #f3f0e9 !important; opacity: 0.9; }
+  .eclipse-card .wb-sub { color: #ece7dc !important; opacity: 0.9; }
   /* Smooth image hover */
   .wb-img-wrap img { transition: transform 0.6s ease, filter 0.4s ease; filter: grayscale(100%) opacity(0.75); }
   .wb-card:hover .wb-img-wrap img { transform: scale(1.04); filter: grayscale(30%) opacity(0.9); }
   /* Timeline strip in hero */
-  .tl-dot { width:7px; height:7px; border:1px solid #d0c5b7; flex-shrink:0; }
-  .tl-dot.done    { background:#c4a77d; border-color:#c4a77d; }
-  .tl-dot.active  { background:#725b37; border-color:#725b37; }
-  .tl-dot.eclipse { background:#31312c; border-color:#31312c; }
+  .tl-dot { width:7px; height:7px; border:1px solid #cfc3a4; flex-shrink:0; }
+  .tl-dot.done    { background:#b6852a; border-color:#b6852a; }
+  .tl-dot.active  { background:#1f7d88; border-color:#1f7d88; }
+  .tl-dot.eclipse { background:#0d0d0d; border-color:#0d0d0d; }
   /* Hero entrance */
   .hero-enter { opacity:0; animation: heroIn 0.7s ease 0.1s forwards; }
   @keyframes heroIn { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
 </style>
+
+<script src="../assets/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/style.css"/>
 </head>
 <body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
 

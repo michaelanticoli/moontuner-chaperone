@@ -4,88 +4,20 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Sacred Geometry - The Canonical Archive</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                "primary-fixed-dim": "#e1c296",
-                "primary-fixed": "#fedeb0",
-                "secondary-fixed": "#e5e2de",
-                "surface-bright": "#fcf9f2",
-                "primary": "#725b37",
-                "secondary-container": "#e5e2de",
-                "inverse-primary": "#e1c296",
-                "tertiary-fixed": "#d5e3ff",
-                "surface": "#fcf9f2",
-                "surface-container": "#f1eee7",
-                "inverse-on-surface": "#f3f0e9",
-                "on-background": "#1c1c18",
-                "on-secondary": "#ffffff",
-                "surface-variant": "#e5e2db",
-                "background": "#fcf9f2",
-                "on-primary-fixed": "#281800",
-                "on-error": "#ffffff",
-                "outline-variant": "#d0c5b7",
-                "on-tertiary-fixed": "#0d1c31",
-                "outline": "#7f766a",
-                "on-error-container": "#93000a",
-                "on-secondary-fixed": "#1c1c1a",
-                "tertiary-container": "#9eacc7",
-                "on-secondary-container": "#656461",
-                "on-primary-container": "#503c1b",
-                "surface-container-low": "#f6f3ec",
-                "on-surface-variant": "#4d463c",
-                "on-tertiary-container": "#324057",
-                "secondary": "#5f5e5c",
-                "on-tertiary": "#ffffff",
-                "surface-tint": "#725b37",
-                "on-primary-fixed-variant": "#584321",
-                "tertiary-fixed-dim": "#b9c7e3",
-                "surface-dim": "#dcdad3",
-                "error": "#ba1a1a",
-                "secondary-fixed-dim": "#c9c6c3",
-                "primary-container": "#c4a77d",
-                "surface-container-lowest": "#ffffff",
-                "inverse-surface": "#31312c",
-                "on-secondary-fixed-variant": "#474744",
-                "surface-container-highest": "#e5e2db",
-                "error-container": "#ffdad6",
-                "surface-container-high": "#ebe8e1",
-                "on-primary": "#ffffff",
-                "on-surface": "#1c1c18",
-                "tertiary": "#515f77",
-                "on-tertiary-fixed-variant": "#3a475e"
-            },
-            "borderRadius": {
-                "DEFAULT": "0px",
-                "lg": "0px",
-                "xl": "0px",
-                "full": "9999px"
-            },
-            "fontFamily": {
-                "headline": ["Noto Serif"],
-                "body": ["Newsreader"],
-                "label": ["Inter"]
-            }
-          },
-        },
-      }
-    </script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+
+
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
         }
         .sacred-gradient {
-            background: linear-gradient(135deg, #725b37 0%, #c4a77d 100%);
+            background: linear-gradient(135deg, #1f7d88 0%, #b6852a 100%);
         }
         .thin-border {
-            border: 0.5px solid rgba(114, 91, 55, 0.15);
+            border: 0.5px solid rgba(138, 127, 100, 0.15);
         }
         .glass-vellum {
             background: rgba(252, 249, 242, 0.8);
@@ -100,16 +32,20 @@
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head>
+  
+<script src="../assets/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/style.css"/>
+</head>
 <body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen">
 <!-- TopAppBar -->
-<header class="fixed top-0 left-0 w-full z-50 bg-[#fcf9f2] dark:bg-[#1c1c18] flex justify-between items-center px-8 py-6">
-<div class="flex items-center gap-4 text-[#725b37] dark:text-[#c4a77d]">
-<span class="material-symbols-outlined text-2xl cursor-pointer hover:bg-[#c4a77d]/10 transition-colors duration-300 p-2">menu</span>
+<header class="fixed top-0 left-0 w-full z-50 bg-[#efe7d3] dark:bg-[#1c1a17] flex justify-between items-center px-8 py-6">
+<div class="flex items-center gap-4 text-[#1f7d88] dark:text-[#b6852a]">
+<span class="material-symbols-outlined text-2xl cursor-pointer hover:bg-[#b6852a]/10 transition-colors duration-300 p-2">menu</span>
 </div>
-<h1 class="text-sm font-['Inter'] font-medium tracking-[0.2em] text-[#1c1c18] dark:text-[#fcf9f2]">THE CANONICAL ARCHIVE</h1>
-<div class="flex items-center gap-4 text-[#725b37] dark:text-[#c4a77d]">
-<span class="material-symbols-outlined text-2xl cursor-pointer hover:bg-[#c4a77d]/10 transition-colors duration-300 p-2">history_edu</span>
+<h1 class="text-sm font-['Work_Sans'] font-medium tracking-[0.2em] text-[#1c1a17] dark:text-[#efe7d3]">THE CANONICAL ARCHIVE</h1>
+<div class="flex items-center gap-4 text-[#1f7d88] dark:text-[#b6852a]">
+<span class="material-symbols-outlined text-2xl cursor-pointer hover:bg-[#b6852a]/10 transition-colors duration-300 p-2">history_edu</span>
 </div>
 </header>
 <main class="pt-28 pb-32 px-6 md:px-12 max-w-7xl mx-auto">
@@ -143,18 +79,18 @@
 <!-- Geometric Elements -->
 <svg class="w-full h-full relative z-10 overflow-visible" viewbox="0 0 100 100">
 <!-- Triangle Base -->
-<path d="M 50 15 L 85 75 L 15 75 Z" fill="none" stroke="#725b37" stroke-width="0.2"></path>
+<path d="M 50 15 L 85 75 L 15 75 Z" fill="none" stroke="#1f7d88" stroke-width="0.2"></path>
 <!-- Connecting Lines -->
-<line stroke="#725b37" stroke-dasharray="1 2" stroke-width="0.1" x1="50" x2="50" y1="15" y2="75"></line>
-<line stroke="#725b37" stroke-dasharray="1 2" stroke-width="0.1" x1="15" x2="85" y1="75" y2="75"></line>
-<!-- Status Indicators (Accent #C4A77D) -->
-<circle cx="50" cy="15" fill="#C4A77D" r="1.5"></circle>
-<circle cx="85" cy="75" fill="#C4A77D" r="1.5"></circle>
-<circle cx="15" cy="75" fill="#C4A77D" r="1.5"></circle>
-<circle cx="50" cy="45" fill="#725b37" r="0.8"></circle>
+<line stroke="#1f7d88" stroke-dasharray="1 2" stroke-width="0.1" x1="50" x2="50" y1="15" y2="75"></line>
+<line stroke="#1f7d88" stroke-dasharray="1 2" stroke-width="0.1" x1="15" x2="85" y1="75" y2="75"></line>
+<!-- Status Indicators (Accent #b6852a) -->
+<circle cx="50" cy="15" fill="#b6852a" r="1.5"></circle>
+<circle cx="85" cy="75" fill="#b6852a" r="1.5"></circle>
+<circle cx="15" cy="75" fill="#b6852a" r="1.5"></circle>
+<circle cx="50" cy="45" fill="#1f7d88" r="0.8"></circle>
 <!-- Main Geometric Form -->
-<circle cx="50" cy="50" fill="none" r="35" stroke="#725b37" stroke-width="0.5"></circle>
-<circle cx="50" cy="50" fill="none" opacity="0.5" r="34" stroke="#c4a77d" stroke-width="0.1"></circle>
+<circle cx="50" cy="50" fill="none" r="35" stroke="#1f7d88" stroke-width="0.5"></circle>
+<circle cx="50" cy="50" fill="none" opacity="0.5" r="34" stroke="#b6852a" stroke-width="0.1"></circle>
 </svg>
 <!-- Marginalia Data -->
 <div class="absolute top-0 right-0 font-label text-[9px] uppercase tracking-widest text-outline">
@@ -263,18 +199,18 @@
 </section>
 </main>
 <!-- BottomNavBar -->
-<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#fcf9f2]/80 dark:bg-[#1c1c18]/80 backdrop-blur-xl flex justify-around items-center px-12 py-8">
-<div class="flex flex-col items-center justify-center text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 hover:text-[#725b37] dark:hover:text-[#c4a77d] transition-all cursor-pointer">
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#efe7d3]/80 dark:bg-[#1c1a17]/80 backdrop-blur-xl flex justify-around items-center px-12 py-8">
+<div class="flex flex-col items-center justify-center text-[#1c1a17]/40 dark:text-[#efe7d3]/40 hover:text-[#1f7d88] dark:hover:text-[#b6852a] transition-all cursor-pointer">
 <span class="material-symbols-outlined text-2xl">auto_stories</span>
 </div>
-<div class="flex flex-col items-center justify-center text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 hover:text-[#725b37] dark:hover:text-[#c4a77d] transition-all cursor-pointer">
+<div class="flex flex-col items-center justify-center text-[#1c1a17]/40 dark:text-[#efe7d3]/40 hover:text-[#1f7d88] dark:hover:text-[#b6852a] transition-all cursor-pointer">
 <span class="material-symbols-outlined text-2xl">account_balance</span>
 </div>
-<div class="flex flex-col items-center justify-center text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 hover:text-[#725b37] dark:hover:text-[#c4a77d] transition-all cursor-pointer">
+<div class="flex flex-col items-center justify-center text-[#1c1a17]/40 dark:text-[#efe7d3]/40 hover:text-[#1f7d88] dark:hover:text-[#b6852a] transition-all cursor-pointer">
 <span class="material-symbols-outlined text-2xl">menu_book</span>
 </div>
 <!-- Active Tab: Fingerprint (Profile/Stats) -->
-<div class="flex flex-col items-center justify-center text-[#725b37] dark:text-[#c4a77d] scale-110 cursor-pointer">
+<div class="flex flex-col items-center justify-center text-[#1f7d88] dark:text-[#b6852a] scale-110 cursor-pointer">
 <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">fingerprint</span>
 </div>
 </nav>

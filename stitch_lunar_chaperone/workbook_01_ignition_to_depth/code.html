@@ -3,123 +3,59 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&amp;family=Inter:wght@300;400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "primary-container": "#c4a77d",
-                        "surface-bright": "#fcf9f2",
-                        "on-error": "#ffffff",
-                        "on-error-container": "#93000a",
-                        "on-secondary": "#ffffff",
-                        "on-primary-fixed": "#281800",
-                        "secondary-container": "#e5e2de",
-                        "surface-container-highest": "#e5e2db",
-                        "secondary": "#5f5e5c",
-                        "error": "#ba1a1a",
-                        "inverse-primary": "#e1c296",
-                        "primary-fixed-dim": "#e1c296",
-                        "outline-variant": "#d0c5b7",
-                        "on-primary": "#ffffff",
-                        "tertiary-fixed-dim": "#b9c7e3",
-                        "surface-container-low": "#f6f3ec",
-                        "secondary-fixed-dim": "#c9c6c3",
-                        "inverse-on-surface": "#f3f0e9",
-                        "on-primary-container": "#503c1b",
-                        "outline": "#7f766a",
-                        "tertiary-fixed": "#d5e3ff",
-                        "surface-dim": "#dcdad3",
-                        "on-tertiary-container": "#324057",
-                        "surface-container": "#f1eee7",
-                        "primary": "#725b37",
-                        "surface-tint": "#725b37",
-                        "on-tertiary": "#ffffff",
-                        "secondary-fixed": "#e5e2de",
-                        "on-secondary-fixed-variant": "#474744",
-                        "surface-container-lowest": "#ffffff",
-                        "background": "#fcf9f2",
-                        "tertiary": "#515f77",
-                        "on-secondary-fixed": "#1c1c1a",
-                        "inverse-surface": "#31312c",
-                        "tertiary-container": "#9eacc7",
-                        "surface-variant": "#e5e2db",
-                        "on-primary-fixed-variant": "#584321",
-                        "on-tertiary-fixed": "#0d1c31",
-                        "on-tertiary-fixed-variant": "#3a475e",
-                        "surface": "#fcf9f2",
-                        "on-secondary-container": "#656461",
-                        "on-surface-variant": "#4d463c",
-                        "surface-container-high": "#ebe8e1",
-                        "on-surface": "#1c1c18",
-                        "error-container": "#ffdad6",
-                        "primary-fixed": "#fedeb0",
-                        "on-background": "#1c1c18"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0px",
-                        "lg": "0px",
-                        "xl": "0px",
-                        "full": "9999px"
-                    },
-                    "fontFamily": {
-                        "headline": ["Noto Serif"],
-                        "body": ["Newsreader"],
-                        "label": ["Inter"]
-                    }
-                }
-            }
-        }
-    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+
+
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
         body {
-            background-color: #fcf9f2;
-            color: #1c1c18;
+            background-color: #efe7d3;
+            color: #1c1a17;
             -webkit-font-smoothing: antialiased;
         }
-        .thin-border-b { border-bottom: 0.5px solid rgba(114, 91, 55, 0.2); }
-        .thin-border-l { border-left: 0.5px solid rgba(114, 91, 55, 0.2); }
+        .thin-border-b { border-bottom: 0.5px solid rgba(138, 127, 100, 0.2); }
+        .thin-border-l { border-left: 0.5px solid rgba(138, 127, 100, 0.2); }
     </style>
 
-<link rel="stylesheet" href="../assets/style.css"/>
+
 <script src="../assets/nav.js" data-workbook="01"></script>
+
+<script src="../assets/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/style.css"/>
 </head>
 <body class="font-body selection:bg-primary-container/30">
 <!-- SideNavBar -->
-<aside class="fixed left-0 top-0 h-full flex flex-col p-8 z-40 bg-[#f5f2eb] dark:bg-[#141412] docked left-0 h-full w-72 transition-all ease-in-out duration-400">
+<aside class="fixed left-0 top-0 h-full flex flex-col p-8 z-40 bg-[#f4eedd] dark:bg-[#0d0d0d] docked left-0 h-full w-72 transition-all ease-in-out duration-400">
 <div class="mb-12">
 <div class="w-12 h-12 mb-4 bg-primary flex items-center justify-center">
 <span class="material-symbols-outlined text-surface text-2xl" data-icon="auto_stories">auto_stories</span>
 </div>
-<h2 class="text-lg font-bold text-[#1c1c18] dark:text-[#fcf9f2] font-label uppercase tracking-[0.1em]">Workbook Index</h2>
-<p class="font-label uppercase tracking-[0.1em] text-[10px] text-[#1c1c18]/80 dark:text-[#fcf9f2]/80">Series Alpha-Omega</p>
+<h2 class="text-lg font-bold text-[#1c1a17] dark:text-[#efe7d3] font-label uppercase tracking-[0.1em]">Workbook Index</h2>
+<p class="font-label uppercase tracking-[0.1em] text-[10px] text-[#1c1a17]/80 dark:text-[#efe7d3]/80">Series Alpha-Omega</p>
 </div>
 <nav class="flex-1 space-y-6">
-<a class="flex items-center space-x-3 text-[#1c1c18]/80 dark:text-[#fcf9f2]/80 font-label uppercase tracking-[0.1em] text-[10px] hover:bg-[#fcf9f2]/50 transition-all duration-400" href="#">
+<a class="flex items-center space-x-3 text-[#1c1a17]/80 dark:text-[#efe7d3]/80 font-label uppercase tracking-[0.1em] text-[10px] hover:bg-[#efe7d3]/50 transition-all duration-400" href="#">
 <span class="material-symbols-outlined" data-icon="brightness_3">brightness_3</span>
 <span>Current Moon</span>
 </a>
-<a class="flex items-center space-x-3 text-[#725b37] dark:text-[#c4a77d] font-bold translate-x-2 font-label uppercase tracking-[0.1em] text-[10px]" href="#">
+<a class="flex items-center space-x-3 text-[#1f7d88] dark:text-[#b6852a] font-bold translate-x-2 font-label uppercase tracking-[0.1em] text-[10px]" href="#">
 <span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
 <span>Archival Ledger</span>
 </a>
-<a class="flex items-center space-x-3 text-[#1c1c18]/80 dark:text-[#fcf9f2]/80 font-label uppercase tracking-[0.1em] text-[10px] hover:bg-[#fcf9f2]/50 transition-all duration-400" href="#">
+<a class="flex items-center space-x-3 text-[#1c1a17]/80 dark:text-[#efe7d3]/80 font-label uppercase tracking-[0.1em] text-[10px] hover:bg-[#efe7d3]/50 transition-all duration-400" href="#">
 <span class="material-symbols-outlined" data-icon="explore">explore</span>
 <span>Celestial Map</span>
 </a>
-<a class="flex items-center space-x-3 text-[#1c1c18]/80 dark:text-[#fcf9f2]/80 font-label uppercase tracking-[0.1em] text-[10px] hover:bg-[#fcf9f2]/50 transition-all duration-400" href="#">
+<a class="flex items-center space-x-3 text-[#1c1a17]/80 dark:text-[#efe7d3]/80 font-label uppercase tracking-[0.1em] text-[10px] hover:bg-[#efe7d3]/50 transition-all duration-400" href="#">
 <span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
 <span>Scholar Notes</span>
 </a>
-<a class="flex items-center space-x-3 text-[#1c1c18]/80 dark:text-[#fcf9f2]/80 font-label uppercase tracking-[0.1em] text-[10px] hover:bg-[#fcf9f2]/50 transition-all duration-400" href="#">
+<a class="flex items-center space-x-3 text-[#1c1a17]/80 dark:text-[#efe7d3]/80 font-label uppercase tracking-[0.1em] text-[10px] hover:bg-[#efe7d3]/50 transition-all duration-400" href="#">
 <span class="material-symbols-outlined" data-icon="settings">settings</span>
 <span>Settings</span>
 </a>
@@ -128,7 +64,7 @@
 <button class="w-full py-4 bg-primary text-on-primary font-label uppercase tracking-widest text-xs mb-8 transition-opacity active:opacity-70">
                 New Transcription
             </button>
-<a class="flex items-center space-x-3 text-[#1c1c18]/80 dark:text-[#fcf9f2]/80 font-label uppercase tracking-[0.1em] text-[10px]" href="#">
+<a class="flex items-center space-x-3 text-[#1c1a17]/80 dark:text-[#efe7d3]/80 font-label uppercase tracking-[0.1em] text-[10px]" href="#">
 <span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
 <span>Library Help</span>
 </a>
@@ -137,13 +73,13 @@
 <!-- Main Canvas -->
 <main class="ml-72 min-h-screen">
 <!-- TopAppBar -->
-<header class="flex justify-between items-center px-12 py-6 w-full bg-[#fcf9f2] dark:bg-[#1c1c18] font-['Noto_Serif'] font-light tracking-tight sticky top-0 z-30">
-<div class="text-2xl font-['Noto_Serif'] italic text-[#1c1c18] dark:text-[#fcf9f2]">Sacred Ledger</div>
+<header class="flex justify-between items-center px-12 py-6 w-full bg-[#efe7d3] dark:bg-[#1c1a17] font-['Playfair_Display'] font-light tracking-tight sticky top-0 z-30">
+<div class="text-2xl font-['Playfair_Display'] italic text-[#1c1a17] dark:text-[#efe7d3]">Sacred Ledger</div>
 <div class="flex items-center space-x-8">
 <nav class="hidden md:flex space-x-8">
-<a class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 font-['Inter'] uppercase tracking-[0.15em] text-xs hover:text-[#725b37] transition-colors duration-300" href="../the_lunar_chaperone_master_index/code.html">The Archive</a>
-<a class="text-[#725b37] dark:text-[#c4a77d] border-b border-[#725b37] pb-1 font-['Inter'] uppercase tracking-[0.15em] text-xs" href="#">Half-Cycle</a>
-<a class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 font-['Inter'] uppercase tracking-[0.15em] text-xs hover:text-[#725b37] transition-colors duration-300" href="../workbook_01_ritual_scripts/code.html">Rituals</a>
+<a class="text-[#1c1a17]/60 dark:text-[#efe7d3]/60 font-['Work_Sans'] uppercase tracking-[0.15em] text-xs hover:text-[#1f7d88] transition-colors duration-300" href="../the_lunar_chaperone_master_index/code.html">The Archive</a>
+<a class="text-[#1f7d88] dark:text-[#b6852a] border-b border-[#1f7d88] pb-1 font-['Work_Sans'] uppercase tracking-[0.15em] text-xs" href="#">Half-Cycle</a>
+<a class="text-[#1c1a17]/60 dark:text-[#efe7d3]/60 font-['Work_Sans'] uppercase tracking-[0.15em] text-xs hover:text-[#1f7d88] transition-colors duration-300" href="../workbook_01_ritual_scripts/code.html">Rituals</a>
 </nav>
 <div class="flex items-center space-x-4 text-primary">
 <span class="material-symbols-outlined cursor-pointer" data-icon="menu_book">menu_book</span>

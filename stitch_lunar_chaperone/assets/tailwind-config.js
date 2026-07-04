@@ -1,4 +1,4 @@
-/* Lunar Chaperone — canonical Tailwind configuration
+/* Lunar Chaperone — Moontuner riso/paper Tailwind configuration
    Load this BEFORE the Tailwind CDN script on every page:
 
      <script src="../assets/tailwind-config.js"></script>
@@ -10,40 +10,40 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        // Paper-archive palette
-        'background':                '#fcf9f2',
-        'surface':                   '#fcf9f2',
-        'surface-bright':            '#fcf9f2',
+        // Riso/paper palette
+        'background':                '#efe7d3',
+        'surface':                   '#efe7d3',
+        'surface-bright':            '#efe7d3',
         'surface-container-lowest':  '#ffffff',
-        'surface-container-low':     '#f6f3ec',
-        'surface-container':         '#f1eee7',
-        'surface-container-high':    '#ebe8e1',
-        'surface-container-highest': '#e5e2db',
-        'surface-dim':               '#dcdad3',
-        'surface-variant':           '#e5e2db',
-        'surface-tint':              '#725b37',
+        'surface-container-low':     '#f4eedd',
+        'surface-container':         '#e9dfc6',
+        'surface-container-high':    '#e3d8bc',
+        'surface-container-highest': '#ddd1b2',
+        'surface-dim':               '#d4c8a6',
+        'surface-variant':           '#ddd1b2',
+        'surface-tint':              '#1f7d88',
 
-        'on-background':             '#1c1c18',
-        'on-surface':                '#1c1c18',
-        'on-surface-variant':        '#4d463c',
+        'on-background':             '#1c1a17',
+        'on-surface':                '#1c1a17',
+        'on-surface-variant':        '#4c463a',
 
-        'primary':                   '#725b37',
-        'primary-container':         '#c4a77d',
-        'primary-fixed':             '#fedeb0',
-        'primary-fixed-dim':         '#e1c296',
+        'primary':                   '#1f7d88',
+        'primary-container':         '#b6852a',
+        'primary-fixed':             '#ecd9a8',
+        'primary-fixed-dim':         '#d4b568',
         'on-primary':                '#ffffff',
-        'on-primary-container':      '#503c1b',
-        'on-primary-fixed':          '#281800',
-        'on-primary-fixed-variant':  '#584321',
-        'inverse-primary':           '#e1c296',
+        'on-primary-container':      '#6d4f16',
+        'on-primary-fixed':          '#201703',
+        'on-primary-fixed-variant':  '#6d4f16',
+        'inverse-primary':           '#d4b568',
 
-        'secondary':                 '#5f5e5c',
-        'secondary-container':       '#e5e2de',
-        'secondary-fixed':           '#e5e2de',
-        'secondary-fixed-dim':       '#c9c6c3',
+        'secondary':                 '#8a7f64',
+        'secondary-container':       '#e6dcc0',
+        'secondary-fixed':           '#e6dcc0',
+        'secondary-fixed-dim':       '#cfc3a4',
         'on-secondary':              '#ffffff',
-        'on-secondary-container':    '#656461',
-        'on-secondary-fixed':        '#1c1c1a',
+        'on-secondary-container':    '#8a7f64',
+        'on-secondary-fixed':        '#1c1a17',
         'on-secondary-fixed-variant':'#474744',
 
         'tertiary':                  '#515f77',
@@ -55,19 +55,19 @@ tailwind.config = {
         'on-tertiary-fixed':         '#0d1c31',
         'on-tertiary-fixed-variant': '#3a475e',
 
-        'outline':                   '#7f766a',
-        'outline-variant':           '#d0c5b7',
+        'outline':                   '#8a7f64',
+        'outline-variant':           '#cfc3a4',
 
         'error':                     '#ba1a1a',
         'error-container':           '#ffdad6',
         'on-error':                  '#ffffff',
         'on-error-container':        '#93000a',
 
-        'inverse-surface':           '#31312c',
-        'inverse-on-surface':        '#f3f0e9',
+        'inverse-surface':           '#0d0d0d',
+        'inverse-on-surface':        '#ece7dc',
 
-        'eclipse':                   '#31312c',
-        'on-eclipse':                '#f3f0e9',
+        'eclipse':                   '#0d0d0d',
+        'on-eclipse':                '#ece7dc',
       },
       borderRadius: {
         DEFAULT: '0px',
@@ -76,10 +76,11 @@ tailwind.config = {
         full:    '9999px',
       },
       fontFamily: {
-        display:  ['"Cormorant Garamond"', '"Noto Serif"', 'Georgia', 'serif'],
-        headline: ['"Noto Serif"',          'Georgia',    'serif'],
-        body:     ['Newsreader',            '"Noto Serif"','Georgia', 'serif'],
-        label:    ['Inter',                 'system-ui',  'sans-serif'],
+        display:  ['"Playfair Display"', 'Georgia', 'serif'],
+        headline: ['"Playfair Display"', 'Georgia', 'serif'],
+        body:     ['"DM Sans"',          'system-ui', 'sans-serif'],
+        label:    ['"Work Sans"',        'system-ui', 'sans-serif'],
+        mono:     ['"IBM Plex Mono"',    'ui-monospace', 'monospace'],
       },
       maxWidth: {
         site: '1280px',

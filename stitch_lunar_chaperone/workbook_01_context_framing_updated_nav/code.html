@@ -3,83 +3,18 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Newsreader:ital,wght@0,400;0,500;1,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "on-error": "#ffffff",
-                        "tertiary-container": "#9eacc7",
-                        "secondary-fixed": "#e5e2de",
-                        "secondary-container": "#e5e2de",
-                        "background": "#fcf9f2",
-                        "secondary-fixed-dim": "#c9c6c3",
-                        "tertiary-fixed-dim": "#b9c7e3",
-                        "surface-container-high": "#ebe8e1",
-                        "on-surface": "#1c1c18",
-                        "surface-container-highest": "#e5e2db",
-                        "surface": "#fcf9f2",
-                        "primary-fixed-dim": "#e1c296",
-                        "on-tertiary": "#ffffff",
-                        "on-error-container": "#93000a",
-                        "error-container": "#ffdad6",
-                        "inverse-on-surface": "#f3f0e9",
-                        "on-secondary-fixed": "#1c1c1a",
-                        "tertiary": "#515f77",
-                        "secondary": "#5f5e5c",
-                        "on-tertiary-fixed-variant": "#3a475e",
-                        "on-background": "#1c1c18",
-                        "surface-container-lowest": "#ffffff",
-                        "on-tertiary-container": "#324057",
-                        "on-primary-fixed-variant": "#584321",
-                        "on-primary": "#ffffff",
-                        "error": "#ba1a1a",
-                        "on-primary-fixed": "#281800",
-                        "surface-dim": "#dcdad3",
-                        "surface-bright": "#fcf9f2",
-                        "surface-container": "#f1eee7",
-                        "tertiary-fixed": "#d5e3ff",
-                        "on-surface-variant": "#4d463c",
-                        "on-secondary-container": "#656461",
-                        "on-primary-container": "#503c1b",
-                        "inverse-surface": "#31312c",
-                        "inverse-primary": "#e1c296",
-                        "on-tertiary-fixed": "#0d1c31",
-                        "surface-tint": "#725b37",
-                        "primary-container": "#c4a77d",
-                        "primary": "#725b37",
-                        "outline-variant": "#d0c5b7",
-                        "outline": "#7f766a",
-                        "primary-fixed": "#fedeb0",
-                        "on-secondary": "#ffffff",
-                        "surface-container-low": "#f6f3ec",
-                        "on-secondary-fixed-variant": "#474744",
-                        "surface-variant": "#e5e2db"
-                    },
-                    fontFamily: {
-                        "headline": ["Noto Serif", "serif"],
-                        "body": ["Newsreader", "serif"],
-                        "label": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "none": "0px"
-                    }
-                }
-            }
-        }
-    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+
+
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
         body {
-            background-color: #fcf9f2;
-            color: #1c1c18;
-            font-family: 'Newsreader', serif;
+            background-color: #efe7d3;
+            color: #1c1a17;
+            font-family: 'DM Sans', serif;
         }
         .custom-scrollbar::-webkit-scrollbar {
             width: 4px;
@@ -88,7 +23,7 @@
             background: transparent;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #d0c5b7;
+            background: #cfc3a4;
         }
         .border-ritual {
             border-bottom: 1px solid rgba(28, 28, 24, 0.1);
@@ -99,57 +34,61 @@
             line-height: 2rem;
         }
     </style>
+
+<script src="../assets/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/style.css"/>
 </head>
 <body class="bg-surface text-on-surface">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#fcf9f2] dark:bg-stone-950 flex justify-between items-center px-12 h-20 w-full border-b border-[#1c1c18]/10 dark:border-[#fcf9f2]/10">
-<div class="font-noto-serif italic font-light text-[#725b37] dark:text-[#c4a77d] text-xl tracking-tight uppercase">LUNAR CHAPERONE</div>
+<nav class="fixed top-0 w-full z-50 bg-[#efe7d3] dark:bg-stone-950 flex justify-between items-center px-12 h-20 w-full border-b border-[#1c1a17]/10 dark:border-[#efe7d3]/10">
+<div class="font-noto-serif italic font-light text-[#1f7d88] dark:text-[#b6852a] text-xl tracking-tight uppercase">LUNAR CHAPERONE</div>
 <div class="flex gap-12 items-center">
-<a class="text-[#725b37] dark:text-[#c4a77d] border-b-0.5 border-[#725b37] pb-1 font-noto-serif text-lg tracking-tight transition-colors duration-300" href="../the_lunar_chaperone_master_index/code.html">The Archive</a>
-<a class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 font-inter uppercase tracking-widest text-[10px] transition-colors duration-300 hover:text-[#725b37]" href="#">Research Logs</a>
+<a class="text-[#1f7d88] dark:text-[#b6852a] border-b-0.5 border-[#1f7d88] pb-1 font-noto-serif text-lg tracking-tight transition-colors duration-300" href="../the_lunar_chaperone_master_index/code.html">The Archive</a>
+<a class="text-[#1c1a17]/60 dark:text-[#efe7d3]/60 font-inter uppercase tracking-widest text-[10px] transition-colors duration-300 hover:text-[#1f7d88]" href="#">Research Logs</a>
 <div class="flex gap-6 ml-4">
-<span class="material-symbols-outlined text-[#725b37] cursor-pointer" data-icon="menu_book">menu_book</span>
-<span class="material-symbols-outlined text-[#725b37] cursor-pointer" data-icon="history_edu">history_edu</span>
+<span class="material-symbols-outlined text-[#1f7d88] cursor-pointer" data-icon="menu_book">menu_book</span>
+<span class="material-symbols-outlined text-[#1f7d88] cursor-pointer" data-icon="history_edu">history_edu</span>
 </div>
 </div>
 </nav>
 <!-- SideNavBar -->
-<aside class="fixed left-0 top-20 h-[calc(100vh-5rem)] w-72 bg-[#fcf9f2] dark:bg-stone-900 flex flex-col py-8 overflow-y-auto border-r border-[#1c1c18]/5 custom-scrollbar">
+<aside class="fixed left-0 top-20 h-[calc(100vh-5rem)] w-72 bg-[#efe7d3] dark:bg-stone-900 flex flex-col py-8 overflow-y-auto border-r border-[#1c1a17]/5 custom-scrollbar">
 <div class="px-8 mb-8">
-<h3 class="font-inter uppercase tracking-[0.15em] text-[11px] text-[#725b37] font-bold">CURRENT WORKBOOK</h3>
+<h3 class="font-inter uppercase tracking-[0.15em] text-[11px] text-[#1f7d88] font-bold">CURRENT WORKBOOK</h3>
 <p class="font-noto-serif text-xl italic opacity-80">Lunar Chaperone Series</p>
 </div>
 <nav class="flex-1 space-y-1">
-<div class="text-[#725b37] dark:text-[#c4a77d] font-bold border-l-2 border-[#725b37] pl-4 flex items-center py-2 transition-all duration-200 ease-in-out cursor-pointer">
+<div class="text-[#1f7d88] dark:text-[#b6852a] font-bold border-l-2 border-[#1f7d88] pl-4 flex items-center py-2 transition-all duration-200 ease-in-out cursor-pointer">
 <span class="material-symbols-outlined mr-3 text-sm" data-icon="radio_button_unchecked">radio_button_unchecked</span>
 <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase I</span>
 </div>
-<div class="text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 flex items-center py-2 transition-all duration-200 ease-in-out hover:bg-[#fcf9f2] dark:hover:bg-stone-800 hover:text-[#725b37] cursor-pointer">
+<div class="text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 flex items-center py-2 transition-all duration-200 ease-in-out hover:bg-[#efe7d3] dark:hover:bg-stone-800 hover:text-[#1f7d88] cursor-pointer">
 <span class="material-symbols-outlined mr-3 text-sm" data-icon="radio_button_unchecked">radio_button_unchecked</span>
 <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase II</span>
 </div>
-<div class="text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 flex items-center py-2 transition-all duration-200 ease-in-out hover:bg-[#fcf9f2] dark:hover:bg-stone-800 hover:text-[#725b37] cursor-pointer">
+<div class="text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 flex items-center py-2 transition-all duration-200 ease-in-out hover:bg-[#efe7d3] dark:hover:bg-stone-800 hover:text-[#1f7d88] cursor-pointer">
 <span class="material-symbols-outlined mr-3 text-sm" data-icon="radio_button_unchecked">radio_button_unchecked</span>
 <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase III</span>
 </div>
 <div class="px-8 py-4 opacity-30 select-none">
 <div class="h-px bg-current w-full"></div>
 </div>
-<div class="text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 flex items-center py-2 transition-all duration-200 ease-in-out hover:bg-[#fcf9f2] dark:hover:bg-stone-800 hover:text-[#725b37] cursor-pointer">
+<div class="text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 flex items-center py-2 transition-all duration-200 ease-in-out hover:bg-[#efe7d3] dark:hover:bg-stone-800 hover:text-[#1f7d88] cursor-pointer">
 <span class="material-symbols-outlined mr-3 text-sm" data-icon="done_all">done_all</span>
 <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase XIV</span>
 </div>
 </nav>
-<div class="px-8 mt-auto pt-8 border-t border-[#1c1c18]/5">
-<button class="w-full bg-[#725b37] text-white py-3 font-inter uppercase tracking-widest text-[10px] mb-6 hover:opacity-90 transition-opacity">
+<div class="px-8 mt-auto pt-8 border-t border-[#1c1a17]/5">
+<button class="w-full bg-[#1f7d88] text-white py-3 font-inter uppercase tracking-widest text-[10px] mb-6 hover:opacity-90 transition-opacity">
                 Begin Ritual
             </button>
 <div class="space-y-4">
-<div class="flex items-center text-[#1c1c18]/40 text-[10px] uppercase tracking-widest cursor-pointer hover:text-[#725b37]">
+<div class="flex items-center text-[#1c1a17]/40 text-[10px] uppercase tracking-widest cursor-pointer hover:text-[#1f7d88]">
 <span class="material-symbols-outlined text-sm mr-2" data-icon="settings">settings</span>
                     Settings
                 </div>
-<div class="flex items-center text-[#1c1c18]/40 text-[10px] uppercase tracking-widest cursor-pointer hover:text-[#725b37]">
+<div class="flex items-center text-[#1c1a17]/40 text-[10px] uppercase tracking-widest cursor-pointer hover:text-[#1f7d88]">
 <span class="material-symbols-outlined text-sm mr-2" data-icon="help">help</span>
                     Support
                 </div>
@@ -162,7 +101,7 @@
 <!-- Header Section -->
 <header class="col-span-12 mb-16 relative">
 <div class="absolute -left-12 top-0 opacity-10 text-[120px] font-headline select-none">01</div>
-<div class="pl-4 border-l border-[#725b37]/20">
+<div class="pl-4 border-l border-[#1f7d88]/20">
 <p class="font-label uppercase tracking-[0.2em] text-[10px] text-primary mb-2">Aries New Moon to Scorpio Full Moon</p>
 <h1 class="font-headline text-6xl font-light text-on-surface leading-tight mb-4">Phase I: <span class="italic">The Primal Spark</span></h1>
 <div class="w-24 h-px bg-primary/40"></div>
@@ -275,7 +214,7 @@
 </div>
 </div>
 <div class="mt-16 flex flex-col items-center">
-<div class="font-noto-serif italic font-light text-[#725b37]/40 text-sm tracking-widest uppercase mb-4">LUNAR CHAPERONE</div>
+<div class="font-noto-serif italic font-light text-[#1f7d88]/40 text-sm tracking-widest uppercase mb-4">LUNAR CHAPERONE</div>
 <div class="flex gap-8">
 <button class="font-label uppercase text-[10px] tracking-[0.2em] text-outline hover:text-primary transition-colors">Archive Index</button>
 <button class="font-label uppercase text-[10px] tracking-[0.2em] text-outline hover:text-primary transition-colors">Phase Protocol</button>

@@ -3,53 +3,29 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;family=Newsreader:ital,wght@0,300;0,400;0,500;1,400&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "primary": "#725b37",
-                    "on-surface": "#1c1c18",
-                    "background": "#fcf9f2",
-                    "surface": "#fcf9f2",
-                    "surface-container-low": "#f6f3ec",
-                    "surface-container-lowest": "#ffffff",
-                    "outline-variant": "#d0c5b7",
-                    "primary-container": "#c4a77d",
-            },
-            "fontFamily": {
-                    "headline": ["Noto Serif", "serif"],
-                    "body": ["Newsreader", "serif"],
-                    "label": ["Inter", "sans-serif"],
-                    "display": ["Cormorant Garamond", "serif"]
-            }
-          },
-        },
-      }
-    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+
+
+
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
         .dotted-area {
-            background-image: radial-gradient(#d0c5b7 1px, transparent 1px);
+            background-image: radial-gradient(#cfc3a4 1px, transparent 1px);
             background-size: 24px 24px;
         }
         .journal-line {
             border: none;
-            border-bottom: 1px solid #d0c5b7;
+            border-bottom: 1px solid #cfc3a4;
             background: transparent;
             transition: all 0.3s ease;
         }
         .journal-line:focus {
             outline: none;
-            border-bottom: 1px solid #725b37;
+            border-bottom: 1px solid #1f7d88;
             padding-left: 8px;
         }
     </style>
@@ -58,20 +34,24 @@
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head>
+  
+<script src="../assets/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/style.css"/>
+</head>
 <body class="bg-background text-on-surface font-body selection:bg-primary-container/30">
 <!-- TopAppBar Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-[#fcf9f2] dark:bg-stone-950 border-b border-[#1c1c18]/10 flex justify-between items-center px-6 py-4">
+<nav class="fixed top-0 w-full z-50 bg-[#efe7d3] dark:bg-stone-950 border-b border-[#1c1a17]/10 flex justify-between items-center px-6 py-4">
 <div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-[#725b37]" data-icon="menu_book">menu_book</span>
-<span class="font-notoSerif text-lg tracking-widest uppercase text-[#725b37] dark:text-[#c4a77d]">Sacred Ledger</span>
+<span class="material-symbols-outlined text-[#1f7d88]" data-icon="menu_book">menu_book</span>
+<span class="font-notoSerif text-lg tracking-widest uppercase text-[#1f7d88] dark:text-[#b6852a]">Sacred Ledger</span>
 </div>
 <div class="hidden md:flex gap-8 items-center">
-<a class="font-label text-[10px] tracking-[0.15em] uppercase font-medium text-[#1c1c18]/60 hover:text-[#725b37] transition-colors duration-300" href="#">Archive</a>
-<a class="font-label text-[10px] tracking-[0.15em] uppercase font-medium text-[#725b37] border-b border-[#725b37]" href="#">Library</a>
-<a class="font-label text-[10px] tracking-[0.15em] uppercase font-medium text-[#1c1c18]/60 hover:text-[#725b37] transition-colors duration-300" href="#">Research</a>
+<a class="font-label text-[10px] tracking-[0.15em] uppercase font-medium text-[#1c1a17]/60 hover:text-[#1f7d88] transition-colors duration-300" href="#">Archive</a>
+<a class="font-label text-[10px] tracking-[0.15em] uppercase font-medium text-[#1f7d88] border-b border-[#1f7d88]" href="#">Library</a>
+<a class="font-label text-[10px] tracking-[0.15em] uppercase font-medium text-[#1c1a17]/60 hover:text-[#1f7d88] transition-colors duration-300" href="#">Research</a>
 </div>
-<div class="font-notoSerif italic text-[#725b37] dark:text-[#c4a77d] text-2xl">MOONTUNER</div>
+<div class="font-notoSerif italic text-[#1f7d88] dark:text-[#b6852a] text-2xl">MOONTUNER</div>
 </nav>
 <main class="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
 <!-- Header Section -->
@@ -375,16 +355,16 @@
 </footer>
 </main>
 <!-- Bottom Navigation for Mobile -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-[#fcf9f2] dark:bg-stone-950 flex justify-around items-center px-4 pb-4 pt-2 border-t border-[#1c1c18]/10">
-<a class="flex flex-col items-center justify-center text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 pt-2" href="#">
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-[#efe7d3] dark:bg-stone-950 flex justify-around items-center px-4 pb-4 pt-2 border-t border-[#1c1a17]/10">
+<a class="flex flex-col items-center justify-center text-[#1c1a17]/50 dark:text-[#efe7d3]/40 pt-2" href="#">
 <span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
 <span class="font-label text-[10px] tracking-[0.15em] uppercase font-medium mt-1">Archive</span>
 </a>
-<a class="flex flex-col items-center justify-center text-[#725b37] dark:text-[#c4a77d] font-bold border-t-2 border-[#725b37] -mt-[1px] pt-2" href="#">
+<a class="flex flex-col items-center justify-center text-[#1f7d88] dark:text-[#b6852a] font-bold border-t-2 border-[#1f7d88] -mt-[1px] pt-2" href="#">
 <span class="material-symbols-outlined" data-icon="local_library">local_library</span>
 <span class="font-label text-[10px] tracking-[0.15em] uppercase font-medium mt-1">Library</span>
 </a>
-<a class="flex flex-col items-center justify-center text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 pt-2" href="#">
+<a class="flex flex-col items-center justify-center text-[#1c1a17]/50 dark:text-[#efe7d3]/40 pt-2" href="#">
 <span class="material-symbols-outlined" data-icon="microscope">magnification_small</span>
 <span class="font-label text-[10px] tracking-[0.15em] uppercase font-medium mt-1">Research</span>
 </a>
