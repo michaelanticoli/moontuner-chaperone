@@ -4,123 +4,59 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Sacred Ledger | Design Workbook #04</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "primary-container": "#c4a77d",
-                        "surface-bright": "#fcf9f2",
-                        "on-error": "#ffffff",
-                        "on-error-container": "#93000a",
-                        "on-secondary": "#ffffff",
-                        "on-primary-fixed": "#281800",
-                        "secondary-container": "#e5e2de",
-                        "surface-container-highest": "#e5e2db",
-                        "secondary": "#5f5e5c",
-                        "error": "#ba1a1a",
-                        "inverse-primary": "#e1c296",
-                        "primary-fixed-dim": "#e1c296",
-                        "outline-variant": "#d0c5b7",
-                        "on-primary": "#ffffff",
-                        "tertiary-fixed-dim": "#b9c7e3",
-                        "surface-container-low": "#f6f3ec",
-                        "secondary-fixed-dim": "#c9c6c3",
-                        "inverse-on-surface": "#f3f0e9",
-                        "on-primary-container": "#503c1b",
-                        "outline": "#7f766a",
-                        "tertiary-fixed": "#d5e3ff",
-                        "surface-dim": "#dcdad3",
-                        "on-tertiary-container": "#324057",
-                        "surface-container": "#f1eee7",
-                        "primary": "#725b37",
-                        "surface-tint": "#725b37",
-                        "on-tertiary": "#ffffff",
-                        "secondary-fixed": "#e5e2de",
-                        "on-secondary-fixed-variant": "#474744",
-                        "surface-container-lowest": "#ffffff",
-                        "background": "#fcf9f2",
-                        "tertiary": "#515f77",
-                        "on-secondary-fixed": "#1c1c1a",
-                        "inverse-surface": "#31312c",
-                        "tertiary-container": "#9eacc7",
-                        "surface-variant": "#e5e2db",
-                        "on-primary-fixed-variant": "#584321",
-                        "on-tertiary-fixed": "#0d1c31",
-                        "on-tertiary-fixed-variant": "#3a475e",
-                        "surface": "#fcf9f2",
-                        "on-secondary-container": "#656461",
-                        "on-surface-variant": "#4d463c",
-                        "surface-container-high": "#ebe8e1",
-                        "on-surface": "#1c1c18",
-                        "error-container": "#ffdad6",
-                        "primary-fixed": "#fedeb0",
-                        "on-background": "#1c1c18"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0px",
-                        "lg": "0px",
-                        "xl": "0px",
-                        "full": "9999px"
-                    },
-                    "fontFamily": {
-                        "headline": ["Noto Serif"],
-                        "body": ["Newsreader"],
-                        "label": ["Inter"]
-                    }
-                },
-            },
-        }
-    </script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+
+
 <style>
-        body { font-family: 'Newsreader', serif; background-color: #fcf9f2; color: #1c1c18; }
+        body { font-family: 'DM Sans', serif; background-color: #efe7d3; color: #1c1a17; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
         .ghost-border { outline: 1px solid rgba(127, 118, 106, 0.15); }
-        .marginalia { font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #7f766a; }
+        .marginalia { font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #8a7f64; }
     </style>
 
-<link rel="stylesheet" href="../assets/style.css"/>
+
 <script src="../assets/nav.js" data-workbook="04"></script>
+
+<script src="../assets/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/style.css"/>
 </head>
 <body class="bg-surface text-on-surface">
 <!-- Sidebar Navigation -->
-<nav class="fixed left-0 top-0 h-full flex flex-col p-8 z-40 bg-[#f5f2eb] dark:bg-[#141412] w-72 transition-all ease-in-out duration-400">
+<nav class="fixed left-0 top-0 h-full flex flex-col p-8 z-40 bg-[#f4eedd] dark:bg-[#0d0d0d] w-72 transition-all ease-in-out duration-400">
 <div class="mb-12">
-<h2 class="text-lg font-bold text-[#1c1c18] dark:text-[#fcf9f2] font-label uppercase tracking-[0.1em]">Workbook Index</h2>
-<p class="text-[10px] font-label uppercase tracking-[0.1em] text-[#1c1c18]/60">Series Alpha-Omega</p>
+<h2 class="text-lg font-bold text-[#1c1a17] dark:text-[#efe7d3] font-label uppercase tracking-[0.1em]">Workbook Index</h2>
+<p class="text-[10px] font-label uppercase tracking-[0.1em] text-[#1c1a17]/60">Series Alpha-Omega</p>
 </div>
 <ul class="flex-grow space-y-8">
 <li class="group">
-<a class="flex items-center gap-4 text-[#1c1c18]/80 hover:bg-[#fcf9f2]/50 p-2 transition-all" href="#">
-<span class="material-symbols-outlined text-[#725b37]">brightness_3</span>
+<a class="flex items-center gap-4 text-[#1c1a17]/80 hover:bg-[#efe7d3]/50 p-2 transition-all" href="#">
+<span class="material-symbols-outlined text-[#1f7d88]">brightness_3</span>
 <span class="font-label uppercase tracking-[0.1em] text-[10px]">Current Moon</span>
 </a>
 </li>
 <li class="group">
-<a class="flex items-center gap-4 text-[#725b37] font-bold translate-x-2 p-2 bg-[#fcf9f2]/50 transition-all" href="#">
-<span class="material-symbols-outlined text-[#725b37]">auto_stories</span>
+<a class="flex items-center gap-4 text-[#1f7d88] font-bold translate-x-2 p-2 bg-[#efe7d3]/50 transition-all" href="#">
+<span class="material-symbols-outlined text-[#1f7d88]">auto_stories</span>
 <span class="font-label uppercase tracking-[0.1em] text-[10px]">Archival Ledger</span>
 </a>
 </li>
 <li class="group">
-<a class="flex items-center gap-4 text-[#1c1c18]/80 hover:bg-[#fcf9f2]/50 p-2 transition-all" href="#">
+<a class="flex items-center gap-4 text-[#1c1a17]/80 hover:bg-[#efe7d3]/50 p-2 transition-all" href="#">
 <span class="material-symbols-outlined">explore</span>
 <span class="font-label uppercase tracking-[0.1em] text-[10px]">Celestial Map</span>
 </a>
 </li>
 <li class="group">
-<a class="flex items-center gap-4 text-[#1c1c18]/80 hover:bg-[#fcf9f2]/50 p-2 transition-all" href="#">
+<a class="flex items-center gap-4 text-[#1c1a17]/80 hover:bg-[#efe7d3]/50 p-2 transition-all" href="#">
 <span class="material-symbols-outlined">edit_note</span>
 <span class="font-label uppercase tracking-[0.1em] text-[10px]">Scholar Notes</span>
 </a>
 </li>
 <li class="group">
-<a class="flex items-center gap-4 text-[#1c1c18]/80 hover:bg-[#fcf9f2]/50 p-2 transition-all" href="#">
+<a class="flex items-center gap-4 text-[#1c1a17]/80 hover:bg-[#efe7d3]/50 p-2 transition-all" href="#">
 <span class="material-symbols-outlined">settings</span>
 <span class="font-label uppercase tracking-[0.1em] text-[10px]">Settings</span>
 </a>
@@ -128,7 +64,7 @@
 </ul>
 <div class="mt-auto border-t border-outline-variant/20 pt-6">
 <button class="w-full py-4 bg-primary text-on-primary font-label uppercase tracking-widest text-[10px] mb-6">New Transcription</button>
-<div class="flex items-center gap-2 text-[#1c1c18]/60">
+<div class="flex items-center gap-2 text-[#1c1a17]/60">
 <span class="material-symbols-outlined text-sm">help_outline</span>
 <span class="font-label uppercase tracking-[0.1em] text-[10px]">Library Help</span>
 </div>
@@ -139,11 +75,11 @@
 <!-- Top Bar -->
 <header class="flex justify-between items-center px-12 py-6 w-full sticky top-0 bg-surface/80 backdrop-blur-md z-30">
 <div class="flex items-center gap-8">
-<h1 class="text-2xl font-['Noto_Serif'] italic text-[#1c1c18]">Sacred Ledger</h1>
+<h1 class="text-2xl font-['Playfair_Display'] italic text-[#1c1a17]">Sacred Ledger</h1>
 <nav class="hidden md:flex gap-6 items-center">
-<a class="font-label uppercase tracking-[0.15em] text-xs text-[#1c1c18]/60 hover:text-[#725b37] transition-colors" href="../the_lunar_chaperone_master_index/code.html">The Archive</a>
-<a class="font-label uppercase tracking-[0.15em] text-xs text-[#725b37] border-b border-[#725b37] pb-1" href="#">Half-Cycle</a>
-<a class="font-label uppercase tracking-[0.15em] text-xs text-[#1c1c18]/60 hover:text-[#725b37] transition-colors" href="#">Rituals</a>
+<a class="font-label uppercase tracking-[0.15em] text-xs text-[#1c1a17]/60 hover:text-[#1f7d88] transition-colors" href="../the_lunar_chaperone_master_index/code.html">The Archive</a>
+<a class="font-label uppercase tracking-[0.15em] text-xs text-[#1f7d88] border-b border-[#1f7d88] pb-1" href="#">Half-Cycle</a>
+<a class="font-label uppercase tracking-[0.15em] text-xs text-[#1c1a17]/60 hover:text-[#1f7d88] transition-colors" href="#">Rituals</a>
 </nav>
 </div>
 <div class="flex items-center gap-6">

@@ -1,65 +1,78 @@
 /* ─────────────────────────────────────────────────────────────────────────────
-   Lunar Chaperone — Canonical Design System Tokens
-   Paper-archive aesthetic: warm ivory, deep ink, muted gold
+   Lunar Chaperone — Moontuner riso/paper restyle
+   Drop-in replacement for stitch_lunar_chaperone/assets/style.css
+   Cream riso stock, warm ink, teal signal (interactive), riso gold (editorial)
    ───────────────────────────────────────────────────────────────────────────── */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Noto+Serif:ital,wght@0,300;0,400;1,300&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
 /* ── Color tokens ───────────────────────────────────────────────────────────── */
 :root {
-  --lc-bg:                  #fcf9f2;
-  --lc-bg-low:              #f6f3ec;
-  --lc-bg-mid:              #f1eee7;
-  --lc-bg-high:             #ebe8e1;
-  --lc-bg-highest:          #e5e2db;
-  --lc-bg-dim:              #dcdad3;
-  --lc-surface:             #fcf9f2;
-  --lc-surface-variant:     #e5e2db;
+  --lc-bg:                  #efe7d3;   /* riso cream stock */
+  --lc-bg-low:              #f4eedd;
+  --lc-bg-mid:              #e9dfc6;
+  --lc-bg-high:             #e3d8bc;
+  --lc-bg-highest:          #ddd1b2;
+  --lc-bg-dim:              #d4c8a6;
+  --lc-surface:             #efe7d3;
+  --lc-surface-variant:     #ddd1b2;
 
-  --lc-ink:                 #1c1c18;
-  --lc-ink-60:              rgba(28,28,24,0.60);
-  --lc-ink-40:              rgba(28,28,24,0.40);
+  --lc-ink:                 #1c1a17;
+  --lc-ink-60:              rgba(28,26,23,0.60);
+  --lc-ink-40:              rgba(28,26,23,0.40);
 
-  --lc-gold:                #725b37;   /* primary */
-  --lc-gold-container:      #c4a77d;   /* primary-container */
-  --lc-gold-fixed:          #fedeb0;
-  --lc-gold-fixed-dim:      #e1c296;
-  --lc-gold-dark:           #503c1b;
+  /* Teal signal — interactive / live / status (Moontuner accent) */
+  --lc-teal:                #1f7d88;
 
-  --lc-outline:             #7f766a;
-  --lc-outline-variant:     #d0c5b7;
+  /* Riso gold — editorial warmth (kept on the old "gold" token names) */
+  --lc-gold:                #1f7d88;   /* primary → teal signal (interactive) */
+  --lc-gold-accent:         #b6852a;   /* riso gold, editorial accents */
+  --lc-gold-container:      #b6852a;   /* primary-container */
+  --lc-gold-fixed:          #ecd9a8;
+  --lc-gold-fixed-dim:      #d4b568;
+  --lc-gold-dark:           #6d4f16;
 
-  --lc-secondary:           #5f5e5c;
-  --lc-secondary-container: #e5e2de;
+  --lc-outline:             #8a7f64;
+  --lc-outline-variant:     #cfc3a4;
 
-  --lc-eclipse:             #31312c;   /* deep ink for eclipse portal cards */
-  --lc-eclipse-text:        #f3f0e9;
+  --lc-secondary:           #8a7f64;
+  --lc-secondary-container: #e6dcc0;
+
+  --lc-eclipse:             #0d0d0d;   /* Core night for eclipse portal cards */
+  --lc-eclipse-text:        #ece7dc;   /* lunar ivory */
 
   /* Cycle group tints */
-  --lc-cycle1-bg:           #f9f6ee;
-  --lc-cycle2-bg:           #f4f1ea;
-  --lc-eclipse-bg:          #2b2925;
+  --lc-cycle1-bg:           #f2ead6;
+  --lc-cycle2-bg:           #ece2c9;
+  --lc-eclipse-bg:          #111110;
+
+  /* Used by .btn-primary / .btn-secondary */
+  --lc-primary:             #1f7d88;
+  --lc-ivory:               #ece7dc;
 }
 
 /* ── Typography scale ───────────────────────────────────────────────────────── */
 :root {
-  --font-display:  'Cormorant Garamond', 'Noto Serif', Georgia, serif;
-  --font-body:     'Newsreader', 'Noto Serif', Georgia, serif;
-  --font-label:    'Inter', system-ui, sans-serif;
+  --font-hero:      'Inter', system-ui, sans-serif;              /* extralight display */
+  --font-display:   'Playfair Display', Georgia, serif;          /* serif headlines + italic accents */
+  --font-editorial: 'Instrument Serif', Georgia, serif;          /* pull-quotes, ritual numerals */
+  --font-body:      'DM Sans', system-ui, sans-serif;
+  --font-label:     'Work Sans', system-ui, sans-serif;
+  --font-mono:      'IBM Plex Mono', ui-monospace, monospace;
 
-  --text-2xs:  0.625rem;   /* 10px */
-  --text-xs:   0.75rem;    /* 12px */
-  --text-sm:   0.875rem;   /* 14px */
-  --text-base: 1rem;       /* 16px */
-  --text-lg:   1.125rem;   /* 18px */
-  --text-xl:   1.25rem;    /* 20px */
-  --text-2xl:  1.5rem;     /* 24px */
-  --text-3xl:  1.875rem;   /* 30px */
-  --text-4xl:  2.25rem;    /* 36px */
-  --text-5xl:  3rem;       /* 48px */
-  --text-6xl:  3.75rem;    /* 60px */
-  --text-7xl:  4.5rem;     /* 72px */
-  --text-8xl:  6rem;       /* 96px */
+  --text-2xs:  0.625rem;
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+  --text-6xl:  3.75rem;
+  --text-7xl:  4.5rem;
+  --text-8xl:  6rem;
 
   --leading-tight:   1;
   --leading-snug:    1.2;
@@ -74,19 +87,25 @@
 
 /* ── Spacing scale ──────────────────────────────────────────────────────────── */
 :root {
-  --space-1:  0.25rem;   /* 4px  */
-  --space-2:  0.5rem;    /* 8px  */
-  --space-3:  0.75rem;   /* 12px */
-  --space-4:  1rem;      /* 16px */
-  --space-6:  1.5rem;    /* 24px */
-  --space-8:  2rem;      /* 32px */
-  --space-12: 3rem;      /* 48px */
-  --space-16: 4rem;      /* 64px */
-  --space-20: 5rem;      /* 80px */
-  --space-24: 6rem;      /* 96px */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
 
   --max-w:    1280px;
   --outer-px: clamp(1.5rem, 5vw, 5rem);
+
+  /* Moontuner radii */
+  --radius-sm: 4px;
+  --radius:    8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
 }
 
 /* ── Global resets & base ───────────────────────────────────────────────────── */
@@ -105,8 +124,19 @@ body {
 }
 
 ::selection {
-  background: var(--lc-gold-container);
-  color:      var(--lc-gold-dark);
+  background: var(--lc-gold-accent);
+  color:      #ffffff;
+}
+
+/* Moontuner headline gesture: italic accent clauses inside display headlines
+   render as italic serif in riso gold. */
+.font-headline .italic,
+.font-headline em,
+.font-display .italic,
+.font-display em {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--lc-gold-accent);
 }
 
 /* ── Material Symbols ───────────────────────────────────────────────────────── */
@@ -118,26 +148,26 @@ body {
 /* ── Scrollbar ─────────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar        { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track  { background: var(--lc-bg); }
-::-webkit-scrollbar-thumb  { background: var(--lc-outline-variant); }
+::-webkit-scrollbar-thumb  { background: var(--lc-gold-accent); }
 
 /* ── Radiating-circles decorative bg ──────────────────────────────────────── */
 .radiating-circles {
   background-image:
     radial-gradient(circle at 100% 0%, transparent 0%, transparent 40%,
-      rgba(114,91,55,0.03) 41%, rgba(114,91,55,0.03) 42%, transparent 43%),
+      rgba(182,133,42,0.05) 41%, rgba(182,133,42,0.05) 42%, transparent 43%),
     radial-gradient(circle at 100% 0%, transparent 0%, transparent 60%,
-      rgba(114,91,55,0.03) 61%, rgba(114,91,55,0.03) 62%, transparent 63%),
+      rgba(182,133,42,0.05) 61%, rgba(182,133,42,0.05) 62%, transparent 63%),
     radial-gradient(circle at 100% 0%, transparent 0%, transparent 80%,
-      rgba(114,91,55,0.03) 81%, rgba(114,91,55,0.03) 82%, transparent 83%);
+      rgba(182,133,42,0.05) 81%, rgba(182,133,42,0.05) 82%, transparent 83%);
 }
 
 /* ── Utility: thin ruled lines ─────────────────────────────────────────────── */
 .rule      { border: none; border-top: 1px solid var(--lc-outline-variant); }
-.rule-gold { border: none; border-top: 1px solid var(--lc-gold); }
+.rule-gold { border: none; border-top: 1px solid var(--lc-gold-accent); }
 
 /* ── Ornament ──────────────────────────────────────────────────────────────── */
-.ornament::before { content: '✦'; color: var(--lc-gold-container); margin-right: 0.4em; }
-.ornament::after  { content: '✦'; color: var(--lc-gold-container); margin-left:  0.4em; }
+.ornament::before { content: '✦'; color: var(--lc-gold-accent); margin-right: 0.4em; }
+.ornament::after  { content: '✦'; color: var(--lc-gold-accent); margin-left:  0.4em; }
 
 /* ── Phase badges ──────────────────────────────────────────────────────────── */
 .badge {
@@ -148,15 +178,17 @@ body {
   text-transform: uppercase;
   padding: 0.2em 0.6em;
   border: 1px solid currentColor;
+  border-radius: var(--radius-sm);
 }
-.badge-cycle1  { color: var(--lc-gold);    border-color: rgba(114,91,55,0.35); background: rgba(196,167,125,0.08); }
-.badge-cycle2  { color: var(--lc-outline); border-color: rgba(127,118,106,0.35); background: rgba(127,118,106,0.06); }
-.badge-eclipse { color: var(--lc-eclipse-text); border-color: rgba(243,240,233,0.25); background: var(--lc-eclipse); }
+.badge-cycle1  { color: var(--lc-gold-dark);  border-color: rgba(182,133,42,0.45); background: rgba(182,133,42,0.10); }
+.badge-cycle2  { color: var(--lc-outline);    border-color: rgba(138,127,100,0.40); background: rgba(138,127,100,0.08); }
+.badge-eclipse { color: var(--lc-eclipse-text); border-color: rgba(236,231,220,0.25); background: var(--lc-eclipse); }
 
 /* ── Workbook card ─────────────────────────────────────────────────────────── */
 .wb-card {
-  background: var(--lc-bg);
+  background: var(--lc-bg-low);
   border: 1px solid var(--lc-outline-variant);
+  border-radius: var(--radius-lg);
   padding: 2rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   cursor: pointer;
@@ -166,16 +198,16 @@ body {
 }
 .wb-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(114,91,55,0.10);
-  border-color: var(--lc-gold-container);
+  border-color: var(--lc-teal);
+  box-shadow: 0 0 0 1px rgba(31,125,136,0.12), 0 6px 24px rgba(31,125,136,0.10);
 }
 .wb-card.eclipse {
   background: var(--lc-eclipse);
   color: var(--lc-eclipse-text);
-  border-color: rgba(243,240,233,0.15);
+  border-color: rgba(236,231,220,0.15);
 }
 .wb-card.eclipse:hover {
-  border-color: rgba(243,240,233,0.40);
+  border-color: var(--lc-teal);
 }
 
 /* ── Progress timeline strip ───────────────────────────────────────────────── */
@@ -190,12 +222,13 @@ body {
   height: 8px;
   border: 1px solid var(--lc-outline-variant);
   background: transparent;
+  border-radius: 9999px;
   transition: background 0.2s, border-color 0.2s;
   flex-shrink: 0;
 }
-.timeline-dot.done    { background: var(--lc-gold-container); border-color: var(--lc-gold-container); }
-.timeline-dot.current { background: var(--lc-gold);           border-color: var(--lc-gold); }
-.timeline-dot.eclipse { background: var(--lc-eclipse);        border-color: var(--lc-eclipse); }
+.timeline-dot.done    { background: var(--lc-gold-accent); border-color: var(--lc-gold-accent); }
+.timeline-dot.current { background: var(--lc-teal);        border-color: var(--lc-teal); }
+.timeline-dot.eclipse { background: var(--lc-eclipse);     border-color: var(--lc-eclipse); }
 
 /* ── Section tabs ──────────────────────────────────────────────────────────── */
 .section-tabs {
@@ -225,8 +258,8 @@ body {
   border-right: none;
   text-decoration: none;
 }
-.section-tab:hover       { color: var(--lc-gold); }
-.section-tab.active      { color: var(--lc-gold); border-bottom-color: var(--lc-gold); }
+.section-tab:hover       { color: var(--lc-teal); }
+.section-tab.active      { color: var(--lc-teal); border-bottom-color: var(--lc-teal); }
 
 /* ── Section panel fade ────────────────────────────────────────────────────── */
 .section-panel { animation: fadeIn 0.2s ease; }
@@ -237,7 +270,7 @@ body {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  background: rgba(252,249,242,0.92);
+  background: rgba(239,231,211,0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--lc-outline-variant);
   transition: background 0.3s;
@@ -246,10 +279,10 @@ body {
 /* ── Hero entrance animation ───────────────────────────────────────────────── */
 .hero-enter {
   opacity: 0;
-  animation: heroEnter 0.8s ease forwards;
+  animation: heroEnter 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 @keyframes heroEnter {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0);    }
 }
 
@@ -269,9 +302,9 @@ body {
   text-decoration: none;
   transition: color 0.2s;
 }
-.breadcrumb a:hover { color: var(--lc-gold); }
+.breadcrumb a:hover { color: var(--lc-teal); }
 .breadcrumb-sep { color: var(--lc-outline-variant); }
-.breadcrumb .current { color: var(--lc-gold); }
+.breadcrumb .current { color: var(--lc-gold-dark); }
 
 /* ── Prev/Next footer nav ──────────────────────────────────────────────────── */
 .wb-nav-footer {
@@ -304,31 +337,42 @@ body {
 .btn-primary {
   display: inline-block;
   padding: 0.875rem 2rem;
-  background: var(--lc-primary);
-  color: var(--lc-ivory);
+  background: var(--lc-ink);
+  color: var(--lc-bg);
   font-family: var(--font-label);
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
   text-decoration: none;
   border: none;
+  border-radius: 9999px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
 }
-.btn-primary:hover { background: var(--lc-gold-dark); }
+.btn-primary:hover  { background: var(--lc-gold-accent); color: #ffffff; }
+.btn-primary:active { transform: scale(0.97); }
 
 .btn-secondary {
   display: inline-block;
   padding: 0.875rem 2rem;
   background: transparent;
-  color: var(--lc-primary);
+  color: var(--lc-ink);
   font-family: var(--font-label);
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
   text-decoration: none;
-  border: 1px solid var(--lc-outline-variant);
+  border: 1px solid var(--lc-outline);
+  border-radius: 9999px;
   cursor: pointer;
-  transition: border-color 0.2s, color 0.2s;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
-.btn-secondary:hover { border-color: var(--lc-primary); color: var(--lc-primary); }
+.btn-secondary:hover  { background: var(--lc-ink); color: var(--lc-bg); border-color: var(--lc-ink); }
+.btn-secondary:active { transform: scale(0.97); }
+
+/* ── Focus (Moontuner: teal ring) ───────────────────────────── */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: none;
+  border-color: var(--lc-teal);
+  box-shadow: 0 0 0 3px rgba(31,125,136,0.12);
+}

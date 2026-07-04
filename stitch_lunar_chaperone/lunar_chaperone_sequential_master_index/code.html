@@ -3,69 +3,50 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;display=swap" rel="stylesheet"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
         }
         body {
-            font-family: 'Newsreader', serif;
+            font-family: 'DM Sans', serif;
             -webkit-font-smoothing: antialiased;
         }
-        .font-noto-serif { font-family: 'Noto Serif', serif; }
+        .font-noto-serif { font-family: 'Playfair Display', serif; }
         .font-inter { font-family: 'Inter', sans-serif; }
-        .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+        .font-cormorant { font-family: 'Playfair Display', serif; }
         
         ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #fcf9f2; }
-        ::-webkit-scrollbar-thumb { background: #d0c5b7; }
+        ::-webkit-scrollbar-track { background: #efe7d3; }
+        ::-webkit-scrollbar-thumb { background: #cfc3a4; }
     </style>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-surface": "#1c1c18",
-                        "surface": "#fcf9f2",
-                        "primary-container": "#c4a77d",
-                        "primary": "#725b37",
-                        "outline-variant": "#d0c5b7",
-                        "surface-container-low": "#f6f3ec",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-container-highest": "#e5e2db"
-                    },
-                    "fontFamily": {
-                        "headline": ["Noto Serif"],
-                        "body": ["Newsreader"],
-                        "label": ["Inter"]
-                    }
-                }
-            }
-        }
-    </script>
+
 <style>
         body {
             min-height: max(884px, 100dvh);
         }
     </style>
+
+<script src="../assets/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/style.css"/>
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary-container/30">
 <!-- TopAppBar -->
-<header class="fixed top-0 z-50 w-full bg-[#fcf9f2] dark:bg-stone-950 border-b-[0.5px] border-stone-200 dark:border-stone-800 flex justify-between items-center px-6 py-4">
+<header class="fixed top-0 z-50 w-full bg-[#efe7d3] dark:bg-stone-950 border-b-[0.5px] border-stone-200 dark:border-stone-800 flex justify-between items-center px-6 py-4">
 <div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d]" data-icon="menu_book">menu_book</span>
-<h1 class="text-lg font-normal tracking-[0.15em] uppercase text-[#1c1c18] dark:text-stone-200 font-noto-serif">THE CANONICAL ARCHIVE</h1>
+<span class="material-symbols-outlined text-[#1f7d88] dark:text-[#b6852a]" data-icon="menu_book">menu_book</span>
+<h1 class="text-lg font-normal tracking-[0.15em] uppercase text-[#1c1a17] dark:text-stone-200 font-noto-serif">THE CANONICAL ARCHIVE</h1>
 </div>
 <div class="flex items-center gap-6">
 <nav class="hidden md:flex gap-8 text-[10px] tracking-[0.2em] font-inter uppercase font-medium">
-<a class="text-[#725b37] dark:text-[#c4a77d] transition-colors duration-300" href="#">Archive</a>
-<a class="text-stone-400 dark:text-stone-600 hover:text-[#725b37] transition-colors duration-300" href="#">Library</a>
-<a class="text-stone-400 dark:text-stone-600 hover:text-[#725b37] transition-colors duration-300" href="#">Research</a>
+<a class="text-[#1f7d88] dark:text-[#b6852a] transition-colors duration-300" href="#">Archive</a>
+<a class="text-stone-400 dark:text-stone-600 hover:text-[#1f7d88] transition-colors duration-300" href="#">Library</a>
+<a class="text-stone-400 dark:text-stone-600 hover:text-[#1f7d88] transition-colors duration-300" href="#">Research</a>
 </nav>
-<span class="material-symbols-outlined text-[#725b37] dark:text-[#c4a77d]" data-icon="search">search</span>
+<span class="material-symbols-outlined text-[#1f7d88] dark:text-[#b6852a]" data-icon="search">search</span>
 </div>
 </header>
 <main class="pt-32 pb-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
@@ -114,7 +95,7 @@
 <span class="material-symbols-outlined text-primary/20 group-hover:text-primary transition-colors" data-icon="north_east">north_east</span>
 </a>
 <!-- Workbook 03 - Special Portal -->
-<a class="group py-10 flex flex-col md:flex-row gap-8 items-start md:items-center bg-[#725b37]/5 hover:bg-[#725b37]/10 transition-colors duration-300 px-4 border-l-2 border-primary block" href="#">
+<a class="group py-10 flex flex-col md:flex-row gap-8 items-start md:items-center bg-[#1f7d88]/5 hover:bg-[#1f7d88]/10 transition-colors duration-300 px-4 border-l-2 border-primary block" href="#">
 <span class="font-inter text-[11px] tracking-widest text-primary w-12 font-bold">03</span>
 <div class="flex-grow">
 <div class="flex items-center gap-2 mb-1">
@@ -154,7 +135,7 @@
 <button class="mt-6 font-inter text-[9px] tracking-widest uppercase border border-outline-variant px-6 py-2 hover:bg-primary hover:text-white transition-all">View All 26 Workbooks</button>
 </div>
 <!-- Workbook 25 - Special Portal -->
-<a class="group py-10 flex flex-col md:flex-row gap-8 items-start md:items-center bg-[#725b37]/5 hover:bg-[#725b37]/10 transition-colors duration-300 px-4 border-l-2 border-primary block" href="#">
+<a class="group py-10 flex flex-col md:flex-row gap-8 items-start md:items-center bg-[#1f7d88]/5 hover:bg-[#1f7d88]/10 transition-colors duration-300 px-4 border-l-2 border-primary block" href="#">
 <span class="font-inter text-[11px] tracking-widest text-primary w-12 font-bold">25</span>
 <div class="flex-grow">
 <div class="flex items-center gap-2 mb-1">
@@ -203,8 +184,8 @@
 </footer>
 </main>
 <!-- BottomNavBar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#fcf9f2]/80 dark:bg-stone-950/80 backdrop-blur-md border-t-[0.5px] border-stone-200 dark:border-stone-800 flex justify-around items-center px-4 h-16 z-50">
-<a class="flex flex-col items-center justify-center text-[#725b37] border-t border-[#725b37] -mt-[0.5px] px-4 h-full" href="#">
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#efe7d3]/80 dark:bg-stone-950/80 backdrop-blur-md border-t-[0.5px] border-stone-200 dark:border-stone-800 flex justify-around items-center px-4 h-16 z-50">
+<a class="flex flex-col items-center justify-center text-[#1f7d88] border-t border-[#1f7d88] -mt-[0.5px] px-4 h-full" href="#">
 <span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
 <span class="font-inter uppercase text-[10px] tracking-[0.15em] font-medium mt-1">Archive</span>
 </a>

@@ -3,87 +3,19 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-error": "#ffffff",
-                    "tertiary-container": "#9eacc7",
-                    "secondary-fixed": "#e5e2de",
-                    "secondary-container": "#e5e2de",
-                    "background": "#fcf9f2",
-                    "secondary-fixed-dim": "#c9c6c3",
-                    "tertiary-fixed-dim": "#b9c7e3",
-                    "surface-container-high": "#ebe8e1",
-                    "on-surface": "#1c1c18",
-                    "surface-container-highest": "#e5e2db",
-                    "surface": "#fcf9f2",
-                    "primary-fixed-dim": "#e1c296",
-                    "on-tertiary": "#ffffff",
-                    "on-error-container": "#93000a",
-                    "error-container": "#ffdad6",
-                    "inverse-on-surface": "#f3f0e9",
-                    "on-secondary-fixed": "#1c1c1a",
-                    "tertiary": "#515f77",
-                    "secondary": "#5f5e5c",
-                    "on-tertiary-fixed-variant": "#3a475e",
-                    "on-background": "#1c1c18",
-                    "surface-container-lowest": "#ffffff",
-                    "on-tertiary-container": "#324057",
-                    "on-primary-fixed-variant": "#584321",
-                    "on-primary": "#ffffff",
-                    "error": "#ba1a1a",
-                    "on-primary-fixed": "#281800",
-                    "surface-dim": "#dcdad3",
-                    "surface-bright": "#fcf9f2",
-                    "surface-container": "#f1eee7",
-                    "tertiary-fixed": "#d5e3ff",
-                    "on-surface-variant": "#4d463c",
-                    "on-secondary-container": "#656461",
-                    "on-primary-container": "#503c1b",
-                    "inverse-surface": "#31312c",
-                    "inverse-primary": "#e1c296",
-                    "on-tertiary-fixed": "#0d1c31",
-                    "surface-tint": "#725b37",
-                    "primary-container": "#c4a77d",
-                    "primary": "#725b37",
-                    "outline-variant": "#d0c5b7",
-                    "outline": "#7f766a",
-                    "primary-fixed": "#fedeb0",
-                    "on-secondary": "#ffffff",
-                    "surface-container-low": "#f6f3ec",
-                    "on-secondary-fixed-variant": "#474744",
-                    "surface-variant": "#e5e2db"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0px",
-                    "lg": "0px",
-                    "xl": "0px",
-                    "full": "9999px"
-            },
-            "fontFamily": {
-                    "headline": ["Noto Serif"],
-                    "body": ["Newsreader"],
-                    "label": ["Inter"]
-            }
-          },
-        },
-      }
-    </script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+
+
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
         body {
-            background-color: #fcf9f2;
-            color: #1c1c18;
-            font-family: 'Newsreader', serif;
+            background-color: #efe7d3;
+            color: #1c1a17;
+            font-family: 'DM Sans', serif;
         }
         .asymmetric-grid {
             display: grid;
@@ -95,56 +27,60 @@
             font-size: 10px;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: #7f766a;
+            color: #8a7f64;
         }
         .glass-vellum {
             background: rgba(252, 249, 242, 0.8);
             backdrop-filter: blur(12px);
         }
     </style>
+
+<script src="../assets/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/style.css"/>
 </head>
 <body class="bg-surface text-on-surface antialiased overflow-x-hidden">
 <!-- Top Navigation Anchor -->
-<header class="fixed top-0 w-full z-50 bg-[#fcf9f2] dark:bg-stone-950 border-b border-[#1c1c18]/10 dark:border-[#fcf9f2]/10 flex justify-between items-center px-12 h-20 w-full">
+<header class="fixed top-0 w-full z-50 bg-[#efe7d3] dark:bg-stone-950 border-b border-[#1c1a17]/10 dark:border-[#efe7d3]/10 flex justify-between items-center px-12 h-20 w-full">
 <div class="flex items-center gap-4">
-<span class="font-noto-serif italic font-light text-[#725b37] dark:text-[#c4a77d] text-xl">THE CANONICAL ARCHIVE</span>
+<span class="font-noto-serif italic font-light text-[#1f7d88] dark:text-[#b6852a] text-xl">THE CANONICAL ARCHIVE</span>
 </div>
 <nav class="hidden md:flex items-center gap-10">
-<a class="font-inter uppercase tracking-widest text-[10px] text-[#1c1c18]/60 hover:text-[#725b37] transition-colors duration-300 cursor-pointer active:opacity-70" href="../the_lunar_chaperone_master_index/code.html">The Archive</a>
-<a class="font-noto-serif text-lg tracking-tight text-[#725b37] dark:text-[#c4a77d] border-b-0.5 border-[#725b37] pb-1 cursor-pointer active:opacity-70" href="#">Research Logs</a>
+<a class="font-inter uppercase tracking-widest text-[10px] text-[#1c1a17]/60 hover:text-[#1f7d88] transition-colors duration-300 cursor-pointer active:opacity-70" href="../the_lunar_chaperone_master_index/code.html">The Archive</a>
+<a class="font-noto-serif text-lg tracking-tight text-[#1f7d88] dark:text-[#b6852a] border-b-0.5 border-[#1f7d88] pb-1 cursor-pointer active:opacity-70" href="#">Research Logs</a>
 </nav>
-<div class="flex items-center gap-6 text-[#725b37]">
+<div class="flex items-center gap-6 text-[#1f7d88]">
 <span class="material-symbols-outlined cursor-pointer">menu_book</span>
 <span class="material-symbols-outlined cursor-pointer">history_edu</span>
 </div>
 </header>
 <!-- Side Navigation Anchor -->
-<aside class="fixed left-0 top-20 h-[calc(100vh-5rem)] w-72 bg-[#fcf9f2] border-r border-[#1c1c18]/5 flex flex-col py-8 overflow-y-auto z-40">
+<aside class="fixed left-0 top-20 h-[calc(100vh-5rem)] w-72 bg-[#efe7d3] border-r border-[#1c1a17]/5 flex flex-col py-8 overflow-y-auto z-40">
 <div class="px-8 mb-10">
-<h3 class="font-inter uppercase tracking-[0.15em] text-[11px] text-[#725b37] opacity-60 mb-1">CURRENT WORKBOOK</h3>
+<h3 class="font-inter uppercase tracking-[0.15em] text-[11px] text-[#1f7d88] opacity-60 mb-1">CURRENT WORKBOOK</h3>
 <p class="font-noto-serif text-lg">Lunar Chaperone Series</p>
 </div>
 <nav class="flex flex-col gap-1">
-<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#725b37] dark:text-[#c4a77d] font-bold border-l-2 border-[#725b37] pl-4" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase I</span></a>
-<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase II</span></a>
-<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase III</span></a>
-<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase IV</span></a>
-<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase V</span></a>
-<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase VI</span></a>
-<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase VII</span></a>
-<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase VIII</span></a>
-<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase IX</span></a>
-<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase X</span></a>
-<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase XI</span></a>
-<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase XII</span></a>
-<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase XIII</span></a>
-<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1c18]/40 dark:text-[#fcf9f2]/40 pl-4 hover:bg-[#fcf9f2] hover:text-[#725b37]" href="#"><span class="material-symbols-outlined text-[18px]">done_all</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase XIV</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1f7d88] dark:text-[#b6852a] font-bold border-l-2 border-[#1f7d88] pl-4" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase I</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 hover:bg-[#efe7d3] hover:text-[#1f7d88]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase II</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 hover:bg-[#efe7d3] hover:text-[#1f7d88]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase III</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 hover:bg-[#efe7d3] hover:text-[#1f7d88]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase IV</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 hover:bg-[#efe7d3] hover:text-[#1f7d88]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase V</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 hover:bg-[#efe7d3] hover:text-[#1f7d88]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase VI</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 hover:bg-[#efe7d3] hover:text-[#1f7d88]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase VII</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 hover:bg-[#efe7d3] hover:text-[#1f7d88]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase VIII</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 hover:bg-[#efe7d3] hover:text-[#1f7d88]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase IX</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 hover:bg-[#efe7d3] hover:text-[#1f7d88]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase X</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 hover:bg-[#efe7d3] hover:text-[#1f7d88]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase XI</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 hover:bg-[#efe7d3] hover:text-[#1f7d88]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase XII</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 hover:bg-[#efe7d3] hover:text-[#1f7d88]" href="#"><span class="material-symbols-outlined text-[18px]">radio_button_unchecked</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase XIII</span></a>
+<a class="flex items-center gap-4 py-3 transition-all duration-200 ease-in-out text-[#1c1a17]/40 dark:text-[#efe7d3]/40 pl-4 hover:bg-[#efe7d3] hover:text-[#1f7d88]" href="#"><span class="material-symbols-outlined text-[18px]">done_all</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Phase XIV</span></a>
 </nav>
-<div class="mt-auto px-8 py-6 border-t border-[#1c1c18]/5">
-<button class="w-full bg-[#725b37] text-white py-4 font-inter uppercase tracking-widest text-[11px] mb-6 hover:bg-[#503c1b] transition-colors">Begin Ritual</button>
+<div class="mt-auto px-8 py-6 border-t border-[#1c1a17]/5">
+<button class="w-full bg-[#1f7d88] text-white py-4 font-inter uppercase tracking-widest text-[11px] mb-6 hover:bg-[#6d4f16] transition-colors">Begin Ritual</button>
 <div class="flex flex-col gap-4">
-<a class="flex items-center gap-4 text-[#1c1c18]/40 hover:text-[#725b37] transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">settings</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Settings</span></a>
-<a class="flex items-center gap-4 text-[#1c1c18]/40 hover:text-[#725b37] transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">help</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Support</span></a>
+<a class="flex items-center gap-4 text-[#1c1a17]/40 hover:text-[#1f7d88] transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">settings</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Settings</span></a>
+<a class="flex items-center gap-4 text-[#1c1a17]/40 hover:text-[#1f7d88] transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">help</span> <span class="font-inter uppercase tracking-[0.15em] text-[11px]">Support</span></a>
 </div>
 </div>
 </aside>

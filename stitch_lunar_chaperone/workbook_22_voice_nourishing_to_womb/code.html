@@ -4,88 +4,20 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>LUNAR CHAPERONE | Workbook 22</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&amp;family=Noto+Serif:ital,wght@0,300;0,400;1,300&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-primary-fixed-variant": "#584321",
-                        "on-secondary-fixed": "#1c1c1a",
-                        "on-surface-variant": "#4d463c",
-                        "on-background": "#1c1c18",
-                        "background": "#fcf9f2",
-                        "surface-container-highest": "#e5e2db",
-                        "surface-container-high": "#ebe8e1",
-                        "surface-variant": "#e5e2db",
-                        "error-container": "#ffdad6",
-                        "primary-fixed": "#fedeb0",
-                        "on-tertiary-container": "#324057",
-                        "primary-fixed-dim": "#e1c296",
-                        "primary-container": "#c4a77d",
-                        "surface-tint": "#725b37",
-                        "secondary-fixed": "#e5e2de",
-                        "on-surface": "#1c1c18",
-                        "inverse-on-surface": "#f3f0e9",
-                        "surface-container-lowest": "#ffffff",
-                        "secondary": "#5f5e5c",
-                        "surface-dim": "#dcdad3",
-                        "secondary-container": "#e5e2de",
-                        "outline": "#7f766a",
-                        "on-tertiary-fixed-variant": "#3a475e",
-                        "surface-container-low": "#f6f3ec",
-                        "surface-container": "#f1eee7",
-                        "outline-variant": "#d0c5b7",
-                        "on-tertiary-fixed": "#0d1c31",
-                        "on-secondary-fixed-variant": "#474744",
-                        "on-secondary": "#ffffff",
-                        "tertiary": "#515f77",
-                        "inverse-primary": "#e1c296",
-                        "error": "#ba1a1a",
-                        "on-primary-container": "#503c1b",
-                        "surface-bright": "#fcf9f2",
-                        "on-error": "#ffffff",
-                        "inverse-surface": "#31312c",
-                        "on-primary-fixed": "#281800",
-                        "surface": "#fcf9f2",
-                        "tertiary-fixed": "#d5e3ff",
-                        "on-secondary-container": "#656461",
-                        "secondary-fixed-dim": "#c9c6c3",
-                        "tertiary-container": "#9eacc7",
-                        "on-primary": "#ffffff",
-                        "on-error-container": "#93000a",
-                        "on-tertiary": "#ffffff",
-                        "tertiary-fixed-dim": "#b9c7e3",
-                        "primary": "#725b37"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0px",
-                        "lg": "0px",
-                        "xl": "0px",
-                        "full": "9999px"
-                    },
-                    "fontFamily": {
-                        "headline": ["Noto Serif"],
-                        "body": ["Newsreader"],
-                        "label": ["Inter"]
-                    }
-                },
-            },
-        }
-    </script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+
+
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
             font-size: 20px;
         }
         body {
-            background-color: #fcf9f2;
-            color: #1c1c18;
-            font-family: 'Newsreader', serif;
+            background-color: #efe7d3;
+            color: #1c1a17;
+            font-family: 'DM Sans', serif;
         }
         .asymmetric-grid {
             display: grid;
@@ -94,57 +26,61 @@
         }
     </style>
 
-<link rel="stylesheet" href="../assets/style.css"/>
+
 <script src="../assets/nav.js" data-workbook="22"></script>
+
+<script src="../assets/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/style.css"/>
 </head>
 <body class="bg-surface text-on-surface">
 <!-- TopNavBar -->
-<nav class="bg-[#fcf9f2] dark:bg-[#1c1c18] docked full-width top-0 z-50 border-b-[0.5px] border-[#c4a77d]/20 flex justify-between items-center w-full px-12 py-6 sticky">
-<div class="font-['Inter'] uppercase tracking-[0.2em] text-sm font-bold text-[#1c1c18] dark:text-[#fcf9f2]">
+<nav class="bg-[#efe7d3] dark:bg-[#1c1a17] docked full-width top-0 z-50 border-b-[0.5px] border-[#b6852a]/20 flex justify-between items-center w-full px-12 py-6 sticky">
+<div class="font-['Work_Sans'] uppercase tracking-[0.2em] text-sm font-bold text-[#1c1a17] dark:text-[#efe7d3]">
             LUNAR CHAPERONE
         </div>
 <div class="hidden md:flex gap-12">
-<a class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 font-['Inter'] uppercase tracking-widest text-[10px] hover:text-[#725b37] transition-colors duration-300" href="#">ARCHIVE</a>
-<a class="text-[#725b37] border-b border-[#725b37] pb-1 font-['Inter'] uppercase tracking-widest text-[10px]" href="#">PROTOCOLS</a>
-<a class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 font-['Inter'] uppercase tracking-widest text-[10px] hover:text-[#725b37] transition-colors duration-300" href="#">EXEGESIS</a>
+<a class="text-[#1c1a17]/60 dark:text-[#efe7d3]/60 font-['Work_Sans'] uppercase tracking-widest text-[10px] hover:text-[#1f7d88] transition-colors duration-300" href="#">ARCHIVE</a>
+<a class="text-[#1f7d88] border-b border-[#1f7d88] pb-1 font-['Work_Sans'] uppercase tracking-widest text-[10px]" href="#">PROTOCOLS</a>
+<a class="text-[#1c1a17]/60 dark:text-[#efe7d3]/60 font-['Work_Sans'] uppercase tracking-widest text-[10px] hover:text-[#1f7d88] transition-colors duration-300" href="#">EXEGESIS</a>
 </div>
-<div class="flex items-center gap-6 text-[#725b37]">
+<div class="flex items-center gap-6 text-[#1f7d88]">
 <span class="material-symbols-outlined cursor-pointer" data-icon="menu_book">menu_book</span>
 <span class="material-symbols-outlined cursor-pointer" data-icon="account_balance">account_balance</span>
 </div>
 </nav>
 <div class="flex min-h-screen">
 <!-- SideNavBar -->
-<aside class="hidden lg:flex flex-col h-screen w-72 bg-[#f5f2eb] dark:bg-[#151512] sticky top-0 py-12 px-8 gap-8 bg-gradient-to-r from-transparent to-[#c4a77d]/5 border-r border-[#c4a77d]/10">
+<aside class="hidden lg:flex flex-col h-screen w-72 bg-[#f4eedd] dark:bg-[#151512] sticky top-0 py-12 px-8 gap-8 bg-gradient-to-r from-transparent to-[#b6852a]/5 border-r border-[#b6852a]/10">
 <div class="mb-8">
 <div class="w-12 h-12 bg-primary-container/20 flex items-center justify-center mb-4">
 <span class="material-symbols-outlined text-primary" data-icon="history_edu">history_edu</span>
 </div>
-<h2 class="font-['Noto_Serif'] italic text-xl text-[#725b37]">LUNAR CHAPERONE</h2>
-<p class="font-['Inter'] uppercase tracking-[0.15em] text-[9px] opacity-60">Graduate Research Suite</p>
+<h2 class="font-['Playfair_Display'] italic text-xl text-[#1f7d88]">LUNAR CHAPERONE</h2>
+<p class="font-['Work_Sans'] uppercase tracking-[0.15em] text-[9px] opacity-60">Graduate Research Suite</p>
 </div>
 <nav class="flex flex-col gap-6">
-<a class="text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 font-['Inter'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] transition-all flex items-center gap-3" href="#">
+<a class="text-[#1c1a17]/50 dark:text-[#efe7d3]/40 font-['Work_Sans'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#b6852a]/10 hover:text-[#1c1a17] transition-all flex items-center gap-3" href="#">
 <span class="material-symbols-outlined" data-icon="first_page">first_page</span> WAXING PHASE
                 </a>
-<a class="text-[#725b37] dark:text-[#c4a77d] font-bold translate-x-2 transition-transform font-['Inter'] uppercase tracking-[0.15em] text-[11px] flex items-center gap-3" href="#">
+<a class="text-[#1f7d88] dark:text-[#b6852a] font-bold translate-x-2 transition-transform font-['Work_Sans'] uppercase tracking-[0.15em] text-[11px] flex items-center gap-3" href="#">
 <span class="material-symbols-outlined" data-icon="brightness_7">brightness_7</span> FULL MOON
                 </a>
-<a class="text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 font-['Inter'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] transition-all flex items-center gap-3" href="#">
+<a class="text-[#1c1a17]/50 dark:text-[#efe7d3]/40 font-['Work_Sans'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#b6852a]/10 hover:text-[#1c1a17] transition-all flex items-center gap-3" href="#">
 <span class="material-symbols-outlined" data-icon="last_page">last_page</span> WANING PHASE
                 </a>
-<a class="text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 font-['Inter'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] transition-all flex items-center gap-3" href="#">
+<a class="text-[#1c1a17]/50 dark:text-[#efe7d3]/40 font-['Work_Sans'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#b6852a]/10 hover:text-[#1c1a17] transition-all flex items-center gap-3" href="#">
 <span class="material-symbols-outlined" data-icon="brightness_3">brightness_3</span> NEW MOON
                 </a>
-<a class="text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 font-['Inter'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] transition-all flex items-center gap-3" href="#">
+<a class="text-[#1c1a17]/50 dark:text-[#efe7d3]/40 font-['Work_Sans'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#b6852a]/10 hover:text-[#1c1a17] transition-all flex items-center gap-3" href="#">
 <span class="material-symbols-outlined" data-icon="terminal">terminal</span> RESEARCH LOGS
                 </a>
 </nav>
-<div class="mt-auto flex flex-col gap-4 border-t border-[#c4a77d]/10 pt-8">
-<a class="text-[#1c1c18]/50 font-['Inter'] uppercase tracking-[0.15em] text-[10px] flex items-center gap-2" href="#">
+<div class="mt-auto flex flex-col gap-4 border-t border-[#b6852a]/10 pt-8">
+<a class="text-[#1c1a17]/50 font-['Work_Sans'] uppercase tracking-[0.15em] text-[10px] flex items-center gap-2" href="#">
 <span class="material-symbols-outlined text-xs" data-icon="biotech">biotech</span> EQUIPMENT
                 </a>
-<button class="bg-primary text-on-primary font-['Inter'] uppercase tracking-[0.2em] text-[10px] py-4 px-6 text-left">
+<button class="bg-primary text-on-primary font-['Work_Sans'] uppercase tracking-[0.2em] text-[10px] py-4 px-6 text-left">
                     INITIATE PROTOCOL
                 </button>
 </div>
@@ -277,10 +213,10 @@
                         "The archive remembers what the body forgets. Every workbook is a step toward the integration of the lunar cycle within the cellular memory."
                     </p>
 <div class="flex gap-4">
-<button class="px-8 py-3 bg-transparent border border-outline-variant text-[#1c1c18] font-['Inter'] uppercase tracking-widest text-[10px] hover:bg-surface-container-low transition-colors">
+<button class="px-8 py-3 bg-transparent border border-outline-variant text-[#1c1a17] font-['Work_Sans'] uppercase tracking-widest text-[10px] hover:bg-surface-container-low transition-colors">
                             DOWNLOAD LOG
                         </button>
-<button class="px-8 py-3 bg-primary text-on-primary font-['Inter'] uppercase tracking-widest text-[10px]">
+<button class="px-8 py-3 bg-primary text-on-primary font-['Work_Sans'] uppercase tracking-widest text-[10px]">
                             CONTINUE PROTOCOL
                         </button>
 </div>

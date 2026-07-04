@@ -3,105 +3,41 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Inter:wght@200;300;400;600&amp;family=Noto+Serif:ital,wght@0,300;0,400;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "outline": "#7f766a",
-                        "surface-variant": "#e5e2db",
-                        "primary-fixed": "#fedeb0",
-                        "surface-bright": "#fcf9f2",
-                        "on-error-container": "#93000a",
-                        "secondary-fixed": "#e5e2de",
-                        "on-tertiary-fixed-variant": "#3a475e",
-                        "outline-variant": "#d0c5b7",
-                        "on-secondary-container": "#656461",
-                        "on-primary": "#ffffff",
-                        "on-tertiary": "#ffffff",
-                        "tertiary": "#515f77",
-                        "error-container": "#ffdad6",
-                        "surface-dim": "#dcdad3",
-                        "on-primary-fixed-variant": "#584321",
-                        "on-secondary-fixed-variant": "#474744",
-                        "inverse-primary": "#e1c296",
-                        "surface-tint": "#725b37",
-                        "background": "#fcf9f2",
-                        "on-error": "#ffffff",
-                        "surface-container-high": "#ebe8e1",
-                        "on-secondary": "#ffffff",
-                        "tertiary-container": "#9eacc7",
-                        "secondary": "#5f5e5c",
-                        "on-tertiary-container": "#324057",
-                        "secondary-fixed-dim": "#c9c6c3",
-                        "inverse-surface": "#31312c",
-                        "secondary-container": "#e5e2de",
-                        "primary": "#725b37",
-                        "error": "#ba1a1a",
-                        "on-primary-fixed": "#281800",
-                        "on-secondary-fixed": "#1c1c1a",
-                        "surface-container-low": "#f6f3ec",
-                        "primary-fixed-dim": "#e1c296",
-                        "tertiary-fixed": "#d5e3ff",
-                        "on-tertiary-fixed": "#0d1c31",
-                        "on-surface-variant": "#4d463c",
-                        "on-surface": "#1c1c18",
-                        "surface": "#fcf9f2",
-                        "surface-container-lowest": "#ffffff",
-                        "tertiary-fixed-dim": "#b9c7e3",
-                        "surface-container": "#f1eee7",
-                        "inverse-on-surface": "#f3f0e9",
-                        "primary-container": "#c4a77d",
-                        "surface-container-highest": "#e5e2db",
-                        "on-background": "#1c1c18",
-                        "on-primary-container": "#503c1b"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0px",
-                        "lg": "0px",
-                        "xl": "0px",
-                        "full": "9999px"
-                    },
-                    "fontFamily": {
-                        "headline": ["Cormorant Garamond", "serif"],
-                        "body": ["Newsreader", "serif"],
-                        "label": ["Inter", "sans-serif"]
-                    }
-                }
-            }
-        }
-    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+
+
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
             vertical-align: middle;
         }
-        body { background-color: #fcf9f2; color: #1c1c18; }
+        body { background-color: #efe7d3; color: #1c1a17; }
         .mask-gradient {
             mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
         }
     </style>
 
-<link rel="stylesheet" href="../assets/style.css"/>
+
 <script src="../assets/nav.js" data-workbook="16"></script>
+
+<script src="../assets/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/style.css"/>
 </head>
 <body class="font-body selection:bg-primary-container/30">
 <!-- Top Navigation Bar -->
-<nav class="fixed top-0 z-50 flex justify-between items-center w-full px-12 py-6 bg-[#fcf9f2] dark:bg-stone-950 bg-gradient-to-b from-stone-200/50 to-transparent dark:from-stone-800/30">
+<nav class="fixed top-0 z-50 flex justify-between items-center w-full px-12 py-6 bg-[#efe7d3] dark:bg-stone-950 bg-gradient-to-b from-stone-200/50 to-transparent dark:from-stone-800/30">
 <div class="flex items-center gap-8">
-<span class="text-2xl font-serif lowercase tracking-tighter text-[#725b37] dark:text-[#c4a77d]">Lunar Chaperone</span>
+<span class="text-2xl font-serif lowercase tracking-tighter text-[#1f7d88] dark:text-[#b6852a]">Lunar Chaperone</span>
 <div class="hidden md:flex items-center gap-6">
-<a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-[0.15em] text-[10px] hover:text-[#725b37] transition-colors duration-300" href="../the_lunar_chaperone_master_index/code.html">The Archive</a>
-<a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-[0.15em] text-[10px] hover:text-[#725b37] transition-colors duration-300" href="#">Phases</a>
-<a class="text-[#725b37] dark:text-[#c4a77d] border-b border-[#725b37] dark:border-[#c4a77d] pb-1 font-sans uppercase tracking-[0.15em] text-[10px]" href="#">Rituals</a>
-<a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-[0.15em] text-[10px] hover:text-[#725b37] transition-colors duration-300" href="#">Metadata</a>
+<a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-[0.15em] text-[10px] hover:text-[#1f7d88] transition-colors duration-300" href="../the_lunar_chaperone_master_index/code.html">The Archive</a>
+<a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-[0.15em] text-[10px] hover:text-[#1f7d88] transition-colors duration-300" href="#">Phases</a>
+<a class="text-[#1f7d88] dark:text-[#b6852a] border-b border-[#1f7d88] dark:border-[#b6852a] pb-1 font-sans uppercase tracking-[0.15em] text-[10px]" href="#">Rituals</a>
+<a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-[0.15em] text-[10px] hover:text-[#1f7d88] transition-colors duration-300" href="#">Metadata</a>
 </div>
 </div>
-<div class="flex items-center gap-6 text-[#725b37] dark:text-[#c4a77d]">
+<div class="flex items-center gap-6 text-[#1f7d88] dark:text-[#b6852a]">
 <span class="material-symbols-outlined cursor-nwse-resize">menu_book</span>
 <span class="material-symbols-outlined cursor-nwse-resize">settings</span>
 <div class="w-8 h-8 bg-surface-container-high border-[0.5px] border-outline-variant overflow-hidden">
@@ -111,7 +47,7 @@
 </nav>
 <div class="flex min-h-screen pt-24">
 <!-- Side Navigation Bar -->
-<aside class="fixed left-0 h-full w-72 flex flex-col bg-[#fcf9f2] dark:bg-stone-950 border-r-[0.5px] border-stone-200 dark:border-stone-800 p-8 pt-12">
+<aside class="fixed left-0 h-full w-72 flex flex-col bg-[#efe7d3] dark:bg-stone-950 border-r-[0.5px] border-stone-200 dark:border-stone-800 p-8 pt-12">
 <div class="mb-12">
 <div class="w-12 h-12 bg-surface-container-low mb-4 flex items-center justify-center border-[0.5px] border-outline-variant">
 <span class="material-symbols-outlined text-primary text-xl">auto_stories</span>
@@ -128,7 +64,7 @@
 <span class="material-symbols-outlined text-sm">last_page</span>
 <span>Waxing Crescent</span>
 </div>
-<div class="flex items-center gap-3 text-[#725b37] dark:text-[#c4a77d] font-bold translate-x-2 transition-transform font-sans uppercase tracking-[0.2em] text-[11px]">
+<div class="flex items-center gap-3 text-[#1f7d88] dark:text-[#b6852a] font-bold translate-x-2 transition-transform font-sans uppercase tracking-[0.2em] text-[11px]">
 <span class="material-symbols-outlined text-sm">brightness_1</span>
 <span>Full Moon</span>
 </div>

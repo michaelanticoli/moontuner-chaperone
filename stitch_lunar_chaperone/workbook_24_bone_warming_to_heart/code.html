@@ -4,81 +4,19 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Lunar Chaperone | Bone Warming to Heart</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-primary-fixed-variant": "#584321",
-                        "on-secondary-fixed": "#1c1c1a",
-                        "on-surface-variant": "#4d463c",
-                        "on-background": "#1c1c18",
-                        "background": "#fcf9f2",
-                        "surface-container-highest": "#e5e2db",
-                        "surface-container-high": "#ebe8e1",
-                        "surface-variant": "#e5e2db",
-                        "error-container": "#ffdad6",
-                        "primary-fixed": "#fedeb0",
-                        "on-tertiary-container": "#324057",
-                        "primary-fixed-dim": "#e1c296",
-                        "primary-container": "#c4a77d",
-                        "surface-tint": "#725b37",
-                        "secondary-fixed": "#e5e2de",
-                        "on-surface": "#1c1c18",
-                        "inverse-on-surface": "#f3f0e9",
-                        "surface-container-lowest": "#ffffff",
-                        "secondary": "#5f5e5c",
-                        "surface-dim": "#dcdad3",
-                        "secondary-container": "#e5e2de",
-                        "outline": "#7f766a",
-                        "on-tertiary-fixed-variant": "#3a475e",
-                        "surface-container-low": "#f6f3ec",
-                        "surface-container": "#f1eee7",
-                        "outline-variant": "#d0c5b7",
-                        "on-tertiary-fixed": "#0d1c31",
-                        "on-secondary-fixed-variant": "#474744",
-                        "on-secondary": "#ffffff",
-                        "tertiary": "#515f77",
-                        "inverse-primary": "#e1c296",
-                        "error": "#ba1a1a",
-                        "on-primary-container": "#503c1b",
-                        "surface-bright": "#fcf9f2",
-                        "on-error": "#ffffff",
-                        "inverse-surface": "#31312c",
-                        "on-primary-fixed": "#281800",
-                        "surface": "#fcf9f2",
-                        "tertiary-fixed": "#d5e3ff",
-                        "on-secondary-container": "#656461",
-                        "secondary-fixed-dim": "#c9c6c3",
-                        "tertiary-container": "#9eacc7",
-                        "on-primary": "#ffffff",
-                        "on-error-container": "#93000a",
-                        "on-tertiary": "#ffffff",
-                        "tertiary-fixed-dim": "#b9c7e3",
-                        "primary": "#725b37"
-                    },
-                    "fontFamily": {
-                        "headline": ["Noto Serif"],
-                        "body": ["Newsreader"],
-                        "label": ["Inter"]
-                    }
-                },
-            },
-        }
-    </script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+
+
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
         body {
-            font-family: 'Newsreader', serif;
-            background-color: #fcf9f2;
-            color: #1c1c18;
+            font-family: 'DM Sans', serif;
+            background-color: #efe7d3;
+            color: #1c1a17;
             -webkit-font-smoothing: antialiased;
         }
         .asymmetric-grid {
@@ -98,61 +36,65 @@
         }
     </style>
 
-<link rel="stylesheet" href="../assets/style.css"/>
+
 <script src="../assets/nav.js" data-workbook="24"></script>
+
+<script src="../assets/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/style.css"/>
 </head>
 <body class="bg-surface text-on-surface">
 <!-- Top Navigation -->
-<nav class="bg-[#fcf9f2] dark:bg-[#1c1c18] docked full-width top-0 z-50 border-b-[0.5px] border-[#c4a77d]/20 flex justify-between items-center w-full px-12 py-6">
-<div class="font-['Inter'] uppercase tracking-[0.2em] text-sm font-bold text-[#1c1c18] dark:text-[#fcf9f2]">
+<nav class="bg-[#efe7d3] dark:bg-[#1c1a17] docked full-width top-0 z-50 border-b-[0.5px] border-[#b6852a]/20 flex justify-between items-center w-full px-12 py-6">
+<div class="font-['Work_Sans'] uppercase tracking-[0.2em] text-sm font-bold text-[#1c1a17] dark:text-[#efe7d3]">
             LUNAR CHAPERONE
         </div>
 <div class="flex gap-12 items-center">
-<a class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 font-['Inter'] uppercase tracking-widest text-[10px] hover:text-[#725b37] transition-colors duration-300" href="#">ARCHIVE</a>
-<a class="text-[#725b37] border-b border-[#725b37] pb-1 font-['Inter'] uppercase tracking-widest text-[10px] transition-colors duration-300" href="#">PROTOCOLS</a>
-<a class="text-[#1c1c18]/60 dark:text-[#fcf9f2]/60 font-['Inter'] uppercase tracking-widest text-[10px] hover:text-[#725b37] transition-colors duration-300" href="#">EXEGESIS</a>
+<a class="text-[#1c1a17]/60 dark:text-[#efe7d3]/60 font-['Work_Sans'] uppercase tracking-widest text-[10px] hover:text-[#1f7d88] transition-colors duration-300" href="#">ARCHIVE</a>
+<a class="text-[#1f7d88] border-b border-[#1f7d88] pb-1 font-['Work_Sans'] uppercase tracking-widest text-[10px] transition-colors duration-300" href="#">PROTOCOLS</a>
+<a class="text-[#1c1a17]/60 dark:text-[#efe7d3]/60 font-['Work_Sans'] uppercase tracking-widest text-[10px] hover:text-[#1f7d88] transition-colors duration-300" href="#">EXEGESIS</a>
 </div>
 <div class="flex gap-6 items-center">
-<span class="material-symbols-outlined text-[#725b37] cursor-pointer" data-icon="menu_book">menu_book</span>
-<span class="material-symbols-outlined text-[#725b37] cursor-pointer" data-icon="account_balance">account_balance</span>
+<span class="material-symbols-outlined text-[#1f7d88] cursor-pointer" data-icon="menu_book">menu_book</span>
+<span class="material-symbols-outlined text-[#1f7d88] cursor-pointer" data-icon="account_balance">account_balance</span>
 </div>
 </nav>
 <div class="flex min-h-screen">
 <!-- Sidebar -->
-<aside class="bg-[#f5f2eb] dark:bg-[#151512] h-screen w-72 left-0 top-0 bg-gradient-to-r from-transparent to-[#c4a77d]/5 flex flex-col h-full py-12 px-8 gap-8 hidden md:flex sticky top-0">
+<aside class="bg-[#f4eedd] dark:bg-[#151512] h-screen w-72 left-0 top-0 bg-gradient-to-r from-transparent to-[#b6852a]/5 flex flex-col h-full py-12 px-8 gap-8 hidden md:flex sticky top-0">
 <div class="space-y-1">
-<div class="font-['Noto_Serif'] italic text-xl text-[#725b37]">LUNAR CHAPERONE</div>
-<div class="font-['Inter'] uppercase tracking-[0.15em] text-[11px] text-[#1c1c18]/50">Graduate Research Suite</div>
+<div class="font-['Playfair_Display'] italic text-xl text-[#1f7d88]">LUNAR CHAPERONE</div>
+<div class="font-['Work_Sans'] uppercase tracking-[0.15em] text-[11px] text-[#1c1a17]/50">Graduate Research Suite</div>
 </div>
 <nav class="flex flex-col gap-6 mt-8">
-<div class="group flex items-center gap-4 text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 font-['Inter'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] dark:hover:text-[#fcf9f2] transition-all p-2">
+<div class="group flex items-center gap-4 text-[#1c1a17]/50 dark:text-[#efe7d3]/40 font-['Work_Sans'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#b6852a]/10 hover:text-[#1c1a17] dark:hover:text-[#efe7d3] transition-all p-2">
 <span class="material-symbols-outlined" data-icon="first_page">first_page</span>
 <span>WAXING PHASE</span>
 </div>
-<div class="group flex items-center gap-4 text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 font-['Inter'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] dark:hover:text-[#fcf9f2] transition-all p-2">
+<div class="group flex items-center gap-4 text-[#1c1a17]/50 dark:text-[#efe7d3]/40 font-['Work_Sans'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#b6852a]/10 hover:text-[#1c1a17] dark:hover:text-[#efe7d3] transition-all p-2">
 <span class="material-symbols-outlined" data-icon="brightness_7">brightness_7</span>
 <span>FULL MOON</span>
 </div>
-<div class="group flex items-center gap-4 text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 font-['Inter'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] dark:hover:text-[#fcf9f2] transition-all p-2">
+<div class="group flex items-center gap-4 text-[#1c1a17]/50 dark:text-[#efe7d3]/40 font-['Work_Sans'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#b6852a]/10 hover:text-[#1c1a17] dark:hover:text-[#efe7d3] transition-all p-2">
 <span class="material-symbols-outlined" data-icon="last_page">last_page</span>
 <span>WANING PHASE</span>
 </div>
-<div class="group flex items-center gap-4 text-[#725b37] dark:text-[#c4a77d] font-bold translate-x-2 transition-transform font-['Inter'] uppercase tracking-[0.15em] text-[11px] p-2">
+<div class="group flex items-center gap-4 text-[#1f7d88] dark:text-[#b6852a] font-bold translate-x-2 transition-transform font-['Work_Sans'] uppercase tracking-[0.15em] text-[11px] p-2">
 <span class="material-symbols-outlined" data-icon="brightness_3">brightness_3</span>
 <span>NEW MOON</span>
 </div>
-<div class="group flex items-center gap-4 text-[#1c1c18]/50 dark:text-[#fcf9f2]/40 font-['Inter'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#c4a77d]/10 hover:text-[#1c1c18] dark:hover:text-[#fcf9f2] transition-all p-2">
+<div class="group flex items-center gap-4 text-[#1c1a17]/50 dark:text-[#efe7d3]/40 font-['Work_Sans'] uppercase tracking-[0.15em] text-[11px] hover:bg-[#b6852a]/10 hover:text-[#1c1a17] dark:hover:text-[#efe7d3] transition-all p-2">
 <span class="material-symbols-outlined" data-icon="terminal">terminal</span>
 <span>RESEARCH LOGS</span>
 </div>
 </nav>
 <div class="mt-auto pt-8 space-y-4">
-<button class="w-full py-4 bg-primary text-white font-['Inter'] uppercase tracking-[0.2em] text-[10px] 0px hover:opacity-90 transition-opacity">
+<button class="w-full py-4 bg-primary text-white font-['Work_Sans'] uppercase tracking-[0.2em] text-[10px] 0px hover:opacity-90 transition-opacity">
                     INITIATE PROTOCOL
                 </button>
-<div class="flex justify-between border-t border-[#c4a77d]/10 pt-4">
-<span class="material-symbols-outlined text-[#725b37]/50" data-icon="biotech">biotech</span>
-<span class="material-symbols-outlined text-[#725b37]/50" data-icon="format_quote">format_quote</span>
+<div class="flex justify-between border-t border-[#b6852a]/10 pt-4">
+<span class="material-symbols-outlined text-[#1f7d88]/50" data-icon="biotech">biotech</span>
+<span class="material-symbols-outlined text-[#1f7d88]/50" data-icon="format_quote">format_quote</span>
 </div>
 </div>
 </aside>
@@ -161,7 +103,7 @@
 <!-- Header Section -->
 <header class="mb-24 relative">
 <div class="marginalia mb-4">WB_NO. 24/26 — SERIAL: 4892-00</div>
-<h1 class="text-6xl md:text-8xl font-['Noto_Serif'] font-light italic text-on-surface leading-tight">
+<h1 class="text-6xl md:text-8xl font-['Playfair_Display'] font-light italic text-on-surface leading-tight">
                     Bone Warming <br/>
 <span class="ml-12 md:ml-32 text-primary tracking-tighter">to Heart</span>
 </h1>
@@ -173,7 +115,7 @@
 </div>
 </header>
 <!-- Archival Metadata Grid -->
-<section class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-32 border-t border-[#c4a77d]/20 pt-8">
+<section class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-32 border-t border-[#b6852a]/20 pt-8">
 <div class="space-y-2">
 <div class="marginalia">ARCHETYPE</div>
 <p class="font-body text-xl">The Sovereign Builder</p>
@@ -198,23 +140,23 @@
 <div class="marginalia mb-8">Sequential Protocol Summary</div>
 <div class="space-y-12">
 <div class="flex gap-8 group">
-<div class="text-primary font-['Inter'] font-black text-2xl group-hover:scale-110 transition-transform">01-04</div>
+<div class="text-primary font-['Work_Sans'] font-black text-2xl group-hover:scale-110 transition-transform">01-04</div>
 <div class="space-y-2">
-<h3 class="font-['Inter'] uppercase tracking-widest text-xs font-bold">The Calcification Phase</h3>
+<h3 class="font-['Work_Sans'] uppercase tracking-widest text-xs font-bold">The Calcification Phase</h3>
 <p class="font-body text-lg leading-relaxed">Focus on the skeletal structure. Kneeling meditations. Recognizing the 'bones' of your current work. Silence and cold exposure to stimulate marrow response.</p>
 </div>
 </div>
 <div class="flex gap-8 group">
-<div class="text-primary font-['Inter'] font-black text-2xl group-hover:scale-110 transition-transform">05-10</div>
+<div class="text-primary font-['Work_Sans'] font-black text-2xl group-hover:scale-110 transition-transform">05-10</div>
 <div class="space-y-2">
-<h3 class="font-['Inter'] uppercase tracking-widest text-xs font-bold">The Thermic Ascent</h3>
+<h3 class="font-['Work_Sans'] uppercase tracking-widest text-xs font-bold">The Thermic Ascent</h3>
 <p class="font-body text-lg leading-relaxed">Moving heat from the joints to the solar plexus. Rhythmic breathing. The transition from duty-bound labor to creative vitalism.</p>
 </div>
 </div>
 <div class="flex gap-8 group">
-<div class="text-primary font-['Inter'] font-black text-2xl group-hover:scale-110 transition-transform">11-14</div>
+<div class="text-primary font-['Work_Sans'] font-black text-2xl group-hover:scale-110 transition-transform">11-14</div>
 <div class="space-y-2">
-<h3 class="font-['Inter'] uppercase tracking-widest text-xs font-bold">Solar Coronation</h3>
+<h3 class="font-['Work_Sans'] uppercase tracking-widest text-xs font-bold">Solar Coronation</h3>
 <p class="font-body text-lg leading-relaxed">Full Moon integration. Public expression of the work. Heart-opening postures. Radical visibility of the internal structure.</p>
 </div>
 </div>
@@ -254,14 +196,14 @@
 <div class="marginalia mb-8">Observation Entry</div>
 <div class="space-y-12">
 <div class="relative group">
-<label class="block font-['Inter'] uppercase tracking-widest text-[10px] text-outline mb-2 group-focus-within:text-primary group-focus-within:translate-x-2 transition-all">Current Skeletal Tension Point</label>
+<label class="block font-['Work_Sans'] uppercase tracking-widest text-[10px] text-outline mb-2 group-focus-within:text-primary group-focus-within:translate-x-2 transition-all">Current Skeletal Tension Point</label>
 <input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 font-body text-xl placeholder-on-surface/20" placeholder="e.g. L4-L5 Compression / Knee Guarding" type="text"/>
 </div>
 <div class="relative group">
-<label class="block font-['Inter'] uppercase tracking-widest text-[10px] text-outline mb-2 group-focus-within:text-primary group-focus-within:translate-x-2 transition-all">Heat Transfer Log</label>
+<label class="block font-['Work_Sans'] uppercase tracking-widest text-[10px] text-outline mb-2 group-focus-within:text-primary group-focus-within:translate-x-2 transition-all">Heat Transfer Log</label>
 <textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 font-body text-xl placeholder-on-surface/20 resize-none" placeholder="Describe the migration of warmth from periphery to center..." rows="3"></textarea>
 </div>
-<button class="inline-flex items-center gap-4 text-primary font-['Inter'] uppercase tracking-[0.2em] text-[11px] group border-b border-primary/20 pb-1 hover:border-primary transition-all">
+<button class="inline-flex items-center gap-4 text-primary font-['Work_Sans'] uppercase tracking-[0.2em] text-[11px] group border-b border-primary/20 pb-1 hover:border-primary transition-all">
                             ARCHIVE OBSERVATION
                             <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </button>
@@ -270,18 +212,18 @@
 </div>
 <!-- Footer Quote / Marginalia Layer -->
 <footer class="mt-40 pt-12 border-t border-outline-variant/30 text-center relative">
-<div class="font-['Noto_Serif'] italic text-3xl text-primary-container mb-8 max-w-2xl mx-auto opacity-80">
+<div class="font-['Playfair_Display'] italic text-3xl text-primary-container mb-8 max-w-2xl mx-auto opacity-80">
                     "From the cold depth of the marrow, the solar fire finds its fuel."
                 </div>
 <div class="flex justify-center gap-16 items-center">
 <div class="text-left">
 <div class="marginalia">CURATOR</div>
-<div class="font-['Inter'] text-[10px] tracking-widest mt-1">LUNAR CHAPERONE HQ</div>
+<div class="font-['Work_Sans'] text-[10px] tracking-widest mt-1">LUNAR CHAPERONE HQ</div>
 </div>
 <div class="h-12 w-[1px] bg-outline-variant/50"></div>
 <div class="text-left">
 <div class="marginalia">TIMESTAMP</div>
-<div class="font-['Inter'] text-[10px] tracking-widest mt-1">20.01.24 // 04:12 GMT</div>
+<div class="font-['Work_Sans'] text-[10px] tracking-widest mt-1">20.01.24 // 04:12 GMT</div>
 </div>
 </div>
 </footer>

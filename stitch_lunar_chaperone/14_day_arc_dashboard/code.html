@@ -3,80 +3,18 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface-container-high": "#ebe8e1",
-                    "on-primary-fixed-variant": "#584321",
-                    "error-container": "#ffdad6",
-                    "on-tertiary-container": "#324057",
-                    "on-error-container": "#93000a",
-                    "secondary": "#5f5e5c",
-                    "inverse-primary": "#e1c296",
-                    "error": "#ba1a1a",
-                    "inverse-on-surface": "#f3f0e9",
-                    "background": "#fcf9f2",
-                    "surface-container": "#f1eee7",
-                    "on-secondary-fixed-variant": "#474744",
-                    "on-secondary": "#ffffff",
-                    "secondary-fixed": "#e5e2de",
-                    "on-surface-variant": "#4d463c",
-                    "on-primary-container": "#503c1b",
-                    "on-background": "#1c1c18",
-                    "on-secondary-fixed": "#1c1c1a",
-                    "surface-bright": "#fcf9f2",
-                    "tertiary-fixed-dim": "#b9c7e3",
-                    "surface-container-lowest": "#ffffff",
-                    "on-primary-fixed": "#281800",
-                    "surface-variant": "#e5e2db",
-                    "surface-tint": "#725b37",
-                    "outline-variant": "#d0c5b7",
-                    "surface": "#fcf9f2",
-                    "tertiary-container": "#9eacc7",
-                    "on-surface": "#1c1c18",
-                    "surface-dim": "#dcdad3",
-                    "on-secondary-container": "#656461",
-                    "tertiary": "#515f77",
-                    "on-tertiary-fixed": "#0d1c31",
-                    "on-tertiary": "#ffffff",
-                    "surface-container-highest": "#e5e2db",
-                    "primary-fixed-dim": "#e1c296",
-                    "on-primary": "#ffffff",
-                    "inverse-surface": "#31312c",
-                    "surface-container-low": "#f6f3ec",
-                    "secondary-fixed-dim": "#c9c6c3",
-                    "on-error": "#ffffff",
-                    "primary-container": "#c4a77d",
-                    "outline": "#7f766a",
-                    "on-tertiary-fixed-variant": "#3a475e",
-                    "primary": "#725b37",
-                    "tertiary-fixed": "#d5e3ff",
-                    "secondary-container": "#e5e2de",
-                    "primary-fixed": "#fedeb0"
-            },
-            fontFamily: {
-              headline: ["Noto Serif", "serif"],
-              body: ["Newsreader", "serif"],
-              label: ["Inter", "sans-serif"],
-            },
-          },
-        },
-      }
-    </script>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
         body {
-            background-color: #fcf9f2;
-            color: #1c1c18;
+            background-color: #efe7d3;
+            color: #1c1a17;
         }
         .marginalia {
             writing-mode: vertical-rl;
@@ -88,41 +26,45 @@
       min-height: max(884px, 100dvh);
     }
   </style>
-  </head>
+  
+<script src="../assets/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../assets/style.css"/>
+</head>
 <body class="font-body selection:bg-primary-container selection:text-on-primary-container">
 <!-- Top Navigation -->
-<header class="bg-gradient-to-b from-[#fcf9f2] to-[#f5f2eb] dark:from-stone-950 dark:to-stone-900 flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto top-0 z-50 fixed">
+<header class="bg-gradient-to-b from-[#efe7d3] to-[#f4eedd] dark:from-stone-950 dark:to-stone-900 flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto top-0 z-50 fixed">
 <div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-[#725b37] text-2xl">menu_book</span>
+<span class="material-symbols-outlined text-[#1f7d88] text-2xl">menu_book</span>
 <span class="text-lg font-headline uppercase tracking-[0.15em] text-stone-900 dark:text-stone-100">The Canonical Archive</span>
 </div>
 <nav class="hidden md:flex gap-12 font-label text-[10px] uppercase tracking-[0.2em]">
-<a class="text-[#725b37] border-b-[0.5px] border-[#725b37] pb-1" href="#">Archive Home</a>
-<a class="text-stone-500 hover:text-[#c4a77d] transition-colors" href="#">The Lab</a>
-<a class="text-stone-500 hover:text-[#c4a77d] transition-colors" href="#">Lore</a>
+<a class="text-[#1f7d88] border-b-[0.5px] border-[#1f7d88] pb-1" href="#">Archive Home</a>
+<a class="text-stone-500 hover:text-[#b6852a] transition-colors" href="#">The Lab</a>
+<a class="text-stone-500 hover:text-[#b6852a] transition-colors" href="#">Lore</a>
 </nav>
 <div class="flex items-center gap-6">
-<span class="material-symbols-outlined text-[#725b37]">history_edu</span>
+<span class="material-symbols-outlined text-[#1f7d88]">history_edu</span>
 </div>
 </header>
 <!-- Navigation Drawer (Desktop Sidebar) -->
-<aside class="hidden lg:flex flex-col h-screen fixed left-0 top-0 w-80 py-12 px-10 border-r-[0.5px] border-stone-200 bg-[#fcf9f2] z-40">
+<aside class="hidden lg:flex flex-col h-screen fixed left-0 top-0 w-80 py-12 px-10 border-r-[0.5px] border-stone-200 bg-[#efe7d3] z-40">
 <div class="mt-16">
 <h2 class="font-headline text-xl tracking-widest text-stone-900 mb-12">THE ARCHIVE</h2>
 <nav class="flex flex-col gap-8">
-<a class="flex items-center gap-4 text-[#725b37] font-bold translate-x-2 transition-transform font-label text-xs uppercase tracking-[0.2em]" href="#">
+<a class="flex items-center gap-4 text-[#1f7d88] font-bold translate-x-2 transition-transform font-label text-xs uppercase tracking-[0.2em]" href="#">
 <span class="material-symbols-outlined">calendar_today</span>
                     14-Day Progress
                 </a>
-<a class="flex items-center gap-4 text-stone-400 hover:bg-[#f5f2eb] transition-all p-2 font-label text-xs uppercase tracking-[0.2em]" href="#">
+<a class="flex items-center gap-4 text-stone-400 hover:bg-[#f4eedd] transition-all p-2 font-label text-xs uppercase tracking-[0.2em]" href="#">
 <span class="material-symbols-outlined">auto_stories</span>
                     Ritual Scripts
                 </a>
-<a class="flex items-center gap-4 text-stone-400 hover:bg-[#f5f2eb] transition-all p-2 font-label text-xs uppercase tracking-[0.2em]" href="#">
+<a class="flex items-center gap-4 text-stone-400 hover:bg-[#f4eedd] transition-all p-2 font-label text-xs uppercase tracking-[0.2em]" href="#">
 <span class="material-symbols-outlined">self_improvement</span>
                     Somatic Guides
                 </a>
-<a class="flex items-center gap-4 text-stone-400 hover:bg-[#f5f2eb] transition-all p-2 font-label text-xs uppercase tracking-[0.2em]" href="#">
+<a class="flex items-center gap-4 text-stone-400 hover:bg-[#f4eedd] transition-all p-2 font-label text-xs uppercase tracking-[0.2em]" href="#">
 <span class="material-symbols-outlined">auto_awesome</span>
                     Esoteric Toolkit
                 </a>
@@ -285,7 +227,7 @@
 </section>
 <!-- Navigation Call to Action -->
 <section class="border-t border-stone-200 pt-24 mb-16">
-<div class="bg-surface-container-highest p-1 bg-gradient-to-tr from-[#c4a77d]/20 to-transparent">
+<div class="bg-surface-container-highest p-1 bg-gradient-to-tr from-[#b6852a]/20 to-transparent">
 <a class="group flex flex-col md:flex-row items-center justify-between p-12 bg-surface hover:bg-surface-container-lowest transition-all duration-500 border border-transparent hover:border-primary/20" href="#">
 <div class="max-w-md text-center md:text-left mb-8 md:mb-0">
 <h2 class="font-headline text-3xl mb-4 italic">Workbook Reference</h2>
@@ -303,8 +245,8 @@
 </section>
 </main>
 <!-- Bottom Navigation (Mobile) -->
-<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-8 pt-2 bg-[#fcf9f2]/80 backdrop-blur-xl border-t-[0.5px] border-stone-200 z-50">
-<a class="flex flex-col items-center justify-center text-[#725b37] border-t-2 border-[#725b37] pt-2" href="#">
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-8 pt-2 bg-[#efe7d3]/80 backdrop-blur-xl border-t-[0.5px] border-stone-200 z-50">
+<a class="flex flex-col items-center justify-center text-[#1f7d88] border-t-2 border-[#1f7d88] pt-2" href="#">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
 </a>
 <a class="flex flex-col items-center justify-center text-stone-400 pt-2 hover:text-stone-900 transition-colors" href="#">
