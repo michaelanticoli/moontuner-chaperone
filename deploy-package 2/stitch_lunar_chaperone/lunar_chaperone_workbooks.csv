@@ -1,0 +1,25 @@
+sequence,workbook_id,workbook_title,moon_sign_journey,start_sign,start_phase,end_sign,end_phase,element_shift,body_axis,is_eclipse_2026
+1,wb01,From Fire to Balance,Aries New → Libra Full,Aries,New,Libra,Full,Fire → Air,Head → Kidneys,no
+2,wb02,From Balance to Root,Libra Full → Taurus New,Libra,Full,Taurus,New,Air → Earth,Kidneys → Throat,no
+3,wb03,From Root to Depth,Taurus New → Scorpio Full,Taurus,New,Scorpio,Full,Earth → Water,Throat → Reproductive Organs,no
+4,wb04,From Depth to Voice,Scorpio Full → Gemini New,Scorpio,Full,Gemini,New,Water → Air,Reproductive Organs → Lungs,no
+5,wb05,From Voice to Vision,Gemini New → Sagittarius Full,Gemini,New,Sagittarius,Full,Air → Fire,Lungs → Hips,no
+6,wb06,From Vision to Womb,Sagittarius Full → Cancer New,Sagittarius,Full,Cancer,New,Fire → Water,Hips → Breast,no
+7,wb07,From Womb to Bone,Cancer New → Capricorn Full,Cancer,New,Capricorn,Full,Water → Earth,Breast → Knees,no
+8,wb08,From Bone to Heart,Capricorn Full → Leo New,Capricorn,Full,Leo,New,Earth → Fire,Knees → Heart,no
+9,wb09,From Heart to Mind,Leo New → Aquarius Full,Leo,New,Aquarius,Full,Fire → Air,Heart → Nervous System,yes — solar 20° Leo 2026-08-12 / lunar 4° Aquarius 2026-08-27
+10,wb10,From Mind to Gut,Aquarius Full → Virgo New,Aquarius,Full,Virgo,New,Air → Earth,Nervous System → Digestive System,no
+11,wb11,From Gut to Soul,Virgo New → Pisces Full,Virgo,New,Pisces,Full,Earth → Water,Digestive System → Feet,no
+12,wb12,From Soul to Balance,Pisces Full → Libra New,Pisces,Full,Libra,New,Water → Air,Feet → Kidneys,no
+13,wb13,From Balance to Fire,Libra New → Aries Full,Libra,New,Aries,Full,Air → Fire,Kidneys → Head,no
+14,wb14,From Fire to Depth,Aries Full → Scorpio New,Aries,Full,Scorpio,New,Fire → Water,Head → Reproductive Organs,no
+15,wb15,From Depth to Root,Scorpio New → Taurus Full,Scorpio,New,Taurus,Full,Water → Earth,Reproductive Organs → Throat,no
+16,wb16,From Root to Vision,Taurus Full → Sagittarius New,Taurus,Full,Sagittarius,New,Earth → Fire,Throat → Hips,no
+17,wb17,From Vision to Voice,Sagittarius New → Gemini Full,Sagittarius,New,Gemini,Full,Fire → Air,Hips → Lungs,no
+18,wb18,From Voice to Bone,Gemini Full → Capricorn New,Gemini,Full,Capricorn,New,Air → Earth,Lungs → Knees,no
+19,wb19,From Bone to Womb,Capricorn New → Cancer Full,Capricorn,New,Cancer,Full,Earth → Water,Knees → Breast,no
+20,wb20,From Womb to Mind,Cancer Full → Aquarius New,Cancer,Full,Aquarius,New,Water → Air,Breast → Nervous System,no
+21,wb21,From Mind to Heart,Aquarius New → Leo Full,Aquarius,New,Leo,Full,Air → Fire,Nervous System → Heart,no
+22,wb22,From Heart to Soul,Leo Full → Pisces New,Leo,Full,Pisces,New,Fire → Water,Heart → Feet,no
+23,wb23,From Soul to Gut,Pisces New → Virgo Full,Pisces,New,Virgo,Full,Water → Earth,Feet → Digestive System,no
+24,wb24,From Gut to Fire,Virgo Full → Aries New,Virgo,Full,Aries,New,Earth → Fire,Digestive System → Head,no
